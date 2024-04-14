@@ -36,48 +36,5 @@
 }
 
 
-/* -------------------------------------------------------
-            Define mixin for pagination styles
----------------------------------------------------------*/
-
-@mixin pagination {
-  .pagination {
-    display: inline-block;
-    margin-bottom: 4em;
-
-    a {
-      color: $primary-blue;
-      float: left;
-      padding: 0.5em 1em;
-      text-decoration: none;
-
-      &.active {
-        background-color: $secondary-blue;
-        color: $light-blue;
-        border-radius: 5px;
-      }
-
-      &:hover:not(.active) {
-        background-color: $light-blue;
-        border-radius: 5px;
-      }
-    }
-  }
-
-  // Define pagination styles for responsive design
-  @media (min-width: 320px) and (max-width: 768px) {
-    .pagination {
-      margin-top: 1em;
-      text-align: center;
-
-      a {
-        display: inline-block;
-        float: none;
-      }
-    }
-  }
-}
-
-@forward "pagination";
 @forward "hover";
 @forward "button-style";
