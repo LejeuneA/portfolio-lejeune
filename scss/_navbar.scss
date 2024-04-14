@@ -1,5 +1,9 @@
+@use 'mixins';
+@use 'extends';
+@use 'custom';
+
 /* -------------------------------------------------------
-					Home header
+                    Home header
 ---------------------------------------------------------*/
 // Header
 #header {
@@ -52,7 +56,9 @@
       width: 2em;
       height: 2em;
       margin-top: 1em;
-      transition:0.5s ease, color 0.5s ease;
+      transition:
+        0.5s ease,
+        color 0.5s ease;
 
       &:hover {
         @include hover("background-color", $primary-green, "color", $light-green);
@@ -96,7 +102,7 @@
   a:focus {
     display: flex;
     align-items: center;
-    color:$light-gray ;
+    color: $light-gray;
     padding: 0.8em 1em;
     margin-bottom: 0.5em;
     transition: 0.3s;
@@ -122,32 +128,117 @@
   }
 }
 
-// Mobile Navigation
-.mobile-nav-toggle {
-  position: fixed;
-  right: 1em;
-  top: 1em;
-  z-index: 9998;
-  border: 0;
-  font-size: 2em;
-  transition: all 0.4s;
-  outline: none;
+/* -------------------------------------------------------
+                   Offcanvas menu
+---------------------------------------------------------*/
+.navbar-hamburger {
+  display: flex;
+  justify-content: center;
   background-color: $primary-green;
   color: $light-green;
-  width: 3em; // Adjust width to accommodate the icon
-  height: 3em; // Adjust height to accommodate the icon
-  line-height: 3em; // Center the icon vertically
-  border-radius: 50%; // Make it a circle
+  padding: 0.5rem;
   cursor: pointer;
-  display: flex; // Use flexbox to center the icon
-  justify-content: center; // Center horizontally
-  align-items: center; // Center vertically
+
+  i {
+    font-size: 1.5em;
+    @include hover("background-color", $primary-green, "color", $primary-red);
+  }
 }
 
-.mobile-nav-active {
-  overflow: hidden;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $primary-green;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 5em;
+  z-index: 1000;
 
-  #header {
-    left: 0;
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    font-size: 1.5em;
+    color: $light-green;
+
+    @include hover("background-color", $primary-green, "color", $primary-red);
+  }
+
+  .search-group {
+    margin: 2em 1em;
+
+    .btn-search {
+      background-color: $secondary-green;
+      @include hover("background-color", $primary-red, "color", $light-green);
+    }
+  }
+
+  a {
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1em;
+    color: $light-green;
+    display: block;
+
+    @include hover("background-color", $primary-red, "color", $light-green);
+  }
+
+  .btn-login {
+    background-color: $primary-red;
+    margin: 2em 1em;
+    text-align: center;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+
+    @include hover("background-color", $secondary-green, "color", $primary-green);
+  }
+
+  /* Social Icons styles for small screens */
+  .social-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .social-item {
+    font-size: 1.2em;
+    margin: 0;
+
+    .social-link {
+      color: $secondary-green;
+
+      @include hover("color", $primary-red, "background-color", $primary-green);
+    }
+  }
+}
+
+/* -------------------------------------------------------
+         Offcanvas styles for smaller screens
+---------------------------------------------------------*/
+@media (min-width: 320px) and (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------
+         Offcanvas styles for larger screens
+---------------------------------------------------------*/
+@media (min-width: 769px) {
+  #hamburger,
+  .sidenav,
+  .closebtn {
+    display: none;
   }
 }
