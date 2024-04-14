@@ -1,32 +1,52 @@
-html,
+@use 'mixins';
+@use 'extends';
+@use 'custom';
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
 }
 
-// section{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
 
-//   h2{
-//     text-align: center;
-//     font-weight: 500;
-//     font-size: larger;
-//     margin-top: 2em;
-//     padding: 0 2em;
-//   }
+/*--------------------------------------------------------------
+                Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: $primary-green;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
 
-//   p{
-//     font-weight: 300;
-//     line-height: 1.8em;
-//     text-align: justify;
-//     padding: 2em 0;
-//   }
-// }
+  &:hover {
+    @include hover("background-color", $primary-green, "color", $light-green);
+  }
 
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 
-
+.back-to-top i {
+  font-size: 28px;
+  color: $light-green;
+  line-height: 0;
+}
 /* -------------------------------------------------------
                   .Class styles
 ---------------------------------------------------------*/
@@ -45,7 +65,3 @@ body {
 /* -------------------------------------------------------
                   Responsive styles
 ---------------------------------------------------------*/
-
-@media (min-width: 320px) and (max-width: 1200px) {
- 
-}
