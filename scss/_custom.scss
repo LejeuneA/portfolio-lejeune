@@ -16,20 +16,4 @@ $text-shadow-primary: 1px 1px rgba(71, 71, 71, 0.66);
                     Google fonts
 ---------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-@each $weight in (100, 200, 300, 400, 500, 600, 700, 800, 900) {
-  $font-weight: unquote('#{$weight}');
-
-  .poppins-#{$font-weight} {
-    font-family: "Poppins", sans-serif;
-    font-weight: $font-weight;
-    font-style: normal;
-  }
-
-  .poppins-#{$font-weight}-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: $font-weight;
-    font-style: italic;
-  }
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
