@@ -2,25 +2,27 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
-	<meta
-		content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege"
-		name="keywords">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
+    <meta
+        content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege"
+        name="keywords">
 
-	<!-- Main Css file -->
-	<link rel="stylesheet" href="./css/styles.css">
+    <!-- Main Css file -->
+    <link rel="stylesheet" href="../css/styles.css">
 
-	<!-- Favicons -->
-	<link href="assets/img/favicon.png" rel="icon">
-	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-	<!-- Title -->
-	<title>Acelya Lejeune - Web Developer and Graphic Designer</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Title -->
+    <title>Acelya Lejeune - Web Developer and Graphic Designer</title>
 </head>
 
 <body>
@@ -28,31 +30,88 @@
     <!-----------------------------------------------------------------
                                Navigation
     ------------------------------------------------------------------>
-    <!-- ======= Mobile nav toggle button ======= -->
-  <i class="fa fa-bars mobile-nav-toggle"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
-        <div class="social-links">
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="profile">
+            <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+            <h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
+            <div class="social-links">
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
         </div>
-      </div>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
+                </li>
+                <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
+                </li>
+                <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+                        <span>Portfolio</span></a></li>
+                <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a>
+                </li>
+                <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a>
+                </li>
+            </ul>
+        </nav><!-- .nav-menu -->
+    </header><!-- End Header -->
+
+    <!---------------------------------------------------------------
+                             Offcanvas menu
+    ----------------------------------------------------------------->
+    <div id="mySidenav" class="sidenav">
+
+        <!-- Search bar -->
+        <form class="search" role="search">
+            <div class="search-group">
+                <input class="form-control" type="search" placeholder="Que cherhez-vous?" aria-label="Search">
+                <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+        <!-- Search bar end -->
+
+        <!-- Menu -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+        <!-- Menu end -->
+
+        <!-- Login button -->
+        <a href="../public/login.html" class="btn-login">Se connecter</a>
+        <!-- Login button end -->
+
+        <!-- Social icons -->
+        <ul class="social-nav">
+            <!-- Icons -->
+            <li class="social-item">
+                <a class="social-link" href="https://www.facebook.com/">
+                    <i class="fa-brands fa-square-facebook fa-lg"></i>
+                </a>
+            </li>
+            <li class="social-item">
+                <a class="social-link" href="https://twitter.com/">
+                    <i class="fa-brands fa-x-twitter fa-lg"></i>
+                </a>
+            </li>
+            <li class="social-item">
+                <a class="social-link" href="https://www.instagram.com">
+                    <i class="fa-brands fa-instagram fa-lg"></i>
+                </a>
+            </li>
         </ul>
-      </nav><!-- .nav-menu -->
-  </header><!-- End Header -->
+        <!-- Social icons end -->
+
+    </div>
+
+    <!-- Hamburger icon for smaller screens -->
+    <div class="navbar-hamburger">
+        <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+    </div>
+    <!------------------------------------------------------------- 
+                          Offcanvas menu end
+    --------------------------------------------------------------->
     <!-- Navigation end -->
 
     <!-- Font Awesome JS -->
