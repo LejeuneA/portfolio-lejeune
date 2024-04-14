@@ -1,277 +1,153 @@
-@use 'mixins';
-@use 'extends';
-@use 'custom';
-
 /* -------------------------------------------------------
-                 Navbar upper section
+					Home header
 ---------------------------------------------------------*/
-.navbar {
-  background-color: $light-green;
-}
-
-// Navbar container
-.navbar-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.d-flex {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-// Logo
-.navbar-brand-img {
-  height: 3.5em;
-}
-
-// Logo end
-
-// Social Icons
-.social-nav {
-  display: flex;
-  flex-direction: row;
-
-  .social-item {
-    margin-right: 1rem;
-    font-size: 1.1em;
-    color: $primary-green;
-
-    .social-link {
-      @include hover("background-color", $light-green, "color", $secondary-green);
-    }
-  }
-}
-
-// Social Icons end
-
-// Search bar
-.search-group {
-  display: flex;
-  align-items: stretch;
-
-  input[type="search"] {
-    border: 1px solid $primary-green;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    font-size: smaller;
-    font-style: italic;
-    padding: 0.3rem;
-    flex: 1;
-
-    &:focus {
-      box-shadow: 0 0 10px $secondary-green;
-      outline: none;
-      border: 1px solid $secondary-green;
-    }
-  }
-
-  .btn-search {
-    background-color: $primary-green;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    color: $light-green;
-    padding: 0.3rem 0.5rem;
-    cursor: pointer;
-
-    @include hover("background-color", $secondary-green, "color", $light-green);
-  }
-}
-// Search bar end
-
-/* -------------------------------------------------------
-               Navbar bottom section
----------------------------------------------------------*/
-// Navbar Menu
-.navbar-menu {
-  background-color: $primary-green;
+// Header
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 18em;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  padding: 0 15px;
+  background: $background;
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3em;
-  z-index: 1000;
+  flex-direction: column;
 
-  box-shadow: $box-shadow-primary;
-  -webkit-box-shadow: $box-shadow-primary;
-  -moz-box-shadow: $box-shadow-primary;
-}
-
-// Navbar Nav
-.navbar-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  .nav-item {
-    margin-right: 2em;
-
-    .nav-link {
-      color: $light-green;
-      padding: 0.8em;
-
-      @include hover("background-color", $primary-red, "color", $light-green);
-    }
-  }
-}
-
-// Login button
-nav{
-  .btn-primary{
-      @include hover("background-color", $secondary-green, "color", $light-green);
-    }
-  }
-// Login button end
-
-/* -------------------------------------------------------
-                 Navbar responsive
----------------------------------------------------------*/
-
-/* Media queries for xs, sm, and md screens */
-@media (min-width: 320px) and (max-width: 768px) {
-  .navbar-menu {
-    display: none;
-  }
-
-  .navbar-container {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .d-flex {
-    display: none;
-  }
-
-  /* Logo styles for small screens */
-  .navbar-brand-img {
-    height: 3.5em;
-  }
-
-  /* -------------------------------------------------------
-                   Offcanvas menu
----------------------------------------------------------*/
-  .navbar-hamburger {
-    display: flex;
-    justify-content: center;
-    background-color: $primary-green;
-    color: $light-green;
-    padding: 0.5rem;
-    cursor: pointer;
-
-    i {
-      font-size: 1.5em;
-      @include hover("background-color", $primary-green, "color", $primary-red);
-    }
-  }
-
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: $primary-green;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 5em;
-    z-index: 1000;
-
-    .closebtn {
-      position: absolute;
-      top: 0;
-      right: 1em;
-      font-size: 1.5em;
-      color: $light-green;
-
-      @include hover("background-color", $primary-green, "color", $primary-red);
-    }
-
-    .search-group {
-      margin: 2em 1em;
-
-      .btn-search {
-        background-color: $secondary-green;
-        @include hover("background-color", $primary-red, "color", $light-green);
-      }
-    }
-
-    a {
-      padding: 1em;
-      text-decoration: none;
-      font-size: 1em;
-      color: $light-green;
+  .profile {
+    img {
+      margin: 1em auto;
       display: block;
-
-      @include hover("background-color", $primary-red, "color", $light-green);
+      width: 10em;
+      border: 0.5em solid $gray;
     }
 
-    .btn-login {
-      background-color: $primary-red;
-      margin: 2em 1em;
-      text-align: center;
-      padding: 0.5em 1em;
-      border-radius: 5px;
-
-      @include hover(
-        "background-color",
-        $secondary-green,
-        "color",
-        $primary-green
-      );
-    }
-
-    /* Social Icons styles for small screens */
-    .social-nav {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-    }
-
-    .social-item {
-      font-size: 1.2em;
+    h1 {
+      font-size: 1.5em;
       margin: 0;
+      padding: 0;
+      font-weight: 600;
 
-      .social-link {
-        color: $secondary-green;
-
-        @include hover(
-          "color",
-          $primary-red,
-          "background-color",
-          $primary-green
-        );
+      a,
+      a:hover {
+        color: $light-green;
+        text-decoration: none;
       }
     }
-  }
 
-  /* -------------------------------------------------------
-           Offcanvas styles for smaller screens
----------------------------------------------------------*/
-  @media (min-width: 320px) and (max-width: 768px) {
-    #hamburger {
-      display: block;
-    }
+    .social-links a {
+      font-size: 1em;
+      display: inline-block;
+      background: $gray;
+      color: $light-green;
+      line-height: 1;
+      padding: 0.5em 0;
+      margin-right: 4px;
+      border-radius: 50%;
+      text-align: center;
+      width: 2em;
+      height: 2em;
+      margin-top: 1em;
+      transition:0.5s ease, color 0.5s ease;
 
-    .navbar-menu {
-      display: none;
+      &:hover {
+        @include hover("background-color", $primary-green, "color", $light-green);
+      }
     }
   }
 }
 
-/* -------------------------------------------------------
-           Offcanvas styles for larger screens
----------------------------------------------------------*/
-@media (min-width: 769px) {
-  #hamburger,
-  .sidenav,
-  .closebtn {
-    display: none;
+// Main Content
+#main {
+  margin-left: 20em;
+}
+
+.container,
+.container-fluid {
+  padding-left: 2em;
+  padding-right: 2em;
+
+  @media (max-width: 1199px) {
+    padding-left: 1em;
+    padding-right: 1em;
   }
-} 
+}
+
+// Navigation Menu
+.nav-menu {
+  padding: 2em 0 0 0;
+
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  > ul > li {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  a,
+  a:focus {
+    display: flex;
+    align-items: center;
+    color:$light-gray ;
+    padding: 0.8em 1em;
+    margin-bottom: 0.5em;
+    transition: 0.3s;
+    font-size: 1em;
+
+    i,
+    &:focus i {
+      font-size: 2em;
+      padding-right: 0.5em;
+      color: $gray;
+    }
+
+    &:hover,
+    &.active,
+    &:focus {
+      text-decoration: none;
+      color: $light-green;
+
+      i {
+        color: $primary-green;
+      }
+    }
+  }
+}
+
+// Mobile Navigation
+.mobile-nav-toggle {
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  z-index: 9998;
+  border: 0;
+  font-size: 2em;
+  transition: all 0.4s;
+  outline: none;
+  background-color: $primary-green;
+  color: $light-green;
+  width: 3em; // Adjust width to accommodate the icon
+  height: 3em; // Adjust height to accommodate the icon
+  line-height: 3em; // Center the icon vertically
+  border-radius: 50%; // Make it a circle
+  cursor: pointer;
+  display: flex; // Use flexbox to center the icon
+  justify-content: center; // Center horizontally
+  align-items: center; // Center vertically
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+
+  #header {
+    left: 0;
+  }
+}
