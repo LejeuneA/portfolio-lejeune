@@ -6,7 +6,7 @@
                  Navbar upper section
 ---------------------------------------------------------*/
 .navbar {
-  background-color: $light-blue;
+  background-color: $light-green;
 }
 
 // Navbar container
@@ -38,10 +38,10 @@
   .social-item {
     margin-right: 1rem;
     font-size: 1.1em;
-    color: $primary-blue;
+    color: $primary-green;
 
     .social-link {
-      @include hover("background-color", $light-blue, "color", $secondary-blue);
+      @include hover("background-color", $light-green, "color", $secondary-green);
     }
   }
 }
@@ -54,7 +54,7 @@
   align-items: stretch;
 
   input[type="search"] {
-    border: 1px solid $primary-blue;
+    border: 1px solid $primary-green;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     font-size: smaller;
@@ -63,21 +63,21 @@
     flex: 1;
 
     &:focus {
-      box-shadow: 0 0 10px $secondary-blue;
+      box-shadow: 0 0 10px $secondary-green;
       outline: none;
-      border: 1px solid $secondary-blue;
+      border: 1px solid $secondary-green;
     }
   }
 
   .btn-search {
-    background-color: $primary-blue;
+    background-color: $primary-green;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    color: $light-blue;
+    color: $light-green;
     padding: 0.3rem 0.5rem;
     cursor: pointer;
 
-    @include hover("background-color", $secondary-blue, "color", $light-blue);
+    @include hover("background-color", $secondary-green, "color", $light-green);
   }
 }
 // Search bar end
@@ -87,7 +87,7 @@
 ---------------------------------------------------------*/
 // Navbar Menu
 .navbar-menu {
-  background-color: $primary-blue;
+  background-color: $primary-green;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,10 +110,10 @@
     margin-right: 2em;
 
     .nav-link {
-      color: $light-blue;
+      color: $light-green;
       padding: 0.8em;
 
-      @include hover("background-color", $primary-red, "color", $light-blue);
+      @include hover("background-color", $primary-red, "color", $light-green);
     }
   }
 }
@@ -121,7 +121,7 @@
 // Login button
 nav{
   .btn-primary{
-      @include hover("background-color", $secondary-blue, "color", $light-blue);
+      @include hover("background-color", $secondary-green, "color", $light-green);
     }
   }
 // Login button end
@@ -156,14 +156,14 @@ nav{
   .navbar-hamburger {
     display: flex;
     justify-content: center;
-    background-color: $primary-blue;
-    color: $light-blue;
+    background-color: $primary-green;
+    color: $light-green;
     padding: 0.5rem;
     cursor: pointer;
 
     i {
       font-size: 1.5em;
-      @include hover("background-color", $primary-blue, "color", $primary-red);
+      @include hover("background-color", $primary-green, "color", $primary-red);
     }
   }
 
@@ -174,7 +174,7 @@ nav{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: $primary-blue;
+    background-color: $primary-green;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 5em;
@@ -185,17 +185,17 @@ nav{
       top: 0;
       right: 1em;
       font-size: 1.5em;
-      color: $light-blue;
+      color: $light-green;
 
-      @include hover("background-color", $primary-blue, "color", $primary-red);
+      @include hover("background-color", $primary-green, "color", $primary-red);
     }
 
     .search-group {
       margin: 2em 1em;
 
       .btn-search {
-        background-color: $secondary-blue;
-        @include hover("background-color", $primary-red, "color", $light-blue);
+        background-color: $secondary-green;
+        @include hover("background-color", $primary-red, "color", $light-green);
       }
     }
 
@@ -203,10 +203,10 @@ nav{
       padding: 1em;
       text-decoration: none;
       font-size: 1em;
-      color: $light-blue;
+      color: $light-green;
       display: block;
 
-      @include hover("background-color", $primary-red, "color", $light-blue);
+      @include hover("background-color", $primary-red, "color", $light-green);
     }
 
     .btn-login {
@@ -218,9 +218,9 @@ nav{
 
       @include hover(
         "background-color",
-        $secondary-blue,
+        $secondary-green,
         "color",
-        $primary-blue
+        $primary-green
       );
     }
 
@@ -239,13 +239,13 @@ nav{
       margin: 0;
 
       .social-link {
-        color: $secondary-blue;
+        color: $secondary-green;
 
         @include hover(
           "color",
           $primary-red,
           "background-color",
-          $primary-blue
+          $primary-green
         );
       }
     }
