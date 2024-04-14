@@ -22,17 +22,17 @@
   cursor: pointer;
 
   // Include hover mixin for button
-  @include hover("background-color", $primary-blue, "color", $light-blue);
+  @include hover("background-color", $primary-green, "color", $light-green);
 }
 
 // Apply mixin for primary button
 .btn-primary {
-  @include button-style($primary-red, $light-blue);
+  @include button-style($primary-red, $light-green);
 }
 
 // Apply mixin for secondary button
 .btn-secondary {
-  @include button-style($primary-blue, $light-blue);
+  @include button-style($primary-green, $light-green);
 }
 
 
