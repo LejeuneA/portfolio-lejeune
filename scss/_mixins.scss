@@ -10,31 +10,18 @@
   }
 }
 /* -------------------------------------------------------
-               Define mixin for button styles
+               Define mixin for d-flex styles
 ---------------------------------------------------------*/
-@mixin button-style($bg-color, $text-color) {
-  background-color: $bg-color;
-  text-align: center;
-  border-radius: 5px;
-  padding: 0.4rem 1rem;
-  color: $text-color;
-  z-index: 1000;
-  cursor: pointer;
-
-  // Include hover mixin for button
-  @include hover("background-color", $primary-green, "color", $light-green);
+@mixin d-flex($display: flex, $justify: center, $align: center, $direction: column, $text-align: center) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  text-align: $text-align;
 }
 
-// Apply mixin for primary button
-.btn-primary {
-  @include button-style($primary-red, $light-green);
-}
-
-// Apply mixin for secondary button
-.btn-secondary {
-  @include button-style($primary-green, $light-green);
-}
+// @include d-flex(flex, center, center, column, center);
 
 
 @forward "hover";
-@forward "button-style";
+@forward "d-flex";
