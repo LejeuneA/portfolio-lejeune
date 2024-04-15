@@ -1,103 +1,46 @@
 @use "mixins";
 @use "extends";
 @use "custom";
+@use "global";
 
 /* -------------------------------------------------------
                     Home header
 ---------------------------------------------------------*/
 // Header
 #header {
+  @extend %header;
+  @include d-flex(flex, start, center, column, center);
+  height: $navbarHeightPercentage;
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  width: 18em;
+  width: 20em;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
-  padding: 0 1em;
+  padding: 1em;
   background: $background;
-  overflow-y: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  .profile {
-    text-align: center;
-
-    img {
-      margin: 1em auto;
-      display: block;
-      width: 10em;
-      border: 0.5em solid $gray;
-      border-radius: 50%;
-    }
-
-    h1 {
-      font-size: 1.5em;
-      margin: 0;
-      padding: 0;
-      font-weight: 600;
-
-      a,
-      a:hover {
-        color: $light-green;
-        text-decoration: none;
-      }
-    }
-
-    .social-links a {
-      font-size: 1em;
-      display: inline-block;
-      background: $gray;
-      color: $light-green;
-      line-height: 1;
-      padding: 0.5em auto;
-      border-radius: 50%;
-      text-align: center;
-      width: 2em;
-      height: 2em;
-      margin-top: 1em;
-      transition:
-        0.5s ease,
-        color 0.5s ease;
-
-      &:hover {
-        @include hover("background-color", $primary-green, "color", $light-green);
-      }
-    }
-  }
+  overflow-y: hidden;
 
   // Responsive styles for small screens
   @media (min-width: 320px) and (max-width: 768px) {
     display: none;
-  }
-}
-
-// Main Content
-#main {
-  margin-left: 20em;
-}
-
-.container,
-.container-fluid {
-  padding-left: 2em;
-  padding-right: 2em;
-
-  @media (max-width: 1199px) {
-    padding-left: 1em;
-    padding-right: 1em;
+    height: 100%;
   }
 }
 
 // Navigation Menu
 .nav-menu {
-  padding: 2em 0 0 0;
+  padding-top: 1.5em;
 
   * {
     margin: 0;
     padding: 0;
     list-style: none;
+
+    // Responsive styles for small screens
+    @media (min-width: 320px) and (max-width: 768px) {
+      margin-left: 0.5em;
+    }
   }
 
   > ul > li {
@@ -110,14 +53,14 @@
     display: flex;
     align-items: center;
     color: $light-gray;
-    padding: 0.8em 1em;
+    padding: 0.6em 0.8em;
     margin-bottom: 0.5em;
     transition: 0.3s;
     font-size: 1em;
 
     i,
     &:focus i {
-      font-size: 2em;
+      font-size: 1em;
       padding-right: 0.5em;
       color: $gray;
     }
@@ -125,13 +68,36 @@
     &:hover,
     &.active,
     &:focus {
-      text-decoration: none;
-      color: $light-green;
+      @include hover("color", $light-green, "background-color", $background);
 
       i {
         color: $primary-green;
       }
     }
+  }
+
+  .btn-resume {
+    a {
+      background-color: $gray;
+      text-align: center;
+      padding: 0.5em 2em;
+      border-radius: 0.3em;
+      transition:
+        background-color 0.3s,
+        color 0.3s;
+
+      &:hover {
+        @include hover("background-color", $primary-green, "color", $light-green);
+      }
+
+      // Responsive styles for small screens
+      @media (min-width: 320px) and (max-width: 768px) {
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
   }
 }
 
@@ -139,6 +105,8 @@
                    Offcanvas menu
 ---------------------------------------------------------*/
 .sidenav {
+  @extend %header;
+
   height: 100%;
   width: 0;
   position: fixed;
@@ -150,46 +118,15 @@
   transition: 0.5s;
   padding-top: 5em;
 
-  a {
-    padding: 1em;
-    text-decoration: none;
-    font-size: 1em;
-    color: $light-green;
-    display: block;
-    transition:
-      background-color 0.3s,
-      color 0.3s;
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0.5em;
+    font-size: 3em;
+    margin-left: 6em;
 
     &:hover {
-      background-color: $primary-red;
-      color: $light-green;
-    }
-  }
-
-  .btn-resume {
-    background-color: $primary-green;
-    text-align: center;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    transition:
-      background-color 0.3s,
-      color 0.3s;
-
-    &:hover {
-      @include hover("background-color", $dark-green, "color", $light-green);
-    }
-  }
-
-  .social-item {
-    font-size: 1.2em;
-    margin: 0;
-
-    .social-link {
-      color: $secondary-green;
-
-      &:hover {
-        @include hover("background-color", $primary-green, "color", $light-green);
-      }
+      @include hover ("background-color", $background, "color", $primary-green);
     }
   }
 }
@@ -200,18 +137,16 @@
 
   // Responsive styles for small screens
   @media (min-width: 320px) and (max-width: 768px) {
-    display: block;
+    @include d-flex(flex, center, center, column, center);
+
     position: fixed;
     top: 1em;
     right: 1em;
     z-index: 9999;
-    background-color: $primary-green; 
-    width: 2em;
-    height: 2em; 
+    background-color: $primary-green;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
 
     i {
@@ -220,4 +155,3 @@
     }
   }
 }
-
