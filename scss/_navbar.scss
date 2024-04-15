@@ -23,11 +23,14 @@
   flex-direction: column;
 
   .profile {
+    text-align: center;
+
     img {
       margin: 1em auto;
       display: block;
       width: 10em;
       border: 0.5em solid $gray;
+      border-radius: 50%;
     }
 
     h1 {
@@ -49,8 +52,7 @@
       background: $gray;
       color: $light-green;
       line-height: 1;
-      padding: 0.5em 0;
-      margin-right: 4px;
+      padding: 0.5em auto;
       border-radius: 50%;
       text-align: center;
       width: 2em;
@@ -164,7 +166,7 @@
     }
   }
 
-  .btn-login {
+  .btn-resume {
     background-color: $primary-green;
     text-align: center;
     padding: 0.5em 1em;
@@ -174,7 +176,7 @@
       color 0.3s;
 
     &:hover {
-      @include hover("background-color", $primary-green, "color", $light-green);
+      @include hover("background-color", $dark-green, "color", $light-green);
     }
   }
 
@@ -183,7 +185,7 @@
     margin: 0;
 
     .social-link {
-      color: $secondary-green; /* Replace with your color */
+      color: $secondary-green;
 
       &:hover {
         @include hover("background-color", $primary-green, "color", $light-green);
