@@ -1,10 +1,63 @@
-@use 'mixins';
-@use 'sass-customized';
-
+@use "mixins";
+@use "custom";
+@use "global";
 
 /* -------------------------------------------------------
-                Define extend 
+                Define extend for header
 ---------------------------------------------------------*/
+%header {
+    .profile {
+        text-align: center;
 
+        img {
+            margin: 1em auto;
+            display: block;
+            width: 10em;
+            border: 0.5em solid $gray;
+            border-radius: 50%;
+        }
 
-// @forward '%header-image';
+        h1 {
+            font-size: 1.5em;
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+
+            a,
+            a:hover {
+                color: $light-green;
+                text-decoration: none;
+            }
+        }
+
+        .social-links a {
+            font-size: 1em;
+            display: inline-flex;
+            background: $gray;
+            color: $light-green;
+            line-height: 1;
+            padding: 0.5em auto;
+            border-radius: 50%;
+            text-align: center;
+            width: 2em;
+            height: 2em;
+            margin-top: 1em;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            transition:
+                0.5s ease,
+                color 0.5s ease;
+
+            &:hover {
+                @include hover("background-color", $primary-green, "color", $light-green);
+            }
+
+            i {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@forward '%header';
