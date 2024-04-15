@@ -30,8 +30,8 @@
     <!-----------------------------------------------------------------
                                Navigation
     ------------------------------------------------------------------>
-    <!-- ======= Header ======= -->
     <header id="header">
+        <!-- Profile -->
         <div class="profile">
             <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
             <h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
@@ -41,37 +41,51 @@
             </div>
         </div>
 
+        <!-- Nav Menu -->
         <nav id="navbar" class="nav-menu navbar">
             <ul>
-                <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
-                </li>
+                <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
                 <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-                <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
-                </li>
-                <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a>
-                </li>
-                <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a>
-                </li>
+                <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+                <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+                <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
             </ul>
-        </nav><!-- .nav-menu -->
-    </header><!-- End Header -->
+        </nav>
+        <!-- End Nav Menu -->
+    </header>
+    <!-- End Header -->
+
+    <!-- Offcanvas Menu -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html">Home</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../public/login.html" class="btn-login">Se connecter</a>
+        <ul class="social-nav">
+            <li class="social-item">
+                <a class="social-link" href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
+            </li>
+            <li class="social-item">
+                <a class="social-link" href="https://twitter.com/"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+            </li>
+            <li class="social-item">
+                <a class="social-link" href="https://www.instagram.com"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            </li>
+        </ul>
+    </div>
+    <!-- End Offcanvas Menu -->
+
+    <!-- Hamburger Icon -->
+    <div class="navbar-hamburger">
+        <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+    </div>
+    <!-- End Hamburger Icon -->
 
     <!---------------------------------------------------------------
                              Offcanvas menu
     ----------------------------------------------------------------->
     <div id="mySidenav" class="sidenav">
-
-        <!-- Search bar -->
-        <form class="search" role="search">
-            <div class="search-group">
-                <input class="form-control" type="search" placeholder="Que cherhez-vous?" aria-label="Search">
-                <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-        </form>
-        <!-- Search bar end -->
-
         <!-- Menu -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a class="nav-link" href="../index.html">Home</a>
