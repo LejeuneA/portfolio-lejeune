@@ -22,7 +22,7 @@
   overflow-y: hidden;
 
   // Responsive styles for small screens
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 1199px) {
     display: none;
     height: 100%;
   }
