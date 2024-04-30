@@ -21,33 +21,37 @@ h6 {
                 Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
+  @include d-flex(flex, center, center, center, center);
+
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: 15px;
+  right: 1em;
+  bottom: 1em;
   z-index: 996;
   background: $primary-green;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
+  color:$light-green;
+  width: 3em;
+  height: 3em;
+  border-radius: 5em;
   transition: all 0.4s;
 
   &:hover {
-    @include hover("background-color", $primary-green, "color", $light-green);
+    @include hover("background-color", $dark-green, "color", $light-green);
   }
 
   &.active {
     visibility: visible;
     opacity: 1;
   }
+  
+  .back-to-top i {
+    font-size: 1em;
+    color: $light-green;
+    line-height: 0;
+  }
 }
 
-.back-to-top i {
-  font-size: 28px;
-  color: $light-green;
-  line-height: 0;
-}
 
 /*--------------------------------------------------------------
                         # Main Section
@@ -55,18 +59,21 @@ h6 {
 #main {
   margin-left: 18em;
 
+
   @media (max-width: 1199px) {
     margin-left: 0;
   }
 
-  .container,  
+  .container,
   .container-fluid {
-    padding-left: 5em;
-    padding-right: 5em;
-  
-    @media (max-width: 1199px) {
-      padding-left: 1em;
-      padding-right: 1em;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding:5em;
+    width: 100%;
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+      padding: 3em;
     }
   }
 
@@ -74,8 +81,15 @@ h6 {
     #header {
       left: -18em;
     }
+
+    #main {
+      margin-left: 0;
+    }
+  
+    .container,
+    .container-fluid {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
   }
 }
-
-
-
