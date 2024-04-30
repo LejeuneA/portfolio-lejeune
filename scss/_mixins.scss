@@ -1,3 +1,7 @@
+@use 'custom';
+@use 'extends';
+@use 'global';
+
 /* -------------------------------------------------------
                  Define a mixin for hover
 ---------------------------------------------------------*/
@@ -23,5 +27,28 @@
 // @include d-flex(flex, center, center, column, center);
 
 
+/* -------------------------------------------------------
+               Define mixin for button styles
+---------------------------------------------------------*/
+@mixin button-style($bg-color, $text-color, $hover-bg-color, $hover-text-color) {
+  background-color: $bg-color;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  color: $text-color;
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  // Include hover mixin for button
+  @include hover("background-color", $hover-bg-color, "color", $hover-text-color);
+}
+
+// Apply mixin for primary button
+.btn-primary {
+  @include button-style($gray, $light-gray, $background, $light-green);
+}
+
 @forward "hover";
 @forward "d-flex";
+@forward "button-style";
