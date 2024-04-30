@@ -12,19 +12,24 @@ $base-font-size: 16px; // Define base font size
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about-container {
-    padding: 10em;
-    overflow: hidden;
-    background: $light-green;
+.about-section {
+    @include d-flex(flex, start, start, column, start);
 
-    .about-container-right {
+    background: $light-green;
+    overflow: hidden;
+    width: 100%;
+
+    .about-container {
+        @include d-flex(flex, start, start, column, start);
+        gap: 2em;
+        width: 100%;
+
         h2 {
             font-size: 2em;
             font-weight: bold;
-            margin-bottom: 1em;
             padding-bottom: 0.5em;
             position: relative;
-            color: $primary-green;
+            color: $dark-green;
 
             &::after {
                 content: "";
@@ -37,21 +42,63 @@ $base-font-size: 16px; // Define base font size
                 left: 0;
             }
         }
+        .about-content {
+            @include d-flex(flex, start, start, row, start);
+            gap:5em;
 
-        p {
-            margin-bottom: 0;
-        }
-    }
-    .about-container-left {
-        .content {
-            h3 {
-                font-weight: 300;
-                font-size: 1.5em;
-                color: $primary-blue;
+            .about-container-left {
+                width: 50%;
+
+                p {
+                    margin-bottom: 1em;
+                    line-height: 1.7em;
+                    font-weight: 400;
+
+                    span.first-sentence {
+                        font-size: 1.2em;
+                        font-weight: 500;
+                        display: block;
+                        margin-bottom: 0.5em;
+                        color: $primary-green;
+                    }
+
+                    span {
+                        color: $dark-green;
+                        font-weight: 700;
+                    }
+                }
             }
 
-            p:last-child {
-                margin-bottom: 0;
+            .about-container-right {
+                width: 50%;
+
+                .content {
+                    h3 {
+                        font-weight: 500;
+                        font-size: 1.5em;
+                        color: $dark-green;
+                    }
+
+                    p:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // Responsive styles for small screens
+    @media (min-width: 320px) and (max-width: 768px) {
+        .about-container {
+            .about-content{
+                @include d-flex(flex, center, start, column, start);
+                .about-container-right {
+                    width: 100%;
+                }
+    
+                .about-container-left {
+                    width: 100%;
+                }
             }
         }
     }
