@@ -122,8 +122,9 @@
     position: absolute;
     top: 0;
     right: 0.5em;
-    font-size: 3em;
+    font-size: 2em;
     margin-left: 6em;
+    color:$light-gray;
 
     &:hover {
       @include hover ("background-color", $background, "color", $primary-green);
