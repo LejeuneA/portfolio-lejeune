@@ -29,30 +29,6 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
-
-/* -------------------------------------------------------
-                    Hero type effect
-  ---------------------------------------------------------*/
-"use strict";
-
-function initTyped() {
-  const typed = document.querySelector('.typed');
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  }
-}
-
-// Call the function to initialize typed effect
-initTyped();
-
 /* -------------------------------------------------------
               Easy selector helper function
 ---------------------------------------------------------*/
@@ -67,6 +43,21 @@ initTyped();
     }
   }
 
+  /* -------------------------------------------------------
+                        Hero type effect
+    ---------------------------------------------------------*/
+  const typed = select('.typed')
+  if (typed) {
+    let typed_strings = typed.getAttribute('data-typed-items')
+    typed_strings = typed_strings.split(',')
+    new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
 
   /* -------------------------------------------------------
               Easy event listener function
