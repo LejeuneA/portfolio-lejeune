@@ -42,10 +42,5 @@
                 @include hover("color", $primary-green, "background-color", $background);
             }
         }
-
-        // Responsive styles for footer
-        @media (min-width: 320px) and (max-width: 768px) {
-            display: none;
-        }
     }
 }
