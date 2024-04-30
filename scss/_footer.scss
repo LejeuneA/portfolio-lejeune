@@ -37,9 +37,9 @@
             color: $light-green;
 
             a {
-                color: $primary-green;
+                color: $tertiary-green;
 
-                @include hover("color", $dark-green, "background-color", $background);
+                @include hover("color", $primary-green, "background-color", $background);
             }
         }
 
