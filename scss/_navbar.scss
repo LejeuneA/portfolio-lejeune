@@ -136,7 +136,7 @@
   display: none;
 
   // Responsive styles for small screens
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 1199px) {
     @include d-flex(flex, center, center, column, center);
 
     position: fixed;
@@ -148,6 +148,7 @@
     height: 2.5em;
     border-radius: 50%;
     cursor: pointer;
+
 
     i {
       font-size: 1em;
