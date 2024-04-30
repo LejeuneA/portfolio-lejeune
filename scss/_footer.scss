@@ -19,7 +19,7 @@
     height: calc(100% - #{$navbarHeightPercentage});
 
     // Responsive styles for footer
-    @media (min-width: 320px) and (max-width: 768px) {
+    @media (min-width: 320px) and (max-width: 1199px) {
         display: none;
     }
 
