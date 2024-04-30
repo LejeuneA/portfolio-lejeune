@@ -1,0 +1,58 @@
+@use "custom";
+@use "mixins";
+@use "extends";
+@use "global";
+
+/*--------------------------------------------------------------
+                        # About Section
+--------------------------------------------------------------*/
+
+$base-font-size: 16px; // Define base font size
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about-container {
+    padding: 10em;
+    overflow: hidden;
+    background: $light-green;
+
+    .about-container-right {
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 1em;
+            padding-bottom: 0.5em;
+            position: relative;
+            color: $primary-green;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 2em;
+                height: 0.1em;
+                background: $primary-green;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .about-container-left {
+        .content {
+            h3 {
+                font-weight: 300;
+                font-size: 1.5em;
+                color: $primary-blue;
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
