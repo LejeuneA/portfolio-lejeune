@@ -154,15 +154,13 @@
 			@include d-flex(flex, center, flex-start, row, center);
 			gap: 3em;
 
-			.article {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
+			article {
+				@include d-flex(flex, center, center, column, center);
+				gap: 1em;
 
 				img {
 					height: auto;
-					width: 15em;
+					width: 12em;
 				}
 
 				.article-title {
@@ -172,20 +170,21 @@
 					margin-top: 1em;
 				}
 
-				.article-writer {
+				p {
 					text-align: center;
 					padding: 0;
 					margin: 0;
 					font-weight: 400;
 					font-size: 1em;
+
+					span{
+						font-weight: 200;
+						font-size: 0.9em;
+						display: block;
+						line-height: 1.2em;
+					}
 				}
 
-				.article-feature {
-					font-weight: 200;
-					font-size: 0.9em;
-					display: block;
-					line-height: 1.2em;
-				}
 			}
 		}
 	}
