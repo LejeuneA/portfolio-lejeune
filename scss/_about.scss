@@ -50,6 +50,10 @@
                     line-height: 1.7em;
                     font-weight: 400;
 
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
                     span.first-sentence {
                         font-size: 1.2em;
                         font-weight: 500;
@@ -67,6 +71,10 @@
 
             .about-container-right {
                 width: 50%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
 
                 p {
                     margin-bottom: 2.5em;
