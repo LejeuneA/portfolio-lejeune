@@ -68,7 +68,7 @@
           font-family: "Poppins", sans-serif;
           font-size: small;
           font-style: italic;
-          color: $light-blue;
+          color: $primary-blue;
         }
 
         input:focus,
@@ -90,10 +90,11 @@
         text-align: end;
         font-size: 0.9em;
         font-weight: 400;
+        margin-bottom: 2em;
       }
 
       .btn-primary {
-        margin-top: 2em;
+        padding: 0.7em 6em;
 
         @include hover("background-color", $primary-blue, "color", $light-blue);
       }
