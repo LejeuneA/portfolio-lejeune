@@ -47,14 +47,14 @@
                 width: 50%;
 
                 .progress {
-                    height: 60px;
+                    height: 4em;
                     display: block;
                     background: none;
                     border-radius: 0;
 
                     .skill {
                         padding: 0;
-                        margin: 0 0 6px 0;
+                        margin: 0 0 0.5em 0;
                         text-transform: uppercase;
                         display: block;
                         font-weight: 600;
@@ -69,11 +69,11 @@
 
                     .progress-bar-wrap {
                         background:$light-gray;
-                        height: 10px;
+                        height: 0.8em;
 
                         .progress-bar {
                             width: 1px;
-                            height: 10px;
+                            height: 0.8em;
                             transition: 0.9s;
                             background-color: $primary-green;
                       }
@@ -85,7 +85,7 @@
                 width: 50%;
 
                 .progress {
-                    height: 60px;
+                    height: 4em;
                     display: block;
                     background: none;
                     border-radius: 0;
@@ -107,11 +107,11 @@
 
                     .progress-bar-wrap {
                         background:$light-gray;
-                        height: 10px;
+                        height: 0.8em;
 
                         .progress-bar {
                             width: 1px;
-                            height: 10px;
+                            height: 0.8em;
                             transition: 0.9s;
                             background-color: $primary-green;
                       }

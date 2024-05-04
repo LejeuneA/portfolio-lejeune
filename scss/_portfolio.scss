@@ -14,43 +14,68 @@
     overflow: hidden;
     width: 100%;
 
-    .portfolio-container {
+    .portfolio-content {
         @include d-flex(flex, start, start, column, start);
         gap: 2em;
         width: 100%;
 
-        h2 {
-            font-size: 2em;
-            font-weight: bold;
-            padding-bottom: 0.5em;
-            position: relative;
-            color: $dark-green;
+        .section-title {
+            h2 {
+                font-size: 2em;
+                font-weight: bold;
+                padding-bottom: 0.5em;
+                position: relative;
+                color: $dark-green;
 
-            &::after {
-                content: "";
-                position: absolute;
-                display: block;
-                width: 2em;
-                height: 0.1em;
-                background: $primary-green;
-                bottom: 0;
-                left: 0;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 2em;
+                    height: 0.1em;
+                    background: $primary-green;
+                    bottom: 0;
+                    left: 0;
+                }
             }
 
+            p {
+                margin-top: 2em;
+            }
         }
-        
-        .portfolio-content {
-            @include d-flex(flex, start, start, row, start);
 
-        }
-    }
-
-    // Responsive styles for small screens
-    @media (min-width: 320px) and (max-width: 768px) {
         .portfolio-container {
-            .portfolio-content {
-                @include d-flex(flex, center, start, column, start);
+            @include d-flex(flex, center, center, row, start);
+            gap:2em;
 
+            .portfolio-item {
+                @include d-flex(flex, center, center, row, start);
+                margin-bottom: 2em;
+
+                .portfolio-wrap {
+                    transition: 0.3s;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 1;
+
+                    &:before {
+                        content: "";
+                        background: rgba(255, 255, 255, 0.5);
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        transition: all ease-in-out 0.3s;
+                        z-index: 2;
+                        opacity: 0;
+                    }
+
+                    .img-fluid {
+                        width: 20em;
+                        height: 20em;
+                    }
+                }
             }
         }
     }
