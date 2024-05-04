@@ -182,32 +182,29 @@ function closeNav() {
   /* -------------------------------------------------------
                   Porfolio isotope and filter
   ---------------------------------------------------------*/
-  // window.addEventListener('load', () => {
-  //   let portfolioContainer = select('.portfolio-container');
-  //   if (portfolioContainer) {
-  //     let portfolioIsotope = new Isotope(portfolioContainer, {
-  //       itemSelector: '.portfolio-item'
-  //     });
 
-  //     let portfolioFilters = select('#portfolio-flters li', true);
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-  //     on('click', '#portfolio-flters li', function (e) {
-  //       e.preventDefault();
-  //       portfolioFilters.forEach(function (el) {
-  //         el.classList.remove('filter-active');
-  //       });
-  //       this.classList.add('filter-active');
+  const options = {
+    root: null,
+    threshold: 0.2 
+  };
 
-  //       portfolioIsotope.arrange({
-  //         filter: this.getAttribute('data-filter')
-  //       });
-  //       portfolioIsotope.on('arrangeComplete', function () {
-  //         AOS.refresh()
-  //       });
-  //     }, true);
-  //   }
+  const callback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  };
 
-  // });
+  const observer = new IntersectionObserver(callback, options);
+
+  portfolioItems.forEach(item => {
+    observer.observe(item);
+  });
+
 
 
   /* -------------------------------------------------------
