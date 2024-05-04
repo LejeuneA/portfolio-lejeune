@@ -1,0 +1,55 @@
+@use "custom";
+@use "mixins";
+@use "extends";
+@use "global";
+
+/*--------------------------------------------------------------
+                        # Skills Section
+--------------------------------------------------------------*/
+
+.skills-section {
+    @include d-flex(flex, start, start, column, start);
+
+    background: $light-green;
+    overflow: hidden;
+    width: 100%;
+
+    .skills-container {
+        @include d-flex(flex, start, start, column, start);
+        gap: 2em;
+        width: 100%;
+
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            padding-bottom: 0.5em;
+            position: relative;
+            color: $dark-green;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 2em;
+                height: 0.1em;
+                background: $primary-green;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .skills-content {
+            @include d-flex(flex, start, start, row, start);
+            gap: 5em;
+
+            .skills-container-left {
+                width: 50%;
+            }
+
+            .skills-container-right {
+                width: 50%;
+
+            }
+        }
+    }
+}
