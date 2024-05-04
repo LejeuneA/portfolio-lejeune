@@ -45,35 +45,49 @@
         }
 
         .portfolio-container {
-            @include d-flex(flex, center, center, row, start);
+            @include d-flex(flex, space-between, center, row, start);
             gap:2em;
+            width: 100%;
 
             .portfolio-item {
-                @include d-flex(flex, center, center, row, start);
+                @include d-flex(flex, center, end, row, center);
                 margin-bottom: 2em;
+                width: 25em; 
+                height: 18em;
+
+                background-color: $tertiary-green;
 
                 .portfolio-wrap {
+                    @include d-flex(flex, center, center, row, center);
                     transition: 0.3s;
                     position: relative;
                     overflow: hidden;
                     z-index: 1;
+                    width: 100%;
+                    height: 4em;
 
-                    &:before {
-                        content: "";
-                        background: rgba(255, 255, 255, 0.5);
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        bottom: 0;
-                        transition: all ease-in-out 0.3s;
-                        z-index: 2;
-                        opacity: 0;
-                    }
+                    .portfolio-link-left,
+                    .portfolio-link-right {
+                        @include d-flex(flex, center, center, row, center);
+                        width: 50%;
+                        height: 4em;
+                        border-right: 1px solid $light-green;
+                        background-color: $dark-green;
+                        color: $light-green;
+                        font-weight: 600;
+                        opacity:1;
+                        transition: all ease-in-out 0.5s;
 
-                    .img-fluid {
-                        width: 20em;
-                        height: 20em;
+                        i{
+                            font-size: 1.2em;
+                            color: $light-green;
+                            align-items: center;
+                            margin-right: 0.5em;
+                        }
+
+                        &:hover {
+                            background-color: $primary-green;
+                        }
                     }
                 }
             }
