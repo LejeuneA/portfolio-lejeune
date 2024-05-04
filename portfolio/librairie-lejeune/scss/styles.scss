@@ -1,0 +1,35 @@
+/* -----------------------------------------------------------------
+                        Custom styles
+ ----------------------------------------------------------------- */
+//  Settings
+@import "_custom";
+
+// Tools
+@import "_mixins";
+@import "_extends";
+
+// Generic
+@import "_reset";
+
+// Elements
+@import "_global";
+
+// Components
+@import "_navbar"; 
+@import "_footer";
+
+// Public pages
+@import "_index";
+@import "_livres";
+@import "_papeteries";
+@import "_cadeaux";   
+@import "_about-us";   
+@import "_work-with-us";
+@import "_conditions";
+@import "_product"; 
+@import "_contact";
+
+// Admin pages
+@import "_edit";
+@import "_login"; 
+@import "_manager";
