@@ -7,15 +7,10 @@
                         # About Section
 --------------------------------------------------------------*/
 
-$base-font-size: 16px; // Define base font size
-
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
 .about-section {
     @include d-flex(flex, start, start, column, start);
 
-    background: $light-green;
+    background: rgba(144, 238, 144, 0.1);
     overflow: hidden;
     width: 100%;
 
@@ -42,15 +37,16 @@ $base-font-size: 16px; // Define base font size
                 left: 0;
             }
         }
+
         .about-content {
             @include d-flex(flex, start, start, row, start);
-            gap:5em;
+            gap: 5em;
 
             .about-container-left {
                 width: 50%;
 
                 p {
-                    margin-bottom: 1em;
+                    margin-bottom: 3em;
                     line-height: 1.7em;
                     font-weight: 400;
 
@@ -72,15 +68,29 @@ $base-font-size: 16px; // Define base font size
             .about-container-right {
                 width: 50%;
 
-                .content {
-                    h3 {
+                p {
+                    margin-bottom: 2.5em;
+                    line-height: 1.7em;
+                    font-weight: 400;
+
+                    span.first-sentence {
+                        font-size: 1.2em;
                         font-weight: 500;
-                        font-size: 1.5em;
-                        color: $dark-green;
+                        display: block;
+                        margin-bottom: 0.5em;
+                        color: $primary-green;
                     }
 
-                    p:last-child {
-                        margin-bottom: 0;
+                    span {
+                        color: $dark-green;
+                        font-weight: 700;
+                    }
+                }
+
+                ul{
+                    line-height: 1.7em;
+                    i{
+                        color: $primary-green;
                     }
                 }
             }
@@ -90,12 +100,13 @@ $base-font-size: 16px; // Define base font size
     // Responsive styles for small screens
     @media (min-width: 320px) and (max-width: 768px) {
         .about-container {
-            .about-content{
+            .about-content {
                 @include d-flex(flex, center, start, column, start);
+
                 .about-container-right {
                     width: 100%;
                 }
-    
+
                 .about-container-left {
                     width: 100%;
                 }
