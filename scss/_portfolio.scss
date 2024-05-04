@@ -1,0 +1,57 @@
+@use "custom";
+@use "mixins";
+@use "extends";
+@use "global";
+
+/*--------------------------------------------------------------
+                        # Portfolio Section
+--------------------------------------------------------------*/
+
+.portfolio-section {
+    @include d-flex(flex, start, start, column, start);
+
+    background: rgba(144, 238, 144, 0.1);
+    overflow: hidden;
+    width: 100%;
+
+    .portfolio-container {
+        @include d-flex(flex, start, start, column, start);
+        gap: 2em;
+        width: 100%;
+
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            padding-bottom: 0.5em;
+            position: relative;
+            color: $dark-green;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 2em;
+                height: 0.1em;
+                background: $primary-green;
+                bottom: 0;
+                left: 0;
+            }
+
+        }
+        
+        .portfolio-content {
+            @include d-flex(flex, start, start, row, start);
+
+        }
+    }
+
+    // Responsive styles for small screens
+    @media (min-width: 320px) and (max-width: 768px) {
+        .portfolio-container {
+            .portfolio-content {
+                @include d-flex(flex, center, start, column, start);
+
+            }
+        }
+    }
+}
