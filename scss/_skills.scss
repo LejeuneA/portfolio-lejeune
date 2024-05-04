@@ -41,45 +41,99 @@
         .skills-content {
             @include d-flex(flex, start, start, row, start);
             gap: 5em;
+            width: 100%;
 
-            .skills-container-left,
-            .skills-container-right {
+            .skills-container-left {
                 width: 50%;
 
-                .skills {
-                    .progress {
-                        height: 60px;
+                .progress {
+                    height: 60px;
+                    display: block;
+                    background: none;
+                    border-radius: 0;
+
+                    .skill {
+                        padding: 0;
+                        margin: 0 0 6px 0;
+                        text-transform: uppercase;
                         display: block;
-                        background: none;
-                        border-radius: 0;
+                        font-weight: 600;
+                        font-family: "Poppins", sans-serif;
+                        color: $background;
 
-                        .skill {
-                            padding: 0;
-                            margin: 0 0 6px 0;
-                            text-transform: uppercase;
-                            display: block;
-                            font-weight: 600;
-                            font-family: "Poppins", sans-serif;
-                            color: $background;
-
-                            .val {
-                                float: right;
-                                font-style: normal;
-                            }
-                        }
+                        .val {
+                            float: right;
+                            font-style: normal;
+                          }
                     }
 
                     .progress-bar-wrap {
-                        background: #dce8f8;
+                        background:$light-gray;
                         height: 10px;
+
+                        .progress-bar {
+                            width: 1px;
+                            height: 10px;
+                            transition: 0.9s;
+                            background-color: $primary-green;
+                      }
+                    }
+                }
+            }
+
+            .skills-container-right {
+                width: 50%;
+
+                .progress {
+                    height: 60px;
+                    display: block;
+                    background: none;
+                    border-radius: 0;
+
+                    .skill {
+                        padding: 0;
+                        margin: 0 0 6px 0;
+                        text-transform: uppercase;
+                        display: block;
+                        font-weight: 600;
+                        font-family: "Poppins", sans-serif;
+                        color: $background;
+
+                        .val {
+                            float: right;
+                            font-style: normal;
+                          }
                     }
 
-                    .progress-bar {
-                        width: 1px;
+                    .progress-bar-wrap {
+                        background:$light-gray;
                         height: 10px;
-                        transition: 0.9s;
-                        background-color: #149ddd;
+
+                        .progress-bar {
+                            width: 1px;
+                            height: 10px;
+                            transition: 0.9s;
+                            background-color: $primary-green;
+                      }
                     }
+                }
+            }
+        }
+    }
+
+    // Responsive styles for small screens
+    @media (min-width: 320px) and (max-width: 768px) {
+        .skills-container {
+            .skills-content {
+                @include d-flex(flex, center, start, column, start);
+                gap:0.5em;
+
+                .skills-container-right {
+                    width: 100%;
+                }
+
+                .skills-container-left {
+                    width: 100%;
                 }
             }
         }
