@@ -10,7 +10,7 @@
 .skills-section {
     @include d-flex(flex, start, start, column, start);
 
-    background: $light-green;
+    background-color: rgba($primary-green, 0.2);
     overflow: hidden;
     width: 100%;
 
