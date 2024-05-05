@@ -10,7 +10,8 @@
 .product-container {
     @include d-flex(flex, center, center, column, center);
     gap: 2em;
-    margin: 5em 0;
+    margin-bottom: 5em;
+    margin-top: 5em;
 
     .product-info-container {
         @include d-flex(flex, center, center, row, center);
@@ -149,9 +150,11 @@
                  Article bottom section
 ---------------------------------------------------------*/
 .product-description {
+    @include d-flex(flex, start, start, column, start);
+    width: 100%;
+    
     h2 {
         font-size: 2em;
-        text-align: start;
         font-weight: 200;
         padding: 1em 0;
     }
