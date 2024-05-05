@@ -88,12 +88,24 @@
         }
 
         .form-bottom {
+            @include d-flex(flex, center, center, column, start);
             width: 100%;
-            margin-top: 7em;
-
+            margin-top: 5em;
+        
             .form-ctrl {
                 @extend %form-ctrl;
-
+        
+                textarea {
+                    width: 100%;
+                    padding: 0.5em;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    resize: vertical;
+                    font-size: 1em;
+                    line-height: 1.5;
+                    margin-top: 0.5em;
+                }
+        
                 .published_article {
                     span {
                         font-size: 0.7em;
