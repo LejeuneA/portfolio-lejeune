@@ -29,149 +29,11 @@
 							   Header
 	------------------------------------------------------------------>
     <header class="manager-header">
-        <nav class="navbar">
-            <div class="navbar-container container">
-                <!-- Logo -->
-                <a href="../public/index.html">
-                    <img src="../assets/logo/librairie-lejeune.png" class="navbar-brand-img"
-                        alt="Librairie Lejeune Logo">
-                </a>
-                <!-- Logo end -->
-
-                <!-- Right-side content -->
-                <div class="d-flex">
-                    <!-- Social icons -->
-                    <ul class="social-nav">
-                        <!-- Icons -->
-                        <li class="social-item">
-                            <a class="social-link" href="https://www.facebook.com/" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fa-brands fa-square-facebook fa-lg"></i>
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a class="social-link" href="https://twitter.com/" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fa-brands fa-x-twitter fa-lg"></i>
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a class="social-link" href="https://www.instagram.com" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="fa-brands fa-instagram fa-lg"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- Social icons end -->
-
-                    <!-- Search -->
-                    <form class="search" role="search">
-                        <div class="search-group">
-                            <input class="form-control" type="search" placeholder="Que cherhez-vous?"
-                                aria-label="Search">
-                            <button class="btn-search" type="submit"><i
-                                    class="fa-solid fa-magnifying-glass"></i></button>
-                        </div>
-                    </form>
-                    <!-- Search end -->
-
-                    <!-- Login button -->
-                    <a href="../admin/login.html" class="btn-primary">Se connecter</a>
-                    <!-- Login button end -->
-                </div>
-                <!-- Right-side content end -->
-            </div>
-        </nav>
-
-        <!---------------------------------------------------------------
-                                    Menu
-        ----------------------------------------------------------------->
-        <div class="navbar-menu">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="../public/index.html">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../admin/manager.html">Catégories</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../admin/manager-livre.html">Livres</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../admin/manager-papeterie.html">Papeterie</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../admin/manager-cadeau.html">Cadeaux</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../admin/manager.html">Ajouter</a>
-                </li>
-            </ul>
-        </div>
-        <!---------------------------------------------------------------
-                             Menu end
-        ---------------------------------------------------------------->
-
-        <!---------------------------------------------------------------
-                                 Offcanvas menu
-        ----------------------------------------------------------------->
-        <div id="mySidenav" class="sidenav">
-
-            <!-- Search bar -->
-            <form class="search" role="search">
-                <div class="search-group">
-                    <input class="form-control" type="search" placeholder="Que cherhez-vous?" aria-label="Search">
-                    <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-            </form>
-            <!-- Search bar end -->
-
-            <!-- Menu -->
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a class="nav-link" href="../public/index.html">Accueil</a>
-            <a class="nav-link" href="../admin/manager.html">Catégories</a>
-            <a class="nav-link" href="../admin/manager-livre.html">Livres</a>
-            <a class="nav-link" href="../admin/manager-papeterie.html">Papeterie</a>
-            <a class="nav-link" href="../admin/manager-cadeau.html">Cadeaux</a>
-            <a class="nav-link" href="../admin/manager.html">Ajouter</a>
-            <!-- Menu end -->
-
-            <!-- Login button -->
-            <a href="../admin/login.html" class="btn-login">Se connecter</a>
-            <!-- Login button end -->
-
-            <!-- Social icons -->
-            <ul class="social-nav">
-                <!-- Icons -->
-                <li class="social-item">
-                    <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-square-facebook fa-lg"></i>
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a class="social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-x-twitter fa-lg"></i>
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-instagram fa-lg"></i>
-                    </a>
-                </li>
-            </ul>
-            <!-- Social icons end -->
-
-        </div>
-
-        <!-- Hamburger icon for smaller screens -->
-        <div class="navbar-hamburger">
-            <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
-        </div>
-        <!------------------------------------------------------------- 
-                              Offcanvas menu end
-        --------------------------------------------------------------->
-
-        <!------------------------------------------------------------- 
+        <!-----------------------------------------------------------------
+							   Navigation
+	    ------------------------------------------------------------------>
+        <div data-include="navigation-admin"></div>
+        <!-----------------------------------------------------------------
 							Navigation end
 	    ------------------------------------------------------------------>
     </header>
@@ -182,38 +44,38 @@
     <main>
         <div class="container">
             <div id="content">
-                <main>
-                    <section class="product-container container">
-                        <div class="product-info-container">
-                            <div class="product-img">
-                                <img src="../assets/images/gifts/moments-de-bien-etre.jpg" alt="Moments de bien-être ">
+                <section class="product-container container">
+                    <div class="product-info-container">
+                        <div class="product-img">
+                            <img src="../assets/images/gifts/moments-de-bien-etre.jpg" alt="Moments de bien-être ">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h2>Moments de bien-être </h2>
+                                <p>Bongo</p>
                             </div>
-                            <div class="product-info">
-                                <div>
-                                    <h2>Moments de bien-être </h2>
-                                    <p>Bongo</p>
-                                </div>
-                                <div class="product-price">
-                                    <p>49.90 € <span><i class="fas fa-truck"></i> Livraison 1 à 2
-                                            semaines</span><span><i class="fas fa-receipt"></i> Retrait en magasin dans
-                                            2 h.</span></p>
-                                    <a href="#" class="btn-primary"><i class="fas fa-shopping-cart"></i> Ajouter au
-                                        panier</a>
-                                </div>
-                                <div class="product-advantages">
-                                    <ul>
-                                        <li><i class="fa fa-shopping-cart"></i> Passer une commande en un clic</li>
-                                        <li><i class="fa fa-lock"></i> Payer en toute sécurité</li>
-                                        <li><i class="fa fa-home"></i> Livraison en Belgique: 3,99 €</li>
-                                        <li><i class="fa fa-gift"></i> Livraison en magasin gratuite</li>
-                                    </ul>
-                                </div>
+                            <div class="product-price">
+                                <p>49.90 € <span><i class="fas fa-truck"></i> Livraison 1 à 2
+                                        semaines</span><span><i class="fas fa-receipt"></i> Retrait en magasin dans
+                                        2 h.</span></p>
+                                <a href="#" class="btn-primary"><i class="fas fa-shopping-cart"></i> Ajouter au
+                                    panier</a>
+                            </div>
+                            <div class="product-advantages">
+                                <ul>
+                                    <li><i class="fa fa-shopping-cart"></i> Passer une commande en un clic</li>
+                                    <li><i class="fa fa-lock"></i> Payer en toute sécurité</li>
+                                    <li><i class="fa fa-home"></i> Livraison en Belgique: 3,99 €</li>
+                                    <li><i class="fa fa-gift"></i> Livraison en magasin gratuite</li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="product-description">
-                            <h2>Description</h2>
-                            <p>Bongo Giftbox Moments de bien-être</p>
-                        </div>
+                    </div>
+                    <div class="product-description">
+                        <h2>Description</h2>
+                        <p>Bongo Giftbox Moments de bien-être</p>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
