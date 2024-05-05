@@ -198,6 +198,18 @@
             }
         }
     }
+
+    @media (min-width: 320px) and (max-width: 1199px) {
+        table{
+            tr{
+                td{
+                    &:nth-child(3) {
+                        font-size: 1em;
+                      }
+                }
+            }
+        }
+    }
 }
 
 .table-cadeaux{
@@ -238,6 +250,18 @@
 
                 &:nth-child(6) {
                     width: 40%;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 1199px) {
+        table{
+            tr{
+                td{
+                    &:nth-child(3) {
+                        font-size: 1em;
+                      }
                 }
             }
         }
