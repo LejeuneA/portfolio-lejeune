@@ -1,59 +1,26 @@
-<?php
-require_once('settings.php');
-
-// Check if user is not identified, redirect to login page
-if (!isset($_SESSION['IDENTIFY']) || !$_SESSION['IDENTIFY']) {
-    header('Location: login.php');
-    exit();
-}
-
-$msg = null;
-$result = null;
-$execute = false;
-
-// Check the database connection
-if (!is_object($conn)) {
-    $msg = getMessage($conn, 'error');
-} else {
-    // Fetch all cadeaux from the database
-    $result = getAllCadeauxDB($conn);
-
-    // Check if cadeau exist
-    if (is_array($result) && !empty($result)) {
-        $execute = true;
-
-        // Check if cadeau ID is provided in the URL for deletion
-        if (isset($_GET['idCadeau']) && is_numeric($_GET['idCadeau'])) {
-            $cadeauIdToDelete = $_GET['idCadeau'];
-
-            // Delete the cadeau from the database
-            $deleteResult = deleteCadeauDB($conn, $cadeauIdToDelete);
-
-            // Check deletion result and display appropriate message
-            if ($deleteResult === true) {
-                $msg = getMessage('Cadeau supprimé avec succès.', 'success');
-                // Refresh the page to reflect the changes after deletion
-                header('Location: manager-cadeau.php');
-                exit();
-            } else {
-                $msg = getMessage('Erreur lors de la suppression du cadeau. ' . $deleteResult, 'error');
-            }
-        }
-    } else {
-        $msg = getMessage('Il n\'y a pas de cadeau à afficher actuellement', 'error');
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-    <?php
-    // Include the head section
-    displayHeadSection('Gestion des cadeaux');
-    displayJSSection();
-    ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Découvrez Librairie Lejeune pour des livres, fournitures de papeterie et cadeaux uniques. Parcourez notre sélection dès aujourd'hui!">
+
+    <!-- Custom Sass file -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Google Fonts Preconnect and Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+
+    <!-- Title -->
+    <title>Librairie Lejeune</title>
 </head>
 
 <body>
@@ -61,12 +28,146 @@ if (!is_object($conn)) {
     <!-----------------------------------------------------------------
 							   Header
 	------------------------------------------------------------------>
-    <header>
-        <!-----------------------------------------------------------------
-							   Navigation
-	    ------------------------------------------------------------------>
-        <?php displayNavigation(); ?>
-        <!-----------------------------------------------------------------
+    <header class="manager-header">
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <!-- Logo -->
+                <a href="../public/index.html">
+                    <img src="../assets/logo/librairie-lejeune.png" class="navbar-brand-img"
+                        alt="Librairie Lejeune Logo">
+                </a>
+                <!-- Logo end -->
+
+                <!-- Right-side content -->
+                <div class="d-flex">
+                    <!-- Social icons -->
+                    <ul class="social-nav">
+                        <!-- Icons -->
+                        <li class="social-item">
+                            <a class="social-link" href="https://www.facebook.com/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-square-facebook fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a class="social-link" href="https://twitter.com/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-x-twitter fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a class="social-link" href="https://www.instagram.com" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Social icons end -->
+
+                    <!-- Search -->
+                    <form class="search" role="search">
+                        <div class="search-group">
+                            <input class="form-control" type="search" placeholder="Que cherhez-vous?"
+                                aria-label="Search">
+                            <button class="btn-search" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                    <!-- Search end -->
+
+                    <!-- Login button -->
+                    <a href="../admin/login.html" class="btn-primary">Se connecter</a>
+                    <!-- Login button end -->
+                </div>
+                <!-- Right-side content end -->
+            </div>
+        </nav>
+
+        <!---------------------------------------------------------------
+                                    Menu
+        ----------------------------------------------------------------->
+        <div class="navbar-menu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../public/index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../admin/manager-livre.html">Livres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../admin/manager-papeterie.html">Papeterie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../admin/manager-cadeau.html">Cadeaux</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../admin/manager.html">Ajouter</a>
+                </li>
+            </ul>
+        </div>
+        <!---------------------------------------------------------------
+                             Menu end
+        ---------------------------------------------------------------->
+
+        <!---------------------------------------------------------------
+                                 Offcanvas menu
+        ----------------------------------------------------------------->
+        <div id="mySidenav" class="sidenav">
+
+            <!-- Search bar -->
+            <form class="search" role="search">
+                <div class="search-group">
+                    <input class="form-control" type="search" placeholder="Que cherhez-vous?" aria-label="Search">
+                    <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+            <!-- Search bar end -->
+
+            <!-- Menu -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="nav-link" href="../public/index.html">Accueil</a>
+            <a class="nav-link" href="../admin/manager-livre.html">Livres</a>
+            <a class="nav-link" href="../admin/manager-papeterie.html">Papeterie</a>
+            <a class="nav-link" href="../admin/manager-cadeau.html">Cadeaux</a>
+            <a class="nav-link" href="../admin/manager.html">Ajouter</a>
+            <!-- Menu end -->
+
+            <!-- Login button -->
+            <a href="../admin/login.html" class="btn-login">Se connecter</a>
+            <!-- Login button end -->
+
+            <!-- Social icons -->
+            <ul class="social-nav">
+                <!-- Icons -->
+                <li class="social-item">
+                    <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-square-facebook fa-lg"></i>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a class="social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter fa-lg"></i>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Social icons end -->
+
+        </div>
+
+        <!-- Hamburger icon for smaller screens -->
+        <div class="navbar-hamburger">
+            <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <!------------------------------------------------------------- 
+                              Offcanvas menu end
+        --------------------------------------------------------------->
+
+        <!------------------------------------------------------------- 
 							Navigation end
 	    ------------------------------------------------------------------>
     </header>
@@ -74,18 +175,150 @@ if (!is_object($conn)) {
 							   Header end
 	------------------------------------------------------------------>
     <div class="table-cadeaux container">
-        <h1 class="title">Gérer les cadeaux</h2>
-        <div id="message">
-            <?= isset($msg) ? $msg : ''; ?>
-        </div>
+        <h1 class="title">Gérer les cadeaux</h1>
 
-        <div id="content">
-            <?php
-            // If cadeaux exist, display them in a table
-            if ($execute) {
-                displayCadeauxAsTable($result);
-            }
-            ?>
+        <div id="content" class="container">
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Titre</th>
+                    <th>Fonctionnalité</th>
+                    <th>Prix</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td data-cell="id">30001</td>
+                    <td data-cell="titre">Bongo FR Moments de bien-être/td>
+                    <td data-cell="fonctionnalité">Bongo</td>
+                    <td data-cell="prix">49.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">30002</td>
+                    <td data-cell="titre">Bongo FR Cinéma & Pop-corn à deux</td>
+                    <td data-cell="fonctionnalité">Bongo</td>
+                    <td data-cell="prix">34.90 €</td>
+                    <td data-cell="statut">Inactif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">30003</td>
+                    <td data-cell="titre">Bongo FR Tables Romantiques</td>
+                    <td data-cell="fonctionnalité">Bongo</td>
+                    <td data-cell="prix">69.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">30004</td>
+                    <td data-cell="titre">Bongo FR Parenthese de Douceur</td>
+                    <td data-cell="fonctionnalité">Bongo</td>
+                    <td data-cell="prix">29.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">30005</td>
+                    <td data-cell="titre">Bongo FR Brasserie</td>
+                    <td data-cell="fonctionnalité">Bongo</td>
+                    <td data-cell="prix">29.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">30006</td>
+                    <td data-cell="titre">Bongo FR Rendez-vous Gastronomique</td>
+                    <td data-cell="fonctionnalité">Bongo/td>
+                    <td data-cell="prix">99.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">30007</td>
+                    <td data-cell="titre">Bongo FR Tentations a Deux</td>
+                    <td data-cell="fonctionnalité">Bongo</td>
+                    <td data-cell="prix">49.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">30008</td>
+                    <td data-cell="titre">Bongo FR Evasion a Deux</td>
+                    <td data-cell="fonctionnalité">Bongo</td>
+                    <td data-cell="prix">69.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">30009</td>
+                    <td data-cell="titre">Bongo FR Week end Spa et Volupte</td>
+                    <td data-cell="fonctionnalité">Bongo</td>
+                    <td data-cell="prix">139.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">30010</td>
+                    <td data-cell="titre">Bongo FR Tables Étoilées Michelin</td>
+                    <td data-cell="fonctionnalité">Bongo</td>
+                    <td data-cell="prix">149.90 €</td>
+                    <td data-cell="statut">Inactif</td>
+                    <td>
+                        <a href="edit-cadeau.html" class="btn-secondary">Modifier</a>
+                        <a href="article-cadeau.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+            </table>
         </div>
     </div><!-----------------------------------------------------------------
 								Footer
@@ -97,29 +330,10 @@ if (!is_object($conn)) {
 							  Footer end
 	------------------------------------------------------------------>
 
-    <script>
-        // JavaScript functions for handling cadeau actions
-        function modifierCadeau(cadeauId) {
-            // Redirect to the edit page with the specified cadeau ID
-            window.location.href = 'edit-cadeau.php?idCadeau=' + cadeauId;
-        }
-
-        function afficherCadeau(cadeauId) {
-            // Redirect to the cadeau page with the specified cadeau ID
-            window.location.href = 'article-cadeau.php?idCadeau=' + cadeauId;
-        }
-
-        function supprimerCadeau(cadeauId) {
-            // Confirm cadeau deletion
-            if (confirm('Êtes-vous certain de vouloir supprimer le cadeau ci-dessous ?')) {
-                // Redirect to manager-cadeau.php with the cadeau ID for deletion
-                window.location.href = 'manager-cadeau.php?idCadeau=' + cadeauId;
-            }
-        }
-    </script>
-
     <!-- Font Awesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Include functions.js -->
     <script src="../js/functions.js"></script>
