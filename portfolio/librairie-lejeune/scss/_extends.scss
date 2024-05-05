@@ -372,12 +372,15 @@
 
   // Responsive styles for table
   @media (min-width: 320px) and (max-width: 768px) {
+    overflow-y: visible;
+
     h1 {
       margin-bottom: 0;
     }
 
     table {
       border: 0;
+      font-size: small;
 
       tr {
         border: 0;
