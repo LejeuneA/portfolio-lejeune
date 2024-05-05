@@ -1,59 +1,26 @@
-<?php
-require_once('settings.php');
-
-// Check if user is not identified, redirect to login page
-if (!isset($_SESSION['IDENTIFY']) || !$_SESSION['IDENTIFY']) {
-    header('Location: login.php');
-    exit();
-}
-
-$msg = null;
-$result = null;
-$execute = false;
-
-// Check the database connection
-if (!is_object($conn)) {
-    $msg = getMessage($conn, 'error');
-} else {
-    // Fetch all livres from the database
-    $result = getAllLivresDB($conn);
-
-    // Check if livres exist
-    if (is_array($result) && !empty($result)) {
-        $execute = true;
-
-        // Check if livre ID is provided in the URL for deletion
-        if (isset($_GET['idLivre']) && is_numeric($_GET['idLivre'])) {
-            $livreIdToDelete = $_GET['idLivre'];
-
-            // Delete the livre from the database
-            $deleteResult = deleteLivreDB($conn, $livreIdToDelete);
-
-            // Check deletion result and display appropriate message
-            if ($deleteResult === true) {
-                $msg = getMessage('Livre supprimé avec succès.', 'success');
-                // Refresh the page to reflect the changes after deletion
-                header('Location: manager-livre.php');
-                exit();
-            } else {
-                $msg = getMessage('Erreur lors de la suppression du livre. ' . $deleteResult, 'error');
-            }
-        }
-    } else {
-        $msg = getMessage('Il n\'y a pas de livre à afficher actuellement', 'error');
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-    <?php
-    // Include the head section
-    displayHeadSection('Gestion des livres');
-    displayJSSection();
-    ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Découvrez Librairie Lejeune pour des livres, fournitures de papeterie et cadeaux uniques. Parcourez notre sélection dès aujourd'hui!">
+
+    <!-- Custom Sass file -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Google Fonts Preconnect and Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+
+    <!-- Title -->
+    <title>Librairie Lejeune</title>
 </head>
 
 <body>
@@ -61,12 +28,146 @@ if (!is_object($conn)) {
     <!-----------------------------------------------------------------
 							   Header
 	------------------------------------------------------------------>
-    <header>
-        <!-----------------------------------------------------------------
-							   Navigation
-	    ------------------------------------------------------------------>
-        <?php displayNavigation(); ?>
-        <!-----------------------------------------------------------------
+    <header class="manager-header">
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <!-- Logo -->
+                <a href="../public/index.html">
+                    <img src="../assets/logo/librairie-lejeune.png" class="navbar-brand-img"
+                        alt="Librairie Lejeune Logo">
+                </a>
+                <!-- Logo end -->
+
+                <!-- Right-side content -->
+                <div class="d-flex">
+                    <!-- Social icons -->
+                    <ul class="social-nav">
+                        <!-- Icons -->
+                        <li class="social-item">
+                            <a class="social-link" href="https://www.facebook.com/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-square-facebook fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a class="social-link" href="https://twitter.com/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-x-twitter fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a class="social-link" href="https://www.instagram.com" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Social icons end -->
+
+                    <!-- Search -->
+                    <form class="search" role="search">
+                        <div class="search-group">
+                            <input class="form-control" type="search" placeholder="Que cherhez-vous?"
+                                aria-label="Search">
+                            <button class="btn-search" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                    <!-- Search end -->
+
+                    <!-- Login button -->
+                    <a href="../admin/login.html" class="btn-primary">Se connecter</a>
+                    <!-- Login button end -->
+                </div>
+                <!-- Right-side content end -->
+            </div>
+        </nav>
+
+        <!---------------------------------------------------------------
+                                    Menu
+        ----------------------------------------------------------------->
+        <div class="navbar-menu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../public/index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../admin/manager-livre.html">Livres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../admin/manager-papeterie.html">Papeterie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../admin/manager-cadeau.html">Cadeaux</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../admin/manager.html">Ajouter</a>
+                </li>
+            </ul>
+        </div>
+        <!---------------------------------------------------------------
+                             Menu end
+        ---------------------------------------------------------------->
+
+        <!---------------------------------------------------------------
+                                 Offcanvas menu
+        ----------------------------------------------------------------->
+        <div id="mySidenav" class="sidenav">
+
+            <!-- Search bar -->
+            <form class="search" role="search">
+                <div class="search-group">
+                    <input class="form-control" type="search" placeholder="Que cherhez-vous?" aria-label="Search">
+                    <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
+            <!-- Search bar end -->
+
+            <!-- Menu -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="nav-link" href="../public/index.html">Accueil</a>
+            <a class="nav-link" href="../admin/manager-livre.html">Livres</a>
+            <a class="nav-link" href="../admin/manager-papeterie.html">Papeterie</a>
+            <a class="nav-link" href="../admin/manager-cadeau.html">Cadeaux</a>
+            <a class="nav-link" href="../admin/manager.html">Ajouter</a>
+            <!-- Menu end -->
+
+            <!-- Login button -->
+            <a href="../admin/login.html" class="btn-login">Se connecter</a>
+            <!-- Login button end -->
+
+            <!-- Social icons -->
+            <ul class="social-nav">
+                <!-- Icons -->
+                <li class="social-item">
+                    <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-square-facebook fa-lg"></i>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a class="social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-x-twitter fa-lg"></i>
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a class="social-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Social icons end -->
+
+        </div>
+
+        <!-- Hamburger icon for smaller screens -->
+        <div class="navbar-hamburger">
+            <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <!------------------------------------------------------------- 
+                              Offcanvas menu end
+        --------------------------------------------------------------->
+
+        <!------------------------------------------------------------- 
 							Navigation end
 	    ------------------------------------------------------------------>
     </header>
@@ -75,17 +176,160 @@ if (!is_object($conn)) {
 	------------------------------------------------------------------>
     <div class="table-livres container">
         <h1 class="title">Gérer les livres</h1>
-        <div id="message">
-            <?= isset($msg) ? $msg : ''; ?>
-        </div>
 
         <div id="content" class="container">
-            <?php
-            // If livres exist, display them in a table
-            if ($execute) {
-                displayLivresAsTable($result);
-            }
-            ?>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Titre</th>
+                    <th>Auteur</th>
+                    <th>Fonctionnalité</th>
+                    <th>Prix</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td data-cell="id">10001</td>
+                    <td data-cell="titre">Les yeux de Mona</td>
+                    <td data-cell="auteur">Thomas Schlesser</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">23.00 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">10002</td>
+                    <td data-cell="titre">A touch of chaos</td>
+                    <td data-cell="auteur">Scarlett St. Clair</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">18.10 €</td>
+                    <td data-cell="statut">Inactif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">10003</td>
+                    <td data-cell="titre">Norferville</td>
+                    <td data-cell="auteur">Franck Thilliez</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">22.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">10004</td>
+                    <td data-cell="titre">Holly</td>
+                    <td data-cell="auteur">Stephen King</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">25.00 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">10005</td>
+                    <td data-cell="titre">Captive. Vol. 1</td>
+                    <td data-cell="auteur">Sarah Rivens</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">21.10 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">10006</td>
+                    <td data-cell="titre">Witch & wolf</td>
+                    <td data-cell="auteur">Chloé Wilkox</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">16.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">10007</td>
+                    <td data-cell="titre">A touch of ruin</td>
+                    <td data-cell="auteur">Scarlett St. Clair</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">18.95 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">10008</td>
+                    <td data-cell="titre">Trois vies par semaine</td>
+                    <td data-cell="auteur">Michel Bussi</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">19.20 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">10009</td>
+                    <td data-cell="titre">Comme si de rien n'était</td>
+                    <td data-cell="auteur">Barbara Abel</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">21.00 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-cell="id">10010</td>
+                    <td data-cell="titre">Les effacées</td>
+                    <td data-cell="auteur">Bernard Minier</td>
+                    <td data-cell="fonctionnalité">Livre broché | Français</td>
+                    <td data-cell="prix">22.90 €</td>
+                    <td data-cell="statut">Actif</td>
+                    <td>
+                        <a href="edit-livre.html" class="btn-secondary">Modifier</a>
+                        <a href="article-livre.html" class="btn-secondary">Afficher</a>
+                        <button class="btn-primary">Supprimer</button>
+                    </td>
+                </tr>
+
+            </table>
         </div>
     </div><!-----------------------------------------------------------------
 								Footer
@@ -97,29 +341,10 @@ if (!is_object($conn)) {
 							  Footer end
 	------------------------------------------------------------------>
 
-    <script>
-        // JavaScript functions for handling livre actions
-        function modifierLivre(livreId) {
-            // Redirect to the edit page with the specified livre ID
-            window.location.href = 'edit-livre.php?idLivre=' + livreId;
-        }
-
-        function afficherLivre(livreId) {
-            // Redirect to the livre page with the specified livre ID
-            window.location.href = 'article-livre.php?idLivre=' + livreId;
-        }
-
-        function supprimerLivre(livreId) {
-            // Confirm livre deletion
-            if (confirm('Êtes-vous certain de vouloir supprimer le livre ci-dessous ?')) {
-                // Redirect to manager-livre.php with the livre ID for deletion
-                window.location.href = 'manager-livre.php?idLivre=' + livreId;
-            }
-        }
-    </script>
-
     <!-- Font Awesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"
+        integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Include functions.js -->
     <script src="../js/functions.js"></script>
