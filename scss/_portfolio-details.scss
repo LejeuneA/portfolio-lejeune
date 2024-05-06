@@ -97,7 +97,7 @@
                 }
 
                 .portfolio-info-container {
-                    @include d-flex(flex, center, start, column, center);
+                    @include d-flex(flex, center, center, column, center);
                     width: 100%;
                     gap: 2em;
                     padding-top: 2em;
@@ -112,6 +112,7 @@
 
                         .portfolio-info-left {
                             width: 50%;
+                            padding: 0.3em;
 
                             .portfolio-info-icons {
                                 @include d-flex(flex, center, start, row, center);
@@ -138,6 +139,7 @@
                         .portfolio-info-right {
                             width: 50%;
                             border-left: 1px solid $dark-green;
+                            padding: 0.3em;
 
                             .portfolio-info-icons {
                                 @include d-flex(flex, center, start, row, center);
@@ -229,13 +231,13 @@
             iframe{
                 border: 1px solid $dark-green;
                 width:100%;
-                height:20em;
+                height:25em;
             }
         }
     }
 
     // Responsive styles for small screens
-    @media (min-width: 320px) and (max-width: 1199px) {
+    @media (min-width: 320px) and (max-width: 768px) {
         .portfolio-details-container {
             .portfolio-details-top {
                 
@@ -258,13 +260,13 @@
 
                     .portfolio-info-container {
                         h4{
-                            margin-bottom: 1em;
+                            margin-bottom: 1.5em;
                             font-size: 1.3em;
                         }
 
                         .portfolio-info-container-top {
                             @include d-flex(flex, center, start, column, center);
-                            gap:3em;
+                            gap:2em;
 
                             .portfolio-info-left {
                                 @include d-flex(flex, center, center, column, center);
@@ -314,6 +316,13 @@
                             }
                         }
                     }
+                }
+            }
+
+            .portfolio-details-bottom {
+                iframe{
+                    width:100%;
+                    height:20em;
                 }
             }
         }
