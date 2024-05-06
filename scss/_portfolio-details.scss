@@ -52,12 +52,13 @@
                 border: 1px solid $primary-green;
 
                 .swiper-wrapper {
-                    align-items: center;
-
                     .swiper-slide {
+                        width: 100%;
+                        display: flex;
 
                         img {
                             width: 100%;
+                            object-fit: cover;
                         }
                     }
                 }
@@ -82,22 +83,38 @@
             }
 
             .portfolio-info {
+                @include d-flex(flex, center, center, column, center);
                 width: 100%;
-                box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+                box-shadow: $box-shadow-primary;
+                padding: 2em;
+                
 
                 h3 {
-                    font-size: 2.5em;
+                    font-size: 1.5em;
                     font-weight: 700;
-                    border-bottom: 1px solid #eee;
+                    border-bottom: 1px solid $dark-green;
+                    width: 100%;
+                    padding-bottom: 0.5em;
+                    color: $dark-green
                 }
 
-                ul {
-                    list-style: none;
-                    padding: 0;
-                    font-size: 1em;
+                .portfolio-info-container{
+                    @include d-flex(flex, center, center, row, center);
+                    width: 100%;
+                    gap: 2em;
+                    padding: 2em 0;
 
-                    li + li {
-                        margin-top: 1em;
+                    h4{
+                        font-size: 1.5em;
+                        color: $primary-green;
+                    }
+                    
+                    .portfolio-info-left{
+                        width: 50%;
+                    }
+    
+                    .portfolio-info-right{
+                        width: 50%;
                     }
                 }
             }
