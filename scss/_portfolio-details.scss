@@ -62,7 +62,6 @@
                         }
                     }
                 }
-
             }
 
             .swiper-pagination {
@@ -87,7 +86,6 @@
                 width: 100%;
                 box-shadow: $box-shadow-primary;
                 padding: 2em;
-                
 
                 h3 {
                     font-size: 1.5em;
@@ -95,37 +93,37 @@
                     border-bottom: 1px solid $dark-green;
                     width: 100%;
                     padding-bottom: 0.5em;
-                    color: $dark-green
+                    color: $dark-green;
                 }
 
-                .portfolio-info-container{
+                .portfolio-info-container {
                     @include d-flex(flex, center, start, row, center);
                     width: 100%;
                     gap: 2em;
                     padding: 2em 0;
 
-                    h4{
+                    h4 {
                         font-size: 1.5em;
                         color: $primary-green;
                         margin-bottom: 2em;
                     }
-                    
-                    .portfolio-info-left{
+
+                    .portfolio-info-left {
                         width: 50%;
 
-                        .portfolio-info-icons{
+                        .portfolio-info-icons {
                             @include d-flex(flex, center, start, row, center);
 
-                            .portfolio-info-icon{
+                            .portfolio-info-icon {
                                 @include d-flex(flex, center, center, column, center);
                                 width: 33%;
-                                
-                                img{
+
+                                img {
                                     width: 3em;
                                     margin-bottom: 0.5em;
                                 }
 
-                                p{
+                                p {
                                     text-align: center;
                                     width: 100%;
                                     font-weight: 500;
@@ -134,25 +132,31 @@
                             }
                         }
                     }
-    
-                    .portfolio-info-right{
+
+                    .portfolio-info-right {
                         width: 50%;
                         border-left: 1px solid $dark-green;
 
-                        .portfolio-info-icons{
+                        .portfolio-info-icons {
                             @include d-flex(flex, center, start, row, center);
+                            width: 100%;
+                            gap: 1em;
+                            margin-bottom: 2em;
 
-                            .portfolio-info-icon{
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            .portfolio-info-icon {
                                 @include d-flex(flex, center, center, row, center);
-                                width: 100%;
                                 flex-wrap: wrap;
-                                
-                                img{
+                                width: 50%;
+
+                                img {
                                     width: 3em;
                                     margin-bottom: 0.5em;
                                 }
 
-                                p{
+                                p {
                                     text-align: center;
                                     width: 100%;
                                     font-weight: 500;
