@@ -50,11 +50,11 @@
             width: 100%;
 
             .portfolio-items {
-                @include d-flex(flex, end, end, column, center);
+                @include d-flex(flex, center, center, column, center);
                 margin-bottom: 2em;
                 width: 25em;
                 height: 18em;
-                background-color: $primary-blue;
+                background-color: $background;
 
 
                 .portfolio-item-top{
@@ -62,13 +62,13 @@
                     flex: 1;
                     
                     img{
-                        width: 90%;
+                        width: 70%;
                     }
                     
                 }
 
                 .portfolio-wrap {
-                    @include d-flex(flex, end, center, column, center);
+                    @include d-flex(flex, center, center, column, center);
                     transition: 0.3s;
                     position: relative;
                     overflow: hidden;
@@ -126,6 +126,25 @@
                             &:hover {
                                 background-color: $primary-green;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Responsive styles for small screens
+    @media (min-width: 320px) and (max-width: 1199px) {
+        .portfolio-content {
+            .portfolio-container {
+                @include d-flex(flex, center, center, column, center);
+
+                .portfolio-items {
+                    width: 100%;
+
+                    .portfolio-item-top{
+                        img{
+                            width: 50%;
                         }
                     }
                 }
