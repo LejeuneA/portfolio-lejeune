@@ -92,75 +92,117 @@
                     font-weight: 700;
                     border-bottom: 1px solid $dark-green;
                     width: 100%;
-                    padding-bottom: 0.5em;
+                    padding-bottom: 1em;
                     color: $dark-green;
                 }
 
                 .portfolio-info-container {
-                    @include d-flex(flex, center, start, row, center);
+                    @include d-flex(flex, center, start, column, center);
                     width: 100%;
                     gap: 2em;
-                    padding: 2em 0;
+                    padding-top: 2em;
 
                     h4 {
                         font-size: 1.5em;
                         color: $primary-green;
                         margin-bottom: 2em;
                     }
+                    .portfolio-info-container-top {
+                        @include d-flex(flex, center, start, row, center);
 
-                    .portfolio-info-left {
-                        width: 50%;
+                        .portfolio-info-left {
+                            width: 50%;
 
-                        .portfolio-info-icons {
-                            @include d-flex(flex, center, start, row, center);
+                            .portfolio-info-icons {
+                                @include d-flex(flex, center, start, row, center);
 
-                            .portfolio-info-icon {
-                                @include d-flex(flex, center, center, column, center);
-                                width: 33%;
+                                .portfolio-info-icon {
+                                    @include d-flex(flex, center, center, column, center);
+                                    width: 33%;
 
-                                img {
-                                    width: 3em;
-                                    margin-bottom: 0.5em;
+                                    img {
+                                        width: 3em;
+                                        margin-bottom: 0.5em;
+                                    }
+
+                                    p {
+                                        text-align: center;
+                                        width: 100%;
+                                        font-weight: 500;
+                                        margin-top: 0.3em;
+                                    }
                                 }
+                            }
+                        }
 
-                                p {
-                                    text-align: center;
-                                    width: 100%;
-                                    font-weight: 500;
-                                    margin-top: 0.3em;
+                        .portfolio-info-right {
+                            width: 50%;
+                            border-left: 1px solid $dark-green;
+
+                            .portfolio-info-icons {
+                                @include d-flex(flex, center, start, row, center);
+                                width: 100%;
+                                gap: 1em;
+                                margin-bottom: 2em;
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                                .portfolio-info-icon {
+                                    @include d-flex(flex, center, center, row, center);
+                                    flex-wrap: wrap;
+                                    width: 50%;
+
+                                    img {
+                                        width: 3em;
+                                        height: auto;
+                                        margin-bottom: 0.5em;
+
+                                        &[src*="mysql"] {
+                                            width: 4.5em;
+                                        }
+                                    }
+
+                                    p {
+                                        text-align: center;
+                                        width: 100%;
+                                        font-weight: 500;
+                                        margin-top: 0.3em;
+                                    }
                                 }
                             }
                         }
                     }
 
-                    .portfolio-info-right {
-                        width: 50%;
-                        border-left: 1px solid $dark-green;
+                    .portfolio-info-container-bottom {
+                        @include d-flex(flex, center, start, row, center);
+                        width: 100%;
 
-                        .portfolio-info-icons {
-                            @include d-flex(flex, center, start, row, center);
+                        .portfolio-info-links {
+                            @include d-flex(flex, center, center, row, center);
                             width: 100%;
-                            gap: 1em;
-                            margin-bottom: 2em;
 
-                            &:last-child {
-                                margin-bottom: 0;
-                            }
-                            .portfolio-info-icon {
+                            .portfolio-link-left,
+                            .portfolio-link-right {
                                 @include d-flex(flex, center, center, row, center);
-                                flex-wrap: wrap;
                                 width: 50%;
+                                height: 4em;
+                                border-right: 1px solid $light-green;
+                                background-color: $dark-green;
+                                color: $light-green;
+                                font-weight: 600;
+                                opacity: 1;
+                                transition: all ease-in-out 0.5s;
 
-                                img {
-                                    width: 3em;
-                                    margin-bottom: 0.5em;
+                                i {
+                                    font-size: 1.2em;
+                                    color: $light-green;
+                                    align-items: center;
+                                    margin-right: 0.5em;
                                 }
 
-                                p {
-                                    text-align: center;
-                                    width: 100%;
-                                    font-weight: 500;
-                                    margin-top: 0.3em;
+                                &:hover {
+                                    background-color: $primary-green;
                                 }
                             }
                         }
@@ -181,6 +223,91 @@
 
                 p {
                     padding: 0;
+                }
+            }
+        }
+    }
+
+    // Responsive styles for small screens
+    @media (min-width: 320px) and (max-width: 1199px) {
+        .portfolio-details-container {
+            .portfolio-details-top {
+                
+                .swiper-pagination {
+                    margin-top: 0;
+    
+                    .swiper-pagination-bullet {
+                        width: 0.7em;
+                        height: 0.7em;
+                    }
+                }
+
+                .portfolio-info {
+                    padding: 1em;
+
+                    h3 {
+                        padding-bottom: 0.5em;
+                        font-size: 1.3em;
+                    }
+
+                    .portfolio-info-container {
+                        h4{
+                            margin-bottom: 1em;
+                            font-size: 1.3em;
+                        }
+
+                        .portfolio-info-container-top {
+                            @include d-flex(flex, center, start, column, center);
+                            gap:3em;
+
+                            .portfolio-info-left {
+                                @include d-flex(flex, center, center, column, center);
+                                width: 100%;
+
+                                .portfolio-info-icons {                                   
+                                    .portfolio-info-icon {
+                                        img{
+                                            width: 2.5em;
+                                        }
+
+                                        p{
+                                            font-size: 0.8em;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .portfolio-info-right {
+                                @include d-flex(flex, center, center, column, center);
+                                width: 100%;
+                                border-left: none;
+
+                                .portfolio-info-icons {                                   
+                                    .portfolio-info-icon {
+                                        img{
+                                            width: 2.5em;
+                                        }
+
+                                        p{
+                                            font-size: 0.8em;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .portfolio-info-container-bottom {
+                            .portfolio-info-links {
+                                @include d-flex(flex, center, center, column, center);
+                                gap:0.3em;
+
+                                .portfolio-link-left,
+                                .portfolio-link-right {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
