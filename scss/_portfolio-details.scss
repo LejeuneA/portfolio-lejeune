@@ -99,7 +99,7 @@
                 }
 
                 .portfolio-info-container{
-                    @include d-flex(flex, center, center, row, center);
+                    @include d-flex(flex, center, start, row, center);
                     width: 100%;
                     gap: 2em;
                     padding: 2em 0;
@@ -107,14 +107,59 @@
                     h4{
                         font-size: 1.5em;
                         color: $primary-green;
+                        margin-bottom: 2em;
                     }
                     
                     .portfolio-info-left{
                         width: 50%;
+
+                        .portfolio-info-icons{
+                            @include d-flex(flex, center, start, row, center);
+
+                            .portfolio-info-icon{
+                                @include d-flex(flex, center, center, column, center);
+                                width: 33%;
+                                
+                                img{
+                                    width: 3em;
+                                    margin-bottom: 0.5em;
+                                }
+
+                                p{
+                                    text-align: center;
+                                    width: 100%;
+                                    font-weight: 500;
+                                    margin-top: 0.3em;
+                                }
+                            }
+                        }
                     }
     
                     .portfolio-info-right{
                         width: 50%;
+                        border-left: 1px solid $dark-green;
+
+                        .portfolio-info-icons{
+                            @include d-flex(flex, center, start, row, center);
+
+                            .portfolio-info-icon{
+                                @include d-flex(flex, center, center, row, center);
+                                width: 100%;
+                                flex-wrap: wrap;
+                                
+                                img{
+                                    width: 3em;
+                                    margin-bottom: 0.5em;
+                                }
+
+                                p{
+                                    text-align: center;
+                                    width: 100%;
+                                    font-weight: 500;
+                                    margin-top: 0.3em;
+                                }
+                            }
+                        }
                     }
                 }
             }
