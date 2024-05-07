@@ -17,6 +17,17 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+p{
+  line-height: 1.5em;
+  font-weight: 400;
+  color: $background;
+  font-size: 1.1em;
+
+  @media (min-width: 320px) and (max-width: 768px) {
+    font-size: 1em;
+  }
+}
+
 /*--------------------------------------------------------------
                 Back to top button
 --------------------------------------------------------------*/
