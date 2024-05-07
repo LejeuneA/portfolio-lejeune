@@ -9,7 +9,7 @@
 .services-section {
     @include d-flex(flex, start, start, column, start);
 
-    background: rgba(144, 238, 144, 0.1);
+    background: rgba(144, 238, 144, 0.2);
     overflow: hidden;
     width: 100%;
 
@@ -48,15 +48,50 @@
         }
 
         .services-container {
-            @include d-flex(flex, space-between, center, row, start);
+            @include d-flex(flex, center, center, row, start);
             gap: 2em;
             width: 100%;
 
             .services-item {
                 @include d-flex(flex, center, center, row, center);
+                width: 50%;
+                gap: 1em;
+                padding: 2em;
 
-                .services-item-content{
+                .image-container {
+                    position: relative;
+            
+                    .icon,
+                    .hover-icon {
+                        display: block;
+                        width: 5em;
+                        height: auto;
+                    }
+            
+                    .hover-icon {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                }
+            
+                &:hover {
+                    .hover-icon {
+                        opacity: 1;
+                    }
+                }
+
+                .services-item-content {
                     @include d-flex(flex, center, start, column, start);
+
+                    h4{
+                        font-size: 1.3em;
+                        font-weight: 600;
+                        margin-bottom: 0.3em;
+                        color:$dark-green;
+                    }
                 }
             }
         }
