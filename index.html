@@ -1,450 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
-	<meta
-		content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege"
-		name="keywords">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description"
+			content="Acelya Lejeune - Web Developer and Graphic Designer">
+		<meta
+			content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege"
+			name="keywords">
 
-	<!-- Vendor CSS Files -->
-	<link href="./vendor/aos/aos.css" rel="stylesheet">
-	<link href="./vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link href="./vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-	<link href="./vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<!-- Vendor CSS Files -->
+		<link href="./vendor/aos/aos.css" rel="stylesheet">
+		<link href="./vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+		<link href="./vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+		<link href="./vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-	<!-- Main Css file -->
-	<link rel="stylesheet" href="./css/styles.css">
+		<!-- Main Css file -->
+		<link rel="stylesheet" href="./css/styles.css">
 
-	<!-- Favicons -->
+		<!-- Favicons -->
 
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet">
 
-	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-		rel="stylesheet">
+		<!-- Title -->
+		<title>Acelya Lejeune - Web Developer and Graphic Designer</title>
+	</head>
 
-	<!-- Title -->
-	<title>Acelya Lejeune - Web Developer and Graphic Designer</title>
-</head>
-
-<body>
-	<!-----------------------------------------------------------------
+	<body>
+		<!-----------------------------------------------------------------
                                Navigation
-    ------------------------------------------------------------------>
-	<header id="header">
-		<!-- Profile -->
-		<div class="profile">
-			<img src="./assets/images/header-photo.jpg" alt="" class="profile-img">
-			<h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
-			<div class="social-links">
-				<a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-				<a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-						class="fa fa-linkedin"></i></a>
-				<a href="./public/fr.html" class="language" target="_blank"><b>FR</b></a>
+    	------------------------------------------------------------------>
+		<div data-include="navigation-index"></div>
+		<!-----------------------------------------------------------------
+					Navigation end
+		------------------------------------------------------------------>
+		<section id="hero" class="hero">
+			<div class="hero-container" data-aos="fade-in">
+				<h1>Açelya Lejeune</h1>
+				<p>I'm a <span class="typed"
+						data-typed-items="Web Developer, Graphic Designer"></span></p>
 			</div>
-		</div>
-
-		<!-- Nav Menu -->
-		<nav id="navbar" class="nav-menu navbar">
-			<ul>
-				<li><a href="#hero" class="nav-link scrollto active"><i class="fas fa-home"></i><span>Home</span></a>
-				</li>
-				<li><a href="#about" class="nav-link scrollto"><i class="fas fa-user"></i> <span>About</span></a></li>
-				<li><a href="#skills" class="nav-link scrollto"><i class="fas fa-code"></i> <span>Skills</span></a>
-				</li>
-				<li><a href="#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-						<span>Portfolio</span></a></li>
-				<li><a href="#services" class="nav-link scrollto"><i class="fas fa-tools"></i> <span>Services</span></a>
-				</li>
-				<li><a href="#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-						<span>Contact</span></a>
-				</li>
-			</ul>
-			<div class="btn-resume">
-				<a class="btn-resume" href="./assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
-			</div>
-		</nav>
-		<!-- End Nav Menu -->
-	</header>
-	<!-- End Header -->
-
-	<!-----------------------------------------------------------------
-                        	Offcanvas Menu
-    ------------------------------------------------------------------>
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<!-- Profile -->
-		<div class="profile">
-			<img src="./assets/images/header-photo.jpg" alt="" class="profile-img">
-			<h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
-			<div class="social-links">
-				<a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-				<a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-						class="fa fa-linkedin"></i></a>
-				<a href="./public/fr.html" class="language" target="_blank"><b>FR</b></a>
-			</div>
-		</div>
-
-		<!-- Nav Menu -->
-		<nav id="navbar" class="nav-menu navbar">
-			<ul>
-				<li><a href="#hero" class="nav-link scrollto active"><i class="fas fa-home"></i> <span>Home</span></a>
-				</li>
-				<li><a href="#about" class="nav-link scrollto"><i class="fas fa-user"></i> <span>About</span></a></li>
-				<li><a href="#skills" class="nav-link scrollto"><i class="fas fa-code"></i> <span>Skills</span></a>
-				</li>
-				<li><a href="#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-						<span>Portfolio</span></a></li>
-				<li><a href="#services" class="nav-link scrollto"><i class="fas fa-tools"></i> <span>Services</span></a>
-				</li>
-				<li><a href="#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-						<span>Contact</span></a>
-				</li>
-			</ul>
-			<div class="btn-resume">
-				<a class="btn-resume" href="./assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
-			</div>
-		</nav>
-		<!-- Nav menu end -->
-		<!-- Hamburger Icon -->
-		<div class="navbar-hamburger">
-			<div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
-		</div>
-	</div>
-	<!-- Hamburger icon end -->
-	<!-- Offcanvas menu end-->
-	<!-----------------------------------------------------------------
-                      		Navigation end
-    ------------------------------------------------------------------>
-	<!-----------------------------------------------------------------
-                      		Hero section
-    ------------------------------------------------------------------>
-	<section id="hero" class="hero">
-		<div class="hero-container" data-aos="fade-in">
-			<h1>Açelya Lejeune</h1>
-			<p>I'm a <span class="typed" data-typed-items="Web Developer, Graphic Designer"></span></p>
-		</div>
-	</section>
-	<!-----------------------------------------------------------------
+		</section>
+		<!-----------------------------------------------------------------
                       	Hero section end
-    ------------------------------------------------------------------>
-	<!-- Main -->
-	<main id="main">
-		<!-----------------------------------------------------------------
+    	------------------------------------------------------------------>
+		<!-- Main -->
+		<main id="main">
+			<!-----------------------------------------------------------------
                       	About section
-    ------------------------------------------------------------------>
-		<section id="about" class="about-section">
-			<div class="about-container container">
-				<h2>About</h2>
-				<div class="about-content">
-					<div class="about-container-left" data-aos="fade-right">
-						<p><span class="first-sentence">Welcome to my website! I'm Açelya Lejeune</span>
-							My name is Açelya, a graphic design professional with over 20 years experience. I started my
-							career in Antalya and have since broadened my horizons by working in various digital
-							agencies
-							and print shops in Northern Cyprus, England and then by settling in Belgium.
-						</p>
-						<p>
-							<span class="first-sentence">Graphic Design Expert</span>
-							My professional career has enabled me to follow the evolution of digital art and embrace
-							innovations in the world of design. I've worked on various projects in my area of of
-							expertise
-							using tools such as <span>Adobe Photoshop</span>, <span>Adobe Illustrator</span>,
-							<span>Adobe
-								Indesign</span>, <span>Adobe XD</span> and <span>Figma</span>. I'm here to share my
-							experience
-							with you.
-						</p>
-					</div>
-
-					<div class="about-container-right">
-						<div class="content" data-aos="fade-left">
-							<p>
-								<span class="first-sentence">Passion for Web development</span>
-								In 2019, I moved to England, started my own business, and in 2020, I got married and
-								started
-								my
-								own business. married and moved to Belgium. Currently, I'm developing my web design
-								skills
-								using
-								<span>HTML5</span>, <span>CSS</span>, <span>Sass</span>, <span>Javascript</span>,
-								<span>Php</span> and <span>MySQL</span>. Web design is my passion, and I develop it
-								further
-								with each new project.
+    		------------------------------------------------------------------>
+			<section id="about" class="about-section">
+				<div class="about-container container">
+					<h2>About</h2>
+					<div class="about-content">
+						<div class="about-container-left" data-aos="fade-right">
+							<p><span class="first-sentence">Welcome to my website! I'm Açelya
+									Lejeune</span>
+								My name is Açelya, a graphic design professional with over 20 years
+								experience. I started my
+								career in Antalya and have since broadened my horizons by working in
+								various digital
+								agencies
+								and print shops in Northern Cyprus, England and then by settling in
+								Belgium.
 							</p>
-							<ul>
-								<li><i class="fas fa-chevron-right"></i> <b>Birthday:</b> <span>13 May
-										1980</span></li>
-								<li><i class="fas fa-chevron-right"></i> <b>Website:</b>
-									<span>www.acelyalejeune.be</span>
-								</li>
-								<li><i class="fas fa-chevron-right"></i> <b>Phone:</b> <span>+32 493
-										38 77 29</span></li>
-								<li><i class="fas fa-chevron-right"></i> <b>City:</b> <span>Liége, Belgium</span></li>
-								<li><i class="fas fa-chevron-right"></i> <b>Age:</b> <span>44</span></li>
-								<li><i class="fas fa-chevron-right"></i> <b>Email:</b>
-									<span>contact@acelyalejeune.be</span>
-								</li>
-								<li><i class="fas fa-chevron-right"></i> <b>Freelance:</b>
-									<span>Available</span>
-								</li>
-							</ul>
+							<p>
+								<span class="first-sentence">Graphic Design Expert</span>
+								My professional career has enabled me to follow the evolution of digital
+								art and embrace
+								innovations in the world of design. I've worked on various projects in
+								my area of of
+								expertise
+								using tools such as <span>Adobe Photoshop</span>, <span>Adobe
+									Illustrator</span>,
+								<span>Adobe
+									Indesign</span>, <span>Adobe XD</span> and <span>Figma</span>. I'm here
+								to share my
+								experience
+								with you.
+							</p>
+						</div>
+
+						<div class="about-container-right">
+							<div class="content" data-aos="fade-left">
+								<p>
+									<span class="first-sentence">Passion for Web development</span>
+									In 2019, I moved to England, started my own business, and in 2020, I
+									got married and
+									started
+									my
+									own business. married and moved to Belgium. Currently, I'm developing
+									my web design
+									skills
+									using
+									<span>HTML5</span>, <span>CSS</span>, <span>Sass</span>,
+									<span>Javascript</span>,
+									<span>Php</span> and <span>MySQL</span>. Web design is my passion, and
+									I develop it
+									further
+									with each new project.
+								</p>
+								<ul>
+									<li><i class="fas fa-chevron-right"></i> Birthday: <span>13 May
+											1980</span></li>
+									<li><i class="fas fa-chevron-right"></i> Website:
+										<span>www.acelyalejeune.be</span>
+									</li>
+									<li><i class="fas fa-chevron-right"></i> Phone: <span>+32 493
+											38 77 29</span></li>
+									<li><i class="fas fa-chevron-right"></i> City: <span>Liége,
+											Belgium</span></li>
+									<li><i class="fas fa-chevron-right"></i> Age: <span>44</span></li>
+									<li><i class="fas fa-chevron-right"></i> Email:
+										<span>contact@acelyalejeune.be</span>
+									</li>
+									<li><i class="fas fa-chevron-right"></i> Freelance:
+										<span>Available</span>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<!-----------------------------------------------------------------
+			</section>
+			<!-----------------------------------------------------------------
                       			About section end
-   		------------------------------------------------------------------>
-		<!-----------------------------------------------------------------
+   			------------------------------------------------------------------>
+			<!-----------------------------------------------------------------
                       			Skills section
-   		------------------------------------------------------------------>
-		<section id="skills" class="skills-section">
-			<div class="skills-container container">
-				<h2>Skills</h2>
-				<div class="skills-content">
-					<!-- Skills container left -->
-					<div class="skills-container-left" data-aos="fade-up">
+   			------------------------------------------------------------------>
+			<section id="skills" class="skills-section">
+				<div class="skills-container container">
+					<h2>Skills</h2>
+					<div class="skills-content">
+						<!-- Skills container left -->
+						<div class="skills-container-left" data-aos="fade-up">
 
-						<!-- Html -->
-						<div class="progress">
-							<span class="skill">HTML <i class="val">100%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-									aria-valuemax="100"></div>
+							<!-- Html -->
+							<div class="progress">
+								<span class="skill">HTML <i class="val">100%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="100"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
 							</div>
+
+							<!-- Css -->
+							<div class="progress">
+								<span class="skill">CSS <i class="val">90%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="90"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
+							</div>
+
+							<!-- Sass -->
+							<div class="progress">
+								<span class="skill">SASS <i class="val">90%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="90"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
+							</div>
+
+							<!-- Javascript -->
+							<div class="progress">
+								<span class="skill">JavaScript <i class="val">55%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="55"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
+							</div>
+
+							<!-- Php -->
+							<div class="progress">
+								<span class="skill">PHP <i class="val">80%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="80"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
+							</div>
+
+							<!-- Mysql -->
+							<div class="progress">
+								<span class="skill">MYSQL <i class="val">70%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
+							</div>
+
 						</div>
 
-						<!-- Css -->
-						<div class="progress">
-							<span class="skill">CSS <i class="val">90%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-									aria-valuemax="100"></div>
+						<!-- Skills container right -->
+						<div class="skills-container-right" data-aos="fade-up"
+							data-aos-delay="100">
+
+							<!-- Cms -->
+							<div class="progress">
+								<span class="skill">WordPress/CMS <i class="val">85%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="85"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
 							</div>
-						</div>
 
-						<!-- Sass -->
-						<div class="progress">
-							<span class="skill">SASS <i class="val">90%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-									aria-valuemax="100"></div>
+							<!-- Figma -->
+							<div class="progress">
+								<span class="skill">Figma<i class="val">100%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="100"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
 							</div>
-						</div>
 
-						<!-- Javascript -->
-						<div class="progress">
-							<span class="skill">JavaScript <i class="val">55%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
-									aria-valuemax="100"></div>
+							<!-- Xd -->
+							<div class="progress">
+								<span class="skill">Adobe XD<i class="val">90%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="90"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
 							</div>
-						</div>
 
-						<!-- Php -->
-						<div class="progress">
-							<span class="skill">PHP <i class="val">80%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-									aria-valuemax="100"></div>
+							<!-- Photoshop -->
+							<div class="progress">
+								<span class="skill">Adobe Photoshop <i class="val">90%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="90"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
 							</div>
-						</div>
 
-						<!-- Mysql -->
-						<div class="progress">
-							<span class="skill">MYSQL <i class="val">70%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-									aria-valuemax="100"></div>
+							<!-- Indesign -->
+							<div class="progress">
+								<span class="skill">Adobe InDesign <i class="val">100%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="100"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
 							</div>
-						</div>
 
-					</div>
-
-					<!-- Skills container right -->
-					<div class="skills-container-right" data-aos="fade-up" data-aos-delay="100">
-
-						<!-- Cms -->
-						<div class="progress">
-							<span class="skill">WordPress/CMS <i class="val">85%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-									aria-valuemax="100"></div>
+							<!--Illustrator -->
+							<div class="progress">
+								<span class="skill">Adobe Illustrator <i class="val">80%</i></span>
+								<div class="progress-bar-wrap">
+									<div class="progress-bar" role="progressbar" aria-valuenow="80"
+										aria-valuemin="0"
+										aria-valuemax="100"></div>
+								</div>
 							</div>
-						</div>
 
-						<!-- Figma -->
-						<div class="progress">
-							<span class="skill">Figma<i class="val">100%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
 						</div>
-
-						<!-- Xd -->
-						<div class="progress">
-							<span class="skill">Adobe XD<i class="val">90%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<!-- Photoshop -->
-						<div class="progress">
-							<span class="skill">Adobe Photoshop <i class="val">90%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<!-- Indesign -->
-						<div class="progress">
-							<span class="skill">Adobe InDesign <i class="val">100%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
-						</div>
-
-						<!--Illustrator -->
-						<div class="progress">
-							<span class="skill">Adobe Illustrator <i class="val">80%</i></span>
-							<div class="progress-bar-wrap">
-								<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-									aria-valuemax="100"></div>
-							</div>
-						</div>
-
 					</div>
 				</div>
-			</div>
-		</section>
-		<!-----------------------------------------------------------------
+			</section>
+			<!-----------------------------------------------------------------
                       			Skills section end
-   		------------------------------------------------------------------>
-		<!-----------------------------------------------------------------
+   			------------------------------------------------------------------>
+			<!-----------------------------------------------------------------
                       			Portfolio section
-   		------------------------------------------------------------------>
-		<section id="portfolio" class="portfolio-section">
-			<div class="portfolio-content container">
-				<div class="section-title">
-					<h2>Portfolio</h2>
-					<p>Incorporating two decades of graphic design expertise, I leverage my skills to create impactful
-						works. With a rich background in design, I infuse creativity and experience into every project,
-						delivering compelling results that resonate with audiences. Specializing in responsive web
-						design, I leverage my extensive skill set to craft visually compelling and user-friendly digital
-						experiences that adapt seamlessly across devices. Explore my portfolio to witness the fusion of
-						artistry and technology, honed over years of experimentation and innovation.
-					</p>
+   			------------------------------------------------------------------>
+			<section id="portfolio" class="portfolio-section">
+				<div class="portfolio-content container">
+					<div class="section-title">
+						<h2>Portfolio</h2>
+						<p>Incorporating two decades of graphic design expertise, I leverage my
+							skills to create impactful
+							works. With a rich background in design, I infuse creativity and
+							experience into every project,
+							delivering compelling results that resonate with audiences. Specializing
+							in responsive web
+							design, I leverage my extensive skill set to craft visually compelling
+							and user-friendly digital
+							experiences that adapt seamlessly across devices. Explore my portfolio to
+							witness the fusion of
+							artistry and technology, honed over years of experimentation and
+							innovation.
+						</p>
+					</div>
+					<div class="portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+						<div class="portfolio-items">
+							<div class="portfolio-item-top">
+								<a href="./public/librairie-lejeune.html"><img
+										src="./assets/images/librairie-lejeune-green.png"
+										alt="Librairie lejeune"></a>
+							</div>
+							<div class="portfolio-wrap">
+								<div class="portfolio-links-top">
+									<a class="portfolio-link-top" href="./public/librairie-lejeune.html"
+										title="Live Demo"
+										target="_blank"><i class="fas fa-circle-info"></i> More
+										information</a>
+								</div>
+								<div class="portfolio-links-bottom">
+									<a class="portfolio-link-left"
+										href="./portfolio/librairie-lejeune/public/index.html"
+										title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live
+										Preview</a>
+									<a class="portfolio-link-right"
+										href="https://github.com/LejeuneA/librairie-lejeune"
+										title="See on Github" target="_blank"><i class="fa fa-github"></i>
+										Full Code on GitHub</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="portfolio-items">
+							<div class="portfolio-item-top">
+								<a href="./public/"><img src="./assets/images/recettes_logo.png"
+										alt="Librairie lejeune"></a>
+							</div>
+							<div class="portfolio-wrap">
+								<div class="portfolio-links-top">
+									<a class="portfolio-link-top" href="./public/recettes.html"
+										title="Live Demo"
+										target="_blank"><i class="fas fa-circle-info"></i> More
+										information</a>
+								</div>
+								<div class="portfolio-links-bottom">
+									<a class="portfolio-link-left"
+										href="https://lejeunea.github.io/recettes/"
+										title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live
+										Preview</a>
+									<a class="portfolio-link-right"
+										href="https://github.com/LejeuneA/recettes"
+										title="See on Github" target="_blank"><i class="fa fa-github"></i>
+										Full Code on GitHub</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="portfolio-items">
+							<div class="portfolio-item-top">
+								<a href="./public/"><img src alt="Librairie lejeune"></a>
+							</div>
+							<div class="portfolio-wrap">
+								<div class="portfolio-links-top">
+									<a class="portfolio-link-top" href="./public/librairie-lejeune.html"
+										title="Live Demo"
+										target="_blank"><i class="fas fa-circle-info"></i> More
+										information</a>
+								</div>
+								<div class="portfolio-links-bottom">
+									<a class="portfolio-link-left"
+										href="./portfolio/librairie-lejeune/public/index.html"
+										title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live
+										Preview</a>
+									<a class="portfolio-link-right"
+										href="https://github.com/LejeuneA/librairie-lejeune"
+										title="See on Github" target="_blank"><i class="fa fa-github"></i>
+										Full Code on GitHub</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
 				</div>
-				<div class="portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-					<div class="portfolio-items">
-						<div class="portfolio-item-top">
-							<a href="./public/librairie-lejeune.html"><img src="./assets/images/librairie-lejeune-green.png" alt="Librairie lejeune"></a>
-						</div>
-						<div class="portfolio-wrap">
-							<div class="portfolio-links-top">
-								<a class="portfolio-link-top" href="./public/librairie-lejeune.html" title="Live Demo"
-									target="_blank"><i class="fas fa-circle-info"></i> More information</a>
-							</div>
-							<div class="portfolio-links-bottom">
-								<a class="portfolio-link-left" href="./portfolio/librairie-lejeune/public/index.html"
-									title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live Preview</a>
-								<a class="portfolio-link-right" href="https://github.com/LejeuneA/librairie-lejeune"
-									title="See on Github" target="_blank"><i class="fa fa-github"></i> Full Code on GitHub</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="portfolio-items">
-						<div class="portfolio-item-top">
-							<a href="./public/"><img src="./assets/images/recettes_logo.png" alt="Librairie lejeune"></a>
-						</div>
-						<div class="portfolio-wrap">
-							<div class="portfolio-links-top">
-								<a class="portfolio-link-top" href="./public/recettes.html" title="Live Demo"
-									target="_blank"><i class="fas fa-circle-info"></i> More information</a>
-							</div>
-							<div class="portfolio-links-bottom">
-								<a class="portfolio-link-left" href="https://lejeunea.github.io/recettes/"
-									title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live Preview</a>
-								<a class="portfolio-link-right" href="https://github.com/LejeuneA/recettes"
-									title="See on Github" target="_blank"><i class="fa fa-github"></i> Full Code on GitHub</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="portfolio-items">
-						<div class="portfolio-item-top">
-							<a href="./public/"><img src="" alt="Librairie lejeune"></a>
-						</div>
-						<div class="portfolio-wrap">
-							<div class="portfolio-links-top">
-								<a class="portfolio-link-top" href="./public/librairie-lejeune.html" title="Live Demo"
-									target="_blank"><i class="fas fa-circle-info"></i> More information</a>
-							</div>
-							<div class="portfolio-links-bottom">
-								<a class="portfolio-link-left" href="./portfolio/librairie-lejeune/public/index.html"
-									title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live Preview</a>
-								<a class="portfolio-link-right" href="https://github.com/LejeuneA/librairie-lejeune"
-									title="See on Github" target="_blank"><i class="fa fa-github"></i> Full Code on GitHub</a>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-		<!-----------------------------------------------------------------
+			</section>
+			<!-----------------------------------------------------------------
                       			Portfolio section end
-   		------------------------------------------------------------------>
+   			------------------------------------------------------------------>
 
-	</main>
-	<!-- Main end -->
-	<!-----------------------------------------------------------------
+		</main>
+		<!-- Main end -->
+		<!-----------------------------------------------------------------
                                Footer
-    ------------------------------------------------------------------>
-	<footer id="footer">
-		<div class="footer-container container">
-			<div class="copyright">
-				&copy; Copyright, design and development by <a class="github" href="https://github.com/LejeuneA"
-					target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Açelya
-					Lejeune</a>
+    	------------------------------------------------------------------>
+		<footer id="footer">
+			<div class="footer-container container">
+				<div class="copyright">
+					&copy; Copyright, design and development by <a class="github"
+						href="https://github.com/LejeuneA"
+						target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Açelya
+						Lejeune</a>
+				</div>
 			</div>
-		</div>
-	</footer>
-	<!-----------------------------------------------------------------
+		</footer>
+		<!-----------------------------------------------------------------
                                Footer end
-    ------------------------------------------------------------------>
+    	------------------------------------------------------------------>
 
-	<!-- Font Awesome JS -->
-	<script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
+		<!-- Font Awesome JS -->
+		<script src="https://kit.fontawesome.com/3546d47201.js"
+			crossorigin="anonymous"></script>
 
-	<!-- Back to Top -->
-	<a href="#hero" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
+		<!-- Back to Top -->
+		<a href="#hero" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-	<!-- Vendor JS Files -->
-	<script src="./vendor/purecounter/purecounter_vanilla.js"></script>
-	<script src="./vendor/aos/aos.js"></script>
-	<script src="./vendor/glightbox/js/glightbox.min.js"></script>
-	<script src="./vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="./vendor/swiper/swiper-bundle.min.js"></script>
-	<script src="./vendor/typed.js/typed.umd.js"></script>
-	<script src="./vendor/waypoints/noframework.waypoints.js"></script>
-	<script src="./vendor/php-email-form/validate.js"></script>
+		<!-- Vendor JS Files -->
+		<script src="./vendor/purecounter/purecounter_vanilla.js"></script>
+		<script src="./vendor/aos/aos.js"></script>
+		<script src="./vendor/glightbox/js/glightbox.min.js"></script>
+		<script src="./vendor/isotope-layout/isotope.pkgd.min.js"></script>
+		<script src="./vendor/swiper/swiper-bundle.min.js"></script>
+		<script src="./vendor/typed.js/typed.umd.js"></script>
+		<script src="./vendor/waypoints/noframework.waypoints.js"></script>
+		<script src="./vendor/php-email-form/validate.js"></script>
 
-	<!-- Include main.js -->
-	<script src="./js/main.js"></script>
+		<!-- Include main.js -->
+		<script src="./js/main.js"></script>
 
-</body>
-
+	</body>
 </html>
