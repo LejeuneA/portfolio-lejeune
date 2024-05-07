@@ -40,7 +40,11 @@
             }
 
             p {
-                margin-top: 2em;
+                color: $dark-green;
+                font-weight: 600;
+                font-size: 1.1em;
+                margin-top:1.5em;
+                line-height: 1.8em;
             }
         }
 
@@ -136,6 +140,11 @@
     // Responsive styles for small screens
     @media (min-width: 320px) and (max-width: 1199px) {
         .portfolio-content {
+            .section-title{
+                p{
+                    font-size: 1em;
+                }
+            }
             .portfolio-container {
                 @include d-flex(flex, center, center, column, center);
 
