@@ -1,0 +1,50 @@
+@use "custom";
+@use "mixins";
+@use "extends";
+@use "global";
+
+/*--------------------------------------------------------------
+                        # Services Section
+--------------------------------------------------------------*/
+.services-section {
+    @include d-flex(flex, start, start, column, start);
+
+    background: rgba(144, 238, 144, 0.1);
+    overflow: hidden;
+    width: 100%;
+
+    .services-content {
+        @include d-flex(flex, start, start, column, start);
+        gap: 2em;
+        width: 100%;
+
+        .section-title {
+            h2 {
+                font-size: 2em;
+                font-weight: bold;
+                padding-bottom: 0.5em;
+                position: relative;
+                color: $dark-green;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 2em;
+                    height: 0.1em;
+                    background: $primary-green;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+
+            p {
+                color: $dark-green;
+                font-weight: 600;
+                font-size: 1.1em;
+                margin-top:1.5em;
+                line-height: 1.8em;
+            }
+        }
+    }
+}
