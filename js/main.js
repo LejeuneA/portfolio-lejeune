@@ -117,18 +117,39 @@ function closeNav() {
   /* -------------------------------------------------------
                       Back to top button
   ---------------------------------------------------------*/
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
+  document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.getElementById("backToTop");
+
+    // Function to smoothly scroll to the top of the page
+    const scrollToTop = () => {
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, c - c / 30); // Adjust the speed by changing the value
       }
+    };
+
+    // Add click event listener to back-to-top button
+    if (backToTopButton) {
+      backToTopButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        scrollToTop();
+      });
     }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
+
+    // Show/hide back-to-top button based on scroll position
+    window.addEventListener("scroll", function () {
+      const backToTopButton = document.getElementById("backToTop");
+
+      if (backToTopButton) {
+        if (window.scrollY > 100) { // Adjust the scroll position threshold as needed
+          backToTopButton.classList.add("active");
+        } else {
+          backToTopButton.classList.remove("active");
+        }
+      }
+    });
+  });
 
   /* -------------------------------------------------------
     Scrool with ofset on links with a class name .scrollto
@@ -187,7 +208,7 @@ function closeNav() {
 
   const options = {
     root: null,
-    threshold: 0.2 
+    threshold: 0.2
   };
 
   const callback = (entries, observer) => {
@@ -229,38 +250,6 @@ function closeNav() {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
-    }
-  });
-
-
-
-  /* -------------------------------------------------------
-                   Testimonials slider
-  ---------------------------------------------------------*/
-
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
     }
   });
 
