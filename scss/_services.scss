@@ -96,4 +96,25 @@
             }
         }
     }
+
+    // Responsive styles for small screens
+    @media (min-width: 320px) and (max-width: 768px) {
+        .services-content {
+            .services-container {
+                @include d-flex(flex, center, center, column, center);
+
+                .services-item {
+                    @include d-flex(flex, center, center, column, center);
+                    width: 100%;
+                    padding: 1em;
+
+                    .services-item-content{
+                        @include d-flex(flex, center, center, column, center);
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
 }
