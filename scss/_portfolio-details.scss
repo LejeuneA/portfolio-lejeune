@@ -277,7 +277,7 @@
                     content: "";
                     position: absolute;
                     display: block;
-                    width: 4em;
+                    width: 3em;
                     height: 0.1em;
                     background: $primary-green;
                     bottom: 0;
@@ -307,7 +307,7 @@
                         color: $primary-green;
                         margin-bottom: 0.8em;
                     }
-    
+
                     p {
                         margin: 0;
                         line-height: 1.7em;
@@ -318,7 +318,105 @@
                         &:last-child {
                             margin-bottom: 0;
                         }
+
+                        span {
+                            font-weight: 700;
+                            color: $dark-green;
+                        }
                     }
+                }
+            }
+        }
+    }
+
+    .portfolio-features {
+        @include d-flex(flex, start, start, column, start);
+        gap: 2em;
+
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            padding-bottom: 0.5em;
+            position: relative;
+            color: $dark-green;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 3em;
+                height: 0.1em;
+                background: $primary-green;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        p {
+            color: $dark-green;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 3em;
+        }
+
+        .features {
+            @include d-flex(flex, start, start, row, start);
+            gap: 3em;
+            width: 100%;
+            margin-bottom: 3em;
+
+            .features-left,
+            .features-right {
+                width: 50%;
+
+                h3 {
+                    font-size: 1.3em;
+                    font-weight: 700;
+                    color: $primary-green;
+                    margin-bottom: 0.8em;
+                }
+
+                p {
+                    margin: 0;
+                    line-height: 1.7em;
+                    font-weight: 400;
+                    color: $background;
+                    margin-bottom: 3em;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .access {
+            width: 100%;
+            background-color: rgba($primary-green, 0.1);
+            padding: 2em;
+
+            h3 {
+                font-size: 1.3em;
+                font-weight: 700;
+                width: 100%;
+                margin-bottom: 1em;
+                color: $dark-green;
+                text-align: center;
+                border-bottom: 1px solid $dark-green;
+                padding-bottom: 0.8em;
+            }
+
+            p {
+                color: $background;
+                font-weight: 400;
+                font-size: 1em;
+                margin-bottom: 0.5em;
+                text-align: center;
+
+                span {
+                    font-weight: 600;
+                    font-size: 0.9em;
+                    color: $dark-green;
                 }
             }
         }
@@ -326,6 +424,11 @@
 
     // Responsive styles for small screens
     @media (min-width: 320px) and (max-width: 768px) {
+        .section-title {
+            p {
+                font-size: 1em;
+            }
+        }
         .portfolio-details-container {
             .portfolio-details-top {
                 .swiper-pagination {
@@ -398,6 +501,12 @@
                     .portfolio-card {
                         @include d-flex(flex, space-between, center, column, center);
 
+                        p {
+                            font-size: 1em;
+                            padding: 1.3em;
+                            line-height: 1.5em;
+                        }
+
                         .portfolio-link-left,
                         .portfolio-link-right {
                             width: 100%;
@@ -406,10 +515,56 @@
                 }
             }
 
-            .portfolio-details-bottom {
+            .portfolio-figma {
+                p {
+                    font-size: 1em;
+                }
+
                 iframe {
                     width: 100%;
                     height: 20em;
+                }
+            }
+        }
+
+        .portfolio-details-bottom {
+            .portfolio-description {
+                p {
+                    margin-bottom: 1em;
+                    font-size: 1em;
+                }
+
+                .design-process {
+                    @include d-flex(flex, start, start, column, start);
+
+                    .design-process-left,
+                    .design-process-right {
+                        width: 100%;
+
+                        p {
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .portfolio-features {
+            p {
+                margin-bottom: 1em;
+                font-size: 1em;
+            }
+
+            .features {
+                @include d-flex(flex, start, start, column, start);
+
+                .features-left,
+                .features-right {
+                    width: 100%;
+
+                    p {
+                        font-size: 1em;
+                    }
                 }
             }
         }
