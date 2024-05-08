@@ -12,6 +12,7 @@
     background: rgba(144, 238, 144, 0.1);
     overflow: hidden;
     width: 100%;
+    z-index: 1;
 
     .section-title {
         @include d-flex(flex, start, start, column, start);
