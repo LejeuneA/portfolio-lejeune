@@ -83,6 +83,37 @@
         outline: 1px solid $primary-green;
       }
 
+      // Email input field
+      label[for="email"] {
+        color: $dark-green;
+        font-weight: bold;
+        margin-top: 1em;
+      }
+
+      input[type="email"] {
+        width: 100%;
+        padding: 0.6em;
+        border: 1px solid $primary-green;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 1em;
+        resize: vertical;
+      }
+
+      input[type="email"]::placeholder {
+        font-family: "Poppins", sans-serif;
+        font-size: small;
+        font-style: italic;
+        color: $dark-green;
+      }
+
+      input[type="email"]:focus,
+      input[type="email"]:focus-visible {
+        border: 1px solid $primary-green;
+        box-shadow: 0 0 15px $primary-green;
+      }
+
       /* -----------------------------------------------------------------
                            Buttons
   ----------------------------------------------------------------- */
