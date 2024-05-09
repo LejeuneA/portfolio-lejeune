@@ -122,6 +122,10 @@
                             transition: all ease-in-out 0.5s;
                             font-size: 0.9em;
 
+                            .portfolio-link-right{
+                                background-color: $background;
+                            }
+
                             i {
                                 font-size: 1.2em;
                                 color: $light-green;
