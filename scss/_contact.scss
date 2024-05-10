@@ -7,7 +7,7 @@
                         Contact form
 ----------------------------------------------------------------- */
 .contact-section {
-  @include d-flex(flex, start, start, column, start);
+  @include d-flex(flex, center, center, column, start);
   overflow: hidden;
   width: 100%;
 
@@ -116,7 +116,7 @@
 
       /* -----------------------------------------------------------------
                            Buttons
-  ----------------------------------------------------------------- */
+      ----------------------------------------------------------------- */
 
       input[type="submit"],
       input[type="reset"] {
@@ -130,21 +130,28 @@
 
         /* -----------------------------------------------------------------
                            Buttons responsive
-    ----------------------------------------------------------------- */
+      ----------------------------------------------------------------- */
         @media (min-width: 320px) and (max-width: 768px) {
-          display: flex;
-          align-items: center;
-          text-align: center;
-          justify-content: center;
           margin: 0.5em auto;
           padding: 0.7em 1.2em;
-          width: 22em;
+          width: 100%;
+          align-items: center;
         }
       }
 
       input[type="submit"]:hover,
       input[type="reset"]:hover {
         @include hover("background-color", $primary-yellow, "color", $light-green);
+      }
+    }
+  }
+  // Contact form responsive
+  @media (min-width: 320px) and (max-width: 768px) {
+    .contact-content {
+      @include d-flex(flex, center, center, column, start);
+
+      .contact-container{
+        width: 100%;
       }
     }
   }
