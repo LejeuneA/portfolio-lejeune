@@ -127,7 +127,7 @@
 
                             .portfolio-info-icon {
                                 @include d-flex(flex, center, center, column, center);
-                                width: 33%;
+                                width: 100%;
 
                                 img {
                                     width: 3em;
@@ -139,6 +139,7 @@
                                     width: 100%;
                                     font-weight: 500;
                                     margin-top: 0.3em;
+                                    font-size: 0.9em; 
                                 }
                             }
                         }
