@@ -11,7 +11,7 @@
     @include d-flex(flex, center, center, column, start);
     width: 100%;
     height: 100vh;
-    background: url("../assets/images/hero-background.jpg")  center;
+    background: url("../assets/images/hero-background.jpg") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
 
