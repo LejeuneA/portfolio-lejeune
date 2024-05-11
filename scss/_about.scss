@@ -121,6 +121,7 @@
         .about-container {
             .about-content {
                 @include d-flex(flex, center, start, column, start);
+                gap:3em;
 
                 .about-container-right {
                     width: 100%;
