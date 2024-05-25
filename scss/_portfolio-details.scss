@@ -621,7 +621,6 @@
                         .portfolio-info-right {
                             @include d-flex(flex, center, center, column, center);
                             width: 100%;
-                            border-left: none;
 
                             .portfolio-info-icons {
                                 .portfolio-info-icon {
