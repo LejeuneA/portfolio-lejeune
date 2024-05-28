@@ -69,7 +69,7 @@ $conn->close();
 			<div class="social-links">
 				<a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
 				<a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="./public/fr.html" class="language"><b>FR</b></a>
+				<a href="fr.php" class="language"><b>FR</b></a>
 			</div>
 		</div>
 
@@ -111,7 +111,7 @@ $conn->close();
 			<div class="social-links">
 				<a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
 				<a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-				<a href="./public/fr.html" class="language"><b>FR</b></a>
+				<a href="fr.php" class="language"><b>FR</b></a>
 			</div>
 		</div>
 
