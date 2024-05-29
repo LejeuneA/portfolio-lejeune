@@ -69,7 +69,7 @@
     &.active,
     &.active:focus,
     li:hover > a {
-      color:$light-green;
+      color: $light-green;
       @include hover("color", $light-green, "background-color", $background);
 
       i {
@@ -80,6 +80,8 @@
 
   .btn-resume {
     a {
+      align-items: center;
+      justify-content: center;
       background-color: $gray;
       text-align: center;
       padding: 0.5em 2em;
