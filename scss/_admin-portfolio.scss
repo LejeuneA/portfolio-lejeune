@@ -6,7 +6,37 @@
 /* -------------------------------------------------------
                     Display page
 ---------------------------------------------------------*/
+.admin-portfolio{
+  @include d-flex(flex, center, start, column, center);
+  background: rgba(144, 238, 144, 0.1);
 
-table {
-    
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    padding-top: 2em;
+    position: relative;
+    color: $dark-green;
+    margin-bottom: 1em;
+    margin-left: 2em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 2em;
+      height: 0.1em;
+      background: $primary-green;
+      bottom: 0;
+      left: 0;
+    }
   }
+
+  .section-portfolio {
+    @include d-flex(flex, start, start, column, center);
+    height: 100vh;
+    width: 100%;
+    
+    padding: 0 2em;
+  }
+}
