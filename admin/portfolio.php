@@ -48,24 +48,14 @@ $items = $stmt->fetchAll();
         <!-- Nav Menu -->
         <nav id="navbar" class="nav-menu navbar">
             <ul>
-                <li><a href="#hero" class="nav-link scrollto active"><i class="fas fa-home"></i><span>Home</span></a>
+                <li><a href="../index.php#hero" class="nav-link scrollto active"><i class="fas fa-home"></i><span>Home</span></a>
                 </li>
-                <li><a href="#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>About</span></a></li>
-                <li><a href="#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Skills</span></a>
+                <li><a href="portfolio.php" class="nav-link scrollto"><i class="fas fa-list"></i>
+                        <span>Display</span></a></li>
                 </li>
-                <li><a href="#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="#services" class="nav-link scrollto"><i class="fas fa-tools"></i> <span>Services</span></a>
-                </li>
-                <li><a href="#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
+                <li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
+                        <span>Add</span></a></li>
             </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
-            </div>
             <div class="btn-resume">
                 <a class="btn-resume" href="../admin/portfolio.php">Admin</a>
             </div>
@@ -81,7 +71,7 @@ $items = $stmt->fetchAll();
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <!-- Profile -->
         <div class="profile">
-            <img src="./assets/images/header-photo.jpg" alt class="profile-img">
+            <img src="../assets/images/header-photo.jpg" alt class="profile-img">
             <h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
             <div class="social-links">
                 <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
@@ -93,24 +83,14 @@ $items = $stmt->fetchAll();
         <!-- Nav Menu -->
         <nav id="navbar" class="nav-menu navbar">
             <ul>
-                <li><a href="#hero" class="nav-link scrollto active"><i class="fas fa-home"></i> <span>Home</span></a>
+                <li><a href="../index.php#hero" class="nav-link scrollto active"><i class="fas fa-home"></i><span>Home</span></a>
                 </li>
-                <li><a href="#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>About</span></a></li>
-                <li><a href="#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Skills</span></a>
+                <li><a href="portfolio.php" class="nav-link scrollto"><i class="fas fa-list"></i>
+                        <span>Display</span></a></li>
                 </li>
-                <li><a href="#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="#services" class="nav-link scrollto"><i class="fas fa-tools"></i> <span>Services</span></a>
-                </li>
-                <li><a href="#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
+                <li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
+                        <span>Add</span></a></li>
             </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
-            </div>
             <div class="btn-resume">
                 <a class="btn-resume" href="../admin/portfolio.php">Admin</a>
             </div>
@@ -120,12 +100,13 @@ $items = $stmt->fetchAll();
         <div class="navbar-hamburger">
             <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
         </div>
+        <!-- Hamburger icon end -->
     </div>
-    <!-- Hamburger icon end -->
     <!-- Offcanvas menu end-->
     <!-----------------------------------------------------------------
 						  Navigation end
------------------------------------------------------------------->
+    ------------------------------------------------------------------>
+    <!-- Main -->
     <main id="main">
         <h1>Portfolio</h1>
         <table border="1">
@@ -147,7 +128,7 @@ $items = $stmt->fetchAll();
                         <td><?= htmlspecialchars($item['info_url']) ?></td>
                         <td><?= htmlspecialchars($item['live_url']) ?></td>
                         <td><?= htmlspecialchars($item['github_url']) ?></td>
-                        <td><a href="edit.php?id=<?= htmlspecialchars($item['id']) ?>">Edit</a></td>
+                        <td><a href="edit.php?id=<?= htmlspecialchars($item['id']) ?>"><i class="fas fa-tools"></i>Edit</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
