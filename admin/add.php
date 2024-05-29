@@ -57,24 +57,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- Nav Menu -->
         <nav id="navbar" class="nav-menu navbar">
             <ul>
-                <li><a href="#hero" class="nav-link scrollto active"><i class="fas fa-home"></i><span>Home</span></a>
+                <li><a href="../index.php#hero" class="nav-link scrollto active"><i class="fas fa-home"></i><span>Home</span></a>
                 </li>
-                <li><a href="#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>About</span></a></li>
-                <li><a href="#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Skills</span></a>
+                <li><a href="portfolio.php" class="nav-link scrollto"><i class="fas fa-list"></i>
+                        <span>Display</span></a></li>
                 </li>
-                <li><a href="#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="#services" class="nav-link scrollto"><i class="fas fa-tools"></i> <span>Services</span></a>
-                </li>
-                <li><a href="#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
+                <li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
+                        <span>Add</span></a></li>
             </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
-            </div>
             <div class="btn-resume">
                 <a class="btn-resume" href="../admin/portfolio.php">Admin</a>
             </div>
@@ -102,24 +92,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- Nav Menu -->
         <nav id="navbar" class="nav-menu navbar">
             <ul>
-                <li><a href="#hero" class="nav-link scrollto active"><i class="fas fa-home"></i> <span>Home</span></a>
+                <li><a href="../index.php#hero" class="nav-link scrollto active"><i class="fas fa-home"></i><span>Home</span></a>
                 </li>
-                <li><a href="#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>About</span></a></li>
-                <li><a href="#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Skills</span></a>
+                <li><a href="portfolio.php" class="nav-link scrollto"><i class="fas fa-list"></i>
+                        <span>Display</span></a></li>
                 </li>
-                <li><a href="#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="#services" class="nav-link scrollto"><i class="fas fa-tools"></i> <span>Services</span></a>
-                </li>
-                <li><a href="#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
+                <li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
+                        <span>Add</span></a></li>
             </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
-            </div>
             <div class="btn-resume">
                 <a class="btn-resume" href="../admin/portfolio.php">Admin</a>
             </div>
@@ -129,12 +109,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="navbar-hamburger">
             <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
         </div>
+        <!-- Hamburger icon end -->
     </div>
-    <!-- Hamburger icon end -->
     <!-- Offcanvas menu end-->
     <!-----------------------------------------------------------------
 						  Navigation end
------------------------------------------------------------------->
+    ------------------------------------------------------------------>
+    <!-- Main -->
     <main id="main">
         <h1>Add Portfolio Item</h1>
         <form method="POST" action="add.php">
