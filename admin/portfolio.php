@@ -96,6 +96,7 @@ $items = $stmt->fetchAll();
             </div>
         </nav>
         <!-- Nav menu end -->
+        
         <!-- Hamburger Icon -->
         <div class="navbar-hamburger">
             <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
