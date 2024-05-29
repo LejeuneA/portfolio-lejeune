@@ -96,7 +96,7 @@ $items = $stmt->fetchAll();
             </div>
         </nav>
         <!-- Nav menu end -->
-        
+
         <!-- Hamburger Icon -->
         <div class="navbar-hamburger">
             <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
@@ -108,32 +108,35 @@ $items = $stmt->fetchAll();
 						  Navigation end
     ------------------------------------------------------------------>
     <!-- Main -->
-    <main id="main">
+    <main id="main" class="admin-portfolio">
         <h1>Portfolio</h1>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Image URL</th>
-                    <th>Info URL</th>
-                    <th>Live URL</th>
-                    <th>GitHub URL</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($items as $item) : ?>
+        <section class="section-portfolio">
+            
+            <table border="1">
+                <thead>
                     <tr>
-                        <td><?= htmlspecialchars($item['id']) ?></td>
-                        <td><?= htmlspecialchars($item['image_url']) ?></td>
-                        <td><?= htmlspecialchars($item['info_url']) ?></td>
-                        <td><?= htmlspecialchars($item['live_url']) ?></td>
-                        <td><?= htmlspecialchars($item['github_url']) ?></td>
-                        <td><a href="edit.php?id=<?= htmlspecialchars($item['id']) ?>"><i class="fas fa-tools"></i>Edit</a></td>
+                        <th>ID</th>
+                        <th>Image URL</th>
+                        <th>Info URL</th>
+                        <th>Live URL</th>
+                        <th>GitHub URL</th>
+                        <th>Actions</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php foreach ($items as $item) : ?>
+                        <tr>
+                            <td><?= htmlspecialchars($item['id']) ?></td>
+                            <td><?= htmlspecialchars($item['image_url']) ?></td>
+                            <td><?= htmlspecialchars($item['info_url']) ?></td>
+                            <td><?= htmlspecialchars($item['live_url']) ?></td>
+                            <td><?= htmlspecialchars($item['github_url']) ?></td>
+                            <td><a href="edit.php?id=<?= htmlspecialchars($item['id']) ?>"><i class="fas fa-tools"></i>Edit</a></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <!-----------------------------------------------------------------
