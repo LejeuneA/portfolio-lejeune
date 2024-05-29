@@ -1,173 +1,68 @@
 <?php
-session_start();
+require '../conf/conf-db.php';
 
-require_once '../../config/database.php';
+// Check if the form has been submitted for update or delete
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['update'])) {
+        $id = $_POST['id'];
+        $image_url = $_POST['image_url'];
+        $info_url = $_POST['info_url'];
+        $live_url = $_POST['live_url'];
+        $github_url = $_POST['github_url'];
 
-if ( ! isset($_SESSION["current_user"]) ) {
-	header('Location: index.php');
+        $sql = "UPDATE portfolio SET image_url = :image_url, info_url = :info_url, live_url = :live_url, github_url = :github_url WHERE id = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['image_url' => $image_url, 'info_url' => $info_url, 'live_url' => $live_url, 'github_url' => $github_url, 'id' => $id]);
+
+        echo "Record updated successfully!";
+    }
+
+    if (isset($_POST['delete'])) {
+        $id = $_POST['id'];
+
+        $sql = "DELETE FROM portfolio WHERE id = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute(['id' => $id]);
+
+        echo "Record deleted successfully!";
+    }
 }
 
-$post_id = $_GET['id'] ?? '';
+// Fetch the record to edit
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM portfolio WHERE id = :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['id' => $id]);
+    $record = $stmt->fetch();
 
-if ( $_POST ) {
-
-	$post = $_POST;
-
-	if ( isset( $post['publish'] ) ) {
-		$query = "INSERT INTO posts (title, content, status, user_id, created_at, updated_at)
-		VALUE (:title, :content, :status, :user_id, NOW(), NOW())";
-
-		$statement = $pdo->prepare( $query );
-		$statement->bindValue( ':title', $post['title'] );
-		$statement->bindValue( ':content', $post['content'] );
-		$statement->bindValue( ':status', $post['status'] );
-		$statement->bindValue( ':user_id', $_SESSION['current_user']['id'] );
-		$statement->execute();
-	}
-
-	if ( isset( $post['update'] ) && ! empty( $post_id ) ) {
-		$query = "UPDATE posts p
-		SET p.title = :title, p.content = :content, p.status = :status, p.updated_at = NOW()
-		WHERE p.id = " . $post_id;
-
-		$statement = $pdo->prepare( $query );
-		$statement->bindValue( ':title', $post['title'] );
-		$statement->bindValue( ':content', $post['content'] );
-		$statement->bindValue( ':status', $post['status'] );
-		$statement->execute();
-	}
-
-	if ( isset( $post['delete'] ) && ! empty( $post_id ) ) {
-		$query="DELETE FROM posts
-		WHERE id = " . $post_id;
-
-		$statement = $pdo->prepare( $query );
-		$statement->execute();
-
-		header('Location: posts-list.php');
-	}
+    if (!$record) {
+        die("Record not found!");
+    }
+} else {
+    die("ID not specified!");
 }
-
-if ( isset( $post_id ) && ! empty ( $post_id ) ) {
-	$query = "SELECT p.id as post_id, p.title, p.content, p.status, p.thumbnail, p.user_id, p.created_at, p.updated_at, c.id as categorie_id, c.name
-	FROM posts p
-	LEFT JOIN categories_posts cp ON cp.post_id = p.id
-	LEFT JOIN categories c ON c.id = cp.categorie_id
-	WHERE p.id = " . $_GET['id'];
-
-	$statement = $pdo->prepare( $query );
-	$statement->execute();
-	$post = $statement->fetch();
-}
-
-// var_dump($post);
-
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bioblog</title>
-	<link rel="stylesheet" href="../assets/css/reset.css">
-	<link rel="stylesheet" href="../assets/css/app.css">
+    <title>Edit Portfolio Item</title>
 </head>
-
-<body class="admin post --edit">
-	<?php include_once 'includes/header.php'; ?>
-
-	<main>
-		<section class="admin-header">
-			Ajouter un nouvel article
-		</section>
-
-		<section class="admin-content">
-			<form action="" method="POST">
-				<div>
-					<div class="form-row">
-						<label for="title">Titre de l’article</label>
-						<input id="title" type="text" name="title" placeholder="Titre de l'article" value="<?php echo (isset($post['title'])) ? $post['title'] : ''; ?>">
-					</div>
-
-					<div class="form-row">
-						<label for="content">Contenu de l’article</label>
-						<textarea id="content" name="content" placeholder="Contenu de l’article"><?php echo $post['content'] ?? ''; ?></textarea>
-					</div>
-
-					<div class="form-row --button">
-						<?php if ( isset( $post_id ) && ! empty ( $post_id ) ) : ?>
-							<button class="button-primary button-small button" name="update">Modifier</button>
-							<button class="link-delete link" name="delete">Supprimer</button>
-						<?php else : ?>
-							<button class="button-primary button-small button" name="publish">Publier</button>
-						<?php endif; ?>
-					</div>
-				</div>
-
-				<div>
-					<div class="form-row">
-						<label for="status">Statut de l’article</label>
-						<select name="status" id="status">
-							<option value="0" <?php echo ( isset( $post['status'] ) && $post['status'] == 0 ) ? 'selected' : ''; ?>>Brouillon</option>
-							<option value="1" <?php echo ( isset( $post['status'] ) && $post['status'] == 1 ) ? 'selected' : ''; ?>>Publié</option>
-						</select>
-					</div>
-
-					<div class="form-row --checkbox">
-						<!-- <h3>Catégorie de l’article</h3> -->
-						<div>
-							<input id="categorie-2" type="radio" name="categorie" value="2" <?php echo ( isset( $post['categorie_id'] ) && $post['categorie_id'] == 2 ) ? 'checked' : ''; ?>>
-							<label for="categorie-2">Astuce</label>
-						</div>
-
-						<div>
-							<input id="categorie-5" type="radio" name="categorie" value="5" <?php echo ( isset( $post['categorie_id'] ) && $post['categorie_id'] == 5 ) ? 'checked' : ''; ?>>
-							<label for="categorie-5">Maquillage</label>
-						</div>
-
-						<div>
-							<input id="categorie-3" type="radio" name="categorie" value="3" <?php echo ( isset( $post['categorie_id'] ) && $post['categorie_id'] == 3 ) ? 'checked' : ''; ?>>
-							<label for="categorie-3">Nature</label>
-						</div>
-
-						<div>
-							<input id="categorie-4" type="radio" name="categorie" value="4" <?php echo ( isset( $post['categorie_id'] ) && $post['categorie_id'] == 4 ) ? 'checked' : ''; ?>>
-							<label for="categorie-4">Océan</label>
-						</div>
-
-						<div>
-							<input id="categorie-1" type="radio" name="categorie" value="1" <?php echo ( isset( $post['categorie_id'] ) && $post['categorie_id'] == 1 ) ? 'checked' : ''; ?>>
-							<label for="categorie-1">Recette</label>
-						</div>
-					</div>
-
-					<div class="form-row">
-						<?php if ( isset( $post['thumbnail'] ) && ! empty( $post['thumbnail'] ) ) : ?>
-							<img src="../assets/images/<?php echo $post['thumbnail']; ?>" alt="">
-							<button class="button-primary button-small button">Retirer l’image</button>
-						<?php else : ?>
-							<label for="thumbnail">Image de l’article</label>
-							<input id="thumbnail" type="file" name="thumbnail">
-							<button class="button-primary button-small button">Ajouter une image</button>
-						<?php endif; ?>
-					</div>
-				</div>
-			</form>
-		</section>
-
-	</main>
-
-	<aside class="modal">
-		<div>
-			<h2>Êtes vous sur de vouloir supprimer ?</h2>
-			<p>Attention, cette action est définitive et irréversible.</p>
-			<button class="button-cancel button">Annuler</button>
-			<button class="button-delete button">Supprimer</button>
-		</div>
-	</aside>
-
-	<?php // include_once 'includes/footer.php'; ?>
-
+<body>
+    <h1>Edit Portfolio Item</h1>
+    <form method="POST" action="edit.php">
+        <input type="hidden" name="id" value="<?= htmlspecialchars($record['id']) ?>">
+        <label for="image_url">Image URL:</label>
+        <input type="text" name="image_url" value="<?= htmlspecialchars($record['image_url']) ?>"><br>
+        <label for="info_url">Info URL:</label>
+        <input type="text" name="info_url" value="<?= htmlspecialchars($record['info_url']) ?>"><br>
+        <label for="live_url">Live URL:</label>
+        <input type="text" name="live_url" value="<?= htmlspecialchars($record['live_url']) ?>"><br>
+        <label for="github_url">GitHub URL:</label>
+        <input type="text" name="github_url" value="<?= htmlspecialchars($record['github_url']) ?>"><br>
+        <button type="submit" name="update">Update</button>
+        <button type="submit" name="delete" onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+    </form>
 </body>
 </html>
