@@ -148,8 +148,8 @@ $conn->close();
 		<div class="navbar-hamburger">
 			<div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
 		</div>
+		<!-- Hamburger icon end -->
 	</div>
-	<!-- Hamburger icon end -->
 	<!-- Offcanvas menu end-->
 	<!-----------------------------------------------------------------
 						  Navigation end
