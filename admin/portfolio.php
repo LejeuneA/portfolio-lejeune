@@ -125,12 +125,12 @@ $items = $stmt->fetchAll();
                 <tbody>
                     <?php foreach ($items as $item) : ?>
                         <tr>
-                            <td data-cell="id"><?= htmlspecialchars($item['id']) ?></td>
-                            <td data-cell="image_url"><?= htmlspecialchars($item['image_url']) ?></td>
-                            <td data-cell="info_url"><?= htmlspecialchars($item['info_url']) ?></td>
-                            <td data-cell="live_url"><?= htmlspecialchars($item['live_url']) ?></td>
-                            <td data-cell="github_url"><?= htmlspecialchars($item['github_url']) ?></td>
-                            <td data-cell="actions"><a href="edit.php?id=<?= htmlspecialchars($item['id']) ?>"><i class="fas fa-tools"></i>Edit</a></td>
+                            <td><?= htmlspecialchars($item['id']) ?></td>
+                            <td><?= htmlspecialchars($item['image_url']) ?></td>
+                            <td><?= htmlspecialchars($item['info_url']) ?></td>
+                            <td><?= htmlspecialchars($item['live_url']) ?></td>
+                            <td><?= htmlspecialchars($item['github_url']) ?></td>
+                            <td><a href="edit.php?id=<?= htmlspecialchars($item['id']) ?>"><i class="fas fa-tools"></i> Edit</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
