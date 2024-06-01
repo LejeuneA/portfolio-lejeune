@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- Profile -->
         <div class="profile">
             <img src="../assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
+            <h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
             <div class="social-links">
                 <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- Profile -->
         <div class="profile">
             <img src="../assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
+            <h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
             <div class="social-links">
                 <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
