@@ -26,6 +26,10 @@
     display: none;
     height: 100%;
   }
+
+  @media (min-width: 1200px) and (max-width: 1920px) {
+    height: 100%;
+  }
 }
 
 // Navigation Menu
