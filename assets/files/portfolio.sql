@@ -28,8 +28,9 @@ CREATE TABLE `portfolio` (
   `info_url` varchar(250) DEFAULT NULL,
   `live_url` varchar(250) DEFAULT NULL,
   `github_url` varchar(250) DEFAULT NULL,
+  `info_url_fr` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +39,7 @@ CREATE TABLE `portfolio` (
 
 LOCK TABLES `portfolio` WRITE;
 /*!40000 ALTER TABLE `portfolio` DISABLE KEYS */;
-INSERT INTO `portfolio` VALUES (1,'assets/images/librairie-lejeune-green.png','public/librairie-lejeune.html','https://acelyalejeune.be/portfolio/librairie-lejeune/index.php','https://github.com/LejeuneA/librairie-lejeune'),(2,'assets/images/recettes_logo.png','public/recettes.html','https://lejeunea.github.io/recettes/','https://github.com/LejeuneA/recettes'),(3,'assets/images/tourism_logo.png','public/tourism.html','https://lejeunea.github.io/tourisme-wallonie/','https://github.com/LejeuneA/tourisme-wallonie');
+INSERT INTO `portfolio` VALUES (1,'assets/images/librairie-lejeune-green.png','public/librairie-lejeune.html','https://acelyalejeune.be/portfolio/librairie-lejeune/index.php','https://github.com/LejeuneA/librairie-lejeune','public/librarie-lejeune-fr.html'),(2,'assets/images/recettes_logo.png','public/recettes.html','https://lejeunea.github.io/recettes/','https://github.com/LejeuneA/recettes','public/recettes-fr.html'),(3,'assets/images/tourism_logo.png','public/tourism.html','https://lejeunea.github.io/tourisme-wallonie/','https://github.com/LejeuneA/tourisme-wallonie','public/tourism-fr.html');
 /*!40000 ALTER TABLE `portfolio` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-28 11:10:27
+-- Dump completed on 2024-06-01 22:00:04
