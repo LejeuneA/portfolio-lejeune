@@ -6,7 +6,7 @@
 /* -------------------------------------------------------
                     Display page
 ---------------------------------------------------------*/
-.admin-portfolio{
+.admin-portfolio {
   @include d-flex(flex, center, start, column, center);
   background: rgba(144, 238, 144, 0.1);
 
@@ -33,9 +33,41 @@
   }
 
   .section-portfolio {
-    @include d-flex(flex, start, start, column, center);
-    height: 100vh;
-    width: 100%;
-    padding: 0 2em;
+    height: auto;
+    width: calc(100% - 8em); 
+    margin: 0 4em; 
+    overflow-x: auto; 
+    padding-bottom: 2em; 
+
+    table {
+      width: 100%;
+      border: 1px solid $primary-green;
+      border-collapse: collapse;
+
+      thead {
+        tr {
+          th {
+            border: 1px solid $primary-green;
+            padding: 1em;
+            color: $dark-green;
+            font-size: 1.2em;
+            font-weight: 800;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(odd) {
+            background-color: rgba(144, 238, 144, 0.3);
+          }
+          td {
+            border: 1px solid $primary-green;
+            padding: 1em;
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
   }
 }
