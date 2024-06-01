@@ -105,7 +105,7 @@
                 }
 
                 .portfolio-info-container {
-                    @include d-flex(flex, center, center, row, center);
+                    @include d-flex(flex, center, start, row, center);
                     width: 100%;
                     gap: 2em;
                     padding-top: 2em;
