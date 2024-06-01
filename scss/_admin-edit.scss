@@ -7,9 +7,9 @@
                         Edit page
 ---------------------------------------------------------*/
 .admin-edit {
-    @include d-flex(flex, center, start, column, center);
+    @include d-flex(flex, start, start, column, center);
     background: rgba(144, 238, 144, 0.1);
-    height: 100vh;
+    height: auto;
     width: 100%;
 
     h1 {
