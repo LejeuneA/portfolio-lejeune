@@ -9,12 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$id = $_POST['id'];
 		$image_url = $_POST['image_url'];
 		$info_url = $_POST['info_url'];
+		$info_url_fr = $_POST['info_url_fr'];
 		$live_url = $_POST['live_url'];
 		$github_url = $_POST['github_url'];
 
-		$sql = "UPDATE portfolio SET image_url = :image_url, info_url = :info_url, live_url = :live_url, github_url = :github_url WHERE id = :id";
+		$sql = "UPDATE portfolio SET image_url = :image_url, info_url = :info_url, info_url_fr = :info_url_fr, live_url = :live_url, github_url = :github_url WHERE id = :id";
 		$stmt = $pdo->prepare($sql);
-		if ($stmt->execute(['image_url' => $image_url, 'info_url' => $info_url, 'live_url' => $live_url, 'github_url' => $github_url, 'id' => $id])) {
+		if ($stmt->execute(['image_url' => $image_url, 'info_url' => $info_url, 'info_url_fr' => $info_url_fr, 'live_url' => $live_url, 'github_url' => $github_url, 'id' => $id])) {
 			$_SESSION['message'] = "Record updated successfully!";
 			$_SESSION['message_type'] = "success";
 		} else {
@@ -96,7 +97,7 @@ if (isset($_GET['id'])) {
 		<!-- Profile -->
 		<div class="profile">
 			<img src="../assets/images/header-photo.jpg" alt class="profile-img">
-			<h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
+			<h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
 			<div class="social-links">
 				<a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
 				<a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -131,7 +132,7 @@ if (isset($_GET['id'])) {
 		<!-- Profile -->
 		<div class="profile">
 			<img src="../assets/images/header-photo.jpg" alt class="profile-img">
-			<h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
+			<h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
 			<div class="social-links">
 				<a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
 				<a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -188,6 +189,9 @@ if (isset($_GET['id'])) {
 
 				<label for="info_url">Info URL:</label>
 				<input type="text" name="info_url" value="<?= htmlspecialchars($record['info_url']) ?>">
+
+				<label for="info_url_fr">Info URL FR:</label>
+				<input type="text" name="info_url_fr" value="<?= htmlspecialchars($record['info_url_fr']) ?>">
 
 				<label for="live_url">Live URL:</label>
 				<input type="text" name="live_url" value="<?= htmlspecialchars($record['live_url']) ?>">
