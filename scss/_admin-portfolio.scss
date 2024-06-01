@@ -14,7 +14,7 @@
     font-size: 2em;
     font-weight: bold;
     padding-bottom: 0.5em;
-    padding-top: 2em;
+    padding-top: 1em;
     position: relative;
     color: $dark-green;
     margin-bottom: 1em;
@@ -65,6 +65,22 @@
             border: 1px solid $primary-green;
             padding: 1em;
             word-wrap: break-word;
+          }
+
+          a{
+            color: $dark-green;
+            font-weight: 600;
+
+            &:hover{
+              color: $primary-green;
+            }
+
+            i{
+              color: $dark-green;
+              font-weight: 600;
+              cursor: pointer;
+              margin-left: 1em;
+            }
           }
         }
       }
