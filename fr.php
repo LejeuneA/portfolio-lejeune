@@ -11,13 +11,13 @@ if ($conn->connect_error) {
 }
 
 // Fetch portfolio items
-$sql = "SELECT id, image_url, info_url, live_url, github_url FROM portfolio";
+$sql = "SELECT id, image_url, info_url_fr, live_url, github_url FROM portfolio";
 $result = $conn->query($sql);
 
 $portfolioItems = [];
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         $portfolioItems[] = $row;
     }
 } else {
@@ -95,8 +95,8 @@ $conn->close();
                 <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
             </div>
             <div class="btn-resume">
-				<a class="btn-resume" href="./admin/portfolio.php">Admin</a>
-			</div>
+                <a class="btn-resume" href="./admin/portfolio.php">Admin</a>
+            </div>
         </nav>
         <!-- End Nav Menu -->
     </header>
@@ -142,8 +142,8 @@ $conn->close();
                 <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
             </div>
             <div class="btn-resume">
-				<a class="btn-resume" href="./admin/portfolio.php">Admin</a>
-			</div>
+                <a class="btn-resume" href="./admin/portfolio.php">Admin</a>
+            </div>
         </nav>
         <!-- Nav menu end -->
         <!-- Hamburger Icon -->
@@ -358,11 +358,11 @@ $conn->close();
                     <?php foreach ($portfolioItems as $item) : ?>
                         <div class="portfolio-items">
                             <div class="portfolio-item-top">
-                                <a href="<?php echo htmlspecialchars($item['info_url']); ?>"><img src="<?php echo htmlspecialchars($item['image_url']); ?>" alt="Portfolio Item"></a>
+                                <a href="<?php echo htmlspecialchars($item['info_url_fr']); ?>"><img src="<?php echo htmlspecialchars($item['image_url']); ?>" alt="Portfolio Item"></a>
                             </div>
                             <div class="portfolio-wrap">
                                 <div class="portfolio-links-top">
-                                    <a class="portfolio-link-top" href="<?php echo htmlspecialchars($item['info_url']); ?>" title="More
+                                    <a class="portfolio-link-top" href="<?php echo htmlspecialchars($item['info_url_fr']); ?>" title="More
                         information"><i class="fas fa-circle-info"></i> More
                                         information</a>
                                 </div>
