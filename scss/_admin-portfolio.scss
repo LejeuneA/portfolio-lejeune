@@ -7,8 +7,9 @@
                     Display page
 ---------------------------------------------------------*/
 .admin-portfolio {
-  @include d-flex(flex, center, start, column, center);
+  @include d-flex(flex, start, start, column, center);
   background: rgba(144, 238, 144, 0.1);
+  height: 100vh;
 
   h1 {
     font-size: 2em;
