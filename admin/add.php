@@ -6,12 +6,13 @@ require '../conf/conf-db.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $image_url = $_POST['image_url'];
     $info_url = $_POST['info_url'];
+    $info_url_fr = $_POST['info_url_fr'];
     $live_url = $_POST['live_url'];
     $github_url = $_POST['github_url'];
 
-    $sql = "INSERT INTO portfolio (image_url, info_url, live_url, github_url) VALUES (:image_url, :info_url, :live_url, :github_url)";
+    $sql = "INSERT INTO portfolio (image_url, info_url, info_url_fr, live_url, github_url) VALUES (:image_url, :info_url, :info_url_fr, :live_url, :github_url)";
     $stmt = $pdo->prepare($sql);
-    if ($stmt->execute(['image_url' => $image_url, 'info_url' => $info_url, 'live_url' => $live_url, 'github_url' => $github_url])) {
+    if ($stmt->execute(['image_url' => $image_url, 'info_url' => $info_url, 'info_url_fr' => $info_url_fr, 'live_url' => $live_url, 'github_url' => $github_url])) {
         $_SESSION['message'] = "Record added successfully!";
         $_SESSION['message_type'] = "success";
     } else {
@@ -144,6 +145,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 
                 <label for="info_url">Info URL:</label>
                 <input type="text" name="info_url" required>
+
+                <label for="info_url_fr">Info URL FR:</label>
+                <input type="text" name="info_url_fr" required>
                 
                 <label for="live_url">Live URL:</label>
                 <input type="text" name="live_url" required>
