@@ -13,6 +13,3 @@ try {
     throw new PDOException("Database connection error: " . $e->getMessage());
 }
 
-
-// 127.0.0.1
-// localhost
