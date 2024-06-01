@@ -58,6 +58,15 @@
             }
         }
     }
+
+    @media (min-width: 320px) and (max-width: 1199px) {
+        .profile{
+            img{
+                margin: 0.5em auto;
+                width: 8em;
+            }
+        }
+      }
 }
 
 @forward '%header';
