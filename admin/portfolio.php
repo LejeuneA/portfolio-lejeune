@@ -1,7 +1,6 @@
 <?php
 require '../conf/conf-db.php';
 
-// Fetch all records from the portfolio table
 $sql = "SELECT * FROM portfolio";
 $stmt = $pdo->query($sql);
 $items = $stmt->fetchAll();
@@ -23,7 +22,7 @@ $items = $stmt->fetchAll();
     <link href="../assets/icons/favicon.png" rel="icon" type="image/png">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Title -->
     <title>Display Portfolio Items</title>
@@ -65,8 +64,8 @@ $items = $stmt->fetchAll();
     <!-- End Header -->
 
     <!-----------------------------------------------------------------
-						Offcanvas Menu
-	------------------------------------------------------------------>
+                        Offcanvas Menu
+    ------------------------------------------------------------------>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <!-- Profile -->
@@ -105,14 +104,14 @@ $items = $stmt->fetchAll();
     </div>
     <!-- Offcanvas menu end-->
     <!-----------------------------------------------------------------
-						  Navigation end
+                          Navigation end
     ------------------------------------------------------------------>
     <!-- Main -->
     <main id="main" class="admin-portfolio">
         <h1>Portfolio</h1>
         <section class="section-portfolio">
             
-            <table border="1">
+            <table>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -126,12 +125,12 @@ $items = $stmt->fetchAll();
                 <tbody>
                     <?php foreach ($items as $item) : ?>
                         <tr>
-                            <td><?= htmlspecialchars($item['id']) ?></td>
-                            <td><?= htmlspecialchars($item['image_url']) ?></td>
-                            <td><?= htmlspecialchars($item['info_url']) ?></td>
-                            <td><?= htmlspecialchars($item['live_url']) ?></td>
-                            <td><?= htmlspecialchars($item['github_url']) ?></td>
-                            <td><a href="edit.php?id=<?= htmlspecialchars($item['id']) ?>"><i class="fas fa-tools"></i>Edit</a></td>
+                            <td data-cell="id"><?= htmlspecialchars($item['id']) ?></td>
+                            <td data-cell="image_url"><?= htmlspecialchars($item['image_url']) ?></td>
+                            <td data-cell="info_url"><?= htmlspecialchars($item['info_url']) ?></td>
+                            <td data-cell="live_url"><?= htmlspecialchars($item['live_url']) ?></td>
+                            <td data-cell="github_url"><?= htmlspecialchars($item['github_url']) ?></td>
+                            <td data-cell="actions"><a href="edit.php?id=<?= htmlspecialchars($item['id']) ?>"><i class="fas fa-tools"></i>Edit</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -159,6 +158,16 @@ $items = $stmt->fetchAll();
 
     <!-- Include main.js -->
     <script src="../js/main.js"></script>
+
+    <!-- Custom JS for debugging data-cell attributes -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cells = document.querySelectorAll('td[data-cell]');
+            cells.forEach(cell => {
+                console.log(`${cell.getAttribute('data-cell')}: ${cell.textContent}`);
+            });
+        });
+    </script>
 </body>
 
 </html>
