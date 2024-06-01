@@ -1,6 +1,6 @@
 <?php
 
-$servername = 'localhost';
+$servername = 'localhost'; 
 $dbname = 'portfolio';
 $username = 'root';
 $password = '@NtLYa130580';
@@ -12,3 +12,7 @@ try {
 } catch(PDOException $e) {
     throw new PDOException("Database connection error: " . $e->getMessage());
 }
+
+
+// 127.0.0.1
+// localhost
