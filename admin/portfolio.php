@@ -36,7 +36,7 @@ $items = $stmt->fetchAll();
         <!-- Profile -->
         <div class="profile">
             <img src="../assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
+            <h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
             <div class="social-links">
                 <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -71,7 +71,7 @@ $items = $stmt->fetchAll();
         <!-- Profile -->
         <div class="profile">
             <img src="../assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="index.html">Açelya Lejeune</a></h1>
+            <h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
             <div class="social-links">
                 <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -117,6 +117,7 @@ $items = $stmt->fetchAll();
                         <th>ID</th>
                         <th>Image URL</th>
                         <th>Info URL</th>
+                        <th>Info URL FR</th>
                         <th>Live URL</th>
                         <th>GitHub URL</th>
                         <th>Actions</th>
@@ -128,6 +129,7 @@ $items = $stmt->fetchAll();
                             <td><?= htmlspecialchars($item['id']) ?></td>
                             <td><?= htmlspecialchars($item['image_url']) ?></td>
                             <td><?= htmlspecialchars($item['info_url']) ?></td>
+                            <td><?= htmlspecialchars($item['info_url_fr']) ?></td>
                             <td><?= htmlspecialchars($item['live_url']) ?></td>
                             <td><?= htmlspecialchars($item['github_url']) ?></td>
                             <td><a href="edit.php?id=<?= htmlspecialchars($item['id']) ?>"><i class="fas fa-tools"></i> Edit</a></td>
@@ -158,16 +160,6 @@ $items = $stmt->fetchAll();
 
     <!-- Include main.js -->
     <script src="../js/main.js"></script>
-
-    <!-- Custom JS for debugging data-cell attributes -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const cells = document.querySelectorAll('td[data-cell]');
-            cells.forEach(cell => {
-                console.log(`${cell.getAttribute('data-cell')}: ${cell.textContent}`);
-            });
-        });
-    </script>
 </body>
 
 </html>
