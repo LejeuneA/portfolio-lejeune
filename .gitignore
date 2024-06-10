@@ -28,3 +28,7 @@ file/
 
 #Ignore index.html file
 index.html
+
+
+#Ignore any .psd files
+.psd
