@@ -24,11 +24,10 @@ node_modules/
 .DS_Store
 
 #Ignore any file directory
-file/
-
-#Ignore index.html file
-index.html
-
+files/
 
 #Ignore any .psd files
 .psd
+
+#Ignore any settings.php files
+settings.php
