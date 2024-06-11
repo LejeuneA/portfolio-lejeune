@@ -31,3 +31,6 @@ files/
 
 #Ignore any settings.php files
 settings.php
+
+#Ignore any index.html files
+index.html
