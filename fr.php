@@ -95,7 +95,7 @@ $conn->close();
                 <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
             </div>
             <div class="btn-resume">
-                <a class="btn-resume" href="./admin/portfolio.php">Admin</a>
+                <a class="btn-resume" href="./admin/portfolio.php">Se connecter</a>
             </div>
         </nav>
         <!-- End Nav Menu -->
@@ -104,7 +104,7 @@ $conn->close();
 
     <!-----------------------------------------------------------------
 						Offcanvas Menu
------------------------------------------------------------------->
+    ------------------------------------------------------------------>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <!-- Profile -->
@@ -142,7 +142,7 @@ $conn->close();
                 <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
             </div>
             <div class="btn-resume">
-                <a class="btn-resume" href="./admin/portfolio.php">Admin</a>
+                <a class="btn-resume" href="./admin/login.php">Se connecter</a>
             </div>
         </nav>
         <!-- Nav menu end -->
