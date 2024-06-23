@@ -117,7 +117,7 @@ if (isset($_GET['id'])) {
 						<span>Add</span></a></li>
 			</ul>
 			<div class="btn-resume">
-				<a class="btn-resume" href="../admin/portfolio.php">Admin</a>
+				<a class="btn-resume" href="../admin/logoff.php">Logoff</a>
 			</div>
 		</nav>
 		<!-- End Nav Menu -->
@@ -152,7 +152,7 @@ if (isset($_GET['id'])) {
 						<span>Add</span></a></li>
 			</ul>
 			<div class="btn-resume">
-				<a class="btn-resume" href="../admin/portfolio.php">Admin</a>
+				<a class="btn-resume" href="../admin/logoff.php">Logoff</a>
 			</div>
 		</nav>
 		<!-- Nav menu end -->

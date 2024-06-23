@@ -1,30 +1,45 @@
 <?php
-session_start(); // Start the session
-require '../conf/conf-db.php';
+session_start(); 
 
-// Check if the form has been submitted
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $image_url = $_POST['image_url'];
-    $info_url = $_POST['info_url'];
-    $info_url_fr = $_POST['info_url_fr'];
-    $live_url = $_POST['live_url'];
-    $github_url = $_POST['github_url'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    require_once('../conf/conf-db.php'); 
 
-    $sql = "INSERT INTO portfolio (image_url, info_url, info_url_fr, live_url, github_url) VALUES (:image_url, :info_url, :info_url_fr, :live_url, :github_url)";
-    $stmt = $pdo->prepare($sql);
-    if ($stmt->execute(['image_url' => $image_url, 'info_url' => $info_url, 'info_url_fr' => $info_url_fr, 'live_url' => $live_url, 'github_url' => $github_url])) {
-        $_SESSION['message'] = "Record added successfully!";
-        $_SESSION['message_type'] = "success";
+    // Retrieve form data
+    $login = $_POST['login'];
+    $password = $_POST['pwd'];
+
+    // Validate inputs (you can add more validation if needed)
+    if (empty($login) || empty($password)) {
+        $msg = "Please enter both email and password.";
     } else {
-        $_SESSION['message'] = "Failed to add record.";
-        $_SESSION['message_type'] = "error";
-    }
+        try {
+            // Prepare SQL statement to fetch user details
+            $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+            $stmt->execute([$login]);
+            $user = $stmt->fetch();
 
-    // Redirect back to the add.php page
-    header('Location: add.php');
-    exit;
+            // Verify password
+            if ($user && $password === $user['passwd']) { // Compare plain text passwords
+                // Password is correct, set session variables or redirect as needed
+                $_SESSION['user_id'] = $user['idUser'];
+                $_SESSION['user_email'] = $user['email'];
+                $_SESSION['user_permission'] = $user['permission'];
+
+                // Redirect to admin page or any other authenticated page
+                header("Location: ../admin/portfolio.php");
+                exit();
+            } else {
+                // Invalid login credentials
+                $msg = "Invalid email or password.";
+            }
+        } catch(PDOException $e) {
+            $msg = "Database error: " . $e->getMessage();
+        }
+    }
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,10 +57,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="../assets/icons/favicon.png" rel="icon" type="image/png">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Title -->
-    <title>Add Portfolio Item</title>
+    <title>Display Portfolio Items</title>
 </head>
 
 <body>
@@ -76,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <span>Add</span></a></li>
             </ul>
             <div class="btn-resume">
-                <a class="btn-resume" href="../admin/logoff.php">Logoff</a>
+                <a class="btn-resume" href="../admin/portfolio.php">Admin</a>
             </div>
         </nav>
         <!-- End Nav Menu -->
@@ -84,8 +99,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- End Header -->
 
     <!-----------------------------------------------------------------
-						Offcanvas Menu
-	------------------------------------------------------------------>
+                        Offcanvas Menu
+    ------------------------------------------------------------------>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <!-- Profile -->
@@ -111,10 +126,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <span>Add</span></a></li>
             </ul>
             <div class="btn-resume">
-                <a class="btn-resume" href="../admin/logoff.php">Logoff</a>
+                <a class="btn-resume" href="../admin/login.php">Login</a>
             </div>
         </nav>
         <!-- Nav menu end -->
+
         <!-- Hamburger Icon -->
         <div class="navbar-hamburger">
             <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
@@ -123,46 +139,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     <!-- Offcanvas menu end-->
     <!-----------------------------------------------------------------
-						  Navigation end
+                          Navigation end
     ------------------------------------------------------------------>
-    <!-- Main -->
-    <main id="main" class="admin-add">
-        <h1>Add Portfolio Item</h1>
-
-        <?php if (isset($_SESSION['message'])) : ?>
-            <div class="message <?= $_SESSION['message_type']; ?>">
-                <?= $_SESSION['message']; ?>
-                <?php unset($_SESSION['message']); ?>
-            </div>
-        <?php endif; ?>
-
-
-        <section class="section-add">
-            <form method="POST" action="add.php">
-
-                <label for="image_url">Image URL:</label>
-                <input type="text" name="image_url" required>
-
-                <label for="info_url">Info URL:</label>
-                <input type="text" name="info_url" required>
-
-                <label for="info_url_fr">Info URL FR:</label>
-                <input type="text" name="info_url_fr" required>
-
-                <label for="live_url">Live URL:</label>
-                <input type="text" name="live_url" required>
-
-                <label for="github_url">GitHub URL:</label>
-                <input type="text" name="github_url" required>
-
-                <div class="btn-submit">
-                    <button type="submit">Add</button>
+    <main id="main">
+        <div class="login-container">
+            <div class="login-title">
+                <h1>Login</h1>
+                <p>Login and manage your page</p>
+                <div class="message">
+                    <?php if (isset($msg)) echo $msg; ?>
                 </div>
-            </form>
-        </section>
+            </div>
+            <div class="login-content container">
+                <form class="login-form" action="login.php" method="post">
+                    <div class="form-ctrl">
+                        <label for="login" class="form-ctrl">E-mail</label>
+                        <input type="email" class="form-ctrl" id="login" name="login" value="<?php echo (!empty($_POST['login'])) ? $_POST['login'] : null; ?>" required>
+                    </div>
+                    <div class="form-ctrl">
+                        <label for="pwd" class="form-ctrl">Password</label>
+                        <input type="password" class="form-ctrl" id="pwd" name="pwd" value="" required>
+                    </div>
+                    <a href="./forgot-pass.php"><p>Forgot your password?</p></a>
+                    <input type="hidden" id="form" name="form" value="login">
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
     </main>
-
-    <!-----------------------------------------------------------------
+      <!-----------------------------------------------------------------
                                Footer
     ------------------------------------------------------------------>
     <footer id="footer">
@@ -181,8 +186,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
     <!-- Include main.js -->
-    <script src="./js/main.js"></script>
-
+    <script src="../js/main.js"></script>
+   
 </body>
 
 </html>
