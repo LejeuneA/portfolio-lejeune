@@ -6,7 +6,7 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 
 // Database connection
-$conn = new mysqli('mysql.acelyalejeune.be', 'acelyalejeune', '@NtLYa130580', 'portfolio_contact_form');
+$conn = new mysqli('mysql.acelyalejeune.be', 'acelyalejeune', '@NtLYa130580', 'portfolio_lejeune');
 if ($conn->connect_error) {
     die('Connection Failed: ' . $conn->connect_error);
 } else {
@@ -35,4 +35,4 @@ if ($conn->connect_error) {
     $stmt->close();
     $conn->close();
 }
-?>
+
