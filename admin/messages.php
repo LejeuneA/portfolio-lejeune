@@ -106,7 +106,7 @@ $result = $conn->query($sql);
                     echo "<td>
                             <form method='post' action='messages.php' onsubmit='return confirm(\"Are you sure you want to delete this message?\");'>
                                 <input type='hidden' name='delete_id' value='" . $row["id"] . "'>
-                                <button type='submit'>Delete</button>
+                                <button type='submit' class='btn-primary'>Delete</button>
                             </form>
                           </td>";
                     echo "</tr>";
