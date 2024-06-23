@@ -6,7 +6,7 @@ $subject = $_POST['subject'];
 $message = $_POST['message'];
 
 // Database connection
-$conn = new mysqli('mysql.acelyalejeune.be', 'acelyalejeune', '@NtLYa130580', 'portfolio_lejeune');
+$conn = new mysqli('localhost', 'root', '@NtLYa130580', 'portfolio');
 if ($conn->connect_error) {
     die('Connection Failed: ' . $conn->connect_error);
 } else {
@@ -16,21 +16,21 @@ if ($conn->connect_error) {
     $stmt->execute();
 
     // Send email notification
-    $to = "acelyalejeune@gmail.com"; 
-    $subject = "New Form Submission";
-    $body = "You have received a new form submission:\n\n";
-    $body .= "Name: $firstName $lastName\n";
-    $body .= "Email: $email\n";
-    $body .= "Subject: $subject\n";
-    $body .= "Message: $message\n";
+    // $to = "acelyalejeune@gmail.com"; 
+    // $subject = "New Form Submission";
+    // $body = "You have received a new form submission:\n\n";
+    // $body .= "Name: $firstName $lastName\n";
+    // $body .= "Email: $email\n";
+    // $body .= "Subject: $subject\n";
+    // $body .= "Message: $message\n";
 
     // Send email using mail() function
-    mail($to, $subject, $body);
+    // mail($to, $subject, $body);
 
     echo "Message sent...";
 
     // Redirect back to index.html after 3 seconds
-    header("refresh:1;url=https://acelyalejeune.be/");
+    header("refresh:1;url=http://localhost/portfolio-lejeune/index.php");
 
     $stmt->close();
     $conn->close();
