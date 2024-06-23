@@ -115,6 +115,8 @@ if (isset($_GET['id'])) {
 				</li>
 				<li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
 						<span>Add</span></a></li>
+				<li><a href="messages.php" class="nav-link scrollto"><i class="fa-solid fa-envelope"></i>
+						<span>My messages</span></a></li>
 			</ul>
 			<div class="btn-resume">
 				<a class="btn-resume" href="../admin/logoff.php">Logoff</a>
@@ -150,6 +152,8 @@ if (isset($_GET['id'])) {
 				</li>
 				<li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
 						<span>Add</span></a></li>
+				<li><a href="messages.php" class="nav-link scrollto"><i class="fa-solid fa-envelope"></i>
+						<span>My messages</span></a></li>
 			</ul>
 			<div class="btn-resume">
 				<a class="btn-resume" href="../admin/logoff.php">Logoff</a>
