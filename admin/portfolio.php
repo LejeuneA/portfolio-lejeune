@@ -54,6 +54,8 @@ $items = $stmt->fetchAll();
                 </li>
                 <li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
                         <span>Add</span></a></li>
+                <li><a href="messages.php" class="nav-link scrollto"><i class="fa-solid fa-envelope"></i>
+                        <span>My messages</span></a></li>
             </ul>
             <div class="btn-resume">
                 <a class="btn-resume" href="../admin/logoff.php">Logoff</a>
@@ -89,6 +91,8 @@ $items = $stmt->fetchAll();
                 </li>
                 <li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
                         <span>Add</span></a></li>
+                <li><a href="messages.php" class="nav-link scrollto"><i class="fa-solid fa-envelope"></i>
+                        <span>My messages</span></a></li>
             </ul>
             <div class="btn-resume">
                 <a class="btn-resume" href="../admin/logoff.php">Logoff</a>
@@ -110,7 +114,7 @@ $items = $stmt->fetchAll();
     <main id="main" class="admin-portfolio">
         <h1>Portfolio</h1>
         <section class="section-portfolio">
-            
+
             <table>
                 <thead>
                     <tr>
