@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <span>Add</span></a></li>
             </ul>
             <div class="btn-resume">
-                <a class="btn-resume" href="../admin/portfolio.php">Admin</a>
+                <a class="btn-resume" href="../admin/logoff.php">Logoff</a>
             </div>
         </nav>
         <!-- End Nav Menu -->
@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <span>Add</span></a></li>
             </ul>
             <div class="btn-resume">
-                <a class="btn-resume" href="../admin/login.php">Login</a>
+            <a class="btn-resume" href="../admin/logoff.php">Logoff</a>
             </div>
         </nav>
         <!-- Nav menu end -->
@@ -147,10 +147,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="login-container">
                 <div class="login-title">
                     <h2>Login</h2>
-                    <p>Login and manage your page</p>
-                    <div class="message">
-                        <?php if (isset($msg)) echo $msg; ?>
-                    </div>
                 </div>
                 <div class="login-content container">
                     <form class="login-form" action="login.php" method="post">
@@ -162,9 +158,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <label for="pwd" class="form-ctrl">Password</label>
                             <input type="password" class="form-ctrl" id="pwd" name="pwd" value="" required>
                         </div>
-                        <a href="./forgot-pass.php">
-                            <p>Forgot your password?</p>
-                        </a>
                         <input type="hidden" id="form" name="form" value="login">
                         <button type="submit" class="btn-primary">Login</button>
                     </form>
