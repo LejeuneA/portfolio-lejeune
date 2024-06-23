@@ -7,7 +7,7 @@
                     Display page
 ---------------------------------------------------------*/
 .admin-messages {
-  @include d-flex(flex, start, start, column, center);
+  @include d-flex(flex, start, start, column, start);
   background: rgba(144, 238, 144, 0.1);
   height: 100vh;
 
@@ -18,14 +18,14 @@
     padding-top: 1em;
     position: relative;
     color: $dark-green;
-    margin-bottom: 1em;
-    margin-left: 2em;
+    margin-bottom: 2em;
+    margin-left: 0;
 
     &::after {
       content: "";
       position: absolute;
       display: block;
-      width: 2em;
+      width: 4em;
       height: 0.1em;
       background: $primary-green;
       bottom: 0;
@@ -33,17 +33,16 @@
     }
   }
 
-  .section-portfolio {
+  .section-messages {
     height: auto;
-    width: calc(100% - 8em); 
-    margin: 0 4em; 
-    overflow-x: auto; 
-    padding-bottom: 2em; 
+    width: calc(100% - 8em);
+    margin: 0 4em;
+    overflow-x: auto;
+    padding-bottom: 2em;
 
     table {
       width: 100%;
       border: 1px solid $primary-green;
-      border-collapse: collapse;
 
       thead {
         tr {
@@ -59,28 +58,32 @@
 
       tbody {
         tr {
-          &:nth-child(odd) {
-            background-color: rgba(144, 238, 144, 0.3);
+          th {
+            background-color: $background;
+            color: $light-green;
+            padding: 1em;
+            border: 1px solid $light-green;
+            font-size: 1.2em;
+            font-weight: 800;
+            text-transform: uppercase;
           }
+
+          &:nth-child(odd) {
+            background-color: rgba($light-gray, 0.2);
+          }
+          
           td {
             border: 1px solid $primary-green;
             padding: 1em;
             word-wrap: break-word;
-          }
 
-          a{
-            color: $dark-green;
-            font-weight: 600;
-
-            &:hover{
-              color: $primary-green;
-            }
-
-            i{
-              color: $dark-green;
-              font-weight: 600;
+            .btn-primary {
+              @include button-style($background, $light-gray, $primary-green, $light-green);
+              padding: 0.5em 1em;
+              border: none;
               cursor: pointer;
-              margin-left: 1em;
+              transition: background-color 0.3s;
+              width: 100%;
             }
           }
         }
