@@ -18,7 +18,7 @@
     padding-top: 1em;
     position: relative;
     color: $dark-green;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     margin-left: 2em;
 
     &::after {
@@ -48,11 +48,13 @@
       thead {
         tr {
           th {
-            border: 1px solid $primary-green;
+            background-color: $background;
+            color: $light-green;
             padding: 1em;
-            color: $dark-green;
+            border: 1px solid $light-green;
             font-size: 1.2em;
             font-weight: 800;
+            text-transform: uppercase;
           }
         }
       }
@@ -60,7 +62,7 @@
       tbody {
         tr {
           &:nth-child(odd) {
-            background-color: rgba(144, 238, 144, 0.3);
+            background-color: rgba($light-gray, 0.2);
           }
           td {
             border: 1px solid $primary-green;
