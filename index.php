@@ -95,7 +95,7 @@ $conn->close();
 				<a class="btn-resume" href="./assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
 			</div>
 			<div class="btn-resume">
-				<a class="btn-resume" href="./admin/portfolio.php">Admin</a>
+				<a class="btn-resume" href="./admin/login.php">Login</a>
 			</div>
 		</nav>
 		<!-- End Nav Menu -->
@@ -140,7 +140,7 @@ $conn->close();
 				<a class="btn-resume" href="./assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
 			</div>
 			<div class="btn-resume">
-				<a class="btn-resume" href="./admin/portfolio.php">Admin</a>
+				<a class="btn-resume" href="./admin/login.php">Login</a>
 			</div>
 		</nav>
 		<!-- Nav menu end -->
