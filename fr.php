@@ -95,7 +95,7 @@ $conn->close();
                 <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
             </div>
             <div class="btn-resume">
-                <a class="btn-resume" href="./admin/portfolio.php">Se connecter</a>
+                <a class="btn-resume" href="./admin/login.php">Se connecter</a>
             </div>
         </nav>
         <!-- End Nav Menu -->
