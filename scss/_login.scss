@@ -6,139 +6,149 @@
 /* -----------------------------------------------------------------
                             Login page
  ----------------------------------------------------------------- */
-.login-container {
-  @include d-flex(flex, center, center, column, center);
-  background-color: $black;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  padding: 5em;
 
-  .login-title {
-    h1 {
-      color: $primary;
-      font-size: 3em;
-      font-weight: lighter;
-      text-align: center;
-    }
+ .login{
+     @include d-flex(flex, center, center, column, center);
+     background-color: $background;
+     height: 100vh;
+     width: 100%;
+     overflow: hidden;
+     position: relative;
 
-    p {
-      color: $white;
-      margin: 0.8em 0;
-      font-weight: 200;
-      font-size: 1.5em;
-    }
-  }
-
-  .message {
-    color: $primary;
-    margin-bottom: 1em;
-  }
-
-  .login-content {
-    @include d-flex(flex, center, center, column, center);
-    background-color: $secondary;
-    padding: 2em;
-    border-radius: 1em;
-    max-width: 30em;
-    width: 100%;
-    z-index: 3;
-
-    .login-form {
-      @include d-flex(flex, center, center, column, center);
-      width: 100%;
-
-      .form-ctrl {
-        width: 100%;
-        margin-bottom: 1em;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        label {
-          color: $white;
-          font-weight: 300;
-          font-size: 0.9em;
-        }
-
-        input {
-          width: 100%;
-          padding: 0.6em;
-          border: 1px solid $secondary;
-          border-radius: 4px;
-          box-sizing: border-box;
-          margin-top: 6px;
-          margin-bottom: 1em;
-          resize: vertical;
-          outline: none;
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-          font-family: "Poppins", sans-serif;
-          font-size: small;
-          font-style: italic;
-          color: $white;
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus {
-          border: 1px solid $primary;
-          box-shadow: 0 0 10px rgba(48, 71, 94, 0.9);
-        }
-
-        input:focus-visible,
-        select:focus-visible,
-        textarea:focus-visible {
-          outline: 1px solid $secondary;
-        }
-      }
-
-      p {
-        color: $primary;
-        text-align: end;
-        font-size: 0.9em;
-        font-weight: 400;
-      }
-
-      .btn-primary {
-        margin-top: 2em;
-        padding: 0.5em 5em;
-
-        @include hover("background-color", $primary, "color", $white);
-      }
-    }
-
-    .background-vector {
-      background-color: $primary;
-
-      img {
-        height: auto;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-      }
-    }
-  }
-
-  // Responsive styles for login page
-  @media (min-width: 320px) and (max-width: 768px) {
-    padding: 1em;
-    height: 100vh;
-
-    .login-title {
-      h1 {
-        font-size: 2em;
-      }
-
-      p {
-        font-size: 1.2em;
-      }
-    }
-  }
-}
+     .login-container {
+       @include d-flex(flex, center, center, column, center);
+       background-color: $background;
+       height: 100vh;
+       width: 100%;
+       overflow: hidden;
+       position: relative;
+       padding: 5em;
+     
+       .login-title {
+         h1 {
+           color: $primary-green;
+           font-size: 3em;
+           font-weight: lighter;
+           text-align: center;
+         }
+     
+         p {
+           color: $light-green;
+           margin: 0.8em 0;
+           font-weight: 200;
+           font-size: 1.5em;
+         }
+       }
+     
+       .message {
+         color: $primary-green;
+         margin-bottom: 1em;
+       }
+     
+       .login-content {
+         @include d-flex(flex, center, center, column, center);
+         background-color: $secondary-green;
+         padding: 2em;
+         border-radius: 1em;
+         max-width: 30em;
+         width: 100%;
+         z-index: 3;
+     
+         .login-form {
+           @include d-flex(flex, center, center, column, center);
+           width: 100%;
+     
+           .form-ctrl {
+             width: 100%;
+             margin-bottom: 1em;
+     
+             &:last-child {
+               margin-bottom: 0;
+             }
+     
+             label {
+               color: $light-green;
+               font-weight: 300;
+               font-size: 0.9em;
+             }
+     
+             input {
+               width: 100%;
+               padding: 0.6em;
+               border: 1px solid $secondary-green;
+               border-radius: 4px;
+               box-sizing: border-box;
+               margin-top: 6px;
+               margin-bottom: 1em;
+               resize: vertical;
+               outline: none;
+             }
+     
+             input::placeholder,
+             textarea::placeholder {
+               font-family: "Poppins", sans-serif;
+               font-size: small;
+               font-style: italic;
+               color: $light-green;
+             }
+     
+             input:focus,
+             select:focus,
+             textarea:focus {
+               border: 1px solid $primary-green;
+               box-shadow: 0 0 10px rgba(48, 71, 94, 0.9);
+             }
+     
+             input:focus-visible,
+             select:focus-visible,
+             textarea:focus-visible {
+               outline: 1px solid $secondary-green;
+             }
+           }
+     
+           p {
+             color: $primary;
+             text-align: end;
+             font-size: 0.9em;
+             font-weight: 400;
+           }
+     
+           .btn-primary {
+             margin-top: 2em;
+             padding: 0.5em 5em;
+     
+             @include hover("background-color", $primary-green, "color", $light-green);
+           }
+         }
+     
+         .background-vector {
+           background-color: $primary-green;
+     
+           img {
+             height: auto;
+             width: 100%;
+             position: absolute;
+             bottom: 0;
+             left: 0;
+             z-index: -1;
+           }
+         }
+       }
+     
+       // Responsive styles for login page
+       @media (min-width: 320px) and (max-width: 768px) {
+         padding: 1em;
+         height: 100vh;
+     
+         .login-title {
+           h1 {
+             font-size: 2em;
+           }
+     
+           p {
+             font-size: 1.2em;
+           }
+         }
+       }
+     }
+ }
