@@ -1,8 +1,8 @@
 <?php
-session_start(); 
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    require_once('../conf/conf-db.php'); 
+    require_once('../conf/conf-db.php');
 
     // Retrieve form data
     $login = $_POST['login'];
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Invalid login credentials
                 $msg = "Invalid email or password.";
             }
-        } catch(PDOException $e) {
+        } catch (PDOException $e) {
             $msg = "Database error: " . $e->getMessage();
         }
     }
@@ -142,32 +142,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                           Navigation end
     ------------------------------------------------------------------>
     <main id="main">
-        <div class="login-container">
-            <div class="login-title">
-                <h1>Login</h1>
-                <p>Login and manage your page</p>
-                <div class="message">
-                    <?php if (isset($msg)) echo $msg; ?>
+
+        <section class="login">
+            <div class="login-container">
+                <div class="login-title">
+                    <h2>Login</h2>
+                    <p>Login and manage your page</p>
+                    <div class="message">
+                        <?php if (isset($msg)) echo $msg; ?>
+                    </div>
+                </div>
+                <div class="login-content container">
+                    <form class="login-form" action="login.php" method="post">
+                        <div class="form-ctrl">
+                            <label for="login" class="form-ctrl">E-mail</label>
+                            <input type="email" class="form-ctrl" id="login" name="login" value="<?php echo (!empty($_POST['login'])) ? $_POST['login'] : null; ?>" required>
+                        </div>
+                        <div class="form-ctrl">
+                            <label for="pwd" class="form-ctrl">Password</label>
+                            <input type="password" class="form-ctrl" id="pwd" name="pwd" value="" required>
+                        </div>
+                        <a href="./forgot-pass.php">
+                            <p>Forgot your password?</p>
+                        </a>
+                        <input type="hidden" id="form" name="form" value="login">
+                        <button type="submit" class="btn-primary">Login</button>
+                    </form>
                 </div>
             </div>
-            <div class="login-content container">
-                <form class="login-form" action="login.php" method="post">
-                    <div class="form-ctrl">
-                        <label for="login" class="form-ctrl">E-mail</label>
-                        <input type="email" class="form-ctrl" id="login" name="login" value="<?php echo (!empty($_POST['login'])) ? $_POST['login'] : null; ?>" required>
-                    </div>
-                    <div class="form-ctrl">
-                        <label for="pwd" class="form-ctrl">Password</label>
-                        <input type="password" class="form-ctrl" id="pwd" name="pwd" value="" required>
-                    </div>
-                    <a href="./forgot-pass.php"><p>Forgot your password?</p></a>
-                    <input type="hidden" id="form" name="form" value="login">
-                    <button type="submit" class="btn-primary">Login</button>
-                </form>
-            </div>
-        </div>
+        </section>
     </main>
-      <!-----------------------------------------------------------------
+
+    <!-----------------------------------------------------------------
                                Footer
     ------------------------------------------------------------------>
     <footer id="footer">
@@ -187,7 +193,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Include main.js -->
     <script src="../js/main.js"></script>
-   
+
 </body>
 
 </html>
