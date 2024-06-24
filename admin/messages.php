@@ -72,6 +72,7 @@ $result = $conn->query($sql);
                 </li>
                 <li><a href="portfolio.php" class="nav-link scrollto"><i class="fas fa-list"></i>
                         <span>Display</span></a></li>
+                </li>
                 <li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
                         <span>Add</span></a></li>
                 <li><a href="messages.php" class="nav-link scrollto"><i class="fa-solid fa-envelope"></i>
@@ -85,6 +86,48 @@ $result = $conn->query($sql);
     </header>
     <!-- End Header -->
 
+    <!-----------------------------------------------------------------
+                        Offcanvas Menu
+    ------------------------------------------------------------------>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Profile -->
+        <div class="profile">
+            <img src="../assets/images/header-photo.jpg" alt class="profile-img">
+            <h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
+            <div class="social-links">
+                <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="../fr.php" class="language"><b>FR</b></a>
+            </div>
+        </div>
+
+        <!-- Nav Menu -->
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li><a href="../index.php#hero" class="nav-link scrollto active"><i class="fas fa-home"></i><span>Home</span></a>
+                </li>
+                <li><a href="portfolio.php" class="nav-link scrollto"><i class="fas fa-list"></i>
+                        <span>Display</span></a></li>
+                </li>
+                <li><a href="add.php" class="nav-link scrollto"><i class="fa-solid fa-square-plus"></i>
+                        <span>Add</span></a></li>
+                <li><a href="messages.php" class="nav-link scrollto"><i class="fa-solid fa-envelope"></i>
+                        <span>My messages</span></a></li>
+            </ul>
+            <div class="btn-resume">
+                <a class="btn-resume" href="../admin/logoff.php">Logoff</a>
+            </div>
+        </nav>
+        <!-- Nav menu end -->
+
+        <!-- Hamburger Icon -->
+        <div class="navbar-hamburger">
+            <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <!-- Hamburger icon end -->
+    </div>
+    <!-- Offcanvas menu end-->
     <!-----------------------------------------------------------------
                           Navigation end
     ------------------------------------------------------------------>
