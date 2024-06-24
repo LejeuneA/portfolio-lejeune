@@ -185,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
     <!-- Include main.js -->
-    <script src="./js/main.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 
