@@ -35,10 +35,10 @@
 
   .section-portfolio {
     height: auto;
-    width: calc(100% - 8em); 
-    margin: 0 4em; 
-    overflow-x: auto; 
-    padding-bottom: 2em; 
+    width: calc(100% - 8em);
+    margin: 0 4em;
+    overflow-x: auto;
+    padding-bottom: 2em;
 
     table {
       width: 100%;
@@ -70,15 +70,15 @@
             word-wrap: break-word;
           }
 
-          a{
+          a {
             color: $dark-green;
             font-weight: 600;
 
-            &:hover{
+            &:hover {
               color: $primary-green;
             }
 
-            i{
+            i {
               color: $dark-green;
               font-weight: 600;
               cursor: pointer;
@@ -88,5 +88,21 @@
         }
       }
     }
+  }
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+    @include d-flex(flex, start, start, column, start);
+    overflow-x: hidden;
+    padding: 0 1em;
+
+    h1 {
+      font-size: 1.5em;
+      margin: 2em 0.5em;
+    }
+
+    .section-portfolio{
+      margin: 0 auto;
+      width: 100%;
+  }
   }
 }
