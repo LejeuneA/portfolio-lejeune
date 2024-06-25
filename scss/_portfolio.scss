@@ -4,7 +4,7 @@
 @use "global";
 
 /*--------------------------------------------------------------
-                        # Portfolio Section
+                 # Portfolio Section
 --------------------------------------------------------------*/
 
 .portfolio-section {
@@ -49,8 +49,9 @@
         }
 
         .portfolio-container {
-            @include d-flex(flex, space-between, center, row, start);
-            gap: 1.5em;
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2em;
             width: 100%;
 
             .portfolio-items {
