@@ -7,7 +7,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+	die("Connection failed: " . $conn->connect_error);
 }
 
 // Fetch portfolio items
@@ -17,11 +17,11 @@ $result = $conn->query($sql);
 $portfolioItems = [];
 
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $portfolioItems[] = $row;
-    }
+	while ($row = $result->fetch_assoc()) {
+		$portfolioItems[] = $row;
+	}
 } else {
-    echo "0 results";
+	echo "0 results";
 }
 
 $conn->close();
@@ -392,8 +392,7 @@ $conn->close();
 							</div>
 							<div class="portfolio-wrap">
 								<div class="portfolio-links-top">
-									<a class="portfolio-link-top" href="<?php echo htmlspecialchars($item['info_url']); ?>" title="More
-                        information"><i class="fas fa-circle-info"></i> More
+									<a class="portfolio-link-top" href="<?php echo htmlspecialchars($item['info_url']); ?>" title="More information"><i class="fas fa-circle-info"></i> More
 										information</a>
 								</div>
 								<div class="portfolio-links-bottom">
