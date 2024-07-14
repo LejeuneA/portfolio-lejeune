@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['user_permission'] = $user['permission'];
 
                 // Redirect to admin page or any other authenticated page
-                header("Location: ../admin/portfolio.php");
+                header("Location: ../admin/messages.php");
                 exit();
             } else {
                 // Invalid login credentials
