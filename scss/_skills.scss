@@ -38,6 +38,14 @@
             }
         }
 
+        h3 {
+            font-size: 1.5em;
+            font-weight: bold;
+            position: relative;
+            color: $dark-green;
+            margin-bottom: 1em;
+        }
+
         .skills-content {
             @include d-flex(flex, start, start, row, start);
             gap: 5em;

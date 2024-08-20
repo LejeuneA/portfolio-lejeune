@@ -255,6 +255,8 @@ $conn->close();
 					<!-- Skills container left -->
 					<div class="skills-container-left" data-aos="fade-up">
 
+						<h3>Front-end Developer</h3>
+
 						<!-- Html -->
 						<div class="progress">
 							<span class="skill">HTML <i class="val">100%</i></span>
@@ -281,7 +283,7 @@ $conn->close();
 
 						<!-- Javascript -->
 						<div class="progress">
-							<span class="skill">JavaScript <i class="val">55%</i></span>
+							<span class="skill">JavaScript & jQuery <i class="val">65%</i></span>
 							<div class="progress-bar-wrap">
 								<div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
@@ -303,11 +305,6 @@ $conn->close();
 							</div>
 						</div>
 
-					</div>
-
-					<!-- Skills container right -->
-					<div class="skills-container-right" data-aos="fade-up" data-aos-delay="100">
-
 						<!-- Cms -->
 						<div class="progress">
 							<span class="skill">WordPress/CMS <i class="val">85%</i></span>
@@ -315,6 +312,13 @@ $conn->close();
 								<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div>
+
+					</div>
+
+					<!-- Skills container right -->
+					<div class="skills-container-right" data-aos="fade-up" data-aos-delay="100">
+
+						<h3>UI & Graphic Design</h3>
 
 						<!-- Figma -->
 						<div class="progress">
