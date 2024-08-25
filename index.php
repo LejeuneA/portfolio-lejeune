@@ -169,7 +169,7 @@ $conn->close();
 			<div class="about-container container">
 				<h2>About</h2>
 				<div class="about-content">
-					<div class="about-container-left" data-aos="fade-right" data-aos-duration="1700">
+					<div class="about-container-left" data-aos="fade-right" data-aos-duration="1500">
 						<p><span class="first-sentence">Welcome to my website! I'm Açelya
 								Lejeune</span>
 							My name is Açelya, a graphic design professional with over 20 years
@@ -198,7 +198,7 @@ $conn->close();
 					</div>
 
 					<div class="about-container-right">
-						<div class="content" data-aos="fade-left" data-aos-duration="1800">
+						<div class="content" data-aos="fade-left" data-aos-duration="1600">
 							<p>
 								<span class="first-sentence">Passion for Web development</span>
 								In 2019, I moved to England, started my own business, and in 2020, I
@@ -250,7 +250,7 @@ $conn->close();
 				<h2>Skills</h2>
 				<div class="skills-content">
 					<!-- Skills container left -->
-					<div class="skills-container-left" data-aos="fade-up" data-aos-duration="1700">
+					<div class="skills-container-left" data-aos="fade-up" data-aos-duration="1500">
 
 						<h3>Front-end Developer</h3>
 
@@ -313,7 +313,7 @@ $conn->close();
 					</div>
 
 					<!-- Skills container right -->
-					<div class="skills-container-right" data-aos="fade-up" data-aos-duration="3000">
+					<div class="skills-container-right" data-aos="fade-up" data-aos-duration="1500">
 
 						<h3>UI & Graphic Design</h3>
 
@@ -385,7 +385,7 @@ $conn->close();
 						innovation.
 					</p>
 				</div>
-				<div class="portfolio-container" data-aos="fade-up" data-aos-duration="2000">
+				<div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">
 					<?php foreach ($portfolioItems as $item) : ?>
 						<div class="portfolio-items">
 							<div class="portfolio-item-top">
@@ -427,7 +427,7 @@ $conn->close();
 					</p>
 				</div>
 
-				<div class="services-container" data-aos="fade-right" data-aos-duration="2000">
+				<div class="services-container" data-aos="fade-right" data-aos-duration="1500">
 
 					<div class="services-item">
 						<div class="image-container">
@@ -454,7 +454,7 @@ $conn->close();
 					</div>
 				</div>
 
-				<div class="services-container" data-aos="fade-left" data-aos-duration="2000">
+				<div class="services-container" data-aos="fade-left" data-aos-duration="1500">
 
 					<div class="services-item">
 						<div class="image-container">
@@ -502,7 +502,7 @@ $conn->close();
 					</p>
 				</div>
 
-				<div class="contact-container" data-aos="fade-in" data-aos-duration="2000">
+				<div class="contact-container" data-aos="fade-in" data-aos-duration="1500">
 					<form action="./forms/contact.php" method="post">
 
 						<label for="firstName">Name</label>
