@@ -1,4 +1,4 @@
-@use 'custom' as *;
+@use "custom" as *;
 @import "mixins";
 @import "extends";
 @import "global";
@@ -43,86 +43,43 @@
             font-weight: bold;
             position: relative;
             color: $dark-green;
-            margin-bottom: 1em;
         }
 
         .skills-content {
-            @include d-flex(flex, start, start, row, start);
-            gap: 5em;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 1.5em;
             width: 100%;
 
-            .skills-container-left {
-                width: 50%;
+            .skills-list-container {
+                display: grid;
+                grid-auto-flow: row;
+                grid-auto-rows: auto;
+                grid-gap: 0.5em;
 
-                .progress {
-                    height: 4em;
-                    display: block;
-                    background: none;
-                    border-radius: 0;
-
-                    .skill {
-                        padding: 0;
-                        margin: 0 0 0.5em 0;
-                        text-transform: uppercase;
-                        display: block;
-                        font-weight: 600;
-                        font-family: "Poppins", sans-serif;
-                        color: $background;
-
-                        .val {
-                            float: right;
-                            font-style: normal;
-                          }
-                    }
-
-                    .progress-bar-wrap {
-                        background:$light-gray;
-                        height: 0.8em;
-
-                        .progress-bar {
-                            width: 1px;
-                            height: 0.8em;
-                            transition: 0.9s;
-                            background-color: $primary-green;
-                      }
-                    }
+                h3 {
+                    width: 100%;
+                    margin-bottom: 0.5em;
                 }
-            }
 
-            .skills-container-right {
-                width: 50%;
+                .skills-list {
+                    display: grid;
+                    grid-auto-flow: column;
+                    grid-auto-columns: auto;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
 
-                .progress {
-                    height: 4em;
-                    display: block;
-                    background: none;
-                    border-radius: 0;
-
-                    .skill {
-                        padding: 0;
-                        margin: 0 0 6px 0;
-                        text-transform: uppercase;
-                        display: block;
-                        font-weight: 600;
-                        font-family: "Poppins", sans-serif;
-                        color: $background;
-
-                        .val {
-                            float: right;
-                            font-style: normal;
-                          }
-                    }
-
-                    .progress-bar-wrap {
-                        background:$light-gray;
-                        height: 0.8em;
-
-                        .progress-bar {
-                            width: 1px;
-                            height: 0.8em;
-                            transition: 0.9s;
-                            background-color: $primary-green;
-                      }
+                    li {
+                        padding: 0.5em;
+                        position: relative;
+                        color: $light-green;
+                        font-weight: 500;
+                        font-size: 1em;
+                        margin-right: 0.5em;
+                        background-color: $background;
+                        text-align: center;
                     }
                 }
             }
@@ -134,14 +91,25 @@
         .skills-container {
             .skills-content {
                 @include d-flex(flex, center, start, column, start);
-                gap:0.5em;
+                gap: 2em;
+                width: 100%;
 
-                .skills-container-right {
+                .skills-list-container {
+                    display: grid;
+                    grid-auto-flow: row;
+                    grid-auto-rows: auto;
+                    grid-gap: 0.5em;
                     width: 100%;
-                }
 
-                .skills-container-left {
-                    width: 100%;
+                    .skills-list {
+                        grid-auto-flow: row;
+                        grid-auto-rows: auto;
+
+                        li {
+                            margin-bottom: 0.5em;
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
