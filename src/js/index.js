@@ -54,7 +54,7 @@ document.querySelector(".closebtn").addEventListener("click", closeNav);
   ---------------------------------------------------------*/
   document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
-      duration: 1000,
+      duration: 3000,
       easing: 'ease-in-out',
       once: true,
       mirror: false,
