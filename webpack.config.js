@@ -136,3 +136,18 @@ module.exports = (env, argv) => {
 
 	return config;
 };
+
+
+/** 
+ * PACKAGE.JSON
+ * 
+ * "scripts": {
+ *   "dev": "webpack --mode=development",
+ *   "prod": "webpack --mode=production",
+ *   "test": "echo \"Error: no test specified\" && exit 1"
+ * },
+ * 
+ * "author": "",
+ * "license": "ISC"
+ * 
+ */
