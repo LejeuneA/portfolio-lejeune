@@ -1,34 +1,20 @@
-/* -------------------------------------------------------
-                 Adding components in Html
----------------------------------------------------------*/
-document.addEventListener("DOMContentLoaded", function () {
-  var includes = document.querySelectorAll('[data-include]');
+import _ from 'lodash';
+console.log(_.join(['Index', 'module', 'loaded!'], ' '));
 
-  includes.forEach(function (element) {
-    var file = '../components/' + element.getAttribute('data-include') + '.html';
+import '../scss/styles.scss';
+import 'aos/dist/aos.css';
 
-    // Fetch the HTML content
-    fetch(file)
-      .then(response => response.text())
-      .then(data => {
-        // Insert the HTML content into the element
-        element.innerHTML = data;
-      })
-      .catch(error => console.error('Error fetching ' + file, error));
-  });
-});
+import Typed from 'typed.js';
+import Waypoint from 'waypoints/lib/noframework.waypoints';
+
+import { openNav, closeNav } from './nav.js';
+
 
 /* -------------------------------------------------------
-                 Offcanvas menu
+                   Offcanvas menu
 ---------------------------------------------------------*/
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
+document.getElementById("hamburger").addEventListener("click", openNav);
+document.querySelector(".closebtn").addEventListener("click", closeNav);
 
 
 /* -------------------------------------------------------
@@ -60,6 +46,20 @@ function closeNav() {
       backDelay: 2000
     });
   }
+
+
+
+  /* -------------------------------------------------------
+                  Animation on scroll
+  ---------------------------------------------------------*/
+  document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+    });
+  });
 
   /* -------------------------------------------------------
               Easy event listener function
@@ -227,55 +227,5 @@ function closeNav() {
   portfolioItems.forEach(item => {
     observer.observe(item);
   });
-
-
-
-  /* -------------------------------------------------------
-                 Initiate portfolio lightbox
-  ---------------------------------------------------------*/
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-
-  /* -------------------------------------------------------
-                Portfolio details slider
-  ---------------------------------------------------------*/
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-
-    slidesPerView: 1,
-    slidesPerGroup: 1
-
-  });
-
-
-  /* -------------------------------------------------------
-                  Animation on scroll
-  ---------------------------------------------------------*/
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
-
-
-  /* -------------------------------------------------------
-                  Initiate Pure Counter
-  ---------------------------------------------------------*/
-  new PureCounter();
 
 })()

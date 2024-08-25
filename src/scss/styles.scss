@@ -1,0 +1,36 @@
+/* -----------------------------------------------------------------
+                        Custom styles
+ ----------------------------------------------------------------- */
+
+// Settings
+@use "custom" as *;
+
+// Tools
+// @use "mixins";
+@use "extends";
+
+// Generic
+@use "reset";
+
+// Elements
+@use "global";
+
+// Components
+@use "navbar"; 
+@use "footer";
+
+// Public pages
+@use "hero";
+@use "about";
+@use "skills"; 
+@use "portfolio";
+@use "portfolio-details";
+@use "services"; 
+@use "contact"; 
+
+// Admin pages
+@use "login";
+@use "admin-add"; 
+@use "admin-edit";
+@use "admin-portfolio";
+@use "admin-messages"; 

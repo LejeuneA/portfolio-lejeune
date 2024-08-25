@@ -1,13 +1,13 @@
-@use "custom";
-@use "mixins";
-@use "extends";
-@use "global";
+@use "custom" as *;
+@import "mixins";
+@import "extends";
+@import "global";
 
 /* -----------------------------------------------------------------
                             Login page
  ----------------------------------------------------------------- */
 
-.login {
+ .login {
   @include d-flex(flex, center, center, column, center);
   background-color: $light-green;
   height: 100vh;
@@ -151,3 +151,4 @@
     }
   }
 }
+

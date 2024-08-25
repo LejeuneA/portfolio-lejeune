@@ -1,6 +1,5 @@
-@use 'custom';
-@use 'extends';
-@use 'global';
+@use 'custom' as *;
+
 
 /* -------------------------------------------------------
                  Define a mixin for hover
@@ -49,6 +48,4 @@
   @include button-style($gray, $light-gray, $background, $light-green);
 }
 
-@forward "hover";
-@forward "d-flex";
-@forward "button-style";
+

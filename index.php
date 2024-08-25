@@ -38,14 +38,11 @@ $conn->close();
 	<meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
 	<meta content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste" name="keywords">
 
-	<!-- Vendor CSS Files -->
-	<link href="./vendor/aos/aos.css" rel="stylesheet">
-	<link href="./vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link href="./vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-	<link href="./vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<!-- AOS File -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
 	<!-- Main Css file -->
-	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./dist/index.css">
 
 	<!-- Favicon -->
 	<link href="./assets/icons/favicon.png" rel="icon" type="image/png">
@@ -155,7 +152,7 @@ $conn->close();
 						  Navigation end
 ------------------------------------------------------------------>
 	<section id="hero" class="hero">
-		<div class="hero-container" data-aos="fade-in">
+		<div class="hero-container" data-aos="fade-in" data-aos-duration="3000">
 			<h1>Açelya Lejeune</h1>
 			<p>I'm a <span class="typed" data-typed-items="Web Developer, Graphic Designer"></span></p>
 		</div>
@@ -172,7 +169,7 @@ $conn->close();
 			<div class="about-container container">
 				<h2>About</h2>
 				<div class="about-content">
-					<div class="about-container-left" data-aos="fade-right">
+					<div class="about-container-left" data-aos="fade-right" data-aos-duration="1700">
 						<p><span class="first-sentence">Welcome to my website! I'm Açelya
 								Lejeune</span>
 							My name is Açelya, a graphic design professional with over 20 years
@@ -201,7 +198,7 @@ $conn->close();
 					</div>
 
 					<div class="about-container-right">
-						<div class="content" data-aos="fade-left">
+						<div class="content" data-aos="fade-left" data-aos-duration="1800">
 							<p>
 								<span class="first-sentence">Passion for Web development</span>
 								In 2019, I moved to England, started my own business, and in 2020, I
@@ -253,7 +250,7 @@ $conn->close();
 				<h2>Skills</h2>
 				<div class="skills-content">
 					<!-- Skills container left -->
-					<div class="skills-container-left" data-aos="fade-up">
+					<div class="skills-container-left" data-aos="fade-up" data-aos-duration="1700">
 
 						<h3>Front-end Developer</h3>
 
@@ -316,7 +313,7 @@ $conn->close();
 					</div>
 
 					<!-- Skills container right -->
-					<div class="skills-container-right" data-aos="fade-up" data-aos-delay="100">
+					<div class="skills-container-right" data-aos="fade-up" data-aos-duration="3000">
 
 						<h3>UI & Graphic Design</h3>
 
@@ -388,7 +385,7 @@ $conn->close();
 						innovation.
 					</p>
 				</div>
-				<div class="portfolio-container" data-aos="fade-up" data-aos-delay="100">
+				<div class="portfolio-container" data-aos="fade-up" data-aos-duration="2000">
 					<?php foreach ($portfolioItems as $item) : ?>
 						<div class="portfolio-items">
 							<div class="portfolio-item-top">
@@ -430,7 +427,7 @@ $conn->close();
 					</p>
 				</div>
 
-				<div class="services-container" data-aos="fade-right" data-aos-delay="100">
+				<div class="services-container" data-aos="fade-right" data-aos-duration="2000">
 
 					<div class="services-item">
 						<div class="image-container">
@@ -457,7 +454,7 @@ $conn->close();
 					</div>
 				</div>
 
-				<div class="services-container" data-aos="fade-left" data-aos-delay="100">
+				<div class="services-container" data-aos="fade-left" data-aos-duration="2000">
 
 					<div class="services-item">
 						<div class="image-container">
@@ -505,7 +502,7 @@ $conn->close();
 					</p>
 				</div>
 
-				<div class="contact-container" data-aos="fade-in">
+				<div class="contact-container" data-aos="fade-in" data-aos-duration="2000">
 					<form action="./forms/contact.php" method="post">
 
 						<label for="firstName">Name</label>
@@ -561,19 +558,24 @@ $conn->close();
 	<!-- Font Awesome JS -->
 	<script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
+	<!-- JS Files -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-	<!-- Vendor JS Files -->
-	<script src="./vendor/purecounter/purecounter_vanilla.js"></script>
-	<script src="./vendor/aos/aos.js"></script>
-	<script src="./vendor/glightbox/js/glightbox.min.js"></script>
-	<script src="./vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="./vendor/swiper/swiper-bundle.min.js"></script>
-	<script src="./vendor/typed.js/typed.umd.js"></script>
-	<script src="./vendor/waypoints/noframework.waypoints.js"></script>
-	<script src="./vendor/php-email-form/validate.js"></script>
 
-	<!-- Include main.js -->
-	<script src="./js/main.js"></script>
+	<!-- Main JS Files -->
+	<script defer="defer" src="./dist/runtime.bundle.js"></script>
+	<script defer="defer" src="./dist/shared.bundle.js"></script>
+	<script defer="defer" src="./dist/index.bundle.js"></script>
+	<script defer="defer" src="./dist/nav.bundle.js"></script>
+	<script defer="defer" src="./dist/swiper.bundle.js"></script>
+
+
+
+	<script>
+		AOS.init();
+	</script>
+
 
 </body>
 

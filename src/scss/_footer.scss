@@ -1,0 +1,46 @@
+@use 'custom' as *;
+@import "mixins";
+@import "extends";
+@import "global";
+
+/* -------------------------------------------------------
+                        Footer 
+---------------------------------------------------------*/
+#footer {
+  color: $light-green;
+  font-size: 0.8em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 25em;
+  z-index: 9999;
+  background: $background;
+  padding:1.5em 0;
+  height: calc(100% - #{$navbarHeightPercentage});
+
+  // Responsive styles for footer
+  @media (min-width: 320px) and (max-width: 1920px) {
+      display: none;
+  }
+
+  .footer-container {
+      @include d-flex(flex, center, center, column, center);
+      max-width: 25em;
+      margin: 0 auto;
+
+      .copyright {
+          text-align: center;
+          width: 100%;
+          padding-top: 5px;
+          text-align: center;
+          font-size: 13px;
+          color: $light-green;
+
+          a {
+              color: $tertiary-green;
+
+              @include hover("color", $primary-green, "background-color", $background);
+          }
+      }
+  }
+}

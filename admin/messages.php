@@ -3,7 +3,7 @@ session_start();
 require '../conf/conf-db.php';
 
 // Database connection
-$conn = new mysqli('localhost', 'root', '@NtLYa130580', 'portfolio'); 
+$conn = new mysqli('localhost', 'root', '@NtLYa130580', 'portfolio');
 if ($conn->connect_error) {
     die('Connection Failed: ' . $conn->connect_error);
 }
@@ -37,7 +37,7 @@ $result = $conn->query($sql);
     <meta content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste" name="keywords">
 
     <!-- Main Css file -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../dist/index.css">
 
     <!-- Favicon -->
     <link href="../assets/icons/favicon.png" rel="icon" type="image/png">
@@ -181,8 +181,23 @@ $result = $conn->query($sql);
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
-    <!-- Include main.js -->
-    <script src="../js/main.js"></script>
+   <!-- JS Files -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css"></script>
+
+    <!-- Main JS Files -->
+    <script defer="defer" src="../dist/runtime.bundle.js"></script>
+    <script defer="defer" src="../dist/shared.bundle.js"></script>
+    <script defer="defer" src="../dist/index.bundle.js"></script>
+    <script defer="defer" src="../dist/nav.bundle.js"></script>
+    <script defer="defer" src="../dist/swiper.bundle.js"></script>
+
+
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>

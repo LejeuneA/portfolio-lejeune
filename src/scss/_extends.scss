@@ -1,6 +1,5 @@
-@use 'custom';
-@use 'mixins';
-@use "global";
+@use 'custom' as *;
+@import "mixins";
 
 /* -------------------------------------------------------
                 Define extend for header
@@ -69,4 +68,4 @@
       }
 }
 
-@forward '%header';
+

@@ -9,14 +9,15 @@
         content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste"
         name="keywords">
 
-    <!-- Main Css file -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <!-- AOS File -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="../vendor/aos/aos.css" rel="stylesheet">
-    <link href="../vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Swiper File -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main Css file -->
+    <link rel="stylesheet" href="../dist/index.css">
+
 
     <!-- Favicon -->
     <link href="../assets/icons/favicon.png" rel="icon" type="image/png">
@@ -328,7 +329,8 @@
             <div class="portfolio-content container">
                 <div class="section-title">
                     <h2>Portfolio</h2>
-                    <p>Au travers de deux décennies d'expertise en design graphique, j'utilise mes compétences pour créer
+                    <p>Au travers de deux décennies d'expertise en design graphique, j'utilise mes compétences pour
+                        créer
                         des œuvres percutantes. Forte d'une solide expérience en design, j'insuffle créativité et
                         expérience dans chaque projet, offrant des résultats convaincants qui résonnent avec le public.
                         Spécialisée dans le design web responsive, j'utilise mon ensemble de compétences étendu pour
@@ -341,8 +343,8 @@
 
                     <div class="portfolio-items">
                         <div class="portfolio-item-top">
-                            <a href="./librarie-lejeune-fr.html"><img
-                                    src="../assets/images/librairie-lejeune-green.png" alt="Librairie lejeune"></a>
+                            <a href="./librarie-lejeune-fr.html"><img src="../assets/images/librairie-lejeune-green.png"
+                                    alt="Librairie lejeune"></a>
                         </div>
                         <div class="portfolio-wrap">
                             <div class="portfolio-links-top">
@@ -350,7 +352,8 @@
                                 information"><i class="fas fa-circle-info"></i> Plus d'informations</href=>
                             </div>
                             <div class="portfolio-links-bottom">
-                                <a class="portfolio-link-left" href="https://acelyalejeune.be/portfolio/librairie-lejeune/index.php"
+                                <a class="portfolio-link-left"
+                                    href="https://acelyalejeune.be/portfolio/librairie-lejeune/index.php"
                                     title="Live Demo" target="_blank"><i class="fas fa-link"></i> Aperçu en direct</a>
                                 <a class="portfolio-link-right" href="https://github.com/LejeuneA/librairie-lejeune"
                                     title="See on Github" target="_blank"><i class="fa fa-github"></i>
@@ -554,18 +557,21 @@
         <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
 
-        <!-- Vendor JS Files -->
-        <script src="../vendor/purecounter/purecounter_vanilla.js"></script>
-        <script src="../vendor/aos/aos.js"></script>
-        <script src="../vendor/glightbox/js/glightbox.min.js"></script>
-        <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
-        <script src="../vendor/swiper/swiper-bundle.min.js"></script>
-        <script src="../vendor/typed.js/typed.umd.js"></script>
-        <script src="../vendor/waypoints/noframework.waypoints.js"></script>
-        <script src="../vendor/php-email-form/validate.js"></script>
+        <!-- JS Files -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css"></script>
 
-        <!-- Include main.js -->
-        <script src="../js/main.js"></script>
+        <!-- Main JS Files -->
+        <script defer="defer" src="../dist/runtime.bundle.js"></script>
+        <script defer="defer" src="../dist/shared.bundle.js"></script>
+        <script defer="defer" src="../dist/index.bundle.js"></script>
+        <script defer="defer" src="../dist/nav.bundle.js"></script>
+        <script defer="defer" src="../dist/swiper.bundle.js"></script>
+
+        <script>
+            AOS.init();
+        </script>
 
 </body>
 
