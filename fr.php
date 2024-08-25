@@ -223,121 +223,52 @@ $conn->close();
                               Skills section
         ------------------------------------------------------------------>
         <section id="skills" class="skills-section">
-            <div class="skills-container container">
-                <h2>Compétences</h2>
-                <div class="skills-content">
+			<div class="skills-container container">
+				<h2>Skills</h2>
 
-                    <!-- Skills container left -->
-                    <div class="skills-container-left" data-aos="fade-up" data-aos-duration="1500">
+				<div class="skills-content">
 
-                        <h3>Développeur Front-end</h3>
+					<div class="skills-list-container">
+						<h3>Langages de Programmation</h3>
 
-                        <!-- Html -->
-                        <div class="progress">
-                            <span class="skill">HTML <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
+						<ul class="skills-list">
+							<li>Html5</li>
+							<li>Css</li>
+							<li>Sass</li>
+							<li>Javascript</li>
+							<li>Php</li>
+						</ul>
+					</div>
 
-                        <!-- Css -->
-                        <div class="progress">
-                            <span class="skill">CSS <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
+					<div class="skills-list-container">
+						<h3>Frameworks & Outils</h3>
 
-                        <!-- Sass -->
-                        <div class="progress">
-                            <span class="skill">SASS <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
+						<ul class="skills-list">
+							<li>MySQL</li>
+							<li>CMS</li>
+							<li>NodeJs</li>
+							<li>Npm</li>
+							<li>Git</li>
+							<li>GitHub</li>
+						</ul>
+					</div>
 
-                        <!-- Javascript -->
-                        <div class="progress">
-                            <span class="skill">JavaScript & jQuery <i class="val">65%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
+					<div class="skills-list-container">
+						<h3>Logiciels de Design</h3>
 
-                        <!-- Php -->
-                        <div class="progress">
-                            <span class="skill">PHP <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
+						<ul class="skills-list">
+							<li>Figma</li>
+							<li>Adobe XD</li>
+							<li>Adobe Illustrator</li>
+							<li>Adobe Photoshop</li>
+							<li>Adobe InDesign</li>
+						</ul>
+					</div>
 
-                        <!-- Mysql -->
-                        <div class="progress">
-                            <span class="skill">MYSQL <i class="val">70%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
 
-                        <!-- Cms -->
-                        <div class="progress">
-                            <span class="skill">WordPress/CMS <i class="val">85%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Skills container right -->
-                    <div class="skills-container-right" data-aos="fade-up" data-aos-duration="1600">
-
-                        <h3>UI & Conception Graphique</h3>
-
-                        <!-- Figma -->
-                        <div class="progress">
-                            <span class="skill">Figma<i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <!-- Xd -->
-                        <div class="progress">
-                            <span class="skill">Adobe XD<i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <!-- Photoshop -->
-                        <div class="progress">
-                            <span class="skill">Adobe Photoshop <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <!-- Indesign -->
-                        <div class="progress">
-                            <span class="skill">Adobe InDesign <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <!--Illustrator -->
-                        <div class="progress">
-                            <span class="skill">Adobe Illustrator <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
+				</div>
+		</section>
         <!-----------------------------------------------------------------
                                 Skills section end
         ------------------------------------------------------------------>
