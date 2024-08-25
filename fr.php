@@ -44,6 +44,7 @@ $conn->close();
     <!-- Main Css file -->
     <link rel="stylesheet" href="./dist/index.css">
 
+
     <!-- Favicon -->
     <link href="./assets/icons/favicon.png" rel="icon" type="image/png">
 
@@ -171,7 +172,7 @@ $conn->close();
             <div class="about-container container">
                 <h2>À propos</h2>
                 <div class="about-content">
-                    <div class="about-container-left" data-aos="fade-right" data-aos-duration="1700">
+                    <div class="about-container-left" data-aos="fade-right" data-aos-duration="1500">
                         <p><span class="first-sentence">Bienvenue sur mon site web ! Je suis Açelya Lejeune</span>
                             Je m'appelle Açelya, professionnelle du design graphique avec plus de 20 ans d'expérience.
                             J'ai commencé ma carrière à Antalya et depuis, j'ai élargi mes horizons en travaillant dans
@@ -189,7 +190,7 @@ $conn->close();
                     </div>
 
                     <div class="about-container-right">
-                        <div class="content" data-aos="fade-left" data-aos-duration="1800">
+                        <div class="content" data-aos="fade-left" data-aos-duration="1600">
                             <p>
                                 <span class="first-sentence">Passion pour le développement web</span>
                                 En 2019, j'ai déménagé en Angleterre, j'ai lancé ma propre entreprise, et en 2020, je me
@@ -227,7 +228,7 @@ $conn->close();
                 <div class="skills-content">
 
                     <!-- Skills container left -->
-                    <div class="skills-container-left" data-aos="fade-up" data-aos-duration="1700">
+                    <div class="skills-container-left" data-aos="fade-up" data-aos-duration="1500">
 
                         <h3>Développeur Front-end</h3>
 
@@ -289,7 +290,7 @@ $conn->close();
                     </div>
 
                     <!-- Skills container right -->
-                    <div class="skills-container-right" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="skills-container-right" data-aos="fade-up" data-aos-duration="1600">
 
                         <h3>UI & Conception Graphique</h3>
 
@@ -356,7 +357,7 @@ $conn->close();
                         de la technologie, affinée au fil des années d'expérimentation et d'innovation.
                     </p>
                 </div>
-                <div class="portfolio-container" data-aos="fade-up" data-aos-duration="2000">
+                <div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">
                     <?php foreach ($portfolioItems as $item) : ?>
                         <div class="portfolio-items">
                             <div class="portfolio-item-top">
@@ -399,7 +400,7 @@ $conn->close();
                     </p>
                 </div>
 
-                <div class="services-container" data-aos="fade-right" data-aos-duration="2000">
+                <div class="services-container" data-aos="fade-right" data-aos-duration="1500">
 
                     <div class="services-item">
                         <div class="image-container">
@@ -426,7 +427,7 @@ $conn->close();
                     </div>
                 </div>
 
-                <div class="services-container" data-aos="fade-left" data-aos-duration="2000">
+                <div class="services-container" data-aos="fade-left" data-aos-duration="1500">
 
                     <div class="services-item">
                         <div class="image-container">
@@ -473,7 +474,7 @@ $conn->close();
                     </p>
                 </div>
 
-                <div class="contact-container" data-aos="fade-in" data-aos-duration="2000">
+                <div class="contact-container" data-aos="fade-in" data-aos-duration="1500">
                     <form action="../forms/contact.php" method="post">
 
                         <label for="firstName">Nom</label>
@@ -518,34 +519,35 @@ $conn->close();
                     Lejeune</a>
             </div>
         </div>
-        <!-----------------------------------------------------------------
+    </footer>
+    <!-----------------------------------------------------------------
                                Footer end
     	------------------------------------------------------------------>
 
-        <!-- Back to Top -->
-        <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
 
 
-        <!-- Font Awesome JS -->
-        <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
 
-        <!-- JS Files -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-        <!-- Main JS Files -->
-        <script defer="defer" src="./dist/index.bundle.js"></script>
-        <script defer="defer" src="./dist/nav.bundle.js"></script>
-        <script defer="defer" src="./dist/swiper.bundle.js"></script>
-        <script defer="defer" src="./dist/runtime.bundle.js"></script>
-        <script defer="defer" src="./dist/shared.bundle.js"></script>
+    <!-- JS Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 
+    <!-- Main JS Files -->
+    <script defer="defer" src="./dist/runtime.bundle.js"></script>
+    <script defer="defer" src="./dist/shared.bundle.js"></script>
+    <script defer="defer" src="./dist/index.bundle.js"></script>
+    <script defer="defer" src="./dist/nav.bundle.js"></script>
+    <script defer="defer" src="./dist/swiper.bundle.js"></script>
 
-        <script>
-            AOS.init();
-        </script>
+
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
