@@ -10,11 +10,6 @@ module.exports = {
         shared: 'lodash',
     },
 
-    devServer: {
-        static: './dist',
-        hot: true,
-    },
-
     module: {
         rules: [
             {
