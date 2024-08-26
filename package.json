@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-   "dev": "concurrently \"webpack serve --config webpack.dev.js\" \"npm run open-browser\"",
-    "open-browser": "start http://localhost/dashboard/PROJECTS/portfolio-lejeune/index.php",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js --watch",
+    "dev": "webpack serve --config webpack.dev.js --watch",
+    "start": "concurrently \"npm run build\" \"npm run dev\"",
+    "start:dev": "npm run dev",
+    "start:build": "npm run build"
   },
   "keywords": [],
   "author": "",
