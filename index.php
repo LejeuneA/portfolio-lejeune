@@ -271,6 +271,7 @@ $conn->close();
 							<li>CMS</li>
 							<li>NodeJs</li>
 							<li>Npm</li>
+							<li>Webpack</li>
 							<li>Git</li>
 							<li>GitHub</li>
 						</ul>
