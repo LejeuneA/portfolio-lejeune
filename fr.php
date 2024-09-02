@@ -35,7 +35,9 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
-    <meta content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste" name="keywords">
+    <meta
+        content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste"
+        name="keywords">
 
 
     <!-- AOS File -->
@@ -49,7 +51,9 @@ $conn->close();
     <link href="./assets/icons/favicon.png" rel="icon" type="image/png">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Title -->
     <title>Acelya Lejeune - Développeur Web et Infographiste</title>
@@ -66,7 +70,8 @@ $conn->close();
             <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
                 <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
                 <a href="./index.php" class="language"><b>EN</b></a>
             </div>
         </div>
@@ -74,7 +79,8 @@ $conn->close();
         <!-- Nav Menu -->
         <nav id="navbar" class="nav-menu navbar">
             <ul>
-                <li><a href="fr.php#hero" class="nav-link scrollto active"><i class="fas fa-home"></i><span>Acceuil</span></a>
+                <li><a href="fr.php#hero" class="nav-link scrollto active"><i
+                            class="fas fa-home"></i><span>Acceuil</span></a>
                 </li>
                 <li><a href="fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
                         <span>À propos</span></a></li>
@@ -112,7 +118,8 @@ $conn->close();
             <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
                 <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
                 <a href="./index.php" language"><b>EN</b></a>
             </div>
         </div>
@@ -223,53 +230,52 @@ $conn->close();
                               Skills section
         ------------------------------------------------------------------>
         <section id="skills" class="skills-section">
-			<div class="skills-container container">
-				<h2>Skills</h2>
+            <div class="skills-container container">
+                <h2>Skills</h2>
 
-				<div class="skills-content">
+                <div class="skills-content">
 
-					<div class="skills-list-container">
-						<h3>Langages de Programmation</h3>
+                    <div class="skills-list-container">
+                        <h3>Langages de Programmation</h3>
 
-						<ul class="skills-list">
-							<li>Html5</li>
-							<li>Css</li>
-							<li>Sass</li>
-							<li>Javascript</li>
-							<li>Php</li>
-						</ul>
-					</div>
+                        <ul class="skills-list">
+                            <li>Html5</li>
+                            <li>Css</li>
+                            <li>Sass</li>
+                            <li>Javascript</li>
+                            <li>Php</li>
+                        </ul>
+                    </div>
 
-					<div class="skills-list-container">
-						<h3>Frameworks & Outils</h3>
+                    <div class="skills-list-container">
+                        <h3>Frameworks & Outils</h3>
 
-						<ul class="skills-list">
-							<li>MySQL</li>
-							<li>CMS</li>
-							<li>NodeJs</li>
-							<li>Npm</li>
-							<li>Webpack</li>
-							<li>Git</li>
-							<li>GitHub</li>
-						</ul>
-					</div>
+                        <ul class="skills-list">
+                            <li>MySQL</li>
+                            <li>CMS</li>
+                            <li>NodeJs</li>
+                            <li>Npm</li>
+                            <li>Webpack</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
 
-					<div class="skills-list-container">
-						<h3>Logiciels de Design</h3>
+                    <div class="skills-list-container">
+                        <h3>Logiciels de Design</h3>
 
-						<ul class="skills-list">
-							<li>Figma</li>
-							<li>Adobe XD</li>
-							<li>Adobe Illustrator</li>
-							<li>Adobe Photoshop</li>
-							<li>Adobe InDesign</li>
-						</ul>
-					</div>
-
+                        <ul class="skills-list">
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Adobe Photoshop</li>
+                            <li>Adobe InDesign</li>
+                        </ul>
+                    </div>
 
 
-				</div>
-		</section>
+
+                </div>
+        </section>
         <!-----------------------------------------------------------------
                                 Skills section end
         ------------------------------------------------------------------>
@@ -280,7 +286,8 @@ $conn->close();
             <div class="portfolio-content container">
                 <div class="section-title">
                     <h2>Portfolio</h2>
-                    <p>Au travers de deux décennies d'expertise en design graphique, j'utilise mes compétences pour créer
+                    <p>Au travers de deux décennies d'expertise en design graphique, j'utilise mes compétences pour
+                        créer
                         des œuvres percutantes. Forte d'une solide expérience en design, j'insuffle créativité et
                         expérience dans chaque projet, offrant des résultats convaincants qui résonnent avec le public.
                         Spécialisée dans le design web responsive, j'utilise mon ensemble de compétences étendu pour
@@ -293,18 +300,23 @@ $conn->close();
                     <?php foreach ($portfolioItems as $item) : ?>
                         <div class="portfolio-items">
                             <div class="portfolio-item-top">
-                                <a href="<?php echo htmlspecialchars($item['info_url_fr']); ?>"><img src="<?php echo htmlspecialchars($item['image_url']); ?>" alt="Portfolio Item"></a>
+                                <a href="<?php echo htmlspecialchars($item['info_url_fr']); ?>"><img
+                                        src="<?php echo htmlspecialchars($item['image_url']); ?>" alt="Portfolio Item"></a>
                             </div>
                             <div class="portfolio-wrap">
                                 <div class="portfolio-links-top">
-                                    <a class="portfolio-link-top" href="<?php echo htmlspecialchars($item['info_url_fr']); ?>" title="More
+                                    <a class="portfolio-link-top"
+                                        href="<?php echo htmlspecialchars($item['info_url_fr']); ?>" title="More
                         information"><i class="fas fa-circle-info"></i> More
                                         information</a>
                                 </div>
                                 <div class="portfolio-links-bottom">
-                                    <a class="portfolio-link-left" href="<?php echo htmlspecialchars($item['live_url']); ?>" title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live
+                                    <a class="portfolio-link-left" href="<?php echo htmlspecialchars($item['live_url']); ?>"
+                                        title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live
                                         Preview</a>
-                                    <a class="portfolio-link-right" href="<?php echo htmlspecialchars($item['github_url']); ?>" title="See on Github" target="_blank"><i class="fa fa-github"></i>
+                                    <a class="portfolio-link-right"
+                                        href="<?php echo htmlspecialchars($item['github_url']); ?>" title="See on Github"
+                                        target="_blank"><i class="fa fa-github"></i>
                                         Full Code on GitHub</a>
                                 </div>
                             </div>
@@ -422,7 +434,8 @@ $conn->close();
                         <input type="text" id="subject" name="subject" placeholder="Sujet...">
 
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Votre message..." style="height:200px"></textarea>
+                        <textarea id="message" name="message" placeholder="Votre message..."
+                            style="height:200px"></textarea>
 
                         <!-- Button -->
                         <input type="reset" value="Effacer">
@@ -447,7 +460,9 @@ $conn->close();
     <footer id="footer">
         <div class="footer-container container">
             <div class="copyright">
-                &copy; Copyright, conception et développement par <a class="github" href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Açelya
+                &copy; Copyright, conception et développement par <a class="github"
+                    href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
+                        aria-hidden="true"></i> Açelya
                     Lejeune</a>
             </div>
         </div>
