@@ -225,8 +225,10 @@ $conn->close();
                               intégration front-end</span></li>
                         <li><i class="fas fa-chevron-right"></i> Ouverte à : <span>Opportunités à distance avec des
                               équipes au Royaume-Uni et en Europe</span></li>
-                        <li><i class="fas fa-chevron-right"></i> Langues : <span>Turc, anglais, français en
-                              progression</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Langues : <span><br>TURC : langue maternelle
+                              <br>ANGLAIS : niveau professionnel<br>FRANÇAIS : certificat B1.1 — bonne compréhension,
+                              expression orale simple</span>
+                        </li>
                      </ul>
                   </div>
                </div>

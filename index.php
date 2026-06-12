@@ -218,8 +218,9 @@ $conn->close();
                               Frontend Integration</span></li>
                         <li><i class="fas fa-chevron-right"></i> Open to: <span>Remote opportunities with UK and
                               European teams</span></li>
-                        <li><i class="fas fa-chevron-right"></i> Languages: <span>Turkish, English, French in
-                              progress</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Languages: <span><br>TURKISH: Native
+                              <br>ENGLISH: Professional working proficiency
+                              <br>FRENCH: B1.1 certificate — good comprehension, basic spoken communication</span></li>
                      </ul>
                   </div>
                </div>
