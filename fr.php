@@ -32,469 +32,467 @@ $conn->close();
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
-    <meta
-        content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste"
-        name="keywords">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
+   <meta
+      content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste"
+      name="keywords">
 
 
-    <!-- AOS File -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+   <!-- AOS File -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-    <!-- Main Css file -->
-    <link rel="stylesheet" href="./dist/index.css">
+   <!-- Main Css file -->
+   <link rel="stylesheet" href="./dist/index.css">
 
 
-    <!-- Favicon -->
-    <link href="./assets/icons/favicon.png" rel="icon" type="image/png">
+   <!-- Favicon -->
+   <link href="./assets/icons/favicon.png" rel="icon" type="image/png">
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+   <!-- Google Fonts -->
+   <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
 
-    <!-- Title -->
-    <title>Acelya Lejeune - Développeur Web et Infographiste</title>
+   <!-- Title -->
+   <title>Acelya Lejeune - Développeur Web et Infographiste</title>
 </head>
 
 <body>
-    <!-----------------------------------------------------------------
+   <!-----------------------------------------------------------------
                                Navigation
     ------------------------------------------------------------------>
-    <header id="header">
-        <!-- Profile -->
-        <div class="profile">
-            <img src="./assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
-            <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-                        class="fa fa-linkedin"></i></a>
-                <a href="./index.php" class="language"><b>EN</b></a>
-            </div>
-        </div>
+   <header id="header">
+      <!-- Profile -->
+      <div class="profile">
+         <img src="./assets/images/header-photo.jpg" alt class="profile-img">
+         <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
+         <div class="social-links">
+            <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
+                  class="fa fa-linkedin"></i></a>
+            <a href="./index.php" class="language"><b>EN</b></a>
+         </div>
+      </div>
 
-        <!-- Nav Menu -->
-        <nav id="navbar" class="nav-menu navbar">
-            <ul>
-                <li><a href="fr.php#hero" class="nav-link scrollto active"><i
-                            class="fas fa-home"></i><span>Acceuil</span></a>
-                </li>
-                <li><a href="fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>À propos</span></a></li>
-                <li><a href="fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Compétences</span></a>
-                </li>
-                <li><a href="fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
-                        <span>Services</span></a>
-                </li>
-                <li><a href="fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
-            </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
-            </div>
-            <div class="btn-resume">
-                <a class="btn-resume" href="./admin/login.php">Se connecter</a>
-            </div>
-        </nav>
-        <!-- End Nav Menu -->
-    </header>
-    <!-- End Header -->
+      <!-- Nav Menu -->
+      <nav id="navbar" class="nav-menu navbar">
+         <ul>
+            <li><a href="fr.php#hero" class="nav-link scrollto active"><i
+                     class="fas fa-home"></i><span>Acceuil</span></a>
+            </li>
+            <li><a href="fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                  <span>À propos</span></a></li>
+            <li><a href="fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                  <span>Compétences</span></a>
+            </li>
+            <li><a href="fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                  <span>Portfolio</span></a></li>
+            <li><a href="fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                  <span>Services</span></a>
+            </li>
+            <li><a href="fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                  <span>Contact</span></a>
+            </li>
+         </ul>
+         <div class="btn-resume">
+            <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
+         </div>
+         <div class="btn-resume">
+            <a class="btn-resume" href="./admin/login.php">Se connecter</a>
+         </div>
+      </nav>
+      <!-- End Nav Menu -->
+   </header>
+   <!-- End Header -->
 
-    <!-----------------------------------------------------------------
+   <!-----------------------------------------------------------------
 						Offcanvas Menu
     ------------------------------------------------------------------>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <!-- Profile -->
-        <div class="profile">
-            <img src="./assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
-            <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-                        class="fa fa-linkedin"></i></a>
-                <a href="./index.php" language"><b>EN</b></a>
-            </div>
-        </div>
+   <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- Profile -->
+      <div class="profile">
+         <img src="./assets/images/header-photo.jpg" alt class="profile-img">
+         <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
+         <div class="social-links">
+            <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
+                  class="fa fa-linkedin"></i></a>
+            <a href="./index.php" language"><b>EN</b></a>
+         </div>
+      </div>
 
-        <!-- Nav Menu -->
-        <nav id="navbar" class="nav-menu navbar">
-            <ul>
-                <li><a href="fr.php#hero" class="nav-link scrollto active"><i class="fas fa-home"></i>
-                        <span>Acceuil</span></a>
-                </li>
-                <li><a href="fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>À propos</span></a></li>
-                <li><a href="fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Compétences</span></a>
-                </li>
-                <li><a href="fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
-                        <span>Services</span></a>
-                </li>
-                <li><a href="fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
-            </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
-            </div>
-            <div class="btn-resume">
-                <a class="btn-resume" href="./admin/login.php">Se connecter</a>
-            </div>
-        </nav>
-        <!-- Nav menu end -->
-        <!-- Hamburger Icon -->
-        <div class="navbar-hamburger">
-            <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
-        </div>
-    </div>
-    <!-- Hamburger icon end -->
-    <!-----------------------------------------------------------------
+      <!-- Nav Menu -->
+      <nav id="navbar" class="nav-menu navbar">
+         <ul>
+            <li><a href="fr.php#hero" class="nav-link scrollto active"><i class="fas fa-home"></i>
+                  <span>Acceuil</span></a>
+            </li>
+            <li><a href="fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                  <span>À propos</span></a></li>
+            <li><a href="fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                  <span>Compétences</span></a>
+            </li>
+            <li><a href="fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                  <span>Portfolio</span></a></li>
+            <li><a href="fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                  <span>Services</span></a>
+            </li>
+            <li><a href="fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                  <span>Contact</span></a>
+            </li>
+         </ul>
+         <div class="btn-resume">
+            <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
+         </div>
+         <div class="btn-resume">
+            <a class="btn-resume" href="./admin/login.php">Se connecter</a>
+         </div>
+      </nav>
+      <!-- Nav menu end -->
+      <!-- Hamburger Icon -->
+      <div class="navbar-hamburger">
+         <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+      </div>
+   </div>
+   <!-- Hamburger icon end -->
+   <!-----------------------------------------------------------------
 						  Navigation end
     ------------------------------------------------------------------>
-    <section id="hero" class="hero">
-        <div class="hero-container" data-aos="fade-in" data-aos-duration="3000">
-            <h1>Açelya Lejeune</h1>
-            <p>Je suis <span class="typed" data-typed-items="Développeur Web, Infographiste"></span></p>
-        </div>
-    </section>
-    <!-----------------------------------------------------------------
+   <section id="hero" class="hero">
+      <div class="hero-container" data-aos="fade-in" data-aos-duration="3000">
+         <h1>Açelya Lejeune</h1>
+         <p>Je suis <span class="typed" data-typed-items="Designer UX/UI senior, Développeuse Front-End"></span></p>
+      </div>
+   </section>
+   <!-----------------------------------------------------------------
                       	Hero section end
     	------------------------------------------------------------------>
-    <!-- Main -->
-    <main id="main">
-        <!-----------------------------------------------------------------
+   <!-- Main -->
+   <main id="main">
+      <!-----------------------------------------------------------------
                       	        About section
     	------------------------------------------------------------------>
-        <section id="about" class="about-section">
-            <div class="about-container container">
-                <h2>À propos</h2>
-                <div class="about-content">
-                    <div class="about-container-left" data-aos="fade-right" data-aos-duration="1500">
-                        <p><span class="first-sentence">Bienvenue sur mon site web ! Je suis Açelya Lejeune</span>
-                            Je m'appelle Açelya, professionnelle du design graphique avec plus de 20 ans d'expérience.
-                            J'ai commencé ma carrière à Antalya et depuis, j'ai élargi mes horizons en travaillant dans
-                            diverses agences digitales et imprimeries dans le nord de Chypre, en Angleterre, puis en
-                            m'installant en Belgique.
-                        </p>
-                        <p>
-                            <span class="first-sentence">Expert en design graphique</span>
-                            Ma carrière professionnelle m'a permis de suivre l'évolution de l'art numérique et
-                            d'embrasser les innovations dans le monde du design. J'ai travaillé sur divers projets dans
-                            mon domaine d'expertise en utilisant des outils tels que <span>Adobe Photoshop</span>,
-                            <span>Adobe Illustrator</span>, <span>Adobe InDesign</span>, <span>Adobe XD</span> et
-                            <span>Figma</span>. Je suis là pour partager mon expérience avec vous.
-                        </p>
-                    </div>
+      <section id="about" class="about-section">
+         <div class="about-container container">
+            <h2>À propos</h2>
+            <div class="about-content">
+               <div class="about-container-left" data-aos="fade-right" data-aos-duration="1500">
+                  <p><span class="first-sentence">Bienvenue sur mon site web ! Je suis Açelya Lejeune</span>
+                     Je m'appelle Açelya, professionnelle du design graphique avec plus de 20 ans d'expérience.
+                     J'ai commencé ma carrière à Antalya et depuis, j'ai élargi mes horizons en travaillant dans
+                     diverses agences digitales et imprimeries dans le nord de Chypre, en Angleterre, puis en
+                     m'installant en Belgique.
+                  </p>
+                  <p>
+                     <span class="first-sentence">Expert en design graphique</span>
+                     Ma carrière professionnelle m'a permis de suivre l'évolution de l'art numérique et
+                     d'embrasser les innovations dans le monde du design. J'ai travaillé sur divers projets dans
+                     mon domaine d'expertise en utilisant des outils tels que <span>Adobe Photoshop</span>,
+                     <span>Adobe Illustrator</span>, <span>Adobe InDesign</span>, <span>Adobe XD</span> et
+                     <span>Figma</span>. Je suis là pour partager mon expérience avec vous.
+                  </p>
+               </div>
 
-                    <div class="about-container-right">
-                        <div class="content" data-aos="fade-left" data-aos-duration="1600">
-                            <p>
-                                <span class="first-sentence">Passion pour le développement web</span>
-                                En 2019, j'ai déménagé en Angleterre, j'ai lancé ma propre entreprise, et en 2020, je me
-                                suis mariée et j'ai déménagé en Belgique. Actuellement, je développe mes compétences en
-                                design web en utilisant <span>HTML5</span>, <span>CSS</span>, <span>Sass</span>,
-                                <span>Javascript</span>, <span>Php</span> et <span>MySQL</span>. Le design web est ma
-                                passion, et je le développe davantage avec chaque nouveau projet.
-                            </p>
-                            <ul>
-                                <li><i class="fas fa-chevron-right"></i> Date de naissance : <span>13 Mai 1980</span>
-                                </li>
-                                <li><i class="fas fa-chevron-right"></i> Site Web : <span>www.acelyalejeune.be</span>
-                                </li>
-                                <li><i class="fas fa-chevron-right"></i> Téléphone : <span>+32 493 38 77 29</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Ville : <span>Liège, Belgique</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Âge : <span>44</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Email : <span>contact@acelyalejeune.be</span>
-                                </li>
-                                <li><i class="fas fa-chevron-right"></i> Freelance : <span>Disponible</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+               <div class="about-container-right">
+                  <div class="content" data-aos="fade-left" data-aos-duration="1600">
+                     <p>
+                        <span class="first-sentence">Passion pour le développement web</span>
+                        En 2019, j'ai déménagé en Angleterre, j'ai lancé ma propre entreprise, et en 2020, je me
+                        suis mariée et j'ai déménagé en Belgique. Actuellement, je développe mes compétences en
+                        design web en utilisant <span>HTML5</span>, <span>CSS</span>, <span>Sass</span>,
+                        <span>Javascript</span>, <span>Php</span> et <span>MySQL</span>. Le design web est ma
+                        passion, et je le développe davantage avec chaque nouveau projet.
+                     </p>
+                     <ul>
+                        <li><i class="fas fa-chevron-right"></i> Date de naissance : <span>13 Mai 1980</span>
+                        </li>
+                        <li><i class="fas fa-chevron-right"></i> Site Web : <span>www.acelyalejeune.be</span>
+                        </li>
+                        <li><i class="fas fa-chevron-right"></i> Téléphone : <span>+32 493 38 77 29</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Ville : <span>Liège, Belgique</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Âge : <span>44</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Email : <span>contact@acelyalejeune.be</span>
+                        </li>
+                        <li><i class="fas fa-chevron-right"></i> Freelance : <span>Disponible</span></li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-        </section>
-        <!-----------------------------------------------------------------
+         </div>
+      </section>
+      <!-----------------------------------------------------------------
                                 About section end
         ------------------------------------------------------------------>
-        <!-----------------------------------------------------------------
+      <!-----------------------------------------------------------------
                               Skills section
         ------------------------------------------------------------------>
-        <section id="skills" class="skills-section">
-            <div class="skills-container container">
-                <h2>Skills</h2>
+      <section id="skills" class="skills-section">
+         <div class="skills-container container">
+            <h2>Skills</h2>
 
-                <div class="skills-content">
+            <div class="skills-content">
 
-                    <div class="skills-list-container">
-                        <h3>Langages de Programmation</h3>
+               <div class="skills-list-container">
+                  <h3>Langages de Programmation</h3>
 
-                        <ul class="skills-list">
-                            <li>Html5</li>
-                            <li>Css</li>
-                            <li>Sass</li>
-                            <li>Javascript</li>
-                            <li>Php</li>
-                        </ul>
-                    </div>
+                  <ul class="skills-list">
+                     <li>Html5</li>
+                     <li>Css</li>
+                     <li>Sass</li>
+                     <li>Javascript</li>
+                     <li>Php</li>
+                  </ul>
+               </div>
 
-                    <div class="skills-list-container">
-                        <h3>Frameworks & Outils</h3>
+               <div class="skills-list-container">
+                  <h3>Frameworks & Outils</h3>
 
-                        <ul class="skills-list">
-                            <li>MySQL</li>
-                            <li>CMS</li>
-                            <li>NodeJs</li>
-                            <li>Npm</li>
-                            <li>Webpack</li>
-                            <li>GitHub</li>
-                        </ul>
-                    </div>
+                  <ul class="skills-list">
+                     <li>MySQL</li>
+                     <li>CMS</li>
+                     <li>NodeJs</li>
+                     <li>Npm</li>
+                     <li>Webpack</li>
+                     <li>GitHub</li>
+                  </ul>
+               </div>
 
-                    <div class="skills-list-container">
-                        <h3>Logiciels de Design</h3>
+               <div class="skills-list-container">
+                  <h3>Logiciels de Design</h3>
 
-                        <ul class="skills-list">
-                            <li>Figma</li>
-                            <li>Adobe XD</li>
-                            <li>Adobe Illustrator</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Adobe InDesign</li>
-                        </ul>
-                    </div>
+                  <ul class="skills-list">
+                     <li>Figma</li>
+                     <li>Adobe XD</li>
+                     <li>Adobe Illustrator</li>
+                     <li>Adobe Photoshop</li>
+                     <li>Adobe InDesign</li>
+                  </ul>
+               </div>
 
 
 
-                </div>
-        </section>
-        <!-----------------------------------------------------------------
+            </div>
+      </section>
+      <!-----------------------------------------------------------------
                                 Skills section end
         ------------------------------------------------------------------>
-        <!-----------------------------------------------------------------
+      <!-----------------------------------------------------------------
                                 Portfolio section
         ------------------------------------------------------------------>
-        <section id="portfolio" class="portfolio-section">
-            <div class="portfolio-content container">
-                <div class="section-title">
-                    <h2>Portfolio</h2>
-                    <p>Au travers de deux décennies d'expertise en design graphique, j'utilise mes compétences pour
-                        créer
-                        des œuvres percutantes. Forte d'une solide expérience en design, j'insuffle créativité et
-                        expérience dans chaque projet, offrant des résultats convaincants qui résonnent avec le public.
-                        Spécialisée dans le design web responsive, j'utilise mon ensemble de compétences étendu pour
-                        créer des expériences numériques visuellement attrayantes et conviviales qui s'adaptent
-                        parfaitement à tous les appareils. Explorez mon portfolio pour découvrir la fusion de l'art et
-                        de la technologie, affinée au fil des années d'expérimentation et d'innovation.
-                    </p>
-                </div>
-                <div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">
-                    <?php foreach ($portfolioItems as $item) : ?>
-                        <div class="portfolio-items">
-                            <div class="portfolio-item-top">
-                                <a href="<?php echo htmlspecialchars($item['info_url_fr']); ?>"><img
-                                        src="<?php echo htmlspecialchars($item['image_url']); ?>" alt="Portfolio Item"></a>
-                            </div>
-                            <div class="portfolio-wrap">
-                                <div class="portfolio-links-top">
-                                    <a class="portfolio-link-top"
-                                        href="<?php echo htmlspecialchars($item['info_url_fr']); ?>" title="More
-                        information"><i class="fas fa-circle-info"></i> More
-                                        information</a>
-                                </div>
-                                <div class="portfolio-links-bottom">
-                                    <a class="portfolio-link-left" href="<?php echo htmlspecialchars($item['live_url']); ?>"
-                                        title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live
-                                        Preview</a>
-                                    <a class="portfolio-link-right"
-                                        href="<?php echo htmlspecialchars($item['github_url']); ?>" title="See on Github"
-                                        target="_blank"><i class="fa fa-github"></i>
-                                        Full Code on GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+      <section id="portfolio" class="portfolio-section">
+         <div class="portfolio-content container">
+            <div class="section-title">
+               <h2>Portfolio</h2>
+               <p>Au travers de deux décennies d'expertise en design graphique, j'utilise mes compétences pour
+                  créer
+                  des œuvres percutantes. Forte d'une solide expérience en design, j'insuffle créativité et
+                  expérience dans chaque projet, offrant des résultats convaincants qui résonnent avec le public.
+                  Spécialisée dans le design web responsive, j'utilise mon ensemble de compétences étendu pour
+                  créer des expériences numériques visuellement attrayantes et conviviales qui s'adaptent
+                  parfaitement à tous les appareils. Explorez mon portfolio pour découvrir la fusion de l'art et
+                  de la technologie, affinée au fil des années d'expérimentation et d'innovation.
+               </p>
             </div>
-        </section>
-        <!-----------------------------------------------------------------
+            <div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">
+               <?php foreach ($portfolioItems as $item) : ?>
+               <div class="portfolio-items">
+                  <div class="portfolio-item-top">
+                     <a href="<?php echo htmlspecialchars($item['info_url_fr']); ?>"><img
+                           src="<?php echo htmlspecialchars($item['image_url']); ?>" alt="Portfolio Item"></a>
+                  </div>
+                  <div class="portfolio-wrap">
+                     <div class="portfolio-links-top">
+                        <a class="portfolio-link-top" href="<?php echo htmlspecialchars($item['info_url_fr']); ?>"
+                           title="More
+                        information"><i class="fas fa-circle-info"></i> More
+                           information</a>
+                     </div>
+                     <div class="portfolio-links-bottom">
+                        <a class="portfolio-link-left" href="<?php echo htmlspecialchars($item['live_url']); ?>"
+                           title="Live Demo" target="_blank"><i class="fas fa-link"></i> Live
+                           Preview</a>
+                        <a class="portfolio-link-right" href="<?php echo htmlspecialchars($item['github_url']); ?>"
+                           title="See on Github" target="_blank"><i class="fa fa-github"></i>
+                           Full Code on GitHub</a>
+                     </div>
+                  </div>
+               </div>
+               <?php endforeach; ?>
+            </div>
+         </div>
+      </section>
+      <!-----------------------------------------------------------------
                               Portfolio section end
         ------------------------------------------------------------------>
 
-        <!-----------------------------------------------------------------
+      <!-----------------------------------------------------------------
                              Services section
         ------------------------------------------------------------------>
-        <section id="services" class="services-section">
-            <div class="services-content container">
-                <div class="section-title">
-                    <h2>Services</h2>
-                    <p>Mes services se concentrent sur l'amélioration de votre présence numérique et l'engagement de
-                        votre public. Du design web sur mesure aux graphismes captivants, je propose des solutions
-                        adaptées pour rehausser votre marque. Que ce soit pour un design d'interface utilisateur fluide
-                        ou pour garantir une compatibilité multi-appareils, je suis là pour concrétiser votre vision et
-                        avoir un impact en ligne.
-                    </p>
-                </div>
-
-                <div class="services-container" data-aos="fade-right" data-aos-duration="1500">
-
-                    <div class="services-item">
-                        <div class="image-container">
-                            <img class="icon" src="./assets/icons/web-green.png" alt="icône">
-                            <img class="hover-icon" src="./assets/icons/web-white.png" alt="icône survol">
-                        </div>
-                        <div class="services-item-content">
-                            <h4 class="title">Design web</h4>
-                            <p class="description">Création de sites web visuellement attrayants et intuitifs adaptés à
-                                votre marque et à votre public.</p>
-                        </div>
-                    </div>
-
-                    <div class="services-item">
-                        <div class="image-container">
-                            <img class="icon" src="./assets/icons/ui-green.png" alt="icône">
-                            <img class="hover-icon" src="./assets/icons/ui-white.png" alt="icône survol">
-                        </div>
-                        <div class="services-item-content">
-                            <h4 class="title">Design d'UI</h4>
-                            <p class="description">Création d'interfaces utilisateur fluides et engageantes pour des
-                                expériences numériques optimales.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="services-container" data-aos="fade-left" data-aos-duration="1500">
-
-                    <div class="services-item">
-                        <div class="image-container">
-                            <img class="icon" src="./assets/icons/graphic-green.png" alt="icône">
-                            <img class="hover-icon" src="./assets/icons/graphic-white.png" alt="icône survol">
-                        </div>
-                        <div class="services-item-content">
-                            <h4 class="title">Design graphique</h4>
-                            <p class="description">Conception de visuels et d'éléments attractifs pour renforcer
-                                l'identité et la communication de la marque.</p>
-                        </div>
-                    </div>
-
-                    <div class="services-item">
-                        <div class="image-container">
-                            <img class="icon" src="./assets/icons/responsive-green.png" alt="icône">
-                            <img class="hover-icon" src="./assets/icons/responsive-white.png" alt="icône survol">
-                        </div>
-                        <div class="services-item-content">
-                            <h4 class="title">Design responsive</h4>
-                            <p class="description">Garantir que votre site web ait un aspect superbe et fonctionne
-                                parfaitement sur tous les appareils et tailles d'écran.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Services items end -->
+      <section id="services" class="services-section">
+         <div class="services-content container">
+            <div class="section-title">
+               <h2>Services</h2>
+               <p>Mes services se concentrent sur l'amélioration de votre présence numérique et l'engagement de
+                  votre public. Du design web sur mesure aux graphismes captivants, je propose des solutions
+                  adaptées pour rehausser votre marque. Que ce soit pour un design d'interface utilisateur fluide
+                  ou pour garantir une compatibilité multi-appareils, je suis là pour concrétiser votre vision et
+                  avoir un impact en ligne.
+               </p>
             </div>
-            <!-- Services content end -->
-        </section>
-        <!-----------------------------------------------------------------
+
+            <div class="services-container" data-aos="fade-right" data-aos-duration="1500">
+
+               <div class="services-item">
+                  <div class="image-container">
+                     <img class="icon" src="./assets/icons/web-green.png" alt="icône">
+                     <img class="hover-icon" src="./assets/icons/web-white.png" alt="icône survol">
+                  </div>
+                  <div class="services-item-content">
+                     <h4 class="title">Design web</h4>
+                     <p class="description">Création de sites web visuellement attrayants et intuitifs adaptés à
+                        votre marque et à votre public.</p>
+                  </div>
+               </div>
+
+               <div class="services-item">
+                  <div class="image-container">
+                     <img class="icon" src="./assets/icons/ui-green.png" alt="icône">
+                     <img class="hover-icon" src="./assets/icons/ui-white.png" alt="icône survol">
+                  </div>
+                  <div class="services-item-content">
+                     <h4 class="title">Design d'UI</h4>
+                     <p class="description">Création d'interfaces utilisateur fluides et engageantes pour des
+                        expériences numériques optimales.</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="services-container" data-aos="fade-left" data-aos-duration="1500">
+
+               <div class="services-item">
+                  <div class="image-container">
+                     <img class="icon" src="./assets/icons/graphic-green.png" alt="icône">
+                     <img class="hover-icon" src="./assets/icons/graphic-white.png" alt="icône survol">
+                  </div>
+                  <div class="services-item-content">
+                     <h4 class="title">Design graphique</h4>
+                     <p class="description">Conception de visuels et d'éléments attractifs pour renforcer
+                        l'identité et la communication de la marque.</p>
+                  </div>
+               </div>
+
+               <div class="services-item">
+                  <div class="image-container">
+                     <img class="icon" src="./assets/icons/responsive-green.png" alt="icône">
+                     <img class="hover-icon" src="./assets/icons/responsive-white.png" alt="icône survol">
+                  </div>
+                  <div class="services-item-content">
+                     <h4 class="title">Design responsive</h4>
+                     <p class="description">Garantir que votre site web ait un aspect superbe et fonctionne
+                        parfaitement sur tous les appareils et tailles d'écran.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- Services items end -->
+         </div>
+         <!-- Services content end -->
+      </section>
+      <!-----------------------------------------------------------------
                            Services section end
         ------------------------------------------------------------------>
 
-        <!-----------------------------------------------------------------
+      <!-----------------------------------------------------------------
                               Contact section
         ------------------------------------------------------------------>
-        <section id="contact" class="contact-section">
-            <div class="contact-content container">
-                <div class="section-title">
-                    <h2>Contact</h2>
-                    <p>Si vous êtes intéressé par une collaboration en design graphique, développement web ou autres
-                        projets créatifs, veuillez me contacter via ma page. J'ai hâte de mieux vous connaître et de
-                        travailler avec vous sur vos projets.
-                    </p>
-                </div>
-
-                <div class="contact-container" data-aos="fade-in" data-aos-duration="1500">
-                    <form action="../forms/contact.php" method="post">
-
-                        <label for="firstName">Nom</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="Votre nom...">
-
-                        <label for="lastName">Prénom</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Votre prénom...">
-
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Votre email...">
-
-                        <label for="subject">Sujet</label>
-                        <input type="text" id="subject" name="subject" placeholder="Sujet...">
-
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Votre message..."
-                            style="height:200px"></textarea>
-
-                        <!-- Button -->
-                        <input type="reset" value="Effacer">
-                        <input type="submit" value="Envoyer">
-                        <!-- Button end -->
-                    </form>
-                    <!-- Contact form end -->
-                </div>
-                <!-- Contact container -->
+      <section id="contact" class="contact-section">
+         <div class="contact-content container">
+            <div class="section-title">
+               <h2>Contact</h2>
+               <p>Si vous êtes intéressé par une collaboration en design graphique, développement web ou autres
+                  projets créatifs, veuillez me contacter via ma page. J'ai hâte de mieux vous connaître et de
+                  travailler avec vous sur vos projets.
+               </p>
             </div>
-            <!-- Contact content end -->
-        </section>
-        <!-----------------------------------------------------------------
+
+            <div class="contact-container" data-aos="fade-in" data-aos-duration="1500">
+               <form action="../forms/contact.php" method="post">
+
+                  <label for="firstName">Nom</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Votre nom...">
+
+                  <label for="lastName">Prénom</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Votre prénom...">
+
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Votre email...">
+
+                  <label for="subject">Sujet</label>
+                  <input type="text" id="subject" name="subject" placeholder="Sujet...">
+
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Votre message..." style="height:200px"></textarea>
+
+                  <!-- Button -->
+                  <input type="reset" value="Effacer">
+                  <input type="submit" value="Envoyer">
+                  <!-- Button end -->
+               </form>
+               <!-- Contact form end -->
+            </div>
+            <!-- Contact container -->
+         </div>
+         <!-- Contact content end -->
+      </section>
+      <!-----------------------------------------------------------------
                                Contact section end
         ------------------------------------------------------------------>
-    </main>
+   </main>
 
-    <!-- Main end -->
-    <!-----------------------------------------------------------------
+   <!-- Main end -->
+   <!-----------------------------------------------------------------
                                Footer
     ------------------------------------------------------------------>
-    <footer id="footer">
-        <div class="footer-container container">
-            <div class="copyright">
-                &copy; Copyright, conception et développement par <a class="github"
-                    href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
-                        aria-hidden="true"></i> Açelya
-                    Lejeune</a>
-            </div>
-        </div>
-    </footer>
-    <!-----------------------------------------------------------------
+   <footer id="footer">
+      <div class="footer-container container">
+         <div class="copyright">
+            &copy; Copyright, conception et développement par <a class="github"
+               href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
+                  aria-hidden="true"></i> Açelya
+               Lejeune</a>
+         </div>
+      </div>
+   </footer>
+   <!-----------------------------------------------------------------
                                Footer end
     	------------------------------------------------------------------>
 
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
+   <!-- Back to Top -->
+   <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
 
 
-    <!-- Font Awesome JS -->
-    <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
+   <!-- Font Awesome JS -->
+   <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
 
-    <!-- JS Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   <!-- JS Files -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 
-    <!-- Main JS Files -->
-    <script defer="defer" src="./dist/runtime.bundle.js"></script>
-    <script defer="defer" src="./dist/shared.bundle.js"></script>
-    <script defer="defer" src="./dist/index.bundle.js"></script>
-    <script defer="defer" src="./dist/nav.bundle.js"></script>
-    <script defer="defer" src="./dist/swiper.bundle.js"></script>
+   <!-- Main JS Files -->
+   <script defer="defer" src="./dist/runtime.bundle.js"></script>
+   <script defer="defer" src="./dist/shared.bundle.js"></script>
+   <script defer="defer" src="./dist/index.bundle.js"></script>
+   <script defer="defer" src="./dist/nav.bundle.js"></script>
+   <script defer="defer" src="./dist/swiper.bundle.js"></script>
 
 
-    <script>
-        AOS.init();
-    </script>
+   <script>
+   AOS.init();
+   </script>
 
 </body>
 
