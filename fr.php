@@ -311,14 +311,17 @@ $conn->close();
          <div class="portfolio-content container">
             <div class="section-title">
                <h2>Portfolio</h2>
-               <p>Au travers de deux décennies d'expertise en design graphique, j'utilise mes compétences pour
-                  créer
-                  des œuvres percutantes. Forte d'une solide expérience en design, j'insuffle créativité et
-                  expérience dans chaque projet, offrant des résultats convaincants qui résonnent avec le public.
-                  Spécialisée dans le design web responsive, j'utilise mon ensemble de compétences étendu pour
-                  créer des expériences numériques visuellement attrayantes et conviviales qui s'adaptent
-                  parfaitement à tous les appareils. Explorez mon portfolio pour découvrir la fusion de l'art et
-                  de la technologie, affinée au fil des années d'expérimentation et d'innovation.
+               <p>
+                  Ce portfolio rassemble une sélection de projets issus de mon parcours en design et en développement
+                  front-end. Il reflète mon expérience en design graphique et digital, mon attention aux interfaces
+                  claires et responsives, ainsi que mon évolution avec des technologies front-end comme HTML5, CSS3,
+                  SCSS, JavaScript, Angular, PHP et MySQL.
+               </p>
+               <p>
+                  À travers ces projets, je souhaite montrer comment je combine design visuel, ergonomie, mise en page,
+                  développement responsive et fonctionnalités backend de base pour créer des expériences digitales
+                  concrètes. Certains projets sont davantage orientés design, tandis que d’autres incluent une partie
+                  plus technique et de l’intégration front-end.
                </p>
             </div>
             <div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">

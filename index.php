@@ -304,22 +304,20 @@ $conn->close();
          <div class="portfolio-content container">
             <div class="section-title">
                <h2>Portfolio</h2>
-               <p>Incorporating two decades of graphic design expertise, I leverage my
-                  skills to create impactful
-                  works. With a rich background in design, I infuse creativity and
-                  experience into every project,
-                  delivering compelling results that resonate with audiences. Specializing
-                  in responsive web
-                  design, I leverage my extensive skill set to craft visually compelling
-                  and user-friendly digital
-                  experiences that adapt seamlessly across devices. Explore my portfolio to
-                  witness the fusion of
-                  artistry and technology, honed over years of experimentation and
-                  innovation.
+               <p>
+                  This portfolio brings together selected projects from my design and frontend development journey. It
+                  reflects my background in graphic and digital design, my focus on clear and responsive interfaces, and
+                  my growing experience with frontend technologies such as HTML5, CSS3, SCSS, JavaScript, Angular, PHP
+                  and MySQL.
+               </p>
+               <p>
+                  Through these projects, I aim to show how I combine visual design, usability, layout, responsive
+                  development and basic backend functionality to create practical digital experiences. Some projects are
+                  design-focused, while others include more technical implementation and frontend integration.
                </p>
             </div>
             <div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">
-               <?php foreach ($portfolioItems as $item) : ?>
+               <?php foreach ($portfolioItems as $item): ?>
                <div class="portfolio-items">
                   <div class="portfolio-item-top">
                      <a href="<?php echo htmlspecialchars($item['info_url']); ?>"><img
