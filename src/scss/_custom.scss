@@ -1,26 +1,37 @@
 /* -------------------------------------------------------
                       Custom colors
 ---------------------------------------------------------*/
-$primary-red: rgb(240, 84, 85);
-$primary-green: rgb(120, 196, 92);
-$secondary-green: rgb(19, 161, 15);
-$tertiary-green: rgb(156, 189, 143);
-$dark-green: rgb(11, 93, 9);
-$light-green: rgb(232, 253, 232);
-$primary-yellow: rgb(244, 164, 66);
-$primary-blue:rgb(20, 30, 70);
-$gray:rgb(44, 47, 63);
-$light-gray:rgb(168, 169, 180);
-$secondary-gray:rgb(111, 113, 128);
-$background:rgb(4, 11, 20);
+$primary-red: #f05455;
 
+// Modern portfolio palette
+// Neutral surfaces keep the site clean; green is used as an accent, not as a full-page wash.
+$primary-green: #3f8f5b;
+$secondary-green: #2f7d46;
+$tertiary-green: #dbead8;
+$dark-green: #1f6b3a;
+$light-green: #f6fbf4;
+$primary-yellow: #c99343;
+$primary-blue: #141e46;
 
-$box-shadow-primary: 0px 3px 5px 0px rgba(71, 71, 71, 0.66);
-$text-shadow-primary: 1px 1px rgba(71, 71, 71, 0.66);
+// UI neutrals
+$gray: #2b3142;
+$light-gray: #c4c8d4;
+$secondary-gray: #8f96aa;
+$background: #07111f;
+$body-background: #f8faf7;
+$surface: #ffffff;
+$surface-soft: #eef7ec;
+$text-primary: #1f2933;
+$text-secondary: #4b5563;
+$border-soft: #d9e6d8;
+
+$box-shadow-primary: 0 0.75em 1.5em rgba(7, 17, 31, 0.045);
+$box-shadow-soft: 0 0.35em 1em rgba(7, 17, 31, 0.035);
+$text-shadow-primary: 1px 1px rgba(7, 17, 31, 0.4);
 
 $navbarHeightPercentage: 88%;
 
-$base-font-size: 16px; 
+$base-font-size: 16px;
 /* -------------------------------------------------------
                     Google fonts
 ---------------------------------------------------------*/

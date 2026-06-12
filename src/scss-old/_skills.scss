@@ -10,7 +10,7 @@
 .skills-section {
     @include d-flex(flex, start, start, column, start);
 
-    background-color: $surface-soft;
+    background-color: rgba($primary-green, 0.2);
     overflow: hidden;
     width: 100%;
 
@@ -21,7 +21,7 @@
 
         h2 {
             font-size: 2em;
-            font-weight: 700;
+            font-weight: bold;
             padding-bottom: 0.5em;
             position: relative;
             color: $dark-green;
@@ -31,71 +31,62 @@
                 position: absolute;
                 display: block;
                 width: 2em;
-                height: 0.12em;
+                height: 0.1em;
                 background: $primary-green;
                 bottom: 0;
                 left: 0;
-                border-radius: 999px;
             }
         }
 
         h3 {
-            font-size: 1.25em;
-            font-weight: 700;
+            font-size: 1.5em;
+            font-weight: bold;
             position: relative;
             color: $dark-green;
         }
 
         .skills-content {
             display: grid;
-            grid-template-rows: repeat(3, auto);
-            grid-gap: 1.75em;
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 1.5em;
             width: 100%;
 
             .skills-list-container {
                 display: grid;
                 grid-auto-flow: row;
                 grid-auto-rows: auto;
-                grid-gap: 0.75em;
+                grid-gap: 0.5em;
 
                 h3 {
                     width: 100%;
-                    margin-bottom: 0.25em;
+                    margin-bottom: 0.5em;
                 }
 
                 .skills-list {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 0.75em;
+                    display: grid;
+                    grid-auto-flow: column;
+                    grid-auto-columns: auto;
                     list-style: none;
                     padding: 0;
                     margin: 0;
                     width: 100%;
 
                     li {
-                        padding: 0.65em 1.15em;
+                        padding: 0.5em;
                         position: relative;
-                        color: $text-primary;
-                        font-weight: 600;
-                        font-size: 0.95em;
-                        background-color: $surface;
-                        border: 1px solid $border-soft;
-                        border-radius: 999px;
+                        color: $light-green;
+                        font-weight: 500;
+                        font-size: 1em;
+                        margin-right: 0.5em;
+                        background-color: $background;
                         text-align: center;
-                        box-shadow: none;
-                        transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-
-                        &:hover {
-                            transform: translateY(-2px);
-                            border-color: rgba($primary-green, 0.55);
-                            box-shadow: none;
-                        }
                     }
                 }
             }
         }
     }
 
+    // Responsive styles for small screens
     @media (min-width: 320px) and (max-width: 768px) {
         .skills-container {
             .skills-content {
@@ -111,10 +102,12 @@
                     width: 100%;
 
                     .skills-list {
-                        gap: 0.6em;
+                        grid-auto-flow: row;
+                        grid-auto-rows: auto;
 
                         li {
-                            width: auto;
+                            margin-bottom: 0.5em;
+                            width: 100%;
                         }
                     }
                 }

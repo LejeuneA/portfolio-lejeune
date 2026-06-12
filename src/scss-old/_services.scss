@@ -9,7 +9,7 @@
 .services-section {
     @include d-flex(flex, start, start, column, start);
 
-    background: $surface-soft;
+    background: rgba(144, 238, 144, 0.2);
     overflow: hidden;
     width: 100%;
 
@@ -39,8 +39,8 @@
             }
 
             p {
-                color: $text-secondary;
-                font-weight: 500;
+                color: $dark-green;
+                font-weight: 600;
                 font-size: 1.1em;
                 margin-top: 1.5em;
                 line-height: 1.8em;

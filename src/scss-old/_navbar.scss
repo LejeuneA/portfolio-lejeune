@@ -6,6 +6,7 @@
 /* -------------------------------------------------------
                     Home header
 ---------------------------------------------------------*/
+// Header
 #header {
   @extend %header;
   @include d-flex(flex, start, center, column, center);
@@ -16,11 +17,11 @@
   width: 20em;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
-  padding: 1.25em 1em;
-  background: linear-gradient(180deg, $background 0%, #0b1628 100%);
+  padding: 1em;
+  background: $background;
   overflow-y: hidden;
-  border-right: 1px solid rgba($light-green, 0.06);
 
+  // Responsive styles for small screens
   @media (min-width: 320px) and (max-width: 1199px) {
     display: none;
     height: 100%;
@@ -31,6 +32,7 @@
   }
 }
 
+// Navigation Menu
 .nav-menu {
   padding-top: 1.5em;
 
@@ -39,6 +41,7 @@
     padding: 0;
     list-style: none;
 
+    // Responsive styles for small screens
     @media (min-width: 320px) and (max-width: 768px) {
       margin-left: 0.5em;
     }
@@ -54,18 +57,16 @@
     display: flex;
     align-items: center;
     color: $secondary-gray;
-    padding: 0.65em 0.8em;
-    margin-bottom: 0.35em;
+    padding: 0.6em 0.8em;
+    margin-bottom: 0.5em;
     transition: 0.3s;
     font-size: 1em;
-    border-radius: 0.7em;
 
     i,
     &:focus i {
       font-size: 1em;
       padding-right: 0.5em;
       color: $secondary-gray;
-      transition: 0.3s;
     }
 
     &:hover,
@@ -73,7 +74,7 @@
     &.active:focus,
     li:hover > a {
       color: $light-green;
-      background-color: rgba($primary-green, 0.14);
+      @include hover("color", $light-green, "background-color", $background);
 
       i {
         color: $primary-green;
@@ -85,19 +86,19 @@
     a {
       align-items: center;
       justify-content: center;
-      background-color: rgba($light-green, 0.09);
-      color: $light-green;
+      background-color: $gray;
       text-align: center;
-      padding: 0.7em 1.5em;
-      border-radius: 0.7em;
-      border: 1px solid rgba($light-green, 0.08);
-      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      padding: 0.5em 2em;
+      border-radius: 0.3em;
+      transition:
+        background-color 0.3s,
+        color 0.3s;
 
       &:hover {
         @include hover("background-color", $primary-green, "color", $light-green);
-        transform: translateY(-1px);
       }
 
+      // Responsive styles for small screens
       @media (min-width: 320px) and (max-width: 768px) {
         width: 90%;
         align-items: center;
@@ -138,9 +139,11 @@
   }
 }
 
+/* Hamburger icon styles */
 .navbar-hamburger {
   display: none;
 
+  // Responsive styles for small screens
   @media (min-width: 320px) and (max-width: 1199px) {
     @include d-flex(flex, center, center, column, center);
 
@@ -153,7 +156,6 @@
     height: 2.5em;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: $box-shadow-soft;
 
     i {
       font-size: 1em;

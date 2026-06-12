@@ -10,7 +10,7 @@
 .about-section {
     @include d-flex(flex, start, start, column, start);
 
-    background: $body-background;
+    background: rgba(144, 238, 144, 0.1);
     overflow: hidden;
     width: 100%;
 
@@ -94,10 +94,7 @@
                 ul{
                     line-height: 1.7em;
                     padding: 2em;
-                    background-color: $surface;
-                    border: 1px solid $border-soft;
-                    border-radius: 1em;
-                    box-shadow: $box-shadow-soft;
+                    background-color: rgba($primary-green, 0.1);
                     line-height: 2em;
 
                     li{

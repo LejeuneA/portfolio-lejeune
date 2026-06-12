@@ -1,10 +1,11 @@
 @use "custom" as *;
 @import "mixins";
 
+
+
 body {
   font-family: "Open Sans", sans-serif;
-  color: $text-primary;
-  background: $body-background;
+  color: $background;
 }
 
 h1,
@@ -14,22 +15,17 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-  color: $text-primary;
 }
 
-p {
-  line-height: 1.7em;
+p{
+  line-height: 1.5em;
   font-weight: 400;
-  color: $text-secondary;
-  font-size: 1.05em;
+  color: $background;
+  font-size: 1.1em;
 
   @media (min-width: 320px) and (max-width: 768px) {
     font-size: 1em;
   }
-}
-
-a {
-  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -45,23 +41,21 @@ a {
   bottom: 1em;
   z-index: 996;
   background: $primary-green;
-  color: $light-green;
+  color:$light-green;
   width: 3em;
   height: 3em;
   border-radius: 5em;
-  box-shadow: $box-shadow-soft;
   transition: all 0.4s;
 
   &:hover {
     @include hover("background-color", $dark-green, "color", $light-green);
-    transform: translateY(-2px);
   }
 
   &.active {
     visibility: visible;
     opacity: 1;
   }
-
+  
   .back-to-top i {
     font-size: 1em;
     color: $light-green;
@@ -69,12 +63,13 @@ a {
   }
 }
 
+
 /*--------------------------------------------------------------
                         # Main Section
 --------------------------------------------------------------*/
 #main {
   margin-left: 20em;
-  background: $body-background;
+
 
   @media (max-width: 1199px) {
     margin-left: 0;
@@ -84,12 +79,12 @@ a {
   .container-fluid {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 5em;
+    padding:5em;
     width: 100%;
     display: flex;
 
     @media screen and (max-width: 768px) {
-      padding: 3em 1.5em;
+      padding: 3em;
     }
   }
 
@@ -101,7 +96,7 @@ a {
     #main {
       margin-left: 0;
     }
-
+  
     .container,
     .container-fluid {
       padding-left: 1.5em;
