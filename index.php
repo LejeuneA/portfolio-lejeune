@@ -179,75 +179,54 @@ $conn->close();
             <h2>About</h2>
             <div class="about-content">
                <div class="about-container-left" data-aos="fade-right" data-aos-duration="1500">
-                  <p><span class="first-sentence">Welcome to my website! I'm Açelya
-                        Lejeune</span>
-                     My name is Açelya, a graphic design professional with over 20 years
-                     experience. I started my
-                     career in Antalya and have since broadened my horizons by working in
-                     various digital
-                     agencies
-                     and print shops in Northern Cyprus, England and then by settling in
-                     Belgium.
+                  <p>
+                     <span class="first-sentence">Hi, I’m Açelya Lejeune.</span>
+                     I am a senior designer with a long professional background in graphic design, visual communication
+                     and web design. Over the years, I have worked on a wide range of creative and digital projects,
+                     developing a strong sense of layout, typography, color, branding and visual hierarchy.
                   </p>
                   <p>
-                     <span class="first-sentence">Graphic Design Expert</span>
-                     My professional career has enabled me to follow the evolution of digital
-                     art and embrace
-                     innovations in the world of design. I've worked on various projects in
-                     my area of of
-                     expertise
-                     using tools such as <span>Adobe Photoshop</span>, <span>Adobe
-                        Illustrator</span>,
-                     <span>Adobe
-                        Indesign</span>, <span>Adobe XD</span> and <span>Figma</span>. I'm here
-                     to share my
-                     experience
-                     with you.
+                     <span class="first-sentence">A design background shaped across countries</span>
+                     I started my career in Antalya and continued working with agencies, print studios and creative
+                     projects in Northern Cyprus, England and Belgium. Living in Brighton also strengthened my
+                     connection with English-speaking environments and international teams.
                   </p>
                </div>
 
                <div class="about-container-right">
                   <div class="content" data-aos="fade-left" data-aos-duration="1600">
                      <p>
-                        <span class="first-sentence">Passion for Web development</span>
-                        In 2019, I moved to England, started my own business, and in 2020, I
-                        got married and
-                        started
-                        my
-                        own business. married and moved to Belgium. Currently, I'm developing
-                        my web design
-                        skills
-                        using
-                        <span>HTML5</span>, <span>CSS</span>, <span>Sass</span>,
-                        <span>Javascript</span>,
-                        <span>Php</span> and <span>MySQL</span>. Web design is my passion, and
-                        I develop it
-                        further
-                        with each new project.
+                        <span class="first-sentence">From design to frontend development</span>
+                        After many years in design, I decided to deepen my technical skills and completed a two-year
+                        Frontend Developer programme in Liège, Belgium. During this training, I built a final project
+                        with <span>Angular</span> and worked with <span>HTML5</span>, <span>CSS3</span>,
+                        <span>SCSS</span>, <span>JavaScript</span>, <span>TypeScript</span>, <span>PHP</span> and
+                        <span>MySQL</span>.
                      </p>
+
+                     <p>
+                        Today, I combine my design experience with frontend development skills. My strongest areas are
+                        <span>SCSS</span>, responsive interfaces, UI integration, visual design, Git/GitHub workflows
+                        and CMS-based web projects. I also learned <span>Silverstripe</span> in my current workplace.
+                     </p>
+
                      <ul>
-                        <li><i class="fas fa-chevron-right"></i> Birthday: <span>13 May
-                              1980</span></li>
-                        <li><i class="fas fa-chevron-right"></i> Website:
-                           <span>www.acelyalejeune.be</span>
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Phone: <span>+32 493
-                              38 77 29</span></li>
-                        <li><i class="fas fa-chevron-right"></i> City: <span>Liége,
-                              Belgium</span></li>
-                        <li><i class="fas fa-chevron-right"></i> Age: <span>44</span></li>
-                        <li><i class="fas fa-chevron-right"></i> Email:
-                           <span>contact@acelyalejeune.be</span>
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Freelance:
-                           <span>Available</span>
-                        </li>
+                        <li><i class="fas fa-chevron-right"></i> Location: <span>Liège, Belgium</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Website: <span>www.acelyalejeune.be</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Email: <span>contact@acelyalejeune.be</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Focus: <span>Digital Design, Web Design, UI Design,
+                              Frontend Integration</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Open to: <span>Remote opportunities with UK and
+                              European teams</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Languages: <span>Turkish, English, French in
+                              progress</span></li>
                      </ul>
                   </div>
                </div>
             </div>
          </div>
       </section>
+
       <!-----------------------------------------------------------------
                       			About section end
    			------------------------------------------------------------------>

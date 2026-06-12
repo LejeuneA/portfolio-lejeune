@@ -183,49 +183,57 @@ $conn->close();
             <h2>À propos</h2>
             <div class="about-content">
                <div class="about-container-left" data-aos="fade-right" data-aos-duration="1500">
-                  <p><span class="first-sentence">Bienvenue sur mon site web ! Je suis Açelya Lejeune</span>
-                     Je m'appelle Açelya, professionnelle du design graphique avec plus de 20 ans d'expérience.
-                     J'ai commencé ma carrière à Antalya et depuis, j'ai élargi mes horizons en travaillant dans
-                     diverses agences digitales et imprimeries dans le nord de Chypre, en Angleterre, puis en
-                     m'installant en Belgique.
+                  <p>
+                     <span class="first-sentence">Bonjour, je suis Açelya Lejeune.</span>
+                     Je suis designer senior avec une longue expérience professionnelle en design graphique,
+                     communication visuelle et web design. Au fil des années, j’ai travaillé sur de nombreux projets
+                     créatifs et digitaux, en développant un sens solide de la mise en page, de la typographie, de la
+                     couleur, de l’identité visuelle et de la hiérarchie visuelle.
                   </p>
                   <p>
-                     <span class="first-sentence">Expert en design graphique</span>
-                     Ma carrière professionnelle m'a permis de suivre l'évolution de l'art numérique et
-                     d'embrasser les innovations dans le monde du design. J'ai travaillé sur divers projets dans
-                     mon domaine d'expertise en utilisant des outils tels que <span>Adobe Photoshop</span>,
-                     <span>Adobe Illustrator</span>, <span>Adobe InDesign</span>, <span>Adobe XD</span> et
-                     <span>Figma</span>. Je suis là pour partager mon expérience avec vous.
+                     <span class="first-sentence">Un parcours design construit dans plusieurs pays</span>
+                     J’ai commencé ma carrière à Antalya, puis j’ai continué à travailler avec des agences, des
+                     imprimeries et des projets créatifs dans le nord de Chypre, en Angleterre et en Belgique. Mon
+                     expérience à Brighton a également renforcé mon lien avec les environnements anglophones et les
+                     équipes internationales.
                   </p>
                </div>
 
                <div class="about-container-right">
                   <div class="content" data-aos="fade-left" data-aos-duration="1600">
                      <p>
-                        <span class="first-sentence">Passion pour le développement web</span>
-                        En 2019, j'ai déménagé en Angleterre, j'ai lancé ma propre entreprise, et en 2020, je me
-                        suis mariée et j'ai déménagé en Belgique. Actuellement, je développe mes compétences en
-                        design web en utilisant <span>HTML5</span>, <span>CSS</span>, <span>Sass</span>,
-                        <span>Javascript</span>, <span>Php</span> et <span>MySQL</span>. Le design web est ma
-                        passion, et je le développe davantage avec chaque nouveau projet.
+                        <span class="first-sentence">Du design vers le développement front-end</span>
+                        Après plusieurs années dans le design, j’ai voulu approfondir mes compétences techniques et j’ai
+                        terminé une formation de deux ans en développement front-end à Liège, en Belgique. Pendant cette
+                        formation, j’ai réalisé un projet de fin d’études avec <span>Angular</span> et travaillé avec
+                        <span>HTML5</span>, <span>CSS3</span>, <span>SCSS</span>, <span>JavaScript</span>,
+                        <span>TypeScript</span>, <span>PHP</span> et <span>MySQL</span>.
                      </p>
+
+                     <p>
+                        Aujourd’hui, je combine mon expérience en design avec des compétences en développement
+                        front-end. Mes points forts sont <span>SCSS</span>, les interfaces responsives, l’intégration
+                        UI, le design visuel, les workflows Git/GitHub et les projets web basés sur un CMS. J’ai
+                        également appris <span>Silverstripe</span> dans mon poste actuel.
+                     </p>
+
                      <ul>
-                        <li><i class="fas fa-chevron-right"></i> Date de naissance : <span>13 Mai 1980</span>
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Site Web : <span>www.acelyalejeune.be</span>
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Téléphone : <span>+32 493 38 77 29</span></li>
-                        <li><i class="fas fa-chevron-right"></i> Ville : <span>Liège, Belgique</span></li>
-                        <li><i class="fas fa-chevron-right"></i> Âge : <span>44</span></li>
-                        <li><i class="fas fa-chevron-right"></i> Email : <span>contact@acelyalejeune.be</span>
-                        </li>
-                        <li><i class="fas fa-chevron-right"></i> Freelance : <span>Disponible</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Localisation : <span>Liège, Belgique</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Site web : <span>www.acelyalejeune.be</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Email : <span>contact@acelyalejeune.be</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Profil : <span>Design digital, web design, design UI,
+                              intégration front-end</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Ouverte à : <span>Opportunités à distance avec des
+                              équipes au Royaume-Uni et en Europe</span></li>
+                        <li><i class="fas fa-chevron-right"></i> Langues : <span>Turc, anglais, français en
+                              progression</span></li>
                      </ul>
                   </div>
                </div>
             </div>
          </div>
       </section>
+
       <!-----------------------------------------------------------------
                                 About section end
         ------------------------------------------------------------------>
