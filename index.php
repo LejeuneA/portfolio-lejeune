@@ -349,19 +349,17 @@ $conn->close();
 
       <!-----------------------------------------------------------------
                       				Services section
-   			------------------------------------------------------------------>
+   	------------------------------------------------------------------>
       <section id="services" class="services-section">
          <div class="services-content container">
             <div class="section-title">
-               <h2>Services</h2>
-               <p>My services focus on enhancing your digital presence and engaging your
-                  audience. From bespoke web design to captivating graphics, I offer
-                  tailored solutions to elevate your brand. Whether it's seamless UI design
-                  or ensuring cross-device compatibility, I'm here to bring your vision to
-                  life and make an impact online.
+               <h2>What I Do</h2>
+               <p>
+                  I bring together a long design background with frontend development skills to create clear, responsive
+                  and visually consistent digital experiences. My work sits between design and implementation: from
+                  visual direction and UI layouts to SCSS styling, frontend integration and CMS-based web projects.
                </p>
             </div>
-
             <div class="services-container" data-aos="fade-right" data-aos-duration="1500">
 
                <div class="services-item">
@@ -370,9 +368,11 @@ $conn->close();
                      <img class="hover-icon" src="./assets/icons/web-white.png" alt="hover icon">
                   </div>
                   <div class="services-item-content">
-                     <h4 class="title">Web design</h4>
-                     <p class="description">Crafting visually appealing and intuitive
-                        websites tailored to your brand and audience.</p>
+                     <h4 class="title">Digital & Web Design</h4>
+                     <p class="description">
+                        Designing clean, structured and visually coherent web pages with attention to layout,
+                        typography, color and brand consistency.
+                     </p>
                   </div>
                </div>
 
@@ -382,9 +382,11 @@ $conn->close();
                      <img class="hover-icon" src="./assets/icons/ui-white.png" alt="hover icon">
                   </div>
                   <div class="services-item-content">
-                     <h4 class="title">UI design</h4>
-                     <p class="description">Creating seamless and engaging user interfaces
-                        for optimal digital experiences.</p>
+                     <h4 class="title">UI Design</h4>
+                     <p class="description">
+                        Creating user-friendly interface layouts, visual systems and screen designs that are clear,
+                        accessible and easy to navigate.
+                     </p>
                   </div>
                </div>
             </div>
@@ -397,9 +399,11 @@ $conn->close();
                      <img class="hover-icon" src="./assets/icons/graphic-white.png" alt="hover icon">
                   </div>
                   <div class="services-item-content">
-                     <h4 class="title">Graphic design</h4>
-                     <p class="description">Designing attractive visuals and assets to
-                        enhance brand identity and communication.</p>
+                     <h4 class="title">Visual Design</h4>
+                     <p class="description">
+                        Using my graphic design experience to create strong visual identities, digital assets and
+                        polished communication materials.
+                     </p>
                   </div>
                </div>
 
@@ -409,9 +413,11 @@ $conn->close();
                      <img class="hover-icon" src="./assets/icons/responsive-white.png" alt="hover icon">
                   </div>
                   <div class="services-item-content">
-                     <h4 class="title">Responsive design</h4>
-                     <p class="description">Ensuring your website looks great and functions
-                        flawlessly across all devices and screen sizes.</p>
+                     <h4 class="title">Frontend Integration</h4>
+                     <p class="description">
+                        Building and refining responsive interfaces with HTML, CSS, SCSS, JavaScript, PHP and CMS
+                        workflows, with a strong eye for design details.
+                     </p>
                   </div>
                </div>
             </div>
@@ -419,9 +425,10 @@ $conn->close();
          </div>
          <!-- Services content end -->
       </section>
+
       <!-----------------------------------------------------------------
                       			Services section end
-   			------------------------------------------------------------------>
+   	------------------------------------------------------------------>
 
       <!-----------------------------------------------------------------
                       				Contact section
