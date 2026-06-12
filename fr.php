@@ -447,20 +447,20 @@ $conn->close();
          <div class="contact-content container">
             <div class="section-title">
                <h2>Contact</h2>
-               <p>Si vous êtes intéressé par une collaboration en design graphique, développement web ou autres
-                  projets créatifs, veuillez me contacter via ma page. J'ai hâte de mieux vous connaître et de
-                  travailler avec vous sur vos projets.
+               <p>
+                  Si mon profil vous intéresse pour un poste en design, une opportunité en intégration front-end ou un
+                  projet digital créatif, n’hésitez pas à me contacter. Je suis ouverte aux opportunités en Belgique,
+                  ainsi qu’aux rôles à distance avec des équipes au Royaume-Uni et en Europe.
                </p>
             </div>
-
             <div class="contact-container" data-aos="fade-in" data-aos-duration="1500">
-               <form action="../forms/contact.php" method="post">
+               <form action="./forms/contact.php" method="post">
 
-                  <label for="firstName">Nom</label>
-                  <input type="text" id="firstName" name="firstName" placeholder="Votre nom...">
+                  <label for="firstName">Prénom</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Votre prénom...">
 
-                  <label for="lastName">Prénom</label>
-                  <input type="text" id="lastName" name="lastName" placeholder="Votre prénom...">
+                  <label for="lastName">Nom</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Votre nom...">
 
                   <label for="email">Email</label>
                   <input type="email" id="email" name="email" placeholder="Votre email...">
@@ -471,16 +471,11 @@ $conn->close();
                   <label for="message">Message</label>
                   <textarea id="message" name="message" placeholder="Votre message..." style="height:200px"></textarea>
 
-                  <!-- Button -->
                   <input type="reset" value="Effacer">
-                  <input type="submit" value="Envoyer">
-                  <!-- Button end -->
+                  <input type="submit" value="Envoyer le message">
                </form>
-               <!-- Contact form end -->
             </div>
-            <!-- Contact container -->
          </div>
-         <!-- Contact content end -->
       </section>
       <!-----------------------------------------------------------------
                                Contact section end

@@ -432,26 +432,25 @@ $conn->close();
 
       <!-----------------------------------------------------------------
                       				Contact section
-   			------------------------------------------------------------------>
+   	------------------------------------------------------------------>
       <section id="contact" class="contact-section">
          <div class="contact-content container">
             <div class="section-title">
                <h2>Contact</h2>
-               <p>If you are interested in collaborating on graphic design, web
-                  development or other creative projects, please creative projects, please
-                  contact me via my page. I look forward to getting to know you better and
-                  to us work together on your projects.
+               <p>
+                  If you are interested in my profile, a design role, a frontend integration opportunity, or a creative
+                  digital project, feel free to contact me. I am open to opportunities in Belgium, as well as remote
+                  roles with UK and European teams.
                </p>
             </div>
-
             <div class="contact-container" data-aos="fade-in" data-aos-duration="1500">
                <form action="./forms/contact.php" method="post">
 
-                  <label for="firstName">Name</label>
-                  <input type="text" id="firstName" name="firstName" placeholder="Your name...">
+                  <label for="firstName">First name</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Your first name...">
 
-                  <label for="lastName">Surname</label>
-                  <input type="text" id="lastName" name="lastName" placeholder="Your surname...">
+                  <label for="lastName">Last name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Your last name...">
 
                   <label for="email">Email</label>
                   <input type="email" id="email" name="email" placeholder="Your email...">
@@ -462,25 +461,21 @@ $conn->close();
                   <label for="message">Message</label>
                   <textarea id="message" name="message" placeholder="Your message..." style="height:200px"></textarea>
 
-                  <!-- Button -->
                   <input type="reset" value="Reset">
-                  <input type="submit" value="Submit">
-                  <!-- Button end -->
+                  <input type="submit" value="Send message">
                </form>
-               <!-- Contact form end -->
             </div>
-            <!-- Contact container -->
          </div>
-         <!-- Contact content end -->
       </section>
+
       <!-----------------------------------------------------------------
                       			Contact section end
-   			------------------------------------------------------------------>
+   	------------------------------------------------------------------>
    </main>
    <!-- Main end -->
    <!-----------------------------------------------------------------
                                Footer
-    	------------------------------------------------------------------>
+   ------------------------------------------------------------------>
    <footer id="footer">
       <div class="footer-container container">
          <div class="copyright">
