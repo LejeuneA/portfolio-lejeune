@@ -288,7 +288,7 @@ $conn->close();
                      <li>GitHub</li>
                      <li>GitHub Desktop</li>
                      <li>SourceTree</li>
-                     <li>Gitg</li>
+                     <li>gitg</li>
                   </ul>
                </div>
             </div>
