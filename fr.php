@@ -236,43 +236,44 @@ $conn->close();
 
       <!-----------------------------------------------------------------
                                 About section end
-        ------------------------------------------------------------------>
+      ------------------------------------------------------------------>
       <!-----------------------------------------------------------------
                               Skills section
-        ------------------------------------------------------------------>
+      ------------------------------------------------------------------>
       <section id="skills" class="skills-section">
          <div class="skills-container container">
-            <h2>Skills</h2>
-
+            <h2>Compétences</h2>
             <div class="skills-content">
 
                <div class="skills-list-container">
-                  <h3>Langages de Programmation</h3>
+                  <h3>Front-end & Développement</h3>
 
                   <ul class="skills-list">
-                     <li>Html5</li>
-                     <li>Css</li>
-                     <li>Sass</li>
-                     <li>Javascript</li>
-                     <li>Php</li>
+                     <li>HTML5</li>
+                     <li>CSS3</li>
+                     <li>SCSS / Sass</li>
+                     <li>JavaScript</li>
+                     <li>TypeScript</li>
+                     <li>Angular</li>
+                     <li>PHP</li>
                   </ul>
                </div>
 
                <div class="skills-list-container">
-                  <h3>Frameworks & Outils</h3>
+                  <h3>CMS, base de données & outils de build</h3>
 
                   <ul class="skills-list">
                      <li>MySQL</li>
+                     <li>Silverstripe</li>
                      <li>CMS</li>
-                     <li>NodeJs</li>
-                     <li>Npm</li>
+                     <li>Node.js</li>
+                     <li>npm</li>
                      <li>Webpack</li>
-                     <li>GitHub</li>
                   </ul>
                </div>
 
                <div class="skills-list-container">
-                  <h3>Logiciels de Design</h3>
+                  <h3>Design & outils UX/UI</h3>
 
                   <ul class="skills-list">
                      <li>Figma</li>
@@ -280,19 +281,32 @@ $conn->close();
                      <li>Adobe Illustrator</li>
                      <li>Adobe Photoshop</li>
                      <li>Adobe InDesign</li>
+                     <li>Design responsive</li>
+                     <li>Design UI</li>
                   </ul>
                </div>
 
+               <div class="skills-list-container">
+                  <h3>Versioning & workflow</h3>
 
-
+                  <ul class="skills-list">
+                     <li>Git</li>
+                     <li>GitHub</li>
+                     <li>GitHub Desktop</li>
+                     <li>SourceTree</li>
+                     <li>Gitg</li>
+                  </ul>
+               </div>
             </div>
+         </div>
       </section>
+
       <!-----------------------------------------------------------------
                                 Skills section end
-        ------------------------------------------------------------------>
+      ------------------------------------------------------------------->
       <!-----------------------------------------------------------------
                                 Portfolio section
-        ------------------------------------------------------------------>
+      ------------------------------------------------------------------>
       <section id="portfolio" class="portfolio-section">
          <div class="portfolio-content container">
             <div class="section-title">
