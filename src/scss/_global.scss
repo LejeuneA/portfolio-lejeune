@@ -73,7 +73,7 @@ a {
                         # Main Section
 --------------------------------------------------------------*/
 #main {
-  margin-left: 20em;
+  margin-left: $sidebar-width;
   background: $body-background;
 
   @media (max-width: 1199px) {

@@ -44,7 +44,7 @@ $conn->close();
    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
    <!-- Main Css file -->
-   <link rel="stylesheet" href="./dist/index.css">
+   <link rel="stylesheet" href="./dist/index.css?v=<?php echo filemtime(__DIR__ . '/dist/index.css'); ?>">
 
    <!-- Favicon -->
    <link href="./assets/icons/favicon.png" rel="icon" type="image/png">

@@ -1,67 +1,88 @@
 @use 'custom' as *;
-@import "mixins";
-@import "extends";
-@import "global";
-
-/*--------------------------------------------------------------
-                        # Hero Section
---------------------------------------------------------------*/
 
 #hero {
-  @include d-flex(flex, center, center, column, start);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
   height: 100vh;
-  background: url("../../assets/images/hero-background.png") no-repeat center;
+
+  padding-left: calc(#{$sidebar-width} + clamp(5rem, 8vw, 10rem));
+  padding-right: 2rem;
+  box-sizing: border-box;
+
+  background: url('../../assets/images/hero-background.png') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
+  overflow: hidden;
 
   &:before {
-      content: "";
-      background: linear-gradient(90deg, rgba($background, 0.78) 0%, rgba($background, 0.42) 55%, rgba($background, 0.18) 100%);
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
+    content: '';
+    background: linear-gradient(
+      90deg,
+      rgba($background, 0.78) 0%,
+      rgba($background, 0.42) 55%,
+      rgba($background, 0.18) 100%
+    );
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
   }
 
   .hero-container {
-      position: relative;
-      z-index: 2;
-      min-width: 19em;
+    position: relative;
+    z-index: 2;
+    min-width: 19em;
+    max-width: 680px;
+    text-align: left;
+    transform: none;
   }
 
   h1 {
-      margin: 0 0 1em 0;
-      font-size: 3.5em;
-      font-weight: 700;
-      line-height:0;
-      color: $light-green;
+    margin: 0 0 0.4em 0;
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $light-green;
   }
 
   p {
-      color: $light-green;
-      margin-bottom: 3em;
-      font-size: 1.5em;
+    color: $light-green;
+    margin-bottom: 3em;
+    font-size: 1.5em;
+    line-height: 1.4;
   }
 
   p span {
-      color: $light-green;
-      padding-bottom: 0.25em;
-      letter-spacing: 0.1em;
-      border-bottom: 2px solid $primary-green;
+    color: $light-green;
+    padding-bottom: 0.25em;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid $primary-green;
   }
 
   @media (min-width: 320px) and (max-width: 1199px) {
-      @include d-flex(flex, center, center, column, start);
-      
-      h1 {
-          font-size: 2.5em; 
-      }
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-attachment: scroll;
 
-      p {
-          font-size: 1.3em;
-      }
+    .hero-container {
+      min-width: auto;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    p {
+      font-size: 1.3em;
+    }
   }
 }
