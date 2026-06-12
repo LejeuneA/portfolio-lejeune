@@ -37,3 +37,7 @@ settings.php
 
 #Ignore any index.html files
 index.html
+
+
+#Ignore any .sql files
+.sql
