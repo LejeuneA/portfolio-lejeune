@@ -1,34 +1,38 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
+    <meta name="description"
+        content="Librairie Lejeune portfolio project by Açelya Lejeune: responsive eCommerce bookstore website with admin panel, PHP and MySQL functionality.">
     <meta
-        content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste"
+        content="bookstore website, eCommerce website, responsive web design, frontend development, PHP, MySQL, admin panel, product catalog, portfolio project, Açelya Lejeune, frontend developer, UI design, web design"
         name="keywords">
 
-    <!-- AOS File -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+```
+<!-- AOS File -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-    <!-- Swiper File -->
-    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+<!-- Swiper File -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
 
+<!-- Main Css file -->
+<link rel="stylesheet" href="../dist/index.css">
 
-    <!-- Main Css file -->
-    <link rel="stylesheet" href="../dist/index.css">
+<!-- Favicon -->
+<link href="../assets/icons/favicon.png" rel="icon" type="image/png">
 
-    <!-- Favicon -->
-    <link href="../assets/icons/favicon.png" rel="icon" type="image/png">
+<!-- Google Fonts -->
+<link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+<!-- Title -->
+<title>Librairie Lejeune | Portfolio Project | Açelya Lejeune</title>
+```
 
-    <!-- Title -->
-    <title>Acelya Lejeune - Web Developer and Graphic Designer</title>
 </head>
 
 <body>
@@ -38,427 +42,399 @@
     <header id="header">
         <!-- Profile -->
         <div class="profile">
-            <img src="../assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="../index.php">Açelya
-                    Lejeune</a></h1>
+            <img src="../assets/images/header-photo.jpg" alt="Açelya Lejeune profile photo" class="profile-img">
+            <h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-                        class="fa fa-linkedin"></i></a>
-                <a href="../fr.php" class="language"><b>FR</b></a>
+                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="GitHub profile"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                    aria-label="LinkedIn profile"><i class="fa fa-linkedin"></i></a>
+                <a href="librairie-lejeune-fr.html" class="language"><b>FR</b></a>
             </div>
         </div>
 
-        <!-- Nav Menu -->
-        <nav id="navbar" class="nav-menu navbar">
-            <ul>
-                <li><a href="../index.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
-                        <span>Home</span></a>
-                </li>
-                <li><a href="../index.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>About</span></a></li>
-                <li><a href="../index.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Skills</span></a>
-                </li>
-                <li><a href="../index.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="../index.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
-                        <span>Services</span></a>
-                </li>
-                <li><a href="../index.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
-            </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
-            </div>
-        </nav>
-        <!-- End Nav Menu -->
-    </header>
-    <!-- End Header -->
-
-    <!---------------------------------------------------------------
-                             Offcanvas menu
-    ----------------------------------------------------------------->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <!-- Profile -->
-        <div class="profile">
-            <img src="../assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="../index.php">Açelya
-                    Lejeune</a></h1>
-            <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-                        class="fa fa-linkedin"></i></a>
-                <a href="../fr.php" class="language"><b>FR</b></a>
-            </div>
+```
+    <!-- Nav Menu -->
+    <nav id="navbar" class="nav-menu navbar">
+        <ul>
+            <li><a href="../index.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
+                    <span>Home</span></a>
+            </li>
+            <li><a href="../index.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                    <span>About</span></a></li>
+            <li><a href="../index.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                    <span>Skills</span></a>
+            </li>
+            <li><a href="../index.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                    <span>Portfolio</span></a></li>
+            <li><a href="../index.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                    <span>Services</span></a>
+            </li>
+            <li><a href="../index.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                    <span>Contact</span></a>
+            </li>
+        </ul>
+        <div class="btn-resume">
+            <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
         </div>
+    </nav>
+    <!-- End Nav Menu -->
+</header>
+<!-- End Header -->
 
-        <!-- Nav Menu -->
-        <nav id="navbar" class="nav-menu navbar">
-            <ul>
-                <li><a href="../index.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
-                        <span>Home</span></a>
-                </li>
-                <li><a href="../index.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>About</span></a></li>
-                <li><a href="../index.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Skills</span></a>
-                </li>
-                <li><a href="../index.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="../index.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
-                        <span>Services</span></a>
-                </li>
-                <li><a href="../index.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
-            </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
-            </div>
-        </nav>
-        <!-- End Nav Menu -->
-        <!-- End Offcanvas Menu -->
+<!---------------------------------------------------------------
+                         Offcanvas menu
+----------------------------------------------------------------->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Profile -->
+    <div class="profile">
+        <img src="../assets/images/header-photo.jpg" alt="Açelya Lejeune profile photo" class="profile-img">
+        <h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
+        <div class="social-links">
+            <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="GitHub profile"><i
+                    class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                aria-label="LinkedIn profile"><i class="fa fa-linkedin"></i></a>
+            <a href="librairie-lejeune-fr.html" class="language"><b>FR</b></a>
+        </div>
     </div>
 
-    <!-- Hamburger Icon -->
-    <div class="navbar-hamburger">
-        <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
-    </div>
-    <!-- End Hamburger Icon -->
-    <!-----------------------------------------------------------------
-                            Navigation end
-    ------------------------------------------------------------------>
-    <!-- Main -->
-    <main id="main">
-        <!-- ======= Portfolio Details Section ======= -->
-        <section id="portfolio-details" class="portfolio-details">
+    <!-- Nav Menu -->
+    <nav id="navbar" class="nav-menu navbar">
+        <ul>
+            <li><a href="../index.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
+                    <span>Home</span></a>
+            </li>
+            <li><a href="../index.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                    <span>About</span></a></li>
+            <li><a href="../index.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                    <span>Skills</span></a>
+            </li>
+            <li><a href="../index.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                    <span>Portfolio</span></a></li>
+            <li><a href="../index.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                    <span>Services</span></a>
+            </li>
+            <li><a href="../index.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                    <span>Contact</span></a>
+            </li>
+        </ul>
+        <div class="btn-resume">
+            <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
+        </div>
+    </nav>
+    <!-- End Nav Menu -->
+</div>
+<!-- End Offcanvas Menu -->
 
-            <div class="portfolio-details-container container">
-                <div class="section-title">
-                    <h2>Librairie Lejeune</h2>
-                    <p>Welcome to Librairie Lejeune, an eCommerce
-                        website
-                        offering a curated selection of books,
-                        stationery, and gifts. Librairie Lejeune
-                        combines a
-                        passion for literature and creativity to
-                        provide customers with a unique shopping
-                        experience.
-                    </p>
+<!-- Hamburger Icon -->
+<div class="navbar-hamburger">
+    <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+</div>
+<!-- End Hamburger Icon -->
+
+<!-----------------------------------------------------------------
+                        Navigation end
+------------------------------------------------------------------>
+
+<!-- Main -->
+<main id="main">
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+
+        <div class="portfolio-details-container container">
+            <div class="section-title">
+                <h2>Librairie Lejeune</h2>
+                <p>
+                    Librairie Lejeune is a responsive eCommerce bookstore project created to present and manage a
+                    catalog of books, stationery and gift items. The project combines visual direction, UI layout,
+                    frontend integration and basic backend functionality.
+                </p>
+                <p>
+                    The website includes public pages for visitors and an admin panel for managing products,
+                    categories and catalog content. It was built with HTML5, CSS3, SCSS, JavaScript, PHP and MySQL,
+                    with a Figma prototype used to plan the interface and user flow.
+                </p>
+            </div>
+
+            <div class="portfolio-details-top">
+
+                <div class="portfolio-details-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/librairie-lejeune-1.jpg"
+                                alt="Librairie Lejeune homepage design">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/librairie-lejeune-2.jpg"
+                                alt="Librairie Lejeune product page">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/librairie-lejeune-3.jpg"
+                                alt="Librairie Lejeune product catalog page">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/librairie-lejeune-4.jpg"
+                                alt="Librairie Lejeune shopping interface">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/librairie-lejeune-5.jpg"
+                                alt="Librairie Lejeune admin panel">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/librairie-lejeune-6.jpg"
+                                alt="Librairie Lejeune responsive website preview">
+                        </div>
+                    </div>
                 </div>
+                <!-- Portfolio details slider end -->
+                <div class="swiper-pagination"></div>
+                <!-- Swiper wrapper end -->
 
-                <div class="portfolio-details-top">
+                <div class="portfolio-info">
+                    <h3>Technologies & Tools Used</h3>
+                    <div class="portfolio-info-container">
 
-                    <div class="portfolio-details-slider swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/librairie-lejeune-1.jpg"
-                                    alt="Librairie lejeune home page">
+                        <div class="portfolio-info-left">
+                            <h4>Creative & UI Tools</h4>
+                            <div class="portfolio-info-icons">
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/ai.png" alt="Illustrator logo">
+                                    <p>Created the logo and visual identity elements.</p>
+                                </div>
+
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/ps.png" alt="Photoshop logo">
+                                    <p>Prepared and adjusted visual assets.</p>
+                                </div>
+
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/figma.png" alt="Figma logo">
+                                    <p>Planned the layout, prototype and user flow.</p>
+                                </div>
                             </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/librairie-lejeune-2.jpg"
-                                    alt="Librairie lejeune product page">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/librairie-lejeune-3.jpg" alt>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/librairie-lejeune-4.jpg" alt>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/librairie-lejeune-5.jpg" alt>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/librairie-lejeune-6.jpg" alt>
-                            </div>
-
+                            <!-- Portfolio-info-icons end -->
                         </div>
+                        <!-- Portfolio-info-left end -->
+
+                        <div class="portfolio-info-right">
+                            <h4>Frontend & Backend</h4>
+                            <div class="portfolio-info-icons">
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/html.png" alt="HTML logo">
+                                    <img src="../assets/icons/css.png" alt="CSS logo">
+                                    <img src="../assets/icons/sass.png" alt="Sass logo">
+                                    <p>Structured and styled the responsive interface.</p>
+                                </div>
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/js.png" alt="JavaScript logo">
+                                    <p>Added interactive behaviours and search features.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info-icons">
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/php.png" alt="PHP logo">
+                                    <p>Implemented backend functionality for the admin panel.</p>
+                                </div>
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/mysql.png" alt="MySQL logo">
+                                    <p>Managed product, category and catalog data.</p>
+                                </div>
+                            </div>
+                            <!-- Portfolio-info-icons end -->
+                        </div>
+                        <!-- Portfolio-info-right end -->
                     </div>
-                    <!-- Portfolio details slider end -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Swiper wrapper end -->
-
-                    <div class="portfolio-info">
-                        <h3>Technologies & Tools Employed</h3>
-                        <div class="portfolio-info-container">
-
-                            <div class="portfolio-info-left">
-                                <h4>Design Tools</h4>
-                                <div class="portfolio-info-icons">
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/ai.png" alt="llustrator logo">
-                                        <p>Crafted captivating logos and
-                                            graphics.</p>
-                                    </div>
-
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/ps.png" alt="Photoshop logo">
-                                        <p>Elevated visual aesthetics
-                                            and
-                                            assets.</p>
-                                    </div>
-
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/figma.png" alt="Figma logo">
-                                        <p>Wireframed and prototyped the
-                                            layout.</p>
-                                    </div>
-                                </div>
-                                <!-- Portfolio-info-icons end -->
-                            </div>
-                            <!-- Portfolio-info-left end -->
-
-                            <div class="portfolio-info-right">
-                                <h4>Web Development Languages</h4>
-                                <div class="portfolio-info-icons">
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/html.png" alt="Html logo">
-                                        <img src="../assets/icons/css.png" alt="Css logo">
-                                        <img src="../assets/icons/sass.png" alt="Sass logo">
-                                        <p>Structured and styled
-                                            frontend
-                                            elements.</p>
-                                    </div>
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/js.png" alt="Javascript logo">
-                                        <p>Implemented interactive
-                                            functionalities.</p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-info-icons">
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/php.png" alt="Php logo">
-                                        <p>Implemented dynamic
-                                            functionalities.</p>
-                                    </div>
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/mysql.png" alt="Mysql logo">
-                                        <p>Established a robust database
-                                            system.</p>
-                                    </div>
-                                </div>
-                                <!-- Portfolio-info-icons end -->
-                            </div>
-                            <!-- Portfolio-info-right end -->
-                        </div>
-                        <!-- Portfolio-info-container end -->
-                    </div>
-                    <!-- Portfolio details info section end -->
-                    <div class="portfolio-cards-container">
-                        <div class="portfolio-info-links">
-                            <div class="portfolio-card librairie-lejeune">
-                                <p>Take a tour of Librairie Lejeune's
-                                    website
-                                    with a live preview. Experience the
-                                    intuitive
-                                    interface and discover the extensive
-                                    product
-                                    catalog.</p>
-                                <p>To explore the functionality of Librairie Lejeune's admin panel and database, use
-                                    the following credentials:</p>
-                                <div class="access">
-                                    <h3>Access Instructions:</h3>
-                                    <p><span>Username:</span> guest@mail.com
-                                    </p>
-                                    <p><span>Password:</span> 1234</p>
-                                </div>
-                            </div>
-                            <a class="portfolio-link-left"
-                                href="https://acelyalejeune.be/portfolio/librairie-lejeune/index.php" target="_blank"><i
-                                    class="fas fa-link"></i>
-                                Live
-                                Preview</a>
-                        </div>
-                        <div class="portfolio-info-links">
-                            <div class="portfolio-card librairie-lejeune">
-                                <p>Delve into the intricacies of Librairie
-                                    Lejeune's development with access to the
-                                    full
-                                    codebase on GitHub. Clone the repository
-                                    to
-                                    explore the backend functionalities and
-                                    frontend design elements.</p>
-                            </div>
-                            <a class="portfolio-link-right" href="https://github.com/LejeuneA/librairie-lejeune"
-                                title="See on Github" target="_blank"><i class="fa fa-github"></i> Full Code
-                                on
-                                GitHub</a>
-                        </div>
-                        <!-- Portfolio info links end -->
-                    </div>
-                    <!--Portfolio cards container end  -->
+                    <!-- Portfolio-info-container end -->
                 </div>
-                <!-- Portfolio details top section end -->
-            </div>
-            <!-- Portfolio details container end -->
+                <!-- Portfolio details info section end -->
 
-            <div class="portfolio-figma container">
-                <h3>Display Design on Figma</h3>
-                <p>Explore the thought process behind Librairie
-                    Lejeune's design by accessing the Figma
-                    prototype.</p>
-                <iframe
-                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFDRZvnluDXRYLNfqgyhPCz%2FLa-Libraire-de-Lejeune%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DuLueEgEtlG1Z7Juj-1"
-                    allowfullscreen>See on Figma
-                </iframe>
-                <!-- Figma iframe end -->
-            </div>
-            <!-- Portfolio figma section end -->
-
-            </div>
-            <!-- Portfolio details section end -->
-
-            <div class="portfolio-details-bottom">
-                <div class="portfolio-description container">
-                    <h2>Design Process</h2>
-                    <p>
-                        To bring Librairie Lejeune to life, I utilized a
-                        combination of design and programming
-                        tools. Here's a brief overview of the process:
-                    </p>
-
-                    <div class="design-process">
-                        <div class="design-process-left">
-                            <h3>Logo Design</h3>
-                            <p>Created the logo using <span>Adobe
-                                    Illustrator</span>, aiming for a
-                                design
-                                that embodies
-                                the essence
-                                of
-                                the bookstore and its offerings.</p>
-
-                            <h3>Prototype Development</h3>
-                            <p>Utilized <span>Figma</span> to develop a
-                                prototype, mapping out the website's
-                                layout
-                                and
-                                user
-                                interface for a seamless browsing
-                                experience.</p>
+                <div class="portfolio-cards-container">
+                    <div class="portfolio-info-links">
+                        <div class="portfolio-card librairie-lejeune">
+                            <p>
+                                Explore the Librairie Lejeune website through the live preview. You can browse the
+                                public pages, view the product catalog, test the responsive layout and access the
+                                demo admin panel.
+                            </p>
+                            <p>
+                                To explore the admin panel, use the following demo credentials:
+                            </p>
+                            <div class="access">
+                                <h3>Access Instructions:</h3>
+                                <p><span>Username:</span> guest@mail.com</p>
+                                <p><span>Password:</span> 1234</p>
+                            </div>
                         </div>
+                        <a class="portfolio-link-left"
+                            href="https://acelyalejeune.be/portfolio/librairie-lejeune/index.php" target="_blank"><i
+                                class="fas fa-link"></i>
+                            Live Preview</a>
+                    </div>
 
-                        <div class="design-process-right">
-                            <h3>Visual Assets</h3>
-                            <p>Employed <span>Adobe Photoshop</span> to
-                                design visually appealing images and
-                                enhance
-                                the
-                                overall aesthetics of the website.</p>
-                            <h3>Programming Languages</h3>
-                            <p>Implemented <span>Html, Css, Scss,
-                                    JavaScript, Php</span> and
-                                <span>MySQL</span> for the
-                                website's frontend and backend
-                                development,
-                                ensuring functionality and
-                                interactivity.
+                    <div class="portfolio-info-links">
+                        <div class="portfolio-card librairie-lejeune">
+                            <p>
+                                View the full codebase on GitHub to explore the project structure, frontend
+                                implementation, PHP functionality and MySQL database logic.
                             </p>
                         </div>
+                        <a class="portfolio-link-right" href="https://github.com/LejeuneA/librairie-lejeune"
+                            title="See on GitHub" target="_blank"><i class="fa fa-github"></i> Full Code on
+                            GitHub</a>
                     </div>
-                    <!-- Design process end -->
+                    <!-- Portfolio info links end -->
                 </div>
-                <!-- Portfolio description end -->
-
+                <!--Portfolio cards container end  -->
             </div>
-            <!-- Portfolio details bottom section end -->
-            <div class="portfolio-features container">
-                <h2>Features</h2>
-                <p>
-                    Librairie Lejeune offers essential features to streamline your experience. Easily manage products
-                    with our Admin Panel, customize browsing with Customizable Product Categories, and enjoy seamless
-                    viewing on any device with Responsive Design. Simplify product discovery with Advanced Search
-                    Functionality.
-                </p>
-                <div class="features">
-                    <div class="features-left">
-                        <h3>Admin Panel</h3>
-                        <p> Manage products efficiently with the admin
-                            panel, allowing for easy modification,
-                            display,
-                            deletion, and addition of products.</p>
+            <!-- Portfolio details top section end -->
+        </div>
+        <!-- Portfolio details container end -->
 
-                        <h3>Customizable Product Categories</h3>
-                        <p>Leverage MySQL to create and manage
-                            customizable
-                            product categories, allowing administrators
-                            to organize products effectively and tailor
-                            the
-                            browsing experience to suit diverse customer
-                            preferences.
+        <div class="portfolio-figma container">
+            <h3>Display Prototype on Figma</h3>
+            <p>
+                Explore the planning process behind Librairie Lejeune by viewing the Figma prototype.
+            </p>
+            <iframe
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFDRZvnluDXRYLNfqgyhPCz%2FLa-Libraire-de-Lejeune%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DuLueEgEtlG1Z7Juj-1"
+                allowfullscreen>See on Figma
+            </iframe>
+            <!-- Figma iframe end -->
+        </div>
+        <!-- Portfolio figma section end -->
+
+        <div class="portfolio-details-bottom">
+            <div class="portfolio-description container">
+                <h2>Creation Process</h2>
+                <p>
+                    To build Librairie Lejeune, I combined visual direction, UI prototyping and web development. The
+                    goal was to create a clear online bookstore interface with practical catalog management features.
+                </p>
+
+                <div class="design-process">
+                    <div class="design-process-left">
+                        <h3>Logo & Visual Direction</h3>
+                        <p>
+                            Created the logo and visual direction with <span>Adobe Illustrator</span>, focusing on a
+                            simple and recognizable identity for the bookstore.
+                        </p>
+
+                        <h3>Prototype & UI Layout</h3>
+                        <p>
+                            Used <span>Figma</span> to plan the page structure, product browsing flow and interface
+                            layout before implementation.
                         </p>
                     </div>
 
-                    <div class="features-right">
-                        <h3>Responsive Design</h3>
-                        <p>Explore Librairie Lejeune seamlessly across
-                            devices with a responsive design, ensuring
-                            an
-                            optimal viewing experience on desktops,
-                            tablets,
-                            and mobile phones.</p>
+                    <div class="design-process-right">
+                        <h3>Visual Assets</h3>
+                        <p>
+                            Prepared and adjusted visual assets with <span>Adobe Photoshop</span> to support the
+                            look and feel of the eCommerce interface.
+                        </p>
 
-                        <h3>Advanced Search Functionality</h3>
-                        <p>Easily find products using advanced search
-                            filters such as category, price range, and
-                            keyword, streamlining the shopping
-                            experience
-                            for users.</p>
+                        <h3>Frontend & Backend Implementation</h3>
+                        <p>
+                            Implemented the website with <span>HTML5, CSS3, SCSS, JavaScript, PHP</span> and
+                            <span>MySQL</span>, including responsive pages, product management and dynamic catalog
+                            features.
+                        </p>
                     </div>
                 </div>
+                <!-- Design process end -->
             </div>
-        </section>
-        <!-- Portfolio details section end -->
-    </main>
-    <!-- Main end -->
-    <!-----------------------------------------------------------------
-                               Footer
-    ------------------------------------------------------------------>
-    <footer id="footer">
-        <div class="footer-container container">
-            <div class="copyright">
-                &copy; Copyright, design and development by <a class="github"
-                    href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
-                        aria-hidden="true"></i> Açelya
-                    Lejeune</a>
+            <!-- Portfolio description end -->
+        </div>
+        <!-- Portfolio details bottom section end -->
+
+        <div class="portfolio-features container">
+            <h2>Features</h2>
+            <p>
+                Librairie Lejeune includes practical eCommerce features for visitors and administrators: product
+                catalog browsing, category management, search and filtering, responsive pages and an admin panel for
+                catalog updates.
+            </p>
+
+            <div class="features">
+                <div class="features-left">
+                    <h3>Admin Panel</h3>
+                    <p>
+                        The admin panel allows products to be added, edited, displayed or deleted, making catalog
+                        management easier.
+                    </p>
+
+                    <h3>Product Category Management</h3>
+                    <p>
+                        Product categories are managed with MySQL, allowing administrators to organize items and
+                        create a clearer browsing experience for visitors.
+                    </p>
+                </div>
+
+                <div class="features-right">
+                    <h3>Responsive Interface</h3>
+                    <p>
+                        The website adapts to desktop, tablet and mobile screens to provide a consistent browsing
+                        experience.
+                    </p>
+
+                    <h3>Search & Filtering</h3>
+                    <p>
+                        Visitors can find products more easily using search and filtering options such as category,
+                        price range and keyword.
+                    </p>
+                </div>
             </div>
         </div>
-    </footer>
-    <!-----------------------------------------------------------------
-                               Footer end
-    ------------------------------------------------------------------>
+    </section>
+    <!-- Portfolio details section end -->
+</main>
+<!-- Main end -->
 
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
+<!-----------------------------------------------------------------
+                           Footer
+------------------------------------------------------------------>
+<footer id="footer">
+    <div class="footer-container container">
+        <div class="copyright">
+            &copy; Copyright, design and development by <a class="github"
+                href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
+                    aria-hidden="true"></i> Açelya Lejeune</a>
+        </div>
+    </div>
+</footer>
+<!-----------------------------------------------------------------
+                           Footer end
+------------------------------------------------------------------>
 
-    <!-- Font Awesome JS -->
-    <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
+<!-- Back to Top -->
+<a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
 
-    <!-- JS Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css"></script>
+<!-- Font Awesome JS -->
+<script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
-    <!-- Main JS Files -->
-    <script defer="defer" src="../dist/runtime.bundle.js"></script>
-    <script defer="defer" src="../dist/shared.bundle.js"></script>
-    <script defer="defer" src="../dist/index.bundle.js"></script>
-    <script defer="defer" src="../dist/nav.bundle.js"></script>
-    <script defer="defer" src="../dist/swiper.bundle.js"></script>
+<!-- JS Files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+<!-- Main JS Files -->
+<script defer="defer" src="../dist/runtime.bundle.js"></script>
+<script defer="defer" src="../dist/shared.bundle.js"></script>
+<script defer="defer" src="../dist/index.bundle.js"></script>
+<script defer="defer" src="../dist/nav.bundle.js"></script>
+<script defer="defer" src="../dist/swiper.bundle.js"></script>
 
-    <script>
-        AOS.init();
-    </script>
-
+<script>
+    AOS.init();
+</script>
+```
 
 </body>
 

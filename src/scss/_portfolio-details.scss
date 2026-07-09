@@ -137,7 +137,7 @@
                                     width: 100%;
                                     font-weight: 500;
                                     margin-top: 0.3em;
-                                    font-size: 0.9em; 
+                                    font-size: 0.9em;
                                 }
                             }
                         }
@@ -157,6 +157,7 @@
                             &:last-child {
                                 margin-bottom: 0;
                             }
+
                             .portfolio-info-icon {
                                 @include d-flex(flex, center, center, row, center);
                                 flex-wrap: wrap;
@@ -184,37 +185,58 @@
                     }
                 }
             }
-            
-            .portfolio-cards-container{
-                @include d-flex(flex, center, center, row, center);
-                width: 100%;
-                gap: 0.5em;
 
+            .portfolio-cards-container {
+                @include d-flex(flex, center, stretch, row, stretch);
+                width: 100%;
+                gap: 1.5em;
 
                 .portfolio-info-links {
-                    @include d-flex(flex, center, center, column, center);
-                    width:50%;
-    
+                    @include d-flex(flex, space-between, stretch, column, stretch);
+                    width: 50%;
+                    padding: 1.2em;
+                    background: rgba($surface, 0.95);
+                    border: 1px solid rgba($primary-green, 0.18);
+                    border-radius: 1.25em;
+                    transition:
+                        transform 0.25s ease,
+                        border-color 0.25s ease,
+                        background-color 0.25s ease;
+
+                    &:hover {
+                        transform: translateY(-0.25em);
+                        border-color: rgba($primary-green, 0.38);
+                        background: $surface;
+                    }
+
                     .portfolio-card {
-                        @include d-flex(flex, space-between, center, column, center);
+                        @include d-flex(flex, start, center, column, center);
                         width: 100%;
-                        height: 10em;
-                        background-color: rgba($primary-green, 0.1);
-                        margin-bottom: 0;
-                        gap:1em;
+                        height: auto;
+                        min-height: 16em;
+                        background-color: rgba($primary-green, 0.08);
+                        border: 1px solid rgba($primary-green, 0.12);
+                        border-radius: 1em;
+                        margin-bottom: 1em;
+                        gap: 1em;
                         padding: 2em;
-    
+
                         p {
                             color: $dark-green;
-                            font-weight: 400;
+                            font-weight: 500;
                             font-size: 1em;
-                        } 
+                            line-height: 1.7em;
+                            text-align: center;
+                            margin: 0;
+                        }
 
                         .access {
                             width: 100%;
                             background-color: rgba($primary-green, 0.1);
+                            border: 1px solid rgba($primary-green, 0.14);
+                            border-radius: 0.9em;
                             padding: 1em;
-                
+
                             h3 {
                                 font-size: 1em;
                                 font-weight: 700;
@@ -222,48 +244,58 @@
                                 margin-bottom: 1em;
                                 color: $dark-green;
                                 text-align: center;
-                                border-bottom: 1px solid $dark-green;
+                                border-bottom: 1px solid rgba($dark-green, 0.45);
                                 padding-bottom: 0.8em;
                             }
-                
+
                             p {
                                 color: $background;
-                                font-weight: 400;
+                                font-weight: 500;
                                 font-size: 1em;
+                                line-height: 1.6em;
                                 text-align: center;
-                
+
                                 span {
-                                    font-weight: 600;
-                                    font-size: 0.9em;
+                                    font-weight: 700;
+                                    font-size: 0.95em;
                                     color: $dark-green;
                                 }
                             }
                         }
                     }
 
-                    .librairie-lejeune{
-                        height: 25em;
+                    .librairie-lejeune {
+                        height: auto;
+                        min-height: 18em;
                     }
 
-                    a{
+                    a {
                         @include d-flex(flex, center, center, row, center);
                         width: 100%;
-                        height: 4em;
-                        background-color: $dark-green;
+                        min-height: 3.3em;
+                        border-radius: 0.85em;
+                        background-color: $background;
+                        border: 1px solid rgba($light-green, 0.12);
                         color: $light-green;
-                        font-weight: 600;
+                        font-weight: 700;
+                        font-size: 0.9em;
+                        text-decoration: none;
                         opacity: 1;
-                        transition: all ease-in-out 0.5s;
+                        transition:
+                            background-color 0.25s ease,
+                            border-color 0.25s ease,
+                            transform 0.25s ease;
 
                         i {
-                            font-size: 1.2em;
+                            font-size: 1.1em;
                             color: $light-green;
-                            align-items: center;
                             margin-right: 0.5em;
                         }
 
                         &:hover {
-                            background-color: $primary-green;
+                            background-color: $dark-green;
+                            border-color: rgba($light-green, 0.28);
+                            transform: translateY(-1px);
                         }
                     }
                 }
@@ -272,7 +304,7 @@
     }
 
     .portfolio-figma {
-        @include d-flex (flex, center, center, column, center);
+        @include d-flex(flex, center, center, column, center);
         width: 100%;
 
         h3 {
@@ -296,7 +328,7 @@
             height: 25em;
         }
     }
-    
+
     .portfolio-details-bottom {
         @include d-flex(flex, start, start, column, start);
 
@@ -433,13 +465,13 @@
         }
     }
 
-    // Responsive styles for small screens
     @media (min-width: 320px) and (max-width: 768px) {
         .section-title {
             p {
                 font-size: 1em;
             }
         }
+
         .portfolio-details-container {
             .portfolio-details-top {
                 .swiper-pagination {
@@ -504,25 +536,29 @@
                         }
                     }
                 }
-                .portfolio-cards-container{
+
+                .portfolio-cards-container {
                     @include d-flex(flex, center, center, column, center);
                     width: 100%;
                     gap: 1.5em;
-                    
 
                     .portfolio-info-links {
-                        @include d-flex(flex, center, center, column, center);
+                        @include d-flex(flex, center, stretch, column, stretch);
                         gap: 0;
                         width: 100%;
-    
+                        padding: 1em;
+
                         .portfolio-card {
                             @include d-flex(flex, start, center, column, center);
                             height: auto;
-    
+                            min-height: auto;
+                            margin-bottom: 1em;
+                            padding: 1.5em;
+
                             p {
                                 font-size: 1em;
-                                padding: 1em;
-                                line-height: 1.5em;
+                                padding: 0;
+                                line-height: 1.6em;
                             }
 
                             .access {
@@ -534,12 +570,16 @@
                                     padding: 0;
                                 }
                             }
-    
-                            .portfolio-link-left,
-                            .portfolio-link-right {
-                                width: 100%;
-                                margin: 0;
-                            }
+                        }
+
+                        .librairie-lejeune {
+                            height: auto;
+                            min-height: auto;
+                        }
+
+                        a {
+                            width: 100%;
+                            margin: 0;
                         }
                     }
                 }
