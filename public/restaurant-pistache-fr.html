@@ -1,34 +1,38 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
+    <meta name="description"
+        content="Projet Restaurant Pistache par Açelya Lejeune — site web responsive pour restaurant avec panneau d'administration, PHP et MySQL.">
     <meta
-        content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste"
+        content="site restaurant, site web responsive, développement front-end, PHP, MySQL, panneau d'administration, système de réservation, projet portfolio, Açelya Lejeune, développeuse frontend, interface UI, web design"
         name="keywords">
 
-    <!-- AOS File -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+```
+<!-- AOS File -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-    <!-- Swiper File -->
-    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+<!-- Swiper File -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Main Css file -->
-    <link rel="stylesheet" href="../dist/index.css">
+<!-- Main Css file -->
+<link rel="stylesheet" href="../dist/index.css">
 
+<!-- Favicon -->
+<link href="../assets/icons/favicon.png" rel="icon" type="image/png">
 
-    <!-- Favicon -->
-    <link href="../assets/icons/favicon.png" rel="icon" type="image/png">
+<!-- Google Fonts -->
+<link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+<!-- Title -->
+<title>Restaurant Pistache — Projet Portfolio | Açelya Lejeune</title>
+```
 
-    <!-- Title -->
-    <title>Acelya Lejeune - Développeur Web et Infographiste</title>
 </head>
 
 <body>
@@ -38,409 +42,402 @@
     <header id="header">
         <!-- Profile -->
         <div class="profile">
-            <img src="../assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="../fr.php">Açelya
-                    Lejeune</a></h1>
+            <img src="../assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
+            <h1 class="text-light"><a href="../fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-                        class="fa fa-linkedin"></i></a>
-                <a href="../index.php" class="language"><b>EN</b></a>
+                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                    aria-label="Profil LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="restaurant-pistache.html" class="language"><b>EN</b></a>
             </div>
         </div>
 
-        <!-- Nav Menu -->
-        <nav id="navbar" class="nav-menu navbar">
-            <ul>
-                <li><a href="../fr.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
-                        <span>Accueil</span></a>
-                </li>
-                <li><a href="../fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>À propos</span></a></li>
-                <li><a href="../fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Compétences</span></a>
-                </li>
-                <li><a href="../fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="../fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
-                        <span>Services</span></a>
-                </li>
-                <li><a href="../fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
-            </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_FR.pdf" download>Download CV</a>
-            </div>
-        </nav>
-        <!-- End Nav Menu -->
-    </header>
-    <!-- End Header -->
-
-    <!---------------------------------------------------------------
-                             Offcanvas menu
-    ----------------------------------------------------------------->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <!-- Profile -->
-        <div class="profile">
-            <img src="../assets/images/header-photo.jpg" alt class="profile-img">
-            <h1 class="text-light"><a href="../fr.php">Açelya
-                    Lejeune</a></h1>
-            <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-                        class="fa fa-linkedin"></i></a>
-                <a href="../index.php" class="language"><b>EN</b></a>
-            </div>
+```
+    <!-- Nav Menu -->
+    <nav id="navbar" class="nav-menu navbar">
+        <ul>
+            <li><a href="../fr.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
+                    <span>Accueil</span></a>
+            </li>
+            <li><a href="../fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                    <span>À propos</span></a></li>
+            <li><a href="../fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                    <span>Compétences</span></a>
+            </li>
+            <li><a href="../fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                    <span>Portfolio</span></a></li>
+            <li><a href="../fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                    <span>Services</span></a>
+            </li>
+            <li><a href="../fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                    <span>Contact</span></a>
+            </li>
+        </ul>
+        <div class="btn-resume">
+            <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
         </div>
-
-        <!-- Nav Menu -->
-        <nav id="navbar" class="nav-menu navbar">
-            <ul>
-                <li><a href="../fr.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
-                        <span>Accueil</span></a>
-                </li>
-                <li><a href="../fr.phpl#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>À propos</span></a></li>
-                <li><a href="../fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Compétences</span></a>
-                </li>
-                <li><a href="../fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="../fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
-                        <span>Services</span></a>
-                </li>
-                <li><a href="../fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
-                </li>
-            </ul>
-            <div class="btn-resume">
-                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_FR.pdf" download>Download CV</a>
-            </div>
-        </nav>
-    </div>
+    </nav>
     <!-- End Nav Menu -->
-    <!-- End Offcanvas Menu -->
+</header>
+<!-- End Header -->
 
-    <!-- Hamburger Icon -->
-    <div class="navbar-hamburger">
-        <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+<!---------------------------------------------------------------
+                         Offcanvas menu
+----------------------------------------------------------------->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Profile -->
+    <div class="profile">
+        <img src="../assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
+        <h1 class="text-light"><a href="../fr.php">Açelya Lejeune</a></h1>
+        <div class="social-links">
+            <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub"><i
+                    class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                aria-label="Profil LinkedIn"><i class="fa fa-linkedin"></i></a>
+            <a href="restaurant-pistache.html" class="language"><b>EN</b></a>
+        </div>
     </div>
-    <!-- End Hamburger Icon -->
-    <!-----------------------------------------------------------------
-                            Navigation end
-    ------------------------------------------------------------------>
 
-    <!-- Main -->
-    <main id="main">
-        <!-- ======= Portfolio Details Section ======= -->
-        <section id="portfolio-details" class="portfolio-details">
+    <!-- Nav Menu -->
+    <nav id="navbar" class="nav-menu navbar">
+        <ul>
+            <li><a href="../fr.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
+                    <span>Accueil</span></a>
+            </li>
+            <li><a href="../fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                    <span>À propos</span></a></li>
+            <li><a href="../fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                    <span>Compétences</span></a>
+            </li>
+            <li><a href="../fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                    <span>Portfolio</span></a></li>
+            <li><a href="../fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                    <span>Services</span></a>
+            </li>
+            <li><a href="../fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                    <span>Contact</span></a>
+            </li>
+        </ul>
+        <div class="btn-resume">
+            <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
+        </div>
+    </nav>
+</div>
+<!-- End Offcanvas Menu -->
 
-            <div class="portfolio-details-container container">
-                <div class="section-title">
-                    <h2>Restaurant Pistache</h2>
-                    <p>Bienvenue à Restaurant Pistache, un havre numérique où l'excellence culinaire rencontre le design
-                        web moderne. Ce site web réactif et convivial a été développé avec une attention méticuleuse aux
-                        détails pour fournir une présence en ligne engageante pour notre restaurant. Avec des sections
-                        détaillées comme À propos, Menu, Réservation et Contact, Restaurant Pistache assure une
-                        expérience transparente pour les visiteurs sur n'importe quel appareil. Le site dispose
-                        également d'un panneau d'administration très fonctionnel, permettant une gestion sans effort des
-                        éléments de menu, des réservations et des communications avec les clients. Explorez et appréciez
-                        l'élégance et l'efficacité de Restaurant Pistache.
-                    </p>
+<!-- Hamburger Icon -->
+<div class="navbar-hamburger">
+    <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+</div>
+<!-- End Hamburger Icon -->
+
+<!-----------------------------------------------------------------
+                        Navigation end
+------------------------------------------------------------------>
+
+<!-- Main -->
+<main id="main">
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+
+        <div class="portfolio-details-container container">
+            <div class="section-title">
+                <h2>Restaurant Pistache</h2>
+                <p>
+                    Restaurant Pistache est un projet de site web responsive conçu et développé pour présenter le
+                    restaurant, le menu, les réservations et les informations de contact de manière claire et facile
+                    à utiliser. Le projet combine direction visuelle, interface UI, intégration front-end et
+                    fonctionnalités backend de base.
+                </p>
+                <p>
+                    Le site comprend des pages publiques pour les visiteurs ainsi qu’un panneau d’administration
+                    permettant de gérer les éléments du menu, les réservations et les messages des clients. Il a été
+                    réalisé avec HTML5, CSS3, SCSS, JavaScript, PHP et MySQL, avec un prototype Figma utilisé pour
+                    préparer l’interface et le parcours utilisateur.
+                </p>
+            </div>
+
+            <div class="portfolio-details-top">
+
+                <div class="portfolio-details-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/restaurant-pistache-1.jpg"
+                                alt="Page d’accueil du site Restaurant Pistache">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/restaurant-pistache-2.jpg"
+                                alt="Page menu du site Restaurant Pistache">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/restaurant-pistache-3.jpg"
+                                alt="Page réservation du site Restaurant Pistache">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/restaurant-pistache-4.jpg"
+                                alt="Page contact du site Restaurant Pistache">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/restaurant-pistache-5.jpg"
+                                alt="Panneau d’administration de Restaurant Pistache">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="../assets/images/portfolio-details/restaurant-pistache-6.jpg"
+                                alt="Aperçu responsive du site Restaurant Pistache">
+                        </div>
+                    </div>
                 </div>
+                <!-- Portfolio details slider end -->
+                <div class="swiper-pagination"></div>
+                <!-- Swiper wrapper end -->
 
-                <div class="portfolio-details-top">
+                <div class="portfolio-info">
+                    <h3>Technologies & outils utilisés</h3>
+                    <div class="portfolio-info-container">
 
-                    <div class="portfolio-details-slider swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/restaurant-pistache-1.jpg"
-                                    alt="Librairie lejeune home page">
+                        <div class="portfolio-info-left">
+                            <h4>Outils graphiques</h4>
+                            <div class="portfolio-info-icons">
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/ai.png" alt="Logo Illustrator">
+                                    <p>Création du logo et des éléments d’identité visuelle.</p>
+                                </div>
+
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/ps.png" alt="Logo Photoshop">
+                                    <p>Préparation et retouche des ressources visuelles.</p>
+                                </div>
+
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/figma.png" alt="Logo Figma">
+                                    <p>Préparation de la mise en page, du prototype et du parcours utilisateur.</p>
+                                </div>
                             </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/restaurant-pistache-2.jpg"
-                                    alt="Librairie lejeune product page">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/restaurant-pistache-3.jpg" alt>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/restaurant-pistache-4.jpg" alt>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/restaurant-pistache-5.jpg" alt>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="../assets/images/portfolio-details/restaurant-pistache-6.jpg" alt>
-                            </div>
-
+                            <!-- Portfolio-info-icons end -->
                         </div>
+                        <!-- Portfolio-info-left end -->
+
+                        <div class="portfolio-info-right">
+                            <h4>Front-end & backend</h4>
+                            <div class="portfolio-info-icons">
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/html.png" alt="Logo HTML">
+                                    <img src="../assets/icons/css.png" alt="Logo CSS">
+                                    <img src="../assets/icons/sass.png" alt="Logo Sass">
+                                    <p>Structure et stylisation de l’interface responsive.</p>
+                                </div>
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/js.png" alt="Logo JavaScript">
+                                    <p>Ajout de comportements interactifs et d’éléments dynamiques.</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-info-icons">
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/php.png" alt="Logo PHP">
+                                    <p>Développement des fonctionnalités backend du panneau d’administration.</p>
+                                </div>
+                                <div class="portfolio-info-icon">
+                                    <img src="../assets/icons/mysql.png" alt="Logo MySQL">
+                                    <p>Gestion des données du menu, des réservations et des messages.</p>
+                                </div>
+                            </div>
+                            <!-- Portfolio-info-icons end -->
+                        </div>
+                        <!-- Portfolio-info-right end -->
                     </div>
-                    <!-- Portfolio details slider end -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Swiper wrapper end -->
-
-                    <div class="portfolio-info">
-                        <h3>Technologies et Outils Utilisés</h3>
-                        <div class="portfolio-info-container">
-
-                            <div class="portfolio-info-left">
-                                <h4>Outils de Conception</h4>
-                                <div class="portfolio-info-icons">
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/ai.png" alt="llustrator logo">
-                                        <p>Conception des logos et des
-                                            graphiques
-                                            captivants.</p>
-                                    </div>
-
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/ps.png" alt="Photoshop logo">
-                                        <p>Amélioration de l'esthétique visuelle
-                                            et
-                                            des ressources.</p>
-                                    </div>
-
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/figma.png" alt="Figma logo">
-                                        <p>Réalisation de wireframes et
-                                            prototypage de la
-                                            mise en page.</p>
-                                    </div>
-                                </div>
-                                <!-- Portfolio-info-icons end -->
-                            </div>
-                            <!-- Portfolio-info-left end -->
-
-                            <div class="portfolio-info-right">
-                                <h4>Langages de Développement Web</h4>
-                                <div class="portfolio-info-icons">
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/html.png" alt="Html logo">
-                                        <img src="../assets/icons/css.png" alt="Css logo">
-                                        <img src="../assets/icons/sass.png" alt="Sass logo">
-                                        <p>Structure et stylisation des
-                                            éléments frontend.</p>
-                                    </div>
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/js.png" alt="Javascript logo">
-                                        <p>Mise en place de
-                                            fonctionnalités interactives.</p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-info-icons">
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/php.png" alt="Php logo">
-                                        <p>Mise en œuvre de
-                                            fonctionnalités dynamiques.</p>
-                                    </div>
-                                    <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/mysql.png" alt="Mysql logo">
-                                        <p>Établissement d'un système de
-                                            base de données robuste.</p>
-                                    </div>
-                                </div>
-                                <!-- Portfolio-info-icons end -->
-                            </div>
-                            <!-- Portfolio-info-right end -->
-                        </div>
-                        <!-- Portfolio-info-container end -->
-                    </div>
-                    <!-- Portfolio details info section end -->
-                    <div class="portfolio-cards-container">
-                        <div class="portfolio-info-links">
-                            <div class="portfolio-card librairie-lejeune">
-                                <p>Faites un tour du site web de la
-                                    Restaurant Pistache avec une prévisualisation
-                                    en direct. Découvrez l'interface intuitive et
-                                    explorez le vaste catalogue de produits.</p>
-                                <p>Pour explorer la fonctionnalité du panneau
-                                    d'administration et de la base de données de la
-                                    Librairie Lejeune, utilisez les identifiants
-                                    suivants:</p>
-                                <div class="access">
-                                    <h3>Instructions d'Accès:</h3>
-                                    <p><span>Nom d'utilisateur:</span> guest@mail.com
-                                    </p>
-                                    <p><span>Mot de passe:</span> 1234</p>
-                                </div>
-                            </div>
-                            <a class="portfolio-link-left"
-                                href="https://acelyalejeune.be/portfolio/restaurant-pistache/index.php"
-                                target="_blank"><i class="fas fa-link"></i>
-                                Prévisualisation en Direct</a>
-                        </div>
-                        <div class="portfolio-info-links">
-                            <div class="portfolio-card librairie-lejeune">
-                                <p>Plongez dans les complexités du
-                                    développement du Restaurant Pistache avec
-                                    accès au code source complet sur GitHub.
-                                    Clonez le dépôt pour explorer les
-                                    fonctionnalités backend et les éléments de
-                                    design frontend.</p>
-                            </div>
-                            <a class="portfolio-link-right" href="https://github.com/LejeuneA/restaurant-pistache"
-                                title="See on Github" target="_blank"><i class="fa fa-github"></i> Code Complet
-                                sur
-                                GitHub</a>
-                        </div>
-                        <!-- Portfolio info links end -->
-                    </div>
-                    <!--Portfolio cards container end  -->
+                    <!-- Portfolio-info-container end -->
                 </div>
-                <!-- Portfolio details top section end -->
-            </div>
-            <!-- Portfolio details container end -->
+                <!-- Portfolio details info section end -->
 
-            <div class="portfolio-figma container">
-                <h3>Afficher le Design sur Figma</h3>
-                <p>Explorez le processus de réflexion derrière la
-                    conception du Restaurant Pistache en accédant
-                    au prototype Figma.</p>
-                <iframe
-                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FE4AoglpNYvP9wGa1Jksgg9%2Frestaurant-pistache%3Fnode-id%3D0-1%26t%3DTsZCu29MKg6f3QYF-1"
-                    allowfullscreen>Voir sur Figma
-                </iframe>
-                <!-- Figma iframe end -->
-            </div>
-            <!-- Portfolio figma section end -->
-
-            </div>
-            <!-- Portfolio details section end -->
-
-            <div class="portfolio-details-bottom">
-                <div class="portfolio-description container">
-                    <h2>Processus de Conception</h2>
-                    <p>
-                        Pour donner vie au restaurant Pistache, j'ai utilisé une combinaison d'outils de conception et
-                        de programmation.
-                        Voici un bref aperçu du processus :
-                    </p>
-
-                    <div class="design-process">
-                        <div class="design-process-left">
-                            <h3>Conception de Logo</h3>
-                            <p>Création du logo à l'aide d'<span>Adobe Illustrator</span>, dans le but d'obtenir un
-                                design qui capture l'essence du restaurant et de ses offres culinaires.</p>
-
-                            <h3>Développement de Prototype</h3>
-                            <p>Utilisation de <span>Figma</span> pour
-                                développer un
-                                prototype, cartographiant la mise en page
-                                du site
-                                web et l'interface utilisateur pour une
-                                expérience de navigation fluide.</p>
+                <div class="portfolio-cards-container">
+                    <div class="portfolio-info-links">
+                        <div class="portfolio-card librairie-lejeune">
+                            <p>
+                                Explorez le site Restaurant Pistache grâce à la prévisualisation en direct. Vous
+                                pouvez consulter les pages publiques, tester l’affichage responsive et accéder au
+                                panneau d’administration de démonstration.
+                            </p>
+                            <p>
+                                Pour explorer le panneau d’administration, utilisez les identifiants de démonstration
+                                suivants :
+                            </p>
+                            <div class="access">
+                                <h3>Instructions d’accès :</h3>
+                                <p><span>Nom d’utilisateur :</span> guest@mail.com</p>
+                                <p><span>Mot de passe :</span> 1234</p>
+                            </div>
                         </div>
+                        <a class="portfolio-link-left"
+                            href="https://acelyalejeune.be/portfolio/restaurant-pistache/index.php"
+                            target="_blank"><i class="fas fa-link"></i>
+                            Prévisualisation en direct</a>
+                    </div>
 
-                        <div class="design-process-right">
-                            <h3>Ressources Visuelles</h3>
-                            <p>Utilisation de <span>Adobe Photoshop</span>
-                                pour
-                                concevoir des images visuellement
-                                attrayantes et
-                                améliorer l'esthétique générale du site
-                                web.</p>
-                            <h3>Langages de Programmation</h3>
-                            <p>Mise en œuvre de <span>Html, Css, Scss,
-                                    JavaScript, Php</span> et
-                                <span>MySQL</span> pour le développement
-                                frontend et backend du site web,
-                                garantissant
-                                la fonctionnalité et l'interactivité.
+                    <div class="portfolio-info-links">
+                        <div class="portfolio-card librairie-lejeune">
+                            <p>
+                                Consultez le code complet sur GitHub pour explorer la structure du projet,
+                                l’intégration front-end, les fonctionnalités PHP et la logique de base de données
+                                MySQL.
                             </p>
                         </div>
+                        <a class="portfolio-link-right" href="https://github.com/LejeuneA/restaurant-pistache"
+                            title="Voir sur GitHub" target="_blank"><i class="fa fa-github"></i> Code complet sur
+                            GitHub</a>
                     </div>
-                    <!-- Design process end -->
+                    <!-- Portfolio info links end -->
                 </div>
-                <!-- Portfolio description end -->
-
+                <!--Portfolio cards container end  -->
             </div>
-            <!-- Portfolio details bottom section end -->
-            <div class="portfolio-features container">
-                <h2>Fonctionnalités</h2>
-                <p>
-                    Restaurant Pistache offre des fonctionnalités essentielles pour améliorer votre expérience
-                    gastronomique. Gérez efficacement menu avec notre panneau d'administration, faites des réservations
-                    et modifiez-les, et profitez d'un affichage transparent sur n'importe quel appareil grâce à notre
-                    Responsive Design. sur n'importe quel appareil grâce à notre Responsive Design. Rationalisez les
-                    interactions avec vos clients grâce à notre formulaire de contact intuitif.
-                </p>
-                <div class="features">
-                    <div class="features-left">
-                        <h3>Panneau d'Administration</h3>
-                        <p> Manage menu items efficiently with the admin panel, allowing for easy modification, display,
-                            deletion, and addition of starters, main courses, and desserts.</p>
+            <!-- Portfolio details top section end -->
+        </div>
+        <!-- Portfolio details container end -->
 
-                        <h3>Gestion des réservations</h3>
-                        <p>Les administrateurs peuvent consulter, modifier, supprimer ou ajouter des réservations, ce
-                            qui simplifie le processus de réservation et garantit une expérience gastronomique agréable
-                            pour les clients.
+        <div class="portfolio-figma container">
+            <h3>Afficher le prototype sur Figma</h3>
+            <p>
+                Explorez le processus de conception de Restaurant Pistache en consultant le prototype Figma.
+            </p>
+            <iframe
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FE4AoglpNYvP9wGa1Jksgg9%2Frestaurant-pistache%3Fnode-id%3D0-1%26t%3DTsZCu29MKg6f3QYF-1"
+                allowfullscreen>Voir sur Figma
+            </iframe>
+            <!-- Figma iframe end -->
+        </div>
+        <!-- Portfolio figma section end -->
+
+        <div class="portfolio-details-bottom">
+            <div class="portfolio-description container">
+                <h2>Processus de création</h2>
+                <p>
+                    Pour créer Restaurant Pistache, j’ai combiné direction visuelle, prototypage UI et développement
+                    web. L’objectif était de créer un site clair pour un restaurant, avec des fonctionnalités
+                    pratiques de gestion.
+                </p>
+
+                <div class="design-process">
+                    <div class="design-process-left">
+                        <h3>Logo & direction visuelle</h3>
+                        <p>
+                            Création du logo et de la direction visuelle avec <span>Adobe Illustrator</span>, avec
+                            une identité fraîche et reconnaissable pour le restaurant.
+                        </p>
+
+                        <h3>Prototype & interface UI</h3>
+                        <p>
+                            Utilisation de <span>Figma</span> pour préparer la structure des pages, l’interface
+                            utilisateur et la navigation avant l’intégration.
                         </p>
                     </div>
 
-                    <div class="features-right">
-                        <h3>Design Réactif</h3>
-                        <p>Explorez le restaurant Pistache de manière transparente sur tous les appareils grâce à un
-                            design réactif, garantissant une expérience de visualisation optimale sur les ordinateurs de
-                            bureau, les tablettes et les téléphones portables.</p>
+                    <div class="design-process-right">
+                        <h3>Ressources visuelles</h3>
+                        <p>
+                            Préparation et retouche des éléments visuels avec <span>Adobe Photoshop</span> afin de
+                            renforcer l’apparence générale du site.
+                        </p>
 
-                        <h3>Formulaire de contact</h3>
-                        <p>Le formulaire de contact permet de gérer facilement les demandes des clients. Les
-                            administrateurs peuvent lire et supprimer les messages, ce qui facilite une communication
-                            efficace avec les clients.</p>
+                        <h3>Intégration front-end & backend</h3>
+                        <p>
+                            Développement du site avec <span>HTML5, CSS3, SCSS, JavaScript, PHP</span> et
+                            <span>MySQL</span>, incluant des pages responsives et des fonctionnalités dynamiques.
+                        </p>
                     </div>
                 </div>
+                <!-- Design process end -->
             </div>
-        </section>
-        <!-- Portfolio details section end -->
-    </main>
-    <!-- Main end -->
-    <!-----------------------------------------------------------------
-                               Footer
-    ------------------------------------------------------------------>
-    <footer id="footer">
-        <div class="footer-container container">
-            <div class="copyright">
-                &copy; Copyright, design and development by <a class="github"
-                    href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
-                        aria-hidden="true"></i> Açelya
-                    Lejeune</a>
+            <!-- Portfolio description end -->
+        </div>
+        <!-- Portfolio details bottom section end -->
+
+        <div class="portfolio-features container">
+            <h2>Fonctionnalités</h2>
+            <p>
+                Restaurant Pistache inclut des fonctionnalités pratiques pour les visiteurs et les administrateurs :
+                présentation du menu, gestion des réservations, gestion des messages de contact et interface
+                responsive sur différents appareils.
+            </p>
+
+            <div class="features">
+                <div class="features-left">
+                    <h3>Panneau d’administration</h3>
+                    <p>
+                        Le panneau d’administration permet d’ajouter, modifier, afficher ou supprimer les éléments
+                        du menu, comme les entrées, les plats principaux et les desserts.
+                    </p>
+
+                    <h3>Gestion des réservations</h3>
+                    <p>
+                        Les administrateurs peuvent consulter, modifier, supprimer ou ajouter des réservations afin
+                        de faciliter la gestion des demandes.
+                    </p>
+                </div>
+
+                <div class="features-right">
+                    <h3>Interface responsive</h3>
+                    <p>
+                        Le site s’adapte aux écrans desktop, tablette et mobile pour offrir une expérience de
+                        navigation cohérente.
+                    </p>
+
+                    <h3>Gestion des messages de contact</h3>
+                    <p>
+                        Les messages envoyés via le formulaire de contact peuvent être consultés et supprimés depuis
+                        le panneau d’administration, afin de faciliter la communication avec les clients.
+                    </p>
+                </div>
             </div>
         </div>
-    </footer>
-    <!-----------------------------------------------------------------
-                               Footer end
-    ------------------------------------------------------------------>
+    </section>
+    <!-- Portfolio details section end -->
+</main>
+<!-- Main end -->
 
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
+<!-----------------------------------------------------------------
+                           Footer
+------------------------------------------------------------------>
+<footer id="footer">
+    <div class="footer-container container">
+        <div class="copyright">
+            &copy; Copyright, conception et développement par <a class="github"
+                href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
+                    aria-hidden="true"></i> Açelya Lejeune</a>
+        </div>
+    </div>
+</footer>
+<!-----------------------------------------------------------------
+                           Footer end
+------------------------------------------------------------------>
 
-    <!-- Font Awesome JS -->
-    <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
+<!-- Back to Top -->
+<a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
 
-    <!-- JS Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css"></script>
+<!-- Font Awesome JS -->
+<script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
-    <!-- Main JS Files -->
-    <script defer="defer" src="../dist/runtime.bundle.js"></script>
-    <script defer="defer" src="../dist/shared.bundle.js"></script>
-    <script defer="defer" src="../dist/index.bundle.js"></script>
-    <script defer="defer" src="../dist/nav.bundle.js"></script>
-    <script defer="defer" src="../dist/swiper.bundle.js"></script>
+<!-- JS Files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
-        AOS.init();
-    </script>
+<!-- Main JS Files -->
+<script defer="defer" src="../dist/runtime.bundle.js"></script>
+<script defer="defer" src="../dist/shared.bundle.js"></script>
+<script defer="defer" src="../dist/index.bundle.js"></script>
+<script defer="defer" src="../dist/nav.bundle.js"></script>
+<script defer="defer" src="../dist/swiper.bundle.js"></script>
 
+<script>
+    AOS.init();
+</script>
+```
 
 </body>
 
