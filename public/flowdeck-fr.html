@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projet Flowdeck par Açelya Lejeune : dashboard de gestion de projets créatifs avec React, TypeScript et une base d’assistant Python Flask.">
+    <meta
+        content="Flowdeck, React, TypeScript, Vite, SCSS, Python, Flask, assistant IA, dashboard, gestion de projets, projet portfolio, développeuse frontend, designer UX UI, Açelya Lejeune"
+        name="keywords">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/index.css">
+    <link href="../assets/icons/favicon.png" rel="icon" type="image/png">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <title>Flowdeck | Projet Portfolio | Açelya Lejeune</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="profile">
+            <img src="../assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
+            <h1 class="text-light"><a href="../fr.php">Açelya Lejeune</a></h1>
+            <div class="social-links">
+                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                    aria-label="Profil LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="flowdeck.html" class="language"><b>EN</b></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li><a href="../fr.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
+                        <span>Accueil</span></a></li>
+                <li><a href="../fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                        <span>À propos</span></a></li>
+                <li><a href="../fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                        <span>Compétences</span></a></li>
+                <li><a href="../fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                        <span>Portfolio</span></a></li>
+                <li><a href="../fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                        <span>Services</span></a></li>
+                <li><a href="../fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                        <span>Contact</span></a></li>
+            </ul>
+            <div class="btn-resume">
+                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <div class="profile">
+            <img src="../assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
+            <h1 class="text-light"><a href="../fr.php">Açelya Lejeune</a></h1>
+            <div class="social-links">
+                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                    aria-label="Profil LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="flowdeck.html" class="language"><b>EN</b></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li><a href="../fr.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
+                        <span>Accueil</span></a></li>
+                <li><a href="../fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                        <span>À propos</span></a></li>
+                <li><a href="../fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                        <span>Compétences</span></a></li>
+                <li><a href="../fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                        <span>Portfolio</span></a></li>
+                <li><a href="../fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                        <span>Services</span></a></li>
+                <li><a href="../fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                        <span>Contact</span></a></li>
+            </ul>
+            <div class="btn-resume">
+                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="navbar-hamburger">
+        <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+    </div>
+
+    <main id="main">
+        <section id="portfolio-details" class="portfolio-details">
+
+            <div class="portfolio-details-container container">
+                <div class="section-title">
+                    <h2>Flowdeck</h2>
+                    <p>
+                        Flowdeck est un projet portfolio réalisé avec React et TypeScript, conçu comme un dashboard de
+                        gestion de projets créatifs pour freelances, designers UX/UI et petites équipes créatives.
+                        L’objectif est d’aider les utilisateurs à gérer projets, clients, statuts, priorités, délais,
+                        progression et état d’avancement dans une interface claire.
+                    </p>
+                    <p>
+                        Le projet a commencé comme un exercice d’apprentissage React et TypeScript, mais je l’ai traité
+                        comme un produit portfolio réaliste, lié à mon expérience UX/UI et à mon orientation future vers
+                        le développement front-end et les applications IA. Il inclut aussi un projet séparé en Python et
+                        Flask comme base pour une future intégration d’assistant.
+                    </p>
+                </div>
+
+                <div class="portfolio-details-top">
+
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/flowdeck-1.jpg"
+                                    alt="Vue générale du dashboard Flowdeck">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/flowdeck-2.jpg"
+                                    alt="Cartes de projets dans Flowdeck">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/flowdeck-3.jpg"
+                                    alt="Filtres de projets dans Flowdeck">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/flowdeck-4.jpg"
+                                    alt="Statistiques de projets dans Flowdeck">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/flowdeck-5.jpg"
+                                    alt="Panneau assistant de Flowdeck">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/flowdeck-6.jpg"
+                                    alt="Aperçu responsive du dashboard Flowdeck">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="portfolio-info">
+                        <h3>Technologies & outils utilisés</h3>
+                        <div class="portfolio-info-container">
+
+                            <div class="portfolio-info-left">
+                                <h4>Design & préparation UI</h4>
+                                <div class="portfolio-info-icons">
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/figma.png" alt="Logo Figma">
+                                        <p>Préparation de la structure du dashboard, des écrans et du parcours
+                                            utilisateur.</p>
+                                    </div>
+
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/ai.png" alt="Logo Illustrator">
+                                        <p>Préparation d’éléments simples d’identité visuelle et d’interface.</p>
+                                    </div>
+
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/ps.png" alt="Logo Photoshop">
+                                        <p>Retouche des visuels et des images de présentation.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-info-right">
+                                <h4>Front-end & base assistant</h4>
+                                <div class="portfolio-info-icons">
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/react.png" alt="Logo React">
+                                        <p>Développement de l’interface dashboard avec React et des composants
+                                            réutilisables.</p>
+                                    </div>
+
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/typescript.png" alt="Logo TypeScript">
+                                        <p>Structuration des données projet avec des types TypeScript partagés.</p>
+                                    </div>
+                                </div>
+
+                                <div class="portfolio-info-icons">
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/sass.png" alt="Logo Sass">
+                                        <p>Stylisation du dashboard avec SCSS et une interface sombre.</p>
+                                    </div>
+
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/python.png" alt="Logo Python">
+                                        <p>Création d’une base assistant séparée avec Python et Flask.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-cards-container">
+                        <div class="portfolio-info-links">
+                            <div class="portfolio-card">
+                                <p>
+                                    Explorez Flowdeck grâce à la prévisualisation en direct. Le lien de déploiement sera
+                                    ajouté après la publication du projet en ligne.
+                                </p>
+                            </div>
+                            <a class="portfolio-link-left" href="#" target="_blank"><i class="fas fa-link"></i>
+                                Prévisualisation en direct</a>
+                        </div>
+
+                        <div class="portfolio-info-links">
+                            <div class="portfolio-card">
+                                <p>
+                                    Consultez le dépôt principal de Flowdeck sur GitHub pour explorer la structure
+                                    React, le modèle de données TypeScript, les composants réutilisables, les filtres,
+                                    l’interface dashboard et le panneau assistant.
+                                </p>
+                            </div>
+                            <a class="portfolio-link-right" href="https://github.com/LejeuneA/flowdeck"
+                                title="Voir sur GitHub" target="_blank"><i class="fa fa-github"></i> Code complet sur
+                                GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-figma container">
+                <h3>Afficher le prototype sur Figma</h3>
+                <p>
+                    Explorez la préparation de l’interface et le parcours utilisateur de Flowdeck en consultant le
+                    prototype Figma.
+                </p>
+                <iframe
+                    src="https://embed.figma.com/design/FDRZvnluDXRYLNfqgyhPCz/La-Libraire-de-Lejeune?node-id=4018-2379&embed-host=share"
+                    allowfullscreen>Voir sur Figma
+                </iframe>
+            </div>
+
+            <div class="portfolio-details-bottom">
+                <div class="portfolio-description container">
+                    <h2>Processus de création</h2>
+                    <p>
+                        Flowdeck a été construit comme un produit dashboard réaliste plutôt qu’un simple exercice de
+                        code. L’objectif était de combiner mon expérience UX/UI avec React, TypeScript et une direction
+                        future vers les assistants IA.
+                    </p>
+
+                    <div class="design-process">
+                        <div class="design-process-left">
+                            <h3>Concept produit & utilisateurs</h3>
+                            <p>
+                                Définition de Flowdeck comme dashboard de gestion de projets pour freelances, designers
+                                UX/UI et petites équipes créatives ayant besoin d’une vue claire sur les projets,
+                                clients, délais et progressions.
+                            </p>
+
+                            <h3>Architecture front-end</h3>
+                            <p>
+                                Développement de l’interface avec <span>React</span>, <span>TypeScript</span>,
+                                <span>Vite</span> et <span>SCSS</span>, avec des composants réutilisables comme
+                                ProjectCard et ProjectList.
+                            </p>
+                        </div>
+
+                        <div class="design-process-right">
+                            <h3>Logique interactive du dashboard</h3>
+                            <p>
+                                Ajout de statistiques, filtres par statut, compteur de projets filtrés, indicateurs de
+                                progression et données typées pour rendre le dashboard plus structuré et interactif.
+                            </p>
+
+                            <h3>Base d’assistant IA</h3>
+                            <p>
+                                Création d’un projet backend séparé en <span>Python</span> et <span>Flask</span> appelé
+                                Flowdeck AI Chatbot Core. Il s’agit d’une base d’assistant rule-based, pas encore d’un
+                                vrai produit LLM.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-features container">
+                <h2>Fonctionnalités</h2>
+                <p>
+                    Flowdeck combine un dashboard React et TypeScript avec une base assistant séparée en Python et
+                    Flask. Le front-end se concentre sur la visibilité des projets, tandis que le backend explore le
+                    traitement des messages, la détection d’intentions et une future intégration IA.
+                </p>
+
+                <div class="features">
+                    <div class="features-left">
+                        <h3>Dashboard React</h3>
+                        <p>
+                            Le dashboard inclut des cartes de projets, une liste dynamique, une navigation latérale, des
+                            statistiques, des indicateurs de progression et une mise en page responsive.
+                        </p>
+
+                        <h3>Filtrage par statut</h3>
+                        <p>
+                            Les projets peuvent être filtrés par statut : All, To Do, In Progress et Completed. L’interface
+                            affiche aussi le nombre de projets filtrés.
+                        </p>
+
+                        <h3>Données typées</h3>
+                        <p>
+                            Un type Project partagé en TypeScript permet de structurer les données projet de manière plus
+                            sûre et de rendre les composants plus prévisibles.
+                        </p>
+                    </div>
+
+                    <div class="features-right">
+                        <h3>Panneau assistant</h3>
+                        <p>
+                            Le projet React inclut une interface Flowdeck Assistant pensée pour être connectée à l’API
+                            Flask lors de l’intégration prévue.
+                        </p>
+
+                        <h3>Chatbot Core Python/Flask</h3>
+                        <p>
+                            Le backend séparé peut détecter des intentions rule-based comme projects, tasks, priority,
+                            deadlines, status, summary et general.
+                        </p>
+
+                        <h3>Intégration prévue</h3>
+                        <p>
+                            Le flux prévu est : React ChatPanel envoie un message vers Flask POST /chat, Python traite
+                            le message, puis React affiche la réponse du bot dans l’interface.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-container container">
+            <div class="copyright">
+                &copy; Copyright, conception et développement par <a class="github"
+                    href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
+                        aria-hidden="true"></i> Açelya Lejeune</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
+
+    <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script defer="defer" src="../dist/runtime.bundle.js"></script>
+    <script defer="defer" src="../dist/shared.bundle.js"></script>
+    <script defer="defer" src="../dist/index.bundle.js"></script>
+    <script defer="defer" src="../dist/nav.bundle.js"></script>
+    <script defer="defer" src="../dist/swiper.bundle.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

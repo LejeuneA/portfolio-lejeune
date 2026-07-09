@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Positive Quotes App portfolio project by Açelya Lejeune: Angular and TypeScript TFE project with authentication, favorites, history, themes and JSON Server.">
+    <meta
+        content="Angular project, TypeScript, Angular Material, SCSS, JSON Server, quote app, TFE project, frontend developer, portfolio project, Açelya Lejeune, UI design, web application"
+        name="keywords">
+
+    <!-- AOS File -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Swiper File -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main Css file -->
+    <link rel="stylesheet" href="../dist/index.css">
+
+    <!-- Favicon -->
+    <link href="../assets/icons/favicon.png" rel="icon" type="image/png">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Title -->
+    <title>Positive Quotes App | Portfolio Project | Açelya Lejeune</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="profile">
+            <img src="../assets/images/header-photo.jpg" alt="Açelya Lejeune profile photo" class="profile-img">
+            <h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
+            <div class="social-links">
+                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="GitHub profile"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                    aria-label="LinkedIn profile"><i class="fa fa-linkedin"></i></a>
+                <a href="positive-quotes-fr.html" class="language"><b>FR</b></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li><a href="../index.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
+                        <span>Home</span></a></li>
+                <li><a href="../index.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                        <span>About</span></a></li>
+                <li><a href="../index.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                        <span>Skills</span></a></li>
+                <li><a href="../index.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                        <span>Portfolio</span></a></li>
+                <li><a href="../index.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                        <span>Services</span></a></li>
+                <li><a href="../index.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                        <span>Contact</span></a></li>
+            </ul>
+            <div class="btn-resume">
+                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="profile">
+            <img src="../assets/images/header-photo.jpg" alt="Açelya Lejeune profile photo" class="profile-img">
+            <h1 class="text-light"><a href="../index.php">Açelya Lejeune</a></h1>
+            <div class="social-links">
+                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="GitHub profile"><i
+                        class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                    aria-label="LinkedIn profile"><i class="fa fa-linkedin"></i></a>
+                <a href="positive-quotes-fr.html" class="language"><b>FR</b></a>
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li><a href="../index.php" class="nav-link scrollto active"><i class="fas fa-home"></i>
+                        <span>Home</span></a></li>
+                <li><a href="../index.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
+                        <span>About</span></a></li>
+                <li><a href="../index.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
+                        <span>Skills</span></a></li>
+                <li><a href="../index.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
+                        <span>Portfolio</span></a></li>
+                <li><a href="../index.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
+                        <span>Services</span></a></li>
+                <li><a href="../index.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
+                        <span>Contact</span></a></li>
+            </ul>
+            <div class="btn-resume">
+                <a class="btn-resume" href="../assets/resume/CV_LEJEUNE_EN.pdf" download>Download CV</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="navbar-hamburger">
+        <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+    </div>
+
+    <main id="main">
+        <section id="portfolio-details" class="portfolio-details">
+
+            <div class="portfolio-details-container container">
+                <div class="section-title">
+                    <h2>Positive Quotes App</h2>
+                    <p>
+                        Positive Quotes App is the TFE project I created during the final year of my Frontend Developer
+                        programme. It is an Angular application built with TypeScript, Angular Material, SCSS and JSON
+                        Server, designed to help users discover, save and revisit motivational quotes.
+                    </p>
+                    <p>
+                        The application includes registration and login, quote categories, favorites, quote history,
+                        account settings, dark and light themes, and dynamic background images loaded from an API. User
+                        data and interactions are saved through JSON Server, using a JSON file as a lightweight local
+                        data source.
+                    </p>
+                </div>
+
+                <div class="portfolio-details-top">
+
+                    <div class="portfolio-details-slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/positive-1.jpg"
+                                    alt="Positive Quotes App dark theme homepage">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/positive-2.jpg"
+                                    alt="Positive Quotes App light theme homepage">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/positive-3.jpg"
+                                    alt="Positive Quotes App favorites page">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/positive-4.jpg"
+                                    alt="Positive Quotes App quote history page">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/positive-5.jpg"
+                                    alt="Positive Quotes App account settings page">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="../assets/images/portfolio-details/positive-6.jpg"
+                                    alt="Positive Quotes App register page">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="portfolio-info">
+                        <h3>Technologies & Tools Used</h3>
+                        <div class="portfolio-info-container">
+
+                            <div class="portfolio-info-left">
+                                <h4>Creative & UI Tools</h4>
+                                <div class="portfolio-info-icons">
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/ai.png" alt="Illustrator logo">
+                                        <p>Created the logo and simple visual identity elements.</p>
+                                    </div>
+
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/ps.png" alt="Photoshop logo">
+                                        <p>Prepared and adjusted visual assets and background images.</p>
+                                    </div>
+
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/figma.png" alt="Figma logo">
+                                        <p>Planned the interface, screens and user flow.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-info-right">
+                                <h4>Frontend & Data</h4>
+                                <div class="portfolio-info-icons">
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/angular.png" alt="Angular logo">
+                                        <p>Built the application structure with Angular and Angular Material.</p>
+                                    </div>
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/typescript.png" alt="TypeScript logo">
+                                        <p>Implemented application logic, state handling and typed components.</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info-icons">
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/sass.png" alt="Sass logo">
+                                        <p>Styled the interface with SCSS, including dark and light theme layouts.</p>
+                                    </div>
+                                    <div class="portfolio-info-icon">
+                                        <img src="../assets/icons/js.png" alt="JSON Server data icon">
+                                        <p>Used JSON Server to store users, favorites and quote history locally.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-cards-container">
+                        <div class="portfolio-info-links">
+                            <div class="portfolio-card">
+                                <p>
+                                    Explore the Positive Quotes App through the live preview. You can register, log in,
+                                    browse quotes by category, save favorites, view quote history and switch between dark
+                                    and light themes.
+                                </p>
+                            </div>
+                            <a class="portfolio-link-left" href="#" target="_blank"><i class="fas fa-link"></i>
+                                Live Preview</a>
+                        </div>
+
+                        <div class="portfolio-info-links">
+                            <div class="portfolio-card">
+                                <p>
+                                    View the full codebase on GitHub to explore the Angular structure, TypeScript logic,
+                                    Angular Material components, SCSS styling and JSON Server setup.
+                                </p>
+                            </div>
+                            <a class="portfolio-link-right" href="https://github.com/LejeuneA/positive-quotes-app"
+                                title="See on GitHub" target="_blank"><i class="fa fa-github"></i> Full Code on
+                                GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-figma container">
+                <h3>Display Prototype on Figma</h3>
+                <p>
+                    Explore the interface planning and user flow behind Positive Quotes App by viewing the Figma
+                    prototype.
+                </p>
+                <iframe
+                    src="https://embed.figma.com/design/9pjY5TTbJz8b7UERnQRBfg/Positive-Quotes-App?node-id=0-1&embed-host=share"
+                    allowfullscreen>See on Figma
+                </iframe>
+            </div>
+
+            <div class="portfolio-details-bottom">
+                <div class="portfolio-description container">
+                    <h2>Creation Process</h2>
+                    <p>
+                        Positive Quotes App was developed as a final-year frontend project with a focus on building a
+                        complete Angular application: interface design, component structure, user actions, data handling
+                        and responsive visual presentation.
+                    </p>
+
+                    <div class="design-process">
+                        <div class="design-process-left">
+                            <h3>Concept & UI Direction</h3>
+                            <p>
+                                Defined the visual direction around calm, positive and nature-inspired imagery, with
+                                dark and light theme variations to give users a personalized experience.
+                            </p>
+
+                            <h3>Prototype & User Flow</h3>
+                            <p>
+                                Used <span>Figma</span> to plan key screens such as register, login, home, favorites,
+                                history and account settings before implementation.
+                            </p>
+                        </div>
+
+                        <div class="design-process-right">
+                            <h3>Angular Implementation</h3>
+                            <p>
+                                Built the app with <span>Angular</span>, <span>Angular Material</span> and
+                                <span>TypeScript</span>, organizing the interface into reusable components and pages.
+                            </p>
+
+                            <h3>Data & Interaction Logic</h3>
+                            <p>
+                                Used <span>JSON Server</span> to simulate backend data storage for users, favorites and
+                                quote history, while external APIs were used for quotes and dynamic background images.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-features container">
+                <h2>Features</h2>
+                <p>
+                    Positive Quotes App includes practical frontend application features: authentication flow, quote
+                    categories, favorites, history, theme switching, account settings and dynamic background images.
+                </p>
+
+                <div class="features">
+                    <div class="features-left">
+                        <h3>Register & Login</h3>
+                        <p>
+                            Users can create an account and log in before using the app, allowing their favorites and
+                            history to be connected to their profile.
+                        </p>
+
+                        <h3>Quote Categories & API Data</h3>
+                        <p>
+                            Quotes can be browsed by category, with quote content loaded from an API and displayed in a
+                            clean, focused interface.
+                        </p>
+
+                        <h3>Favorites</h3>
+                        <p>
+                            Users can save favorite quotes and revisit them later from a dedicated favorites page.
+                        </p>
+                    </div>
+
+                    <div class="features-right">
+                        <h3>Quote History</h3>
+                        <p>
+                            The app keeps track of viewed quotes, allowing users to return to quotes they have already
+                            explored.
+                        </p>
+
+                        <h3>Dark & Light Themes</h3>
+                        <p>
+                            Users can switch between dark and light themes, changing the visual atmosphere of the
+                            application.
+                        </p>
+
+                        <h3>Dynamic Background Images</h3>
+                        <p>
+                            Background images change through an API when pages are refreshed, giving the interface a
+                            more atmospheric and varied experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-container container">
+            <div class="copyright">
+                &copy; Copyright, design and development by <a class="github"
+                    href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
+                        aria-hidden="true"></i> Açelya Lejeune</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
+
+    <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script defer="defer" src="../dist/runtime.bundle.js"></script>
+    <script defer="defer" src="../dist/shared.bundle.js"></script>
+    <script defer="defer" src="../dist/index.bundle.js"></script>
+    <script defer="defer" src="../dist/nav.bundle.js"></script>
+    <script defer="defer" src="../dist/swiper.bundle.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
