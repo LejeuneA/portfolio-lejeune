@@ -16,10 +16,12 @@
 
     .portfolio-content {
         @include d-flex(flex, start, start, column, start);
-        gap: 2em;
+        gap: 2.5em;
         width: 100%;
 
         .section-title {
+            max-width: 72em;
+
             h2 {
                 font-size: 2em;
                 font-weight: 700;
@@ -43,110 +45,173 @@
             p {
                 color: $text-secondary;
                 font-weight: 500;
-                font-size: 1.05em;
-                margin-top: 1.5em;
+                font-size: 1.02em;
+                margin-top: 1.4em;
                 line-height: 1.8em;
-                max-width: 65em;
+                max-width: 68em;
             }
         }
 
         .portfolio-container {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-gap: 2em;
+            gap: 2.25em;
             width: 100%;
 
             .portfolio-items {
-                @include d-flex(flex, center, center, column, center);
-                margin-bottom: 2em;
+                @include d-flex(flex, center, stretch, column, center);
+
                 width: 100%;
-                height: auto;
-                background-color: $surface;
-                border: 1px solid $border-soft;
-                border-radius: 1.25em;
-                box-shadow: none;
+                min-height: 20em;
+                background: rgba($surface, 0.95);
+                border: 1px solid rgba($primary-green, 0.18);
+                border-radius: 1.35em;
                 overflow: hidden;
-                transition: transform 0.25s ease, border-color 0.25s ease;
+                position: relative;
+                transition:
+                    transform 0.25s ease,
+                    border-color 0.25s ease,
+                    background-color 0.25s ease;
 
                 &:hover {
-                    transform: translateY(-4px);
-                    box-shadow: none;
+                    transform: translateY(-0.35em);
+                    border-color: rgba($primary-green, 0.42);
+                    background: $surface;
                 }
 
-                .portfolio-item-top{
+                .portfolio-item-top {
                     @include d-flex(flex, center, center, column, center);
-                    flex: 1;
-                    padding: 2em;
-                    background: linear-gradient(180deg, $surface 0%, $light-green 100%);
 
-                    img{
-                        width: 70%;
+                    min-height: 13em;
+                    padding: 2.5em;
+                    position: relative;
+                    overflow: hidden;
+                    background:
+                        radial-gradient(circle at 75% 25%, rgba($primary-green, 0.16), transparent 32%),
+                        linear-gradient(135deg, rgba($light-green, 0.55) 0%, rgba($surface, 0.98) 55%, rgba($primary-green, 0.08) 100%);
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 1em;
+                        border: 1px solid rgba($primary-green, 0.08);
+                        border-radius: 1em;
+                        pointer-events: none;
+                    }
+
+                    a {
+                        @include d-flex(flex, center, center, column, center);
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                    img {
+                        width: min(72%, 16em);
+                        max-height: 8em;
+                        object-fit: contain;
+                        opacity: 0.92;
+                        filter: saturate(1.05) contrast(1.05);
+                        transition:
+                            transform 0.25s ease,
+                            opacity 0.25s ease,
+                            filter 0.25s ease;
+                    }
+                }
+
+                &:hover {
+                    .portfolio-item-top {
+                        img {
+                            transform: scale(1.04);
+                            opacity: 1;
+                            filter: saturate(1.15) contrast(1.12);
+                        }
                     }
                 }
 
                 .portfolio-wrap {
-                    @include d-flex(flex, end, center, column, center);
-                    transition: 0.3s;
-                    position: relative;
-                    overflow: hidden;
-                    z-index: 1;
+                    @include d-flex(flex, start, stretch, column, stretch);
+
                     width: 100%;
-                    height: 8em;
+                    height: auto;
+                    padding: 1em;
+                    gap: 0.75em;
+                    background: rgba($surface, 0.98);
+                    border-top: 1px solid rgba($primary-green, 0.12);
 
                     .portfolio-links-top {
                         @include d-flex(flex, center, center, row, center);
+
                         width: 100%;
-                        height: 4em;
-                        background-color: $primary-green;
-                        border-bottom: 1px solid rgba($light-green, 0.2);
-                        color: $light-green;
-                        font-weight: 600;
-                        opacity: 1;
-                        transition: all ease-in-out 0.35s;
-                        font-size: 0.9em;
+                        min-height: 3.2em;
+                        border-radius: 0.85em;
+                        background: rgba($primary-green, 0.1);
+                        border: 1px solid rgba($primary-green, 0.16);
+                        transition:
+                            background-color 0.25s ease,
+                            border-color 0.25s ease,
+                            transform 0.25s ease;
+
+                        a,
+                        .portfolio-link-top {
+                            @include d-flex(flex, center, center, row, center);
+                            width: 100%;
+                            height: 100%;
+                            color: $dark-green;
+                            font-weight: 700;
+                            font-size: 0.9em;
+                            text-decoration: none;
+                        }
 
                         i {
-                            font-size: 1.2em;
-                            color: $light-green;
-                            align-items: center;
-                            margin-right: 0.3em;
+                            font-size: 1em;
+                            color: $primary-green;
+                            margin-right: 0.45em;
                         }
 
                         &:hover {
-                            background-color: $dark-green;
+                            background: rgba($primary-green, 0.16);
+                            border-color: rgba($primary-green, 0.28);
+                            transform: translateY(-1px);
                         }
                     }
 
                     .portfolio-links-bottom {
                         @include d-flex(flex, center, center, row, center);
+
                         width: 100%;
+                        gap: 0.75em;
 
                         .portfolio-link-left,
                         .portfolio-link-right {
                             @include d-flex(flex, center, center, row, center);
-                            width: 50%;
-                            height: 4em;
-                            border-right: 1px solid rgba($light-green, 0.15);
-                            background-color: $background;
-                            color: $light-green;
-                            font-weight: 600;
-                            opacity: 1;
-                            transition: all ease-in-out 0.35s;
-                            font-size: 0.9em;
 
-                            .portfolio-link-right{
-                                background-color: $background;
-                            }
+                            width: 50%;
+                            min-height: 3.2em;
+                            padding: 0 1em;
+                            border-radius: 0.85em;
+                            background: $background;
+                            border: 1px solid rgba($light-green, 0.12);
+                            color: $light-green;
+                            font-weight: 700;
+                            font-size: 0.88em;
+                            text-decoration: none;
+                            transition:
+                                background-color 0.25s ease,
+                                border-color 0.25s ease,
+                                transform 0.25s ease;
 
                             i {
-                                font-size: 1.2em;
+                                font-size: 1em;
                                 color: $light-green;
-                                align-items: center;
-                                margin-right: 0.3em;
+                                margin-right: 0.45em;
                             }
 
                             &:hover {
-                                background-color: $primary-green;
+                                background: $dark-green;
+                                border-color: rgba($light-green, 0.28);
+                                transform: translateY(-1px);
                             }
                         }
                     }
@@ -157,45 +222,42 @@
 
     @media (min-width: 320px) and (max-width: 768px) {
         .portfolio-content {
-            .section-title{
-                p{
+            gap: 2em;
+
+            .section-title {
+                p {
                     font-size: 1em;
+                    line-height: 1.75em;
                 }
             }
+
             .portfolio-container {
-                @include d-flex(flex, space-between, center, column, center);
+                grid-template-columns: 1fr;
+                gap: 1.75em;
 
                 .portfolio-items {
-                    @include d-flex(flex, center, center, column, center);
-                    width: 100%;
+                    min-height: auto;
 
-                    .portfolio-item-top{
-                        flex: 1;
-                        text-align: center;
+                    .portfolio-item-top {
+                        min-height: 11em;
+                        padding: 2em;
 
-                        img{
-                            width: 100%;
+                        img {
+                            width: min(82%, 15em);
+                            max-height: 7em;
                         }
                     }
 
-                    .portfolio-wrap{
-                        @include d-flex(flex, end, center, column, center);
-                        width: 100%;
-                        height: 12em;
-                        flex:1;
+                    .portfolio-wrap {
+                        padding: 0.9em;
 
-                        .portfolio-links-bottom{
-                            @include d-flex(flex, center, center, column, center);
-                            width: 100%;
+                        .portfolio-links-bottom {
+                            flex-direction: column;
+                            gap: 0.65em;
 
                             .portfolio-link-left,
-                            .portfolio-link-right{
+                            .portfolio-link-right {
                                 width: 100%;
-                            }
-
-                            .portfolio-link-right{
-                                border-right: none;
-                                border-top: 1px solid rgba($light-green, 0.15);
                             }
                         }
                     }
@@ -204,15 +266,33 @@
         }
     }
 
-    @media (min-width: 769px) and (max-width: 1536px) {
+    @media (min-width: 769px) and (max-width: 1199px) {
         .portfolio-content {
-            .section-title{
-                p{
-                    font-size: 1em;
-                }
-            }
             .portfolio-container {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1.6em;
+
+                .portfolio-items {
+                    .portfolio-item-top {
+                        min-height: 11.5em;
+                        padding: 2em;
+
+                        img {
+                            width: min(78%, 14em);
+                        }
+                    }
+
+                    .portfolio-wrap {
+                        .portfolio-links-bottom {
+                            flex-direction: column;
+
+                            .portfolio-link-left,
+                            .portfolio-link-right {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
