@@ -90,6 +90,37 @@
                         radial-gradient(circle at 75% 25%, rgba($primary-green, 0.16), transparent 32%),
                         linear-gradient(135deg, rgba($light-green, 0.55) 0%, rgba($surface, 0.98) 55%, rgba($primary-green, 0.08) 100%);
 
+                    .portfolio-card-meta {
+                        position: relative;
+                        z-index: 2;
+                        width: 100%;
+                        text-align: center;
+                        margin-bottom: 1.4em;
+
+                        h3 {
+                            color: $dark-green;
+                            font-size: 1.15em;
+                            font-weight: 800;
+                            margin-bottom: 0.55em;
+                            line-height: 1.3em;
+                        }
+
+                        p {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $dark-green;
+                            background: rgba($primary-green, 0.12);
+                            border: 1px solid rgba($primary-green, 0.18);
+                            border-radius: 999px;
+                            padding: 0.45em 1em;
+                            font-size: 0.82em;
+                            font-weight: 700;
+                            line-height: 1.2em;
+                            margin: 0;
+                        }
+                    }
+
                     &::before {
                         content: "";
                         position: absolute;
