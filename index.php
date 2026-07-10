@@ -163,7 +163,7 @@ $conn->close();
     <section id="hero" class="hero">
         <div class="hero-container" data-aos="fade-in" data-aos-duration="3000">
             <h1>Açelya Lejeune</h1>
-            <p><span class="typed" data-typed-items="Senior Digital Designer, Frontend Developer"></span></p>
+            <p><span class="typed" data-typed-items="Senior Digital Designer, Frontend Developer, AI Developer"></span></p>
         </div>
     </section>
     <!-----------------------------------------------------------------
