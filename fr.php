@@ -59,7 +59,7 @@ try {
         rel="stylesheet">
 
     <!-- Title -->
-    <title>Acelya Lejeune - Développeur Web et Infographiste</title>
+    <title>Acelya Lejeune - Designer Digitale, Développeuse Front-End, Développeuse AI</title>
 </head>
 
 <body>
@@ -170,7 +170,7 @@ try {
     <section id="hero" class="hero">
         <div class="hero-container" data-aos="fade-in" data-aos-duration="3000">
             <h1>Açelya Lejeune</h1>
-            <p><span class="typed" data-typed-items="Designer Digitale Senior, Développeuse Front-End, Développeuse AI"></span></p>
+            <p><span class="typed" data-typed-items="Designer Digitale, Développeuse Front-End, Développeuse AI"></span></p>
         </div>
     </section>
     <!-----------------------------------------------------------------

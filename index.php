@@ -57,7 +57,7 @@ try {
         rel="stylesheet">
 
     <!-- Title -->
-    <title>Acelya Lejeune - Web Developer and Graphic Designer</title>
+    <title>Acelya Lejeune - Digital Designer, Frontend Developer, AI Developer</title>
 </head>
 
 <body>
@@ -165,7 +165,7 @@ try {
     <section id="hero" class="hero">
         <div class="hero-container" data-aos="fade-in" data-aos-duration="3000">
             <h1>Açelya Lejeune</h1>
-            <p><span class="typed" data-typed-items="Senior Digital Designer, Frontend Developer, AI Developer"></span></p>
+            <p><span class="typed" data-typed-items="Digital Designer, Frontend Developer, AI Developer"></span></p>
         </div>
     </section>
     <!-----------------------------------------------------------------
