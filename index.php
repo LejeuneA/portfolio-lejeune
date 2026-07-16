@@ -1,30 +1,29 @@
 <?php
 
-require_once 'conf/conf-db.php';
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch portfolio items
-$sql = "SELECT id, image_url, info_url, live_url, github_url FROM portfolio";
-$result = $conn->query($sql);
-
 $portfolioItems = [];
+$databaseError = null;
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $portfolioItems[] = $row;
-    }
-} else {
-    echo "0 results";
+try {
+    require_once __DIR__ . '/conf/conf-db.php';
+
+    $sql = '
+        SELECT
+            id,
+            image_url,
+            info_url,
+            live_url,
+            github_url
+        FROM portfolio
+        ORDER BY id ASC
+    ';
+
+    $statement = $pdo->query($sql);
+    $portfolioItems = $statement->fetchAll();
+} catch (Throwable $exception) {
+    error_log($exception->getMessage());
+
+    $databaseError = 'Portfolio projects could not be loaded.';
 }
-
-$conn->close();
 
 ?>
 
