@@ -498,35 +498,78 @@ try {
    	------------------------------------------------------------------>
 
         <!-----------------------------------------------------------------
-                      				Contact section
-   	------------------------------------------------------------------>
+                            Contact section
+------------------------------------------------------------------>
         <section id="contact" class="contact-section">
             <div class="contact-content container">
                 <div class="section-title">
                     <h2>Contact</h2>
+
                     <p>
-                        If you are interested in my profile, a design role, a frontend integration opportunity, or a creative
-                        digital project, feel free to contact me. I am open to opportunities in Belgium, as well as remote
-                        roles with UK and European teams.
+                        If you are interested in my profile, a design role, a frontend
+                        integration opportunity, or a creative digital project, feel free
+                        to contact me. I am open to opportunities in Belgium, as well as
+                        remote roles with UK and European teams.
                     </p>
                 </div>
-                <div class="contact-container" data-aos="fade-in" data-aos-duration="1500">
-                    <form action="./forms/contact.php" method="post">
+
+                <div
+                    class="contact-container"
+                    data-aos="fade-in"
+                    data-aos-duration="1500">
+                    <form action="forms/contact.php" method="post">
+                        <input
+                            type="hidden"
+                            name="redirect"
+                            value="index.php">
 
                         <label for="firstName">First name</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="Your first name...">
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            placeholder="Your first name..."
+                            autocomplete="given-name"
+                            maxlength="100"
+                            required>
 
                         <label for="lastName">Last name</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Your last name...">
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            placeholder="Your last name..."
+                            autocomplete="family-name"
+                            maxlength="100"
+                            required>
 
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email...">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your email..."
+                            autocomplete="email"
+                            maxlength="255"
+                            required>
 
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject...">
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Subject..."
+                            maxlength="255"
+                            required>
 
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Your message..." style="height:200px"></textarea>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Your message..."
+                            maxlength="5000"
+                            rows="8"
+                            required></textarea>
 
                         <input type="reset" value="Reset">
                         <input type="submit" value="Send message">
@@ -534,10 +577,9 @@ try {
                 </div>
             </div>
         </section>
-
         <!-----------------------------------------------------------------
-                      			Contact section end
-   	------------------------------------------------------------------>
+                         Contact section end
+------------------------------------------------------------------>
     </main>
     <!-- Main end -->
     <!-----------------------------------------------------------------

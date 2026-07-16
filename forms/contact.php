@@ -1,38 +1,101 @@
 <?php
-$firstName = $_POST['firstName'];
-$lastName = $_POST['lastName'];
-$email = $_POST['email']; // Assuming 'email' corresponds to 'email' in your HTML form
-$subject = $_POST['subject'];
-$message = $_POST['message'];
 
-// Database connection
-$conn = new mysqli('localhost', 'root', '@NtLYa130580', 'portfolio');
-if ($conn->connect_error) {
-    die('Connection Failed: ' . $conn->connect_error);
-} else {
-    // Insert form data into the database
-    $stmt = $conn->prepare("INSERT INTO contact_info (firstName, lastName, email, subject, message) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $firstName, $lastName, $email, $subject, $message);
-    $stmt->execute();
+declare(strict_types=1);
 
-    // Send email notification
-    // $to = "acelyalejeune@gmail.com"; 
-    // $subject = "New Form Submission";
-    // $body = "You have received a new form submission:\n\n";
-    // $body .= "Name: $firstName $lastName\n";
-    // $body .= "Email: $email\n";
-    // $body .= "Subject: $subject\n";
-    // $body .= "Message: $message\n";
+$redirectPage = $_POST['redirect'] ?? 'index.php';
 
-    // Send email using mail() function
-    // mail($to, $subject, $body);
+$allowedRedirects = [
+    'index.php',
+    'fr.php',
+];
 
-    echo "Message sent...";
-
-    // Redirect back to index.html after 3 seconds
-    header("refresh:1;url=http://localhost/portfolio-lejeune/index.php");
-
-    $stmt->close();
-    $conn->close();
+if (!in_array($redirectPage, $allowedRedirects, true)) {
+    $redirectPage = 'index.php';
 }
 
+$redirectUrl = '../' . $redirectPage;
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: ' . $redirectUrl . '#contact', true, 303);
+    exit;
+}
+
+$firstName = trim($_POST['firstName'] ?? '');
+$lastName = trim($_POST['lastName'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$subject = trim($_POST['subject'] ?? '');
+$message = trim($_POST['message'] ?? '');
+
+if (
+    $firstName === '' ||
+    $lastName === '' ||
+    $email === '' ||
+    $subject === '' ||
+    $message === ''
+) {
+    header(
+        'Location: ' . $redirectUrl . '?contact=missing#contact',
+        true,
+        303,
+    );
+    exit;
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    header(
+        'Location: ' . $redirectUrl . '?contact=invalid-email#contact',
+        true,
+        303,
+    );
+    exit;
+}
+
+if (
+    mb_strlen($firstName) > 100 ||
+    mb_strlen($lastName) > 100 ||
+    mb_strlen($email) > 255 ||
+    mb_strlen($subject) > 255 ||
+    mb_strlen($message) > 5000
+) {
+    header(
+        'Location: ' . $redirectUrl . '?contact=too-long#contact',
+        true,
+        303,
+    );
+    exit;
+}
+
+try {
+    require_once __DIR__ . '/../conf/conf-db.php';
+
+    $statement = $pdo->prepare(
+        'INSERT INTO contact_info
+            (firstName, lastName, email, subject, message)
+        VALUES
+            (:firstName, :lastName, :email, :subject, :message)'
+    );
+
+    $statement->execute([
+        'firstName' => $firstName,
+        'lastName' => $lastName,
+        'email' => $email,
+        'subject' => $subject,
+        'message' => $message,
+    ]);
+
+    header(
+        'Location: ' . $redirectUrl . '?contact=success#contact',
+        true,
+        303,
+    );
+    exit;
+} catch (Throwable $exception) {
+    error_log($exception->getMessage());
+
+    header(
+        'Location: ' . $redirectUrl . '?contact=error#contact',
+        true,
+        303,
+    );
+    exit;
+}
