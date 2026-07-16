@@ -41,3 +41,7 @@ index.html
 
 #Ignore any .sql files
 .sql
+
+
+#Ignore any conf files
+conf/conf-db.local.php
