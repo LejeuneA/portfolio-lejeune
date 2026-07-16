@@ -34,10 +34,13 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
     <meta
-        content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste"
-        name="keywords">
+        name="description"
+        content="Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Belgium, specialising in React, TypeScript, PHP and AI applications.">
+
+    <meta
+        name="keywords"
+        content="Açelya Lejeune, UX UI Designer, Frontend Developer, Product Designer, React Developer, TypeScript Developer, PHP Developer, AI Application Developer, web design portfolio, frontend portfolio, Liège, Belgium, remote Europe">
 
     <!-- AOS File -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">

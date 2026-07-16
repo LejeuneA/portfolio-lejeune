@@ -34,10 +34,13 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acelya Lejeune - Web Developer and Graphic Designer">
     <meta
-        content="web, developer, designer, portfolio, web developer, web designer, graphic designer, acelya lejeune, lejeune, frontend, web developer liege, web designer liege, devéloppeur web liege, designer graphique liege, infographiste"
-        name="keywords">
+        name="description"
+        content="Portfolio d’Açelya Lejeune, UX/UI Designer et Frontend Developer en Belgique, spécialisée en React, TypeScript, PHP et applications d’IA.">
+
+    <meta
+        name="keywords"
+        content="Açelya Lejeune, UX UI Designer, développeuse frontend, Product Designer, développeuse React, TypeScript, PHP, applications IA, portfolio UX UI, portfolio frontend, Liège, Belgique, travail à distance">
 
 
     <!-- AOS File -->
