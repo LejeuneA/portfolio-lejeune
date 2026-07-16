@@ -1,12 +1,24 @@
 <?php
-session_start();
 
-// Unset all session variables
-$_SESSION = array();
+declare(strict_types=1);
 
-// Destroy the session
-session_destroy();
+require_once __DIR__ . '/auth.php';
 
-// Redirect to index.php
-header("Location: ../index.php");
-exit();
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: login.php', true, 303);
+    exit;
+}
+
+$csrfToken = $_POST['csrf_token'] ?? null;
+
+if (!isValidCsrfToken(
+    is_string($csrfToken) ? $csrfToken : null,
+)) {
+    header('Location: portfolio.php', true, 303);
+    exit;
+}
+
+destroyAdminSession();
+
+header('Location: login.php', true, 303);
+exit;

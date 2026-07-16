@@ -7,157 +7,332 @@
                     Home header
 ---------------------------------------------------------*/
 #header {
-  @extend %header;
-  @include d-flex(flex, start, center, column, center);
-  height: $navbarHeightPercentage;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: $sidebar-width;
-  transition: all ease-in-out 0.5s;
-  z-index: 9997;
-  padding: 1.25em 1em;
-  background: linear-gradient(180deg, $background 0%, #0b1628 100%);
-  overflow-y: hidden;
-  border-right: 1px solid rgba($light-green, 0.06);
+    @extend %header;
+    @include d-flex(flex, start, center, column, center);
 
-  @media (min-width: 320px) and (max-width: 1199px) {
-    display: none;
-    height: 100%;
-  }
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9997;
 
-  @media (min-width: 1200px) and (max-width: 1920px) {
-    height: 100%;
-  }
+    width: $sidebar-width;
+    height: $navbarHeightPercentage;
+    padding: 1.25em 1em;
+
+    background: linear-gradient(180deg,
+            $background 0%,
+            #0b1628 100%);
+
+    border-right: 1px solid rgba($light-green, 0.06);
+    overflow-y: hidden;
+
+    transition: all ease-in-out 0.5s;
+
+    @media (min-width: 320px) and (max-width: 1199px) {
+        display: none;
+        height: 100%;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1920px) {
+        height: 100%;
+    }
 }
 
+/* -------------------------------------------------------
+                    Navigation
+---------------------------------------------------------*/
 .nav-menu {
-  padding-top: 1.5em;
+    width: 100%;
+    padding-top: 1.5em;
 
-  * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    >ul>li {
+        position: relative;
+        white-space: nowrap;
+    }
+
+    a,
+    a:focus,
+    .logout-button,
+    .logout-button:focus {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        margin: 0 0 0.35em;
+        padding: 0.65em 0.8em;
+
+        border: 0;
+        border-radius: 0.7em;
+        outline: 0;
+
+        background: transparent;
+        color: $secondary-gray;
+
+        font-family: inherit;
+        font-size: 1em;
+        font-weight: inherit;
+        line-height: inherit;
+        text-align: left;
+        text-decoration: none;
+
+        appearance: none;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        transition:
+            color 0.3s,
+            background-color 0.3s,
+            border-color 0.3s,
+            transform 0.3s;
+
+        i {
+            flex: 0 0 auto;
+
+            padding-right: 0.5em;
+
+            color: $secondary-gray;
+            font-size: 1em;
+
+            transition: color 0.3s;
+        }
+
+        span {
+            flex: 1;
+        }
+
+        &:hover,
+        &.active,
+        &.active:focus {
+            background-color: rgba($primary-green, 0.14);
+            color: $light-green;
+
+            i {
+                color: $primary-green;
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px solid $light-green;
+            outline-offset: 2px;
+        }
+    }
+
+    /* -------------------------------------------------------
+                        Resume button
+    ---------------------------------------------------------*/
+    .btn-resume {
+        width: 100%;
+        margin-top: 1em;
+
+        a {
+            justify-content: center;
+
+            min-height: 44px;
+            padding: 0.7em 1.5em;
+
+            border: 1px solid rgba($light-green, 0.12);
+
+            background-color: rgba($light-green, 0.09);
+            color: $light-green;
+            text-align: center;
+
+            &:hover,
+            &:focus-visible {
+                border-color: $primary-green;
+                background-color: $primary-green;
+                color: $light-green;
+
+                transform: translateY(-1px);
+            }
+        }
+    }
+
+    /* -------------------------------------------------------
+                        Logoff button
+    ---------------------------------------------------------*/
+    .logout-item {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    .logout-form {
+        display: block;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logout-button {
+        justify-content: center;
+
+        min-height: 44px;
+        margin: 0;
+        padding: 0.7em 1.5em;
+
+        border: 1px solid rgba($light-green, 0.12);
+
+        background-color: rgba($light-green, 0.09);
+        color: $light-green;
+        text-align: center;
+
+        i {
+            color: $light-green;
+        }
+
+        span {
+            flex: 0 1 auto;
+        }
+
+        &:hover,
+        &:focus-visible {
+            border-color: $primary-green;
+            background-color: $primary-green;
+            color: $light-green;
+
+            transform: translateY(-1px);
+
+            i {
+                color: $light-green;
+            }
+        }
+    }
 
     @media (min-width: 320px) and (max-width: 768px) {
-      margin-left: 0.5em;
+        ul {
+            margin-left: 0.5em;
+        }
+
+        .logout-item,
+        .btn-resume {
+            width: calc(100% - 1em);
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
-  }
-
-  > ul > li {
-    position: relative;
-    white-space: nowrap;
-  }
-
-  a,
-  a:focus {
-    display: flex;
-    align-items: center;
-    color: $secondary-gray;
-    padding: 0.65em 0.8em;
-    margin-bottom: 0.35em;
-    transition: 0.3s;
-    font-size: 1em;
-    border-radius: 0.7em;
-
-    i,
-    &:focus i {
-      font-size: 1em;
-      padding-right: 0.5em;
-      color: $secondary-gray;
-      transition: 0.3s;
-    }
-
-    &:hover,
-    &.active,
-    &.active:focus,
-    li:hover > a {
-      color: $light-green;
-      background-color: rgba($primary-green, 0.14);
-
-      i {
-        color: $primary-green;
-      }
-    }
-  }
-
-  .btn-resume {
-    a {
-      align-items: center;
-      justify-content: center;
-      background-color: rgba($light-green, 0.09);
-      color: $light-green;
-      text-align: center;
-      padding: 0.7em 1.5em;
-      border-radius: 0.7em;
-      border: 1px solid rgba($light-green, 0.08);
-      transition: background-color 0.3s, color 0.3s, transform 0.3s;
-
-      &:hover {
-        @include hover("background-color", $primary-green, "color", $light-green);
-        transform: translateY(-1px);
-      }
-
-      @media (min-width: 320px) and (max-width: 768px) {
-        width: 90%;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-  }
 }
 
 /* -------------------------------------------------------
                    Offcanvas menu
 ---------------------------------------------------------*/
 .sidenav {
-  @extend %header;
-
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  background-color: $background;
-  overflow: hidden;
-  transition: 0.5s;
-  padding-top: 5em;
-
-  .closebtn {
-    position: absolute;
-    top: 0;
-    right: 0.5em;
-    font-size: 2em;
-    margin-left: 6em;
-    color: $light-gray;
-
-    &:hover {
-      @include hover("background-color", $background, "color", $primary-green);
-    }
-  }
-}
-
-.navbar-hamburger {
-  display: none;
-
-  @media (min-width: 320px) and (max-width: 1199px) {
-    @include d-flex(flex, center, center, column, center);
+    @extend %header;
 
     position: fixed;
-    top: 1em;
-    right: 1em;
-    z-index: 9999;
-    background-color: $primary-green;
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: $box-shadow-soft;
+    top: 0;
+    left: 0;
+    z-index: 10000;
 
-    i {
-      font-size: 1em;
-      color: $light-green;
+    width: 0;
+    height: 100%;
+    padding-top: 5em;
+
+    background-color: $background;
+    overflow: hidden;
+
+    transition: width 0.5s;
+
+    .closebtn {
+        position: absolute;
+        top: 0.25em;
+        right: 0.5em;
+
+        margin: 0;
+        padding: 0.25em;
+
+        border: 0;
+        outline: 0;
+
+        background: transparent;
+        color: $light-gray;
+
+        font-family: inherit;
+        font-size: 2em;
+        line-height: 1;
+
+        appearance: none;
+        cursor: pointer;
+
+        &:hover {
+            background: transparent;
+            color: $primary-green;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $light-green;
+            outline-offset: 2px;
+        }
     }
-  }
+
+    .nav-menu {
+        width: 100%;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+}
+
+/* -------------------------------------------------------
+                   Hamburger menu
+---------------------------------------------------------*/
+.navbar-hamburger {
+    display: none;
+
+    @media (min-width: 320px) and (max-width: 1199px) {
+        @include d-flex(flex,
+            center,
+            center,
+            column,
+            center);
+
+        position: fixed;
+        top: 1em;
+        right: 1em;
+        z-index: 9999;
+
+        width: 2.5em;
+        height: 2.5em;
+
+        background-color: $primary-green;
+        border-radius: 50%;
+        box-shadow: $box-shadow-soft;
+    }
+
+    #hamburger {
+        @include d-flex(flex,
+            center,
+            center,
+            column,
+            center);
+
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        border: 0;
+        border-radius: 50%;
+        outline: 0;
+
+        background: transparent;
+
+        appearance: none;
+        cursor: pointer;
+
+        i {
+            color: $light-green;
+            font-size: 1em;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $light-green;
+            outline-offset: 3px;
+        }
+    }
 }
