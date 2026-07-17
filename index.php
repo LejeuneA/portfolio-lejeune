@@ -214,8 +214,8 @@ try {
 
                             <ul>
                                 <li><i class="fas fa-chevron-right"></i> Location: <span>Liège, Belgium</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Website: <span>www.acelyalejeune.be</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Email: <span>contact@acelyalejeune.be</span></li>
+                                <li><i class="fas fa-chevron-right"></i> Website: <span>www.acelyalejeune.com</span></li>
+                                <li><i class="fas fa-chevron-right"></i> Email: <span>contactcom</span></li>
                                 <li><i class="fas fa-chevron-right"></i> Focus: <span>Digital Design, Web Design, UI Design,
                                         Frontend Integration</span></li>
                                 <li><i class="fas fa-chevron-right"></i> Open to: <span>Remote opportunities with UK and

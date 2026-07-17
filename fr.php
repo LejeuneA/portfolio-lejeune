@@ -222,8 +222,8 @@ try {
 
                             <ul>
                                 <li><i class="fas fa-chevron-right"></i> Localisation : <span>Liège, Belgique</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Site web : <span>www.acelyalejeune.be</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Email : <span>contact@acelyalejeune.be</span></li>
+                                <li><i class="fas fa-chevron-right"></i> Site web : <span>www.acelyalejeune.com</span></li>
+                                <li><i class="fas fa-chevron-right"></i> Email : <span>contact@acelyalejeune.com</span></li>
                                 <li><i class="fas fa-chevron-right"></i> Profil : <span>Design digital, web design, design UI,
                                         intégration front-end</span></li>
                                 <li><i class="fas fa-chevron-right"></i> Ouverte à : <span>Opportunités à distance avec des
