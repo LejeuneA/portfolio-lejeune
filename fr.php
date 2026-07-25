@@ -3,30 +3,94 @@
 $portfolioItems = [];
 $databaseError = null;
 
+$cssPath = __DIR__ . '/dist/index.css';
+$cssVersion = file_exists($cssPath) ? filemtime($cssPath) : time();
+
+$esc = function ($value, $fallback = '') {
+    return htmlspecialchars((string)($value ?? $fallback), ENT_QUOTES, 'UTF-8');
+};
+
+$getPortfolioMetaFr = function ($item) {
+    $source = strtolower(
+        ($item['info_url_fr'] ?? '') . ' ' .
+            ($item['info_url'] ?? '') . ' ' .
+            ($item['github_url'] ?? '') . ' ' .
+            ($item['image_url'] ?? '')
+    );
+
+    if (strpos($source, 'flowdeck') !== false) {
+        return [
+            'title' => 'Flowdeck',
+            'stack' => 'React · TypeScript · Python/Flask'
+        ];
+    }
+
+    if (strpos($source, 'positive-quotes') !== false) {
+        return [
+            'title' => 'Positive Quotes App',
+            'stack' => 'Angular · TypeScript · SCSS'
+        ];
+    }
+
+    if (strpos($source, 'restaurant-pistache') !== false) {
+        return [
+            'title' => 'Restaurant Pistache',
+            'stack' => 'PHP · MySQL · SCSS'
+        ];
+    }
+
+    if (strpos($source, 'librairie-lejeune') !== false) {
+        return [
+            'title' => 'Librairie Lejeune',
+            'stack' => 'PHP · MySQL · eCommerce'
+        ];
+    }
+
+    if (strpos($source, 'recettes') !== false) {
+        return [
+            'title' => 'Les Recettes',
+            'stack' => 'HTML · CSS'
+        ];
+    }
+
+    if (strpos($source, 'tourisme-wallonie') !== false || strpos($source, 'tourism') !== false) {
+        return [
+            'title' => 'Tourisme Wallonie',
+            'stack' => 'HTML · CSS'
+        ];
+    }
+
+    return [
+        'title' => 'Projet portfolio',
+        'stack' => 'Web design · Front-end'
+    ];
+};
+
 try {
     require_once __DIR__ . '/conf/conf-db.php';
 
     $sql = '
-        SELECT
-            id,
-            image_url,
-            info_url,
-            live_url,
-            github_url
-        FROM portfolio
-        ORDER BY id ASC
-    ';
+    SELECT
+        id,
+        image_url,
+        info_url,
+        info_url_fr,
+        live_url,
+        github_url,
+        sort_order
+    FROM portfolio
+    ORDER BY sort_order ASC, id DESC
+';
 
     $statement = $pdo->query($sql);
-    $portfolioItems = $statement->fetchAll();
+    $portfolioItems = $statement->fetchAll(PDO::FETCH_ASSOC);
 } catch (Throwable $exception) {
     error_log($exception->getMessage());
 
-    $databaseError = 'Portfolio projects could not be loaded.';
+    $databaseError = 'Les projets du portfolio n’ont pas pu être chargés.';
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -42,13 +106,11 @@ try {
         name="keywords"
         content="Açelya Lejeune, UX UI Designer, développeuse frontend, Product Designer, développeuse React, TypeScript, PHP, applications IA, portfolio UX UI, portfolio frontend, Liège, Belgique, travail à distance">
 
-
     <!-- AOS File -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <!-- Main Css file -->
-    <link rel="stylesheet" href="./dist/index.css?v=<?php echo filemtime(__DIR__ . '/dist/index.css'); ?>">
-
+    <link rel="stylesheet" href="./dist/index.css?v=<?php echo $cssVersion; ?>">
 
     <!-- Favicon -->
     <link href="./assets/icons/favicon.png" rel="icon" type="image/png">
@@ -69,12 +131,16 @@ try {
     <header id="header">
         <!-- Profile -->
         <div class="profile">
-            <img src="./assets/images/header-photo.jpg" alt class="profile-img">
+            <img src="./assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-                        class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                    aria-label="Profil LinkedIn">
+                    <i class="fa fa-linkedin"></i>
+                </a>
                 <a href="./index.php" class="language"><b>EN</b></a>
             </div>
         </div>
@@ -82,26 +148,48 @@ try {
         <!-- Nav Menu -->
         <nav id="navbar" class="nav-menu navbar">
             <ul>
-                <li><a href="fr.php#hero" class="nav-link scrollto active"><i
-                            class="fas fa-home"></i><span>Acceuil</span></a>
+                <li>
+                    <a href="fr.php#hero" class="nav-link scrollto active">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
                 </li>
-                <li><a href="fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>À propos</span></a></li>
-                <li><a href="fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Compétences</span></a>
+                <li>
+                    <a href="fr.php#about" class="nav-link scrollto">
+                        <i class="fas fa-user"></i>
+                        <span>À propos</span>
+                    </a>
                 </li>
-                <li><a href="fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
-                        <span>Services</span></a>
+                <li>
+                    <a href="fr.php#skills" class="nav-link scrollto">
+                        <i class="fas fa-code"></i>
+                        <span>Compétences</span>
+                    </a>
                 </li>
-                <li><a href="fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
+                <li>
+                    <a href="fr.php#portfolio" class="nav-link scrollto">
+                        <i class="fas fa-list"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="fr.php#services" class="nav-link scrollto">
+                        <i class="fas fa-tools"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="fr.php#contact" class="nav-link scrollto">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
                 </li>
             </ul>
+
             <div class="btn-resume">
                 <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
             </div>
+
             <div class="btn-resume">
                 <a class="btn-resume" href="./admin/login.php">Se connecter</a>
             </div>
@@ -111,76 +199,113 @@ try {
     <!-- End Header -->
 
     <!-----------------------------------------------------------------
-						Offcanvas Menu
+                        Offcanvas Menu
     ------------------------------------------------------------------>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
         <!-- Profile -->
         <div class="profile">
-            <img src="./assets/images/header-photo.jpg" alt class="profile-img">
+            <img src="./assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"><i
-                        class="fa fa-linkedin"></i></a>
-                <a href="./index.php" language"><b>EN</b></a>
+                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
+                    aria-label="Profil LinkedIn">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="./index.php" class="language"><b>EN</b></a>
             </div>
         </div>
 
         <!-- Nav Menu -->
-        <nav id="navbar" class="nav-menu navbar">
+        <nav id="sidenav-navbar" class="nav-menu navbar">
             <ul>
-                <li><a href="fr.php#hero" class="nav-link scrollto active"><i class="fas fa-home"></i>
-                        <span>Acceuil</span></a>
+                <li>
+                    <a href="fr.php#hero" class="nav-link scrollto active">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
                 </li>
-                <li><a href="fr.php#about" class="nav-link scrollto"><i class="fas fa-user"></i>
-                        <span>À propos</span></a></li>
-                <li><a href="fr.php#skills" class="nav-link scrollto"><i class="fas fa-code"></i>
-                        <span>Compétences</span></a>
+                <li>
+                    <a href="fr.php#about" class="nav-link scrollto">
+                        <i class="fas fa-user"></i>
+                        <span>À propos</span>
+                    </a>
                 </li>
-                <li><a href="fr.php#portfolio" class="nav-link scrollto"><i class="fas fa-list"></i>
-                        <span>Portfolio</span></a></li>
-                <li><a href="fr.php#services" class="nav-link scrollto"><i class="fas fa-tools"></i>
-                        <span>Services</span></a>
+                <li>
+                    <a href="fr.php#skills" class="nav-link scrollto">
+                        <i class="fas fa-code"></i>
+                        <span>Compétences</span>
+                    </a>
                 </li>
-                <li><a href="fr.php#contact" class="nav-link scrollto"><i class="fas fa-envelope"></i>
-                        <span>Contact</span></a>
+                <li>
+                    <a href="fr.php#portfolio" class="nav-link scrollto">
+                        <i class="fas fa-list"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="fr.php#services" class="nav-link scrollto">
+                        <i class="fas fa-tools"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="fr.php#contact" class="nav-link scrollto">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
                 </li>
             </ul>
+
             <div class="btn-resume">
                 <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
             </div>
+
             <div class="btn-resume">
                 <a class="btn-resume" href="./admin/login.php">Se connecter</a>
             </div>
         </nav>
         <!-- Nav menu end -->
-        <!-- Hamburger Icon -->
-        <div class="navbar-hamburger">
-            <div id="hamburger" onclick="openNav()"><i class="fa-solid fa-bars"></i></div>
+    </div>
+    <!-- Offcanvas menu end -->
+
+    <!-- Hamburger Icon -->
+    <div class="navbar-hamburger">
+        <div id="hamburger" onclick="openNav()">
+            <i class="fa-solid fa-bars"></i>
         </div>
     </div>
     <!-- Hamburger icon end -->
+
     <!-----------------------------------------------------------------
-						  Navigation end
+                          Navigation end
     ------------------------------------------------------------------>
+
     <!-----------------------------------------------------------------
-                      	Hero section end
-   ------------------------------------------------------------------>
+                              Hero section
+    ------------------------------------------------------------------>
     <section id="hero" class="hero">
         <div class="hero-container" data-aos="fade-in" data-aos-duration="3000">
             <h1>Açelya Lejeune</h1>
-            <p><span class="typed" data-typed-items="Designer Digitale, Développeuse Front-End, Développeuse AI"></span></p>
+            <p>
+                <span class="typed"
+                    data-typed-items="Designer Digitale, Développeuse Front-End, Développeuse AI"></span>
+            </p>
         </div>
     </section>
     <!-----------------------------------------------------------------
-                      	Hero section end
-   ------------------------------------------------------------------>
+                              Hero section end
+    ------------------------------------------------------------------>
+
     <!-- Main -->
     <main id="main">
         <!-----------------------------------------------------------------
-                      	        About section
-    	------------------------------------------------------------------>
+                                About section
+        ------------------------------------------------------------------>
         <section id="about" class="about-section">
             <div class="about-container container">
                 <h2>À propos</h2>
@@ -221,16 +346,34 @@ try {
                             </p>
 
                             <ul>
-                                <li><i class="fas fa-chevron-right"></i> Localisation : <span>Liège, Belgique</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Site web : <span>www.acelyalejeune.com</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Email : <span>contact@acelyalejeune.com</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Profil : <span>Design digital, web design, design UI,
-                                        intégration front-end</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Ouverte à : <span>Opportunités à distance avec des
-                                        équipes au Royaume-Uni et en Europe</span></li>
-                                <li><i class="fas fa-chevron-right"></i> Langues : <span><br>TURC : langue maternelle
-                                        <br>ANGLAIS : niveau professionnel<br>FRANÇAIS : certificat B1.1 — bonne compréhension,
-                                        expression orale simple</span>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    Localisation : <span>Liège, Belgique</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    Site web : <span>www.acelyalejeune.com</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    Email : <span>contact@acelyalejeune.com</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    Profil : <span>Design digital, web design, design UI, intégration front-end</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    Ouverte à : <span>Opportunités à distance avec des équipes au Royaume-Uni et en Europe</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    Langues :
+                                    <span>
+                                        <br>TURC : langue maternelle
+                                        <br>ANGLAIS : niveau professionnel
+                                        <br>FRANÇAIS : certificat B1.1 — bonne compréhension, expression orale simple
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -238,13 +381,13 @@ try {
                 </div>
             </div>
         </section>
-
         <!-----------------------------------------------------------------
                                 About section end
-      ------------------------------------------------------------------>
+        ------------------------------------------------------------------>
+
         <!-----------------------------------------------------------------
                               Skills section
-      ------------------------------------------------------------------>
+        ------------------------------------------------------------------>
         <section id="skills" class="skills-section">
             <div class="skills-container container">
                 <h2>Compétences</h2>
@@ -260,7 +403,10 @@ try {
                             <li>JavaScript</li>
                             <li>TypeScript</li>
                             <li>Angular</li>
+                            <li>React</li>
                             <li>PHP</li>
+                            <li>Python</li>
+                            <li>Flask</li>
                         </ul>
                     </div>
 
@@ -274,6 +420,8 @@ try {
                             <li>Node.js</li>
                             <li>npm</li>
                             <li>Webpack</li>
+                            <li>Vite</li>
+                            <li>REST API Integration</li>
                         </ul>
                     </div>
 
@@ -281,6 +429,8 @@ try {
                         <h3>Design & outils UX/UI</h3>
 
                         <ul class="skills-list">
+                            <li>UX/UI Design</li>
+                            <li>Product Design</li>
                             <li>Figma</li>
                             <li>Adobe XD</li>
                             <li>Adobe Illustrator</li>
@@ -297,21 +447,21 @@ try {
                         <ul class="skills-list">
                             <li>Git</li>
                             <li>GitHub</li>
-                            <li>GitHub Desktop</li>
-                            <li>SourceTree</li>
-                            <li>gitg</li>
+                            <li>Bitbucket</li>
+                            <li>Jira</li>
+                            <li>Prompt Engineering</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-----------------------------------------------------------------
                                 Skills section end
-      ------------------------------------------------------------------->
+        ------------------------------------------------------------------->
+
         <!-----------------------------------------------------------------
                               Portfolio section
------------------------------------------------------------------->
+        ------------------------------------------------------------------>
         <section id="portfolio" class="portfolio-section">
             <div class="portfolio-content container">
                 <div class="section-title">
@@ -319,103 +469,87 @@ try {
                     <p>
                         Ce portfolio rassemble une sélection de projets issus de mon parcours en design et en développement
                         front-end. Il reflète mon expérience en design graphique et digital, mon attention aux interfaces
-                        claires et responsives, ainsi que mon évolution avec des technologies front-end comme HTML5, CSS3,
-                        SCSS, JavaScript, Angular, PHP et MySQL.
+                        claires et responsives, ainsi que mon évolution avec des technologies comme HTML5, CSS3, SCSS,
+                        JavaScript, TypeScript, Angular, React, PHP, MySQL, Python et Flask.
                     </p>
                     <p>
                         À travers ces projets, je souhaite montrer comment je combine design visuel, ergonomie, mise en page,
-                        développement responsive et fonctionnalités backend de base pour créer des expériences digitales
-                        concrètes. Certains projets sont davantage orientés design, tandis que d’autres incluent une partie
-                        plus technique et de l’intégration front-end.
+                        développement responsive, intégration front-end et premières bases d’applications assistées par l’IA.
+                        Certains projets sont orientés design et intégration, tandis que d’autres incluent une partie plus
+                        technique ou une architecture front-end/backend séparée.
                     </p>
                 </div>
 
-                <?php
-                function getPortfolioMetaFr($item)
-                {
-                    $source = strtolower(
-                        ($item['info_url_fr'] ?? '') . ' ' .
-                            ($item['github_url'] ?? '') . ' ' .
-                            ($item['image_url'] ?? '')
-                    );
-
-                    if (strpos($source, 'flowdeck') !== false) {
-                        return [
-                            'title' => 'Flowdeck',
-                            'stack' => 'React · TypeScript · Python/Flask'
-                        ];
-                    }
-
-                    if (strpos($source, 'positive-quotes') !== false) {
-                        return [
-                            'title' => 'Positive Quotes App',
-                            'stack' => 'Angular · TypeScript · JSON Server'
-                        ];
-                    }
-
-                    if (strpos($source, 'restaurant-pistache') !== false) {
-                        return [
-                            'title' => 'Restaurant Pistache',
-                            'stack' => 'PHP · MySQL · SCSS'
-                        ];
-                    }
-
-                    if (strpos($source, 'librairie-lejeune') !== false) {
-                        return [
-                            'title' => 'Librairie Lejeune',
-                            'stack' => 'PHP · MySQL · eCommerce'
-                        ];
-                    }
-
-                    if (strpos($source, 'recettes') !== false) {
-                        return [
-                            'title' => 'Les Recettes',
-                            'stack' => 'HTML · CSS'
-                        ];
-                    }
-
-                    if (strpos($source, 'tourisme-wallonie') !== false || strpos($source, 'tourism') !== false) {
-                        return [
-                            'title' => 'Tourisme Wallonie',
-                            'stack' => 'HTML · CSS'
-                        ];
-                    }
-
-                    return [
-                        'title' => 'Projet portfolio',
-                        'stack' => 'Web design · Front-end'
-                    ];
-                }
-                ?>
+                <?php if ($databaseError) : ?>
+                    <div class="message error">
+                        <?= $esc($databaseError); ?>
+                    </div>
+                <?php endif; ?>
 
                 <div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">
                     <?php foreach ($portfolioItems as $item) : ?>
-                        <?php $meta = getPortfolioMetaFr($item); ?>
+                        <?php
+                        $meta = $getPortfolioMetaFr($item);
+
+                        $infoUrlFr = !empty($item['info_url_fr'])
+                            ? $item['info_url_fr']
+                            : (!empty($item['info_url']) ? $item['info_url'] : '#');
+
+                        $imageUrl = !empty($item['image_url'])
+                            ? $item['image_url']
+                            : 'assets/images/portfolio/placeholder.png';
+
+                        $liveUrl = !empty($item['live_url']) ? $item['live_url'] : '#';
+                        $githubUrl = !empty($item['github_url']) ? $item['github_url'] : '#';
+
+                        $hasLiveUrl = !empty($item['live_url']) && $item['live_url'] !== '#';
+                        $hasGithubUrl = !empty($item['github_url']) && $item['github_url'] !== '#';
+                        ?>
+
                         <div class="portfolio-items">
                             <div class="portfolio-item-top">
                                 <div class="portfolio-card-meta">
-                                    <h3><?php echo htmlspecialchars($meta['title']); ?></h3>
-                                    <p><?php echo htmlspecialchars($meta['stack']); ?></p>
+                                    <h3><?= $esc($meta['title']); ?></h3>
+                                    <p><?= $esc($meta['stack']); ?></p>
                                 </div>
 
-                                <a href="<?php echo htmlspecialchars($item['info_url_fr']); ?>">
-                                    <img src="<?php echo htmlspecialchars($item['image_url']); ?>" alt="<?php echo htmlspecialchars($meta['title']); ?>">
+                                <a href="<?= $esc($infoUrlFr); ?>">
+                                    <img src="<?= $esc($imageUrl); ?>" alt="<?= $esc($meta['title']); ?>">
                                 </a>
                             </div>
 
                             <div class="portfolio-wrap">
                                 <div class="portfolio-links-top">
-                                    <a class="portfolio-link-top" href="<?php echo htmlspecialchars($item['info_url_fr']); ?>"
-                                        title="Plus d’informations"><i class="fas fa-circle-info"></i> Plus
-                                        d’informations</a>
+                                    <a class="portfolio-link-top" href="<?= $esc($infoUrlFr); ?>"
+                                        title="Plus d’informations">
+                                        <i class="fas fa-circle-info"></i> Plus d’informations
+                                    </a>
                                 </div>
+
                                 <div class="portfolio-links-bottom">
-                                    <a class="portfolio-link-left" href="<?php echo htmlspecialchars($item['live_url']); ?>"
-                                        title="Démo en ligne" target="_blank"><i class="fas fa-link"></i> Aperçu
-                                        en direct</a>
-                                    <a class="portfolio-link-right" href="<?php echo htmlspecialchars($item['github_url']); ?>"
-                                        title="Voir sur GitHub" target="_blank"><i class="fa fa-github"></i>
-                                        Code complet sur GitHub</a>
+                                    <?php if ($hasLiveUrl) : ?>
+                                        <a class="portfolio-link-left" href="<?= $esc($liveUrl); ?>"
+                                            title="Démo en ligne" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-link"></i> Aperçu en direct
+                                        </a>
+                                    <?php else : ?>
+                                        <a class="portfolio-link-left portfolio-link-disabled" href="#"
+                                            title="Aperçu bientôt disponible" aria-disabled="true" onclick="return false;">
+                                            <i class="fas fa-link"></i> Bientôt disponible
+                                        </a>
+                                    <?php endif; ?>
+
+                                    <?php if ($hasGithubUrl) : ?>
+                                        <a class="portfolio-link-right" href="<?= $esc($githubUrl); ?>"
+                                            title="Voir sur GitHub" target="_blank" rel="noopener noreferrer">
+                                            <i class="fa fa-github"></i> Code complet sur GitHub
+                                        </a>
+                                    <?php else : ?>
+                                        <a class="portfolio-link-right portfolio-link-disabled" href="#"
+                                            title="Code non disponible" aria-disabled="true" onclick="return false;">
+                                            <i class="fa fa-github"></i> Code non disponible
+                                        </a>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -425,7 +559,7 @@ try {
         </section>
         <!-----------------------------------------------------------------
                               Portfolio section end
------------------------------------------------------------------->
+        ------------------------------------------------------------------>
 
         <!-----------------------------------------------------------------
                              Services section
@@ -445,8 +579,8 @@ try {
 
                     <div class="services-item">
                         <div class="image-container">
-                            <img class="icon" src="./assets/icons/web-green.png" alt="icône">
-                            <img class="hover-icon" src="./assets/icons/web-white.png" alt="icône survol">
+                            <img class="icon" src="./assets/icons/web-green.png" alt="icône web">
+                            <img class="hover-icon" src="./assets/icons/web-white.png" alt="icône web survol">
                         </div>
                         <div class="services-item-content">
                             <h4 class="title">Design digital & web</h4>
@@ -459,8 +593,8 @@ try {
 
                     <div class="services-item">
                         <div class="image-container">
-                            <img class="icon" src="./assets/icons/ui-green.png" alt="icône">
-                            <img class="hover-icon" src="./assets/icons/ui-white.png" alt="icône survol">
+                            <img class="icon" src="./assets/icons/ui-green.png" alt="icône UI">
+                            <img class="hover-icon" src="./assets/icons/ui-white.png" alt="icône UI survol">
                         </div>
                         <div class="services-item-content">
                             <h4 class="title">Design UI</h4>
@@ -476,8 +610,8 @@ try {
 
                     <div class="services-item">
                         <div class="image-container">
-                            <img class="icon" src="./assets/icons/graphic-green.png" alt="icône">
-                            <img class="hover-icon" src="./assets/icons/graphic-white.png" alt="icône survol">
+                            <img class="icon" src="./assets/icons/graphic-green.png" alt="icône design graphique">
+                            <img class="hover-icon" src="./assets/icons/graphic-white.png" alt="icône design graphique survol">
                         </div>
                         <div class="services-item-content">
                             <h4 class="title">Design visuel</h4>
@@ -490,8 +624,8 @@ try {
 
                     <div class="services-item">
                         <div class="image-container">
-                            <img class="icon" src="./assets/icons/responsive-green.png" alt="icône">
-                            <img class="hover-icon" src="./assets/icons/responsive-white.png" alt="icône survol">
+                            <img class="icon" src="./assets/icons/responsive-green.png" alt="icône responsive">
+                            <img class="hover-icon" src="./assets/icons/responsive-white.png" alt="icône responsive survol">
                         </div>
                         <div class="services-item-content">
                             <h4 class="title">Intégration front-end</h4>
@@ -506,14 +640,13 @@ try {
             </div>
             <!-- Services content end -->
         </section>
-
         <!-----------------------------------------------------------------
                            Services section end
         ------------------------------------------------------------------>
 
         <!-----------------------------------------------------------------
                             Contact section
------------------------------------------------------------------->
+        ------------------------------------------------------------------>
         <section id="contact" class="contact-section">
             <div class="contact-content container">
                 <div class="section-title">
@@ -594,39 +727,39 @@ try {
         </section>
         <!-----------------------------------------------------------------
                          Contact section end
------------------------------------------------------------------->
+        ------------------------------------------------------------------>
     </main>
-
     <!-- Main end -->
+
     <!-----------------------------------------------------------------
                                Footer
     ------------------------------------------------------------------>
     <footer id="footer">
         <div class="footer-container container">
             <div class="copyright">
-                &copy; Copyright, conception et développement par <a class="github"
-                    href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
-                        aria-hidden="true"></i> Açelya
-                    Lejeune</a>
+                &copy; Copyright, conception et développement par
+                <a class="github" href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fa fa-github" aria-hidden="true"></i> Açelya Lejeune
+                </a>
             </div>
         </div>
     </footer>
     <!-----------------------------------------------------------------
                                Footer end
-    	------------------------------------------------------------------>
+    ------------------------------------------------------------------>
 
     <!-- Back to Top -->
-    <a href="#" class="back-to-top" id="backToTop"><i class="fa fa-arrow-up"></i></a>
-
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/3546d47201.js" crossorigin="anonymous"></script>
 
-
     <!-- JS Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
 
     <!-- Main JS Files -->
     <script defer="defer" src="./dist/runtime.bundle.js"></script>
@@ -634,7 +767,6 @@ try {
     <script defer="defer" src="./dist/index.bundle.js"></script>
     <script defer="defer" src="./dist/nav.bundle.js"></script>
     <script defer="defer" src="./dist/swiper.bundle.js"></script>
-
 
     <script>
         AOS.init();
