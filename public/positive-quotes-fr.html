@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Projet Positive Quotes App par Açelya Lejeune : projet TFE Angular et TypeScript avec authentification, favoris, historique, thèmes et JSON Server.">
+        content="Projet Positive Quotes App par Açelya Lejeune : projet TFE Angular et TypeScript avec accès démo contrôlé, catégories de citations, favoris, historique, thèmes et images de fond dynamiques.">
     <meta
-        content="projet Angular, TypeScript, Angular Material, SCSS, JSON Server, application de citations, projet TFE, développeuse frontend, projet portfolio, Açelya Lejeune, interface UI, application web"
+        content="projet Angular, TypeScript, Angular Material, SCSS, application de citations, démo contrôlée, Continue as Demo, projet TFE, développeuse frontend, projet portfolio, Açelya Lejeune, interface UI, application web"
         name="keywords">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -27,7 +27,7 @@
             <img src="../assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="../fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub"><i
+                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="Profil GitHub"><i
                         class="fa fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
                     aria-label="Profil LinkedIn"><i class="fa fa-linkedin"></i></a>
@@ -62,7 +62,7 @@
             <img src="../assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="../fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub"><i
+                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="Profil GitHub"><i
                         class="fa fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
                     aria-label="Profil LinkedIn"><i class="fa fa-linkedin"></i></a>
@@ -104,14 +104,14 @@
                     <p>
                         Positive Quotes App est le projet TFE que j’ai réalisé pendant la dernière année de ma formation
                         en développement front-end. Il s’agit d’une application Angular développée avec TypeScript,
-                        Angular Material, SCSS et JSON Server, conçue pour permettre aux utilisateurs de découvrir,
-                        sauvegarder et retrouver des citations motivantes.
+                        Angular Material et SCSS, conçue pour permettre aux utilisateurs de découvrir, sauvegarder et
+                        retrouver des citations motivantes dans une interface calme et claire.
                     </p>
                     <p>
-                        L’application inclut l’inscription et la connexion, des catégories de citations, les favoris,
-                        l’historique des citations, les paramètres du compte, les thèmes sombre et clair, ainsi que des
-                        images de fond dynamiques chargées via une API. Les données utilisateur et les interactions sont
-                        sauvegardées avec JSON Server, en utilisant un fichier JSON comme source de données locale.
+                        Le projet inclut maintenant une expérience de démo publique contrôlée. L’inscription publique est
+                        fermée, et les visiteurs peuvent explorer l’application grâce à l’option
+                        <span>Continue as Demo</span>. Les favoris et l’historique de la démo sont limités et
+                        temporaires, tandis que le compte propriétaire reste privé pour une utilisation complète.
                     </p>
                 </div>
 
@@ -146,7 +146,7 @@
 
                             <div class="swiper-slide">
                                 <img src="../assets/images/portfolio-details/positive-6.jpg"
-                                    alt="Page d’inscription de Positive Quotes App">
+                                    alt="Page de connexion et d’accès démo de Positive Quotes App">
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                             </div>
 
                             <div class="portfolio-info-right">
-                                <h4>Front-end & données</h4>
+                                <h4>Front-end & expérience démo</h4>
                                 <div class="portfolio-info-icons">
                                     <div class="portfolio-info-icon">
                                         <img src="../assets/icons/angular.png" alt="Logo Angular">
@@ -187,7 +187,8 @@
                                     </div>
                                     <div class="portfolio-info-icon">
                                         <img src="../assets/icons/typescript.png" alt="Logo TypeScript">
-                                        <p>Mise en place de la logique applicative, du typage et des composants.</p>
+                                        <p>Mise en place de la logique applicative, des parcours utilisateur et des
+                                            composants typés.</p>
                                     </div>
                                 </div>
                                 <div class="portfolio-info-icons">
@@ -196,9 +197,8 @@
                                         <p>Stylisation de l’interface avec SCSS, incluant les thèmes sombre et clair.</p>
                                     </div>
                                     <div class="portfolio-info-icon">
-                                        <img src="../assets/icons/js.png" alt="Icône JSON Server">
-                                        <p>Utilisation de JSON Server pour stocker les utilisateurs, favoris et
-                                            historiques.</p>
+                                        <img src="../assets/icons/js.png" alt="Icône logique de données JavaScript">
+                                        <p>Gestion de la logique de démo pour les citations, les favoris et l’historique.</p>
                                     </div>
                                 </div>
                             </div>
@@ -209,35 +209,32 @@
                         <div class="portfolio-info-links">
                             <div class="portfolio-card">
                                 <p>
-                                    Explorez Positive Quotes App grâce à la prévisualisation en direct. Vous pouvez vous
-                                    inscrire, vous connecter, parcourir les citations par catégorie, sauvegarder des
-                                    favoris, consulter l’historique et basculer entre les thèmes sombre et clair.
+                                    Explorez Positive Quotes App grâce à la prévisualisation en direct. Utilisez l’option
+                                    <span>Continue as Demo</span> pour parcourir les citations par catégorie, sauvegarder
+                                    un nombre limité de favoris, consulter un historique temporaire et basculer entre les
+                                    thèmes sombre et clair.
                                 </p>
-                                                            <p>
-                                Pour explorer le panneau d’administration, utilisez les identifiants de démonstration
-                                suivants :
-                            </p>
-                            <div class="access">
-                                <h3>Instructions d’accès :</h3>
-                                <p><span>Nom d’utilisateur :</span> demo@positivequotes.app</p>
-                                <p><span>Mot de passe :</span> Positive123!</p>
+                                <p>
+                                    Le mode démo est volontairement contrôlé pour les visiteurs du portfolio. Il permet de
+                                    tester l’application sans créer de compte personnel, tout en gardant le compte
+                                    propriétaire privé.
+                                </p>
                             </div>
-                            </div>
-                            <a class="portfolio-link-left" href="https://quotes.acelyalejeune.com/" target="_blank"><i class="fas fa-link"></i>
-                                Prévisualisation en direct</a>
+                            <a class="portfolio-link-left" href="https://quotes.acelyalejeune.com/" target="_blank"
+                                rel="noopener noreferrer"><i class="fas fa-link"></i> Prévisualisation en direct</a>
                         </div>
 
                         <div class="portfolio-info-links">
                             <div class="portfolio-card">
                                 <p>
                                     Consultez le code complet sur GitHub pour explorer la structure Angular, la logique
-                                    TypeScript, les composants Angular Material, le style SCSS et la configuration JSON
-                                    Server.
+                                    TypeScript, les composants Angular Material, le style SCSS, la gestion des thèmes et
+                                    le parcours de démo contrôlé.
                                 </p>
                             </div>
                             <a class="portfolio-link-right" href="https://github.com/LejeuneA/positive-quotes-app"
-                                title="Voir sur GitHub" target="_blank"><i class="fa fa-github"></i> Code complet sur
-                                GitHub</a>
+                                title="Voir sur GitHub" target="_blank" rel="noopener noreferrer"><i
+                                    class="fa fa-github"></i> Code complet sur GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -261,7 +258,7 @@
                     <p>
                         Positive Quotes App a été développé comme projet front-end de fin d’études, avec une attention
                         particulière portée à la création d’une application Angular complète : interface, structure des
-                        composants, actions utilisateur, gestion des données et présentation responsive.
+                        composants, actions utilisateur, accès démo, gestion des données et présentation responsive.
                     </p>
 
                     <div class="design-process">
@@ -274,8 +271,8 @@
 
                             <h3>Prototype & parcours utilisateur</h3>
                             <p>
-                                Utilisation de <span>Figma</span> pour préparer les écrans principaux : inscription,
-                                connexion, accueil, favoris, historique et paramètres du compte.
+                                Utilisation de <span>Figma</span> pour préparer les écrans principaux : connexion,
+                                accès démo, accueil, favoris, historique et paramètres du compte.
                             </p>
                         </div>
 
@@ -287,11 +284,11 @@
                                 réutilisables.
                             </p>
 
-                            <h3>Données & logique d’interaction</h3>
+                            <h3>Logique de démo contrôlée</h3>
                             <p>
-                                Utilisation de <span>JSON Server</span> pour simuler un stockage backend des
-                                utilisateurs, favoris et historiques, avec des APIs externes pour les citations et les
-                                images de fond dynamiques.
+                                Mise en place d’une expérience de démo contrôlée avec des favoris limités et un
+                                historique temporaire pour les visiteurs publics, tout en gardant l’accès propriétaire
+                                séparé de la démo portfolio.
                             </p>
                         </div>
                     </div>
@@ -301,17 +298,18 @@
             <div class="portfolio-features container">
                 <h2>Fonctionnalités</h2>
                 <p>
-                    Positive Quotes App inclut des fonctionnalités pratiques d’application front-end : authentification,
-                    catégories de citations, favoris, historique, changement de thème, paramètres du compte et images de
-                    fond dynamiques.
+                    Positive Quotes App inclut des fonctionnalités pratiques d’application front-end : accès démo
+                    contrôlé, catégories de citations, favoris, historique, changement de thème, paramètres du compte et
+                    images de fond dynamiques.
                 </p>
 
                 <div class="features">
                     <div class="features-left">
-                        <h3>Inscription & connexion</h3>
+                        <h3>Accès démo contrôlé</h3>
                         <p>
-                            Les utilisateurs peuvent créer un compte et se connecter avant d’utiliser l’application, ce
-                            qui permet de relier les favoris et l’historique à leur profil.
+                            Les visiteurs peuvent utiliser l’application grâce à l’option
+                            <span>Continue as Demo</span>, sans créer de compte. L’inscription publique est fermée afin
+                            de garder la démo portfolio propre et contrôlée.
                         </p>
 
                         <h3>Catégories & données API</h3>
@@ -320,18 +318,18 @@
                             affiché dans une interface claire.
                         </p>
 
-                        <h3>Favoris</h3>
+                        <h3>Favoris limités</h3>
                         <p>
-                            Les utilisateurs peuvent sauvegarder leurs citations préférées et les retrouver plus tard
-                            dans une page dédiée.
+                            Les visiteurs en mode démo peuvent sauvegarder un nombre limité de citations favorites et
+                            les retrouver pendant l’expérience de démonstration.
                         </p>
                     </div>
 
                     <div class="features-right">
-                        <h3>Historique des citations</h3>
+                        <h3>Historique temporaire des citations</h3>
                         <p>
-                            L’application garde une trace des citations consultées, ce qui permet aux utilisateurs de
-                            retrouver les citations déjà explorées.
+                            L’expérience démo garde un historique limité des citations consultées, ce qui permet aux
+                            visiteurs de retrouver les citations déjà explorées.
                         </p>
 
                         <h3>Thèmes sombre & clair</h3>
@@ -355,8 +353,8 @@
         <div class="footer-container container">
             <div class="copyright">
                 &copy; Copyright, conception et développement par <a class="github"
-                    href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank"><i class="fa fa-github"
-                        aria-hidden="true"></i> Açelya Lejeune</a>
+                    href="https://github.com/LejeuneA/portfolio-lejeune" target="_blank" rel="noopener noreferrer"><i
+                        class="fa fa-github" aria-hidden="true"></i> Açelya Lejeune</a>
             </div>
         </div>
     </footer>
