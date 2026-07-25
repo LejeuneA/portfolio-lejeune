@@ -462,16 +462,15 @@ try {
                 <div class="section-title">
                     <h2>Portfolio</h2>
                     <p>
-                        This portfolio brings together selected projects from my design and frontend development journey. It
-                        reflects my background in graphic and digital design, my focus on clear and responsive interfaces, and
-                        my growing experience with technologies such as HTML5, CSS3, SCSS, JavaScript, TypeScript, Angular,
-                        React, PHP, MySQL, Python and Flask.
+                        This portfolio presents selected projects that bring together my background in UX/UI, visual design
+                        and frontend development. The projects show how I translate design decisions into responsive digital
+                        interfaces using technologies such as HTML5, CSS3, SCSS, JavaScript, TypeScript, Angular, React,
+                        PHP, MySQL, Python and Flask.
                     </p>
                     <p>
-                        Through these projects, I aim to show how I combine visual design, usability, layout, responsive
-                        development, frontend integration and early foundations for AI-assisted applications. Some projects are
-                        design and integration focused, while others include more technical implementation or a separated
-                        frontend/backend architecture.
+                        My work combines visual clarity, structured layouts, usability, frontend integration and practical
+                        application logic. Some projects focus on interface design and responsive implementation, while others
+                        include backend interaction, CMS workflows or the foundations of AI-assisted digital products.
                     </p>
                 </div>
 

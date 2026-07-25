@@ -467,16 +467,16 @@ try {
                 <div class="section-title">
                     <h2>Portfolio</h2>
                     <p>
-                        Ce portfolio rassemble une sélection de projets issus de mon parcours en design et en développement
-                        front-end. Il reflète mon expérience en design graphique et digital, mon attention aux interfaces
-                        claires et responsives, ainsi que mon évolution avec des technologies comme HTML5, CSS3, SCSS,
-                        JavaScript, TypeScript, Angular, React, PHP, MySQL, Python et Flask.
+                        Ce portfolio présente une sélection de projets qui réunissent mon expérience en UX/UI, design visuel
+                        et développement front-end. Ces projets montrent comment je transforme des décisions de design en
+                        interfaces digitales responsives avec des technologies comme HTML5, CSS3, SCSS, JavaScript,
+                        TypeScript, Angular, React, PHP, MySQL, Python et Flask.
                     </p>
                     <p>
-                        À travers ces projets, je souhaite montrer comment je combine design visuel, ergonomie, mise en page,
-                        développement responsive, intégration front-end et premières bases d’applications assistées par l’IA.
-                        Certains projets sont orientés design et intégration, tandis que d’autres incluent une partie plus
-                        technique ou une architecture front-end/backend séparée.
+                        Mon travail combine clarté visuelle, structure des interfaces, ergonomie, intégration front-end et
+                        logique applicative concrète. Certains projets sont centrés sur le design d’interface et l’intégration
+                        responsive, tandis que d’autres incluent des interactions backend, des workflows CMS ou les premières
+                        bases de produits digitaux assistés par l’IA.
                     </p>
                 </div>
 
