@@ -380,17 +380,16 @@ try {
         <!-----------------------------------------------------------------
                               About section end
         ------------------------------------------------------------------>
-
         <!-----------------------------------------------------------------
                               Skills section
-        ------------------------------------------------------------------>
+------------------------------------------------------------------>
         <section id="skills" class="skills-section">
             <div class="skills-container container">
                 <h2>Skills</h2>
                 <div class="skills-content">
 
                     <div class="skills-list-container">
-                        <h3>Frontend & Development</h3>
+                        <h3>Frontend & UI Development</h3>
 
                         <ul class="skills-list">
                             <li>HTML5</li>
@@ -398,54 +397,54 @@ try {
                             <li>SCSS / Sass</li>
                             <li>JavaScript</li>
                             <li>TypeScript</li>
-                            <li>Angular</li>
                             <li>React</li>
+                            <li>Angular</li>
+                            <li>Responsive Interfaces</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-list-container">
+                        <h3>Backend, APIs & CMS</h3>
+
+                        <ul class="skills-list">
                             <li>PHP</li>
                             <li>Python</li>
                             <li>Flask</li>
-                        </ul>
-                    </div>
-
-                    <div class="skills-list-container">
-                        <h3>CMS, Database & Build Tools</h3>
-
-                        <ul class="skills-list">
+                            <li>REST API Integration</li>
                             <li>MySQL</li>
                             <li>Silverstripe</li>
-                            <li>CMS</li>
-                            <li>Node.js</li>
-                            <li>npm</li>
-                            <li>Webpack</li>
-                            <li>Vite</li>
-                            <li>REST API Integration</li>
+                            <li>CMS Workflows</li>
+                            <li>Node.js / npm</li>
                         </ul>
                     </div>
 
                     <div class="skills-list-container">
-                        <h3>Design & UX/UI Tools</h3>
+                        <h3>Product Design & Visual Tools</h3>
 
                         <ul class="skills-list">
                             <li>UX/UI Design</li>
                             <li>Product Design</li>
+                            <li>Interface Design</li>
                             <li>Figma</li>
-                            <li>Adobe XD</li>
-                            <li>Adobe Illustrator</li>
                             <li>Adobe Photoshop</li>
+                            <li>Adobe Illustrator</li>
                             <li>Adobe InDesign</li>
-                            <li>Responsive Design</li>
-                            <li>UI Design</li>
+                            <li>Visual Design</li>
                         </ul>
                     </div>
 
                     <div class="skills-list-container">
-                        <h3>Version Control & Workflow</h3>
+                        <h3>Workflow, AI & Collaboration</h3>
 
                         <ul class="skills-list">
                             <li>Git</li>
                             <li>GitHub</li>
                             <li>Bitbucket</li>
                             <li>Jira</li>
+                            <li>Webpack / Vite</li>
                             <li>Prompt Engineering</li>
+                            <li>AI Application Development Basics</li>
+                            <li>Frontend / Backend Separation</li>
                         </ul>
                     </div>
                 </div>
@@ -453,7 +452,7 @@ try {
         </section>
         <!-----------------------------------------------------------------
                               Skills section end
-        ------------------------------------------------------------------->
+------------------------------------------------------------------->
 
         <!-----------------------------------------------------------------
                               Portfolio section

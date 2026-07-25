@@ -387,14 +387,14 @@ try {
 
         <!-----------------------------------------------------------------
                               Skills section
-        ------------------------------------------------------------------>
+------------------------------------------------------------------>
         <section id="skills" class="skills-section">
             <div class="skills-container container">
                 <h2>Compétences</h2>
                 <div class="skills-content">
 
                     <div class="skills-list-container">
-                        <h3>Front-end & Développement</h3>
+                        <h3>Front-end & intégration UI</h3>
 
                         <ul class="skills-list">
                             <li>HTML5</li>
@@ -402,54 +402,54 @@ try {
                             <li>SCSS / Sass</li>
                             <li>JavaScript</li>
                             <li>TypeScript</li>
-                            <li>Angular</li>
                             <li>React</li>
+                            <li>Angular</li>
+                            <li>Interfaces responsives</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-list-container">
+                        <h3>Backend léger, APIs & CMS</h3>
+
+                        <ul class="skills-list">
                             <li>PHP</li>
                             <li>Python</li>
                             <li>Flask</li>
-                        </ul>
-                    </div>
-
-                    <div class="skills-list-container">
-                        <h3>CMS, base de données & outils de build</h3>
-
-                        <ul class="skills-list">
+                            <li>Intégration d’API REST</li>
                             <li>MySQL</li>
                             <li>Silverstripe</li>
-                            <li>CMS</li>
-                            <li>Node.js</li>
-                            <li>npm</li>
-                            <li>Webpack</li>
-                            <li>Vite</li>
-                            <li>REST API Integration</li>
+                            <li>Workflows CMS</li>
+                            <li>Node.js / npm</li>
                         </ul>
                     </div>
 
                     <div class="skills-list-container">
-                        <h3>Design & outils UX/UI</h3>
+                        <h3>Design produit & outils visuels</h3>
 
                         <ul class="skills-list">
                             <li>UX/UI Design</li>
-                            <li>Product Design</li>
+                            <li>Design produit</li>
+                            <li>Design d’interface</li>
                             <li>Figma</li>
-                            <li>Adobe XD</li>
-                            <li>Adobe Illustrator</li>
                             <li>Adobe Photoshop</li>
+                            <li>Adobe Illustrator</li>
                             <li>Adobe InDesign</li>
-                            <li>Design responsive</li>
-                            <li>Design UI</li>
+                            <li>Design visuel</li>
                         </ul>
                     </div>
 
                     <div class="skills-list-container">
-                        <h3>Versioning & workflow</h3>
+                        <h3>Workflow, IA & collaboration</h3>
 
                         <ul class="skills-list">
                             <li>Git</li>
                             <li>GitHub</li>
                             <li>Bitbucket</li>
                             <li>Jira</li>
+                            <li>Webpack / Vite</li>
                             <li>Prompt Engineering</li>
+                            <li>Bases du développement d’applications IA</li>
+                            <li>Séparation frontend / backend</li>
                         </ul>
                     </div>
                 </div>
@@ -457,7 +457,7 @@ try {
         </section>
         <!-----------------------------------------------------------------
                                 Skills section end
-        ------------------------------------------------------------------->
+------------------------------------------------------------------->
 
         <!-----------------------------------------------------------------
                               Portfolio section
