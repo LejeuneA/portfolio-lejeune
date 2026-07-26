@@ -292,7 +292,7 @@ try {
             <h1>Açelya Lejeune</h1>
             <p>
                 <span class="typed"
-                    data-typed-items="Digital Designer, Frontend Developer, AI Developer"></span>
+                    data-typed-items="Senior UX/UI Designer, Frontend Developer, AI Application Developer"></span>
             </p>
         </div>
     </section>

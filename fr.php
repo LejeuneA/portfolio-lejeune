@@ -293,7 +293,7 @@ try {
             <h1>Açelya Lejeune</h1>
             <p>
                 <span class="typed"
-                    data-typed-items="Designer Digitale, Développeuse Front-End, Développeuse AI"></span>
+                    data-typed-items="Designer UX/UI senior, Développeuse Front-End, Développeuse d’applications IA"></span>
             </p>
         </div>
     </section>
