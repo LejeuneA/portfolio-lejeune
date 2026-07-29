@@ -293,7 +293,7 @@ try {
             <h1>Açelya Lejeune</h1>
             <p>
                 <span class="typed"
-                    data-typed-items="Designer UX/UI senior, Développeuse Front-End, Développeuse d’applications IA"></span>
+                    data-typed-items="Designer UX/UI, Développeuse Front-End, Développeuse d’applications IA"></span>
             </p>
         </div>
     </section>
@@ -305,7 +305,7 @@ try {
     <main id="main">
         <!-----------------------------------------------------------------
                                 About section
-        ------------------------------------------------------------------>
+------------------------------------------------------------------>
         <section id="about" class="about-section">
             <div class="about-container container">
                 <h2>À propos</h2>
@@ -313,36 +313,40 @@ try {
                     <div class="about-container-left" data-aos="fade-right" data-aos-duration="1500">
                         <p>
                             <span class="first-sentence">Bonjour, je suis Açelya Lejeune.</span>
-                            Je suis designer senior avec une longue expérience professionnelle en design graphique,
-                            communication visuelle et web design. Au fil des années, j’ai travaillé sur de nombreux projets
-                            créatifs et digitaux, en développant un sens solide de la mise en page, de la typographie, de la
-                            couleur, de l’identité visuelle et de la hiérarchie visuelle.
+                            Je suis designer UX/UI avec environ 15 ans d’expérience en communication visuelle,
+                            branding, design graphique et design digital. Au fil des années, j’ai travaillé sur une
+                            grande variété de projets créatifs et digitaux, développant un sens solide de la mise en
+                            page, de la typographie, de la couleur, de la hiérarchie visuelle et de la communication
+                            digitale claire.
                         </p>
                         <p>
                             <span class="first-sentence">Un parcours design construit dans plusieurs pays</span>
-                            J’ai commencé ma carrière à Antalya, puis j’ai continué à travailler avec des agences, des
-                            imprimeries et des projets créatifs dans le nord de Chypre, en Angleterre et en Belgique. Mon
-                            expérience à Brighton a également renforcé mon lien avec les environnements anglophones et les
-                            équipes internationales.
+                            J’ai commencé ma carrière à Antalya, puis j’ai continué à travailler avec des agences,
+                            des studios d’impression et des projets créatifs à Chypre du Nord, en Angleterre et en
+                            Belgique. Ce parcours international a façonné ma manière d’aborder le design, avec une
+                            attention particulière à la clarté, à l’adaptabilité, au détail visuel et aux besoins de
+                            différents publics.
                         </p>
                     </div>
 
                     <div class="about-container-right">
                         <div class="content" data-aos="fade-left" data-aos-duration="1600">
                             <p>
-                                <span class="first-sentence">Du design vers le développement front-end</span>
-                                Après plusieurs années dans le design, j’ai voulu approfondir mes compétences techniques et j’ai
-                                terminé une formation de deux ans en développement front-end à Liège, en Belgique. Pendant cette
-                                formation, j’ai réalisé un projet de fin d’études avec <span>Angular</span> et travaillé avec
-                                <span>HTML5</span>, <span>CSS3</span>, <span>SCSS</span>, <span>JavaScript</span>,
-                                <span>TypeScript</span>, <span>PHP</span> et <span>MySQL</span>.
+                                <span class="first-sentence">Du design vers le front-end et les applications IA</span>
+                                Après plusieurs années dans le design, j’ai voulu approfondir mes compétences techniques
+                                et j’ai terminé une formation de deux ans en développement front-end à Liège, en Belgique.
+                                Pendant cette formation et à travers mes projets portfolio, j’ai travaillé avec
+                                <span>Angular</span>, <span>React</span>, <span>TypeScript</span>,
+                                <span>JavaScript</span>, <span>PHP</span>, <span>MySQL</span>,
+                                <span>Python</span> et <span>Flask</span>.
                             </p>
 
                             <p>
-                                Aujourd’hui, je combine mon expérience en design avec des compétences en développement
-                                front-end. Mes points forts sont <span>SCSS</span>, les interfaces responsives, l’intégration
-                                UI, le design visuel, les workflows Git/GitHub et les projets web basés sur un CMS. J’ai
-                                également appris <span>Silverstripe</span> dans mon poste actuel.
+                                Aujourd’hui, je combine mon parcours en design visuel avec des compétences en développement
+                                front-end pour créer des interfaces digitales claires, responsives et réalistes à intégrer.
+                                Mon travail se concentre sur le <span>design UX/UI</span>, <span>SCSS</span>,
+                                les mises en page responsives, l’intégration UI, les projets basés sur un CMS,
+                                les workflows Git/GitHub et les bases du développement d’applications assistées par l’IA.
                             </p>
 
                             <ul>
@@ -360,7 +364,7 @@ try {
                                 </li>
                                 <li>
                                     <i class="fas fa-chevron-right"></i>
-                                    Profil : <span>Design digital, web design, design UI, intégration front-end</span>
+                                    Profil : <span>Design UX/UI, interfaces produit, intégration front-end, applications IA</span>
                                 </li>
                                 <li>
                                     <i class="fas fa-chevron-right"></i>
@@ -372,7 +376,7 @@ try {
                                     <span>
                                         <br>TURC : langue maternelle
                                         <br>ANGLAIS : niveau professionnel
-                                        <br>FRANÇAIS : certificat B1.1 — bonne compréhension, expression orale simple
+                                        <br>FRANÇAIS : certificat B1.1, bonne compréhension et expression orale simple
                                     </span>
                                 </li>
                             </ul>
@@ -383,7 +387,7 @@ try {
         </section>
         <!-----------------------------------------------------------------
                                 About section end
-        ------------------------------------------------------------------>
+------------------------------------------------------------------>
 
         <!-----------------------------------------------------------------
                               Skills section

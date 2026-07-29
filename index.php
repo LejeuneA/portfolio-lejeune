@@ -292,7 +292,7 @@ try {
             <h1>Açelya Lejeune</h1>
             <p>
                 <span class="typed"
-                    data-typed-items="Senior UX/UI Designer, Frontend Developer, AI Application Developer"></span>
+                    data-typed-items="UX/UI Designer, Frontend Developer, AI Application Developer"></span>
             </p>
         </div>
     </section>
@@ -304,7 +304,7 @@ try {
     <main id="main">
         <!-----------------------------------------------------------------
                               About section
-        ------------------------------------------------------------------>
+------------------------------------------------------------------>
         <section id="about" class="about-section">
             <div class="about-container container">
                 <h2>About</h2>
@@ -312,33 +312,36 @@ try {
                     <div class="about-container-left" data-aos="fade-right" data-aos-duration="1500">
                         <p>
                             <span class="first-sentence">Hi, I’m Açelya Lejeune.</span>
-                            I am a senior designer with a long professional background in graphic design, visual communication
-                            and web design. Over the years, I have worked on a wide range of creative and digital projects,
-                            developing a strong sense of layout, typography, color, branding and visual hierarchy.
+                            I am a UX/UI Designer with around 15 years of experience in visual communication,
+                            branding, graphic design and digital design. Over the years, I have worked on a wide
+                            range of creative and digital projects, developing a strong sense of layout, typography,
+                            color, visual hierarchy and clear digital communication.
                         </p>
                         <p>
                             <span class="first-sentence">A design background shaped across countries</span>
-                            I started my career in Antalya and continued working with agencies, print studios and creative
-                            projects in Northern Cyprus, England and Belgium. Living in Brighton also strengthened my
-                            connection with English-speaking environments and international teams.
+                            I started my career in Antalya and continued working with agencies, print studios and
+                            creative projects in Northern Cyprus, England and Belgium. This international path
+                            shaped the way I approach design: with attention to clarity, adaptability, visual detail
+                            and the needs of different audiences.
                         </p>
                     </div>
 
                     <div class="about-container-right">
                         <div class="content" data-aos="fade-left" data-aos-duration="1600">
                             <p>
-                                <span class="first-sentence">From design to frontend development</span>
-                                After many years in design, I decided to deepen my technical skills and completed a two-year
-                                Frontend Developer programme in Liège, Belgium. During this training, I built a final project
-                                with <span>Angular</span> and worked with <span>HTML5</span>, <span>CSS3</span>,
-                                <span>SCSS</span>, <span>JavaScript</span>, <span>TypeScript</span>, <span>PHP</span> and
-                                <span>MySQL</span>.
+                                <span class="first-sentence">Expanding design into frontend and AI applications</span>
+                                After many years in design, I decided to deepen my technical skills and completed a
+                                two-year Frontend Developer programme in Liège, Belgium. During this training and
+                                through my portfolio projects, I worked with <span>Angular</span>, <span>React</span>,
+                                <span>TypeScript</span>, <span>JavaScript</span>, <span>PHP</span>,
+                                <span>MySQL</span>, <span>Python</span> and <span>Flask</span>.
                             </p>
 
                             <p>
-                                Today, I combine my design experience with frontend development skills. My strongest areas are
-                                <span>SCSS</span>, responsive interfaces, UI integration, visual design, Git/GitHub workflows
-                                and CMS-based web projects. I also learned <span>Silverstripe</span> in my current workplace.
+                                Today, I combine my visual design background with frontend development skills to create
+                                clear, responsive and realistic digital interfaces. My work focuses on <span>UX/UI design</span>,
+                                <span>SCSS</span>, responsive layouts, UI integration, CMS-based projects, Git/GitHub
+                                workflows and the foundations of AI-powered application development.
                             </p>
 
                             <ul>
@@ -356,7 +359,7 @@ try {
                                 </li>
                                 <li>
                                     <i class="fas fa-chevron-right"></i>
-                                    Focus: <span>Digital Design, Web Design, UI Design, Frontend Integration</span>
+                                    Focus: <span>UX/UI Design, Product Interfaces, Frontend Integration, AI Applications</span>
                                 </li>
                                 <li>
                                     <i class="fas fa-chevron-right"></i>
@@ -368,7 +371,7 @@ try {
                                     <span>
                                         <br>TURKISH: Native
                                         <br>ENGLISH: Professional working proficiency
-                                        <br>FRENCH: B1.1 certificate — good comprehension, basic spoken communication
+                                        <br>FRENCH: B1.1 certificate, good comprehension and basic spoken communication
                                     </span>
                                 </li>
                             </ul>
@@ -379,7 +382,7 @@ try {
         </section>
         <!-----------------------------------------------------------------
                               About section end
-        ------------------------------------------------------------------>
+------------------------------------------------------------------>
         <!-----------------------------------------------------------------
                               Skills section
 ------------------------------------------------------------------>
