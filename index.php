@@ -120,7 +120,7 @@ try {
         rel="stylesheet">
 
     <!-- Title -->
-    <title>Acelya Lejeune - Digital Designer, Frontend Developer, AI Developer</title>
+    <title>Acelya Lejeune - UX/UI Designer, Frontend Developer, AI Application Developer</title>
 </head>
 
 <body>
@@ -343,8 +343,12 @@ try {
                                 <span>SCSS</span>, responsive layouts, UI integration, CMS-based projects, Git/GitHub
                                 workflows and the foundations of AI-powered application development.
                             </p>
+                        </div>
+                    </div>
 
-                            <ul>
+                    <div class="about-info-card" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="about-info-grid">
+                            <ul class="about-info-column">
                                 <li>
                                     <i class="fas fa-chevron-right"></i>
                                     Location: <span>Liège, Belgium</span>
@@ -361,10 +365,9 @@ try {
                                     <i class="fas fa-chevron-right"></i>
                                     Focus: <span>UX/UI Design, Product Interfaces, Frontend Integration, AI Applications</span>
                                 </li>
-                                <li>
-                                    <i class="fas fa-chevron-right"></i>
-                                    Open to: <span>Remote opportunities with UK and European teams</span>
-                                </li>
+                            </ul>
+
+                            <ul class="about-info-column">
                                 <li>
                                     <i class="fas fa-chevron-right"></i>
                                     Languages:
@@ -373,6 +376,10 @@ try {
                                         <br>ENGLISH: Professional working proficiency
                                         <br>FRENCH: B1.1 certificate, good comprehension and basic spoken communication
                                     </span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    Open to: <span>Remote opportunities with UK and European teams</span>
                                 </li>
                             </ul>
                         </div>

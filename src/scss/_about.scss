@@ -39,99 +39,134 @@
         }
 
         .about-content {
-            @include d-flex(flex, start, start, row, start);
-            gap: 5em;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 3.5em 5em;
+            align-items: start;
+            width: 100%;
+
+            .about-container-left,
+            .about-container-right {
+                width: 100%;
+            }
 
             .about-container-left {
-                width: 50%;
-
                 p {
                     margin-bottom: 3em;
 
                     &:last-child {
                         margin-bottom: 0;
                     }
-
-                    span.first-sentence {
-                        font-size: 1.3em;
-                        font-weight: 600;
-                        display: block;
-                        margin-bottom: 0.5em;
-                        color: $primary-green;
-                    }
-
-                    span {
-                        color: $dark-green;
-                        font-weight: 700;
-                    }
                 }
             }
 
             .about-container-right {
-                width: 50%;
-
-                &:last-child {
-                    margin-bottom: 0;
+                .content {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                 }
 
                 p {
                     margin-bottom: 2.5em;
 
-                    span.first-sentence {
-                        font-size: 1.3em;
-                        font-weight: 600;
-                        display: block;
-                        margin-bottom: 0.5em;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            p {
+                span.first-sentence {
+                    display: block;
+                    margin-bottom: 0.5em;
+                    color: $primary-green;
+                    font-size: 1.3em;
+                    font-weight: 600;
+                }
+
+                span {
+                    color: $dark-green;
+                    font-weight: 700;
+                }
+            }
+
+            .about-info-card {
+                grid-column: 1 / -1;
+                width: 100%;
+                margin-top: 0.5em;
+                padding: 2em;
+                background-color: $surface;
+                border: 1px solid $border-soft;
+                border-radius: 1em;
+                box-shadow: $box-shadow-soft;
+            }
+
+            .about-info-grid {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 3em;
+                width: 100%;
+            }
+
+            .about-info-column {
+                display: flex;
+                flex-direction: column;
+                gap: 1.2em;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    color: $dark-green;
+                    font-size: 1em;
+                    font-weight: 600;
+                    line-height: 1.7;
+
+                    i {
                         color: $primary-green;
+                        margin-right: 0.35em;
                     }
 
                     span {
-                        color: $dark-green;
-                        font-weight: 700;
-                    }
-                }
-
-                ul{
-                    line-height: 1.7em;
-                    padding: 2em;
-                    background-color: $surface;
-                    border: 1px solid $border-soft;
-                    border-radius: 1em;
-                    box-shadow: $box-shadow-soft;
-                    line-height: 2em;
-
-                    li{
-                        font-weight: 600;
-                        color: $dark-green;
-                        font-size: 1em;
-
-                        span{
-                            color: $background;
-                            font-weight: 400;
-                        }
-                    }
-
-                    i{
-                        color: $primary-green;
+                        color: $background;
+                        font-weight: 400;
                     }
                 }
             }
         }
     }
 
-    // Responsive styles for small screens
     @media (min-width: 320px) and (max-width: 768px) {
         .about-container {
             .about-content {
-                @include d-flex(flex, center, start, column, start);
-                gap:3em;
-
-                .about-container-right {
-                    width: 100%;
-                }
+                grid-template-columns: 1fr;
+                gap: 2.5em;
 
                 .about-container-left {
-                    width: 100%;
+                    p {
+                        margin-bottom: 2em;
+                    }
+                }
+
+                .about-container-right {
+                    p {
+                        margin-bottom: 2em;
+                    }
+                }
+
+                .about-info-card {
+                    margin-top: 0;
+                    padding: 1.5em;
+                }
+
+                .about-info-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.2em;
+                }
+
+                .about-info-column {
+                    gap: 1em;
                 }
             }
         }

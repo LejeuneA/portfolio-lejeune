@@ -121,7 +121,7 @@ try {
         rel="stylesheet">
 
     <!-- Title -->
-    <title>Acelya Lejeune - Designer Digitale, Développeuse Front-End, Développeuse AI</title>
+    <title>Acelya Lejeune - Designer UX/UI, Développeuse Front-End, Développeuse d’applications IA</title>
 </head>
 
 <body>
@@ -348,8 +348,12 @@ try {
                                 les mises en page responsives, l’intégration UI, les projets basés sur un CMS,
                                 les workflows Git/GitHub et les bases du développement d’applications assistées par l’IA.
                             </p>
+                        </div>
+                    </div>
 
-                            <ul>
+                    <div class="about-info-card" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="about-info-grid">
+                            <ul class="about-info-column">
                                 <li>
                                     <i class="fas fa-chevron-right"></i>
                                     Localisation : <span>Liège, Belgique</span>
@@ -366,10 +370,9 @@ try {
                                     <i class="fas fa-chevron-right"></i>
                                     Profil : <span>Design UX/UI, interfaces produit, intégration front-end, applications IA</span>
                                 </li>
-                                <li>
-                                    <i class="fas fa-chevron-right"></i>
-                                    Ouverte à : <span>Opportunités à distance avec des équipes au Royaume-Uni et en Europe</span>
-                                </li>
+                            </ul>
+
+                            <ul class="about-info-column">
                                 <li>
                                     <i class="fas fa-chevron-right"></i>
                                     Langues :
@@ -378,6 +381,10 @@ try {
                                         <br>ANGLAIS : niveau professionnel
                                         <br>FRANÇAIS : certificat B1.1, bonne compréhension et expression orale simple
                                     </span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    Ouverte à : <span>Opportunités à distance avec des équipes au Royaume-Uni et en Europe</span>
                                 </li>
                             </ul>
                         </div>
