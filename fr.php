@@ -154,7 +154,14 @@ try {
                     aria-label="Profil LinkedIn">
                     <i class="fa fa-linkedin"></i>
                 </a>
-                <a href="./index.php" class="language"><b>EN</b></a>
+                <a
+                    href="./index.php"
+                    class="language"
+                    data-umami-event="language-switch"
+                    data-umami-event-from="fr"
+                    data-umami-event-to="en">
+                    <b>EN</b>
+                </a>
             </div>
         </div>
 
@@ -200,7 +207,16 @@ try {
             </ul>
 
             <div class="btn-resume">
-                <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
+                <a
+                    class="btn-resume"
+                    href="./assets/resume/CV_LEJEUNE_FR.pdf"
+                    download
+                    data-umami-event="cv-download"
+                    data-umami-event-file="CV_LEJEUNE_FR.pdf"
+                    data-umami-event-language="fr"
+                    data-umami-event-location="main-nav">
+                    Télécharger le CV
+                </a>
             </div>
 
             <div class="btn-resume">
@@ -229,7 +245,14 @@ try {
                     aria-label="Profil LinkedIn">
                     <i class="fa fa-linkedin"></i>
                 </a>
-                <a href="./index.php" class="language"><b>EN</b></a>
+                <a
+                    href="./index.php"
+                    class="language"
+                    data-umami-event="language-switch"
+                    data-umami-event-from="fr"
+                    data-umami-event-to="en">
+                    <b>EN</b>
+                </a>
             </div>
         </div>
 
@@ -275,7 +298,16 @@ try {
             </ul>
 
             <div class="btn-resume">
-                <a class="btn-resume" href="./assets/resume/CV_LEJEUNE_FR.pdf" download>Télécharger le CV</a>
+                <a
+                    class="btn-resume"
+                    href="./assets/resume/CV_LEJEUNE_FR.pdf"
+                    download
+                    data-umami-event="cv-download"
+                    data-umami-event-file="CV_LEJEUNE_FR.pdf"
+                    data-umami-event-language="fr"
+                    data-umami-event-location="mobile-nav">
+                    Télécharger le CV
+                </a>
             </div>
 
             <div class="btn-resume">
@@ -544,16 +576,28 @@ try {
 
                             <div class="portfolio-wrap">
                                 <div class="portfolio-links-top">
-                                    <a class="portfolio-link-top" href="<?= $esc($infoUrlFr); ?>"
-                                        title="Plus d’informations">
+                                    <a
+                                        class="portfolio-link-top"
+                                        href="<?= $esc($infoUrlFr); ?>"
+                                        title="Plus d’informations"
+                                        data-umami-event="portfolio-case-study-click"
+                                        data-umami-event-project="<?= $esc($meta['title']); ?>"
+                                        data-umami-event-language="fr">
                                         <i class="fas fa-circle-info"></i> Plus d’informations
                                     </a>
                                 </div>
 
                                 <div class="portfolio-links-bottom">
                                     <?php if ($hasLiveUrl) : ?>
-                                        <a class="portfolio-link-left" href="<?= $esc($liveUrl); ?>"
-                                            title="Démo en ligne" target="_blank" rel="noopener noreferrer">
+                                        <a
+                                            class="portfolio-link-left"
+                                            href="<?= $esc($liveUrl); ?>"
+                                            title="Démo en ligne"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            data-umami-event="portfolio-live-preview-click"
+                                            data-umami-event-project="<?= $esc($meta['title']); ?>"
+                                            data-umami-event-language="fr">
                                             <i class="fas fa-link"></i> Aperçu en direct
                                         </a>
                                     <?php else : ?>
@@ -564,8 +608,15 @@ try {
                                     <?php endif; ?>
 
                                     <?php if ($hasGithubUrl) : ?>
-                                        <a class="portfolio-link-right" href="<?= $esc($githubUrl); ?>"
-                                            title="Voir sur GitHub" target="_blank" rel="noopener noreferrer">
+                                        <a
+                                            class="portfolio-link-right"
+                                            href="<?= $esc($githubUrl); ?>"
+                                            title="Voir sur GitHub"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            data-umami-event="portfolio-github-click"
+                                            data-umami-event-project="<?= $esc($meta['title']); ?>"
+                                            data-umami-event-language="fr">
                                             <i class="fa fa-github"></i> Code complet sur GitHub
                                         </a>
                                     <?php else : ?>
@@ -744,7 +795,11 @@ try {
                             required></textarea>
 
                         <input type="reset" value="Effacer">
-                        <input type="submit" value="Envoyer le message">
+                        <input
+                            type="submit"
+                            value="Envoyer le message"
+                            data-umami-event="contact-form-submit-click"
+                            data-umami-event-language="fr">
                     </form>
                 </div>
             </div>
