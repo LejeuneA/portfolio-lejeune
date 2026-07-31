@@ -133,6 +133,8 @@ try {
 
     <!-- Title -->
     <title>Açelya Lejeune - Designer UX/UI & Développeuse Front-End</title>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="5bf62b4a-7132-4425-a099-12d42e69f1df"></script>
 </head>
 
 <body>
