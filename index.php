@@ -129,23 +129,38 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Liège, Belgium, with projects in React, TypeScript, Angular, PHP, MySQL, Python, Flask and AI applications.">
+    <meta name="description" content="Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Liège, Belgium, with projects in React, TypeScript, Angular, PHP, MySQL, Python, Flask and AI applications.">
 
     <meta
         name="keywords"
         content="Açelya Lejeune, UX/UI Designer, Frontend Developer, Product Design, React, TypeScript, Angular, PHP, MySQL, Python, Flask, AI applications, portfolio, Liège, Belgium, remote Europe">
 
-    <meta property="og:title" content="Açelya Lejeune - UX/UI Designer & Frontend Developer">
-    <meta
-        property="og:description"
-        content="Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Belgium, combining visual design, product interfaces, React, TypeScript and AI application projects.">
+    <!-- SEO & Social Preview -->
+    <meta name="author" content="Açelya Lejeune">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://www.acelyalejeune.com/">
+    <link rel="alternate" hreflang="en" href="https://www.acelyalejeune.com/">
+    <link rel="alternate" hreflang="fr" href="https://www.acelyalejeune.com/fr.php">
+    <link rel="alternate" hreflang="x-default" href="https://www.acelyalejeune.com/">
+    <meta property="og:title" content="Açelya Lejeune - UX/UI Designer &amp; Frontend Developer">
+    <meta property="og:description" content="Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Liège, Belgium, with projects in React, TypeScript, Angular, PHP, MySQL, Python, Flask and AI applications.">
     <meta property="og:url" content="https://www.acelyalejeune.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Açelya Lejeune Portfolio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Açelya Lejeune portfolio preview with UX/UI, frontend and AI application positioning">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Açelya Lejeune - UX/UI Designer &amp; Frontend Developer">
+    <meta name="twitter:description" content="Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Liège, Belgium, with projects in React, TypeScript, Angular, PHP, MySQL, Python, Flask and AI applications.">
+    <meta name="twitter:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
+    <meta name="twitter:image:alt" content="Açelya Lejeune portfolio preview with UX/UI, frontend and AI application positioning">
 
-    <!-- AOS File -->
+
+<!-- AOS File -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <!-- Main Css file -->
@@ -160,10 +175,8 @@ try {
         rel="stylesheet">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.acelyalejeune.com/">
-
-    <!-- Title -->
-    <title>Açelya Lejeune - UX/UI Designer & Frontend Developer</title>
+<!-- Title -->
+    <title>Açelya Lejeune - UX/UI Designer &amp; Frontend Developer</title>
 
     <!-- Analytics -->
     <script
@@ -172,6 +185,50 @@ try {
         data-website-id="5bf62b4a-7132-4425-a099-12d42e69f1df"
         data-domains="www.acelyalejeune.com,acelyalejeune.com,flowdeck.acelyalejeune.com,quotes.acelyalejeune.com"
         data-tag="portfolio">
+    </script>
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "name": "Açelya Lejeune Portfolio",
+        "url": "https://www.acelyalejeune.com/",
+        "description": "Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Liège, Belgium, with projects in React, TypeScript, Angular, PHP, MySQL, Python, Flask and AI applications.",
+        "inLanguage": "en",
+        "mainEntity": {
+                "@type": "Person",
+                "name": "Açelya Lejeune",
+                "url": "https://www.acelyalejeune.com/",
+                "image": "https://www.acelyalejeune.com/assets/images/og-image.png",
+                "email": "mailto:contact@acelyalejeune.com",
+                "jobTitle": [
+                        "UX/UI Designer",
+                        "Frontend Developer",
+                        "AI Application Developer"
+                ],
+                "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Liège",
+                        "addressCountry": "BE"
+                },
+                "knowsAbout": [
+                        "UX/UI Design",
+                        "Product Design",
+                        "Frontend Development",
+                        "React",
+                        "TypeScript",
+                        "Angular",
+                        "PHP",
+                        "MySQL",
+                        "Python",
+                        "Flask",
+                        "AI Applications"
+                ],
+                "sameAs": [
+                        "https://www.linkedin.com/in/acelyalejeune",
+                        "https://github.com/LejeuneA"
+                ]
+        }
+}
     </script>
 </head>
 
@@ -208,11 +265,11 @@ try {
             <img src="./assets/images/header-photo.jpg" alt="Profile photo of Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="index.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="GitHub profile">
+                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="GitHub profile" rel="noopener noreferrer">
                     <i class="fa fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
-                    aria-label="LinkedIn profile">
+                    aria-label="LinkedIn profile" rel="noopener noreferrer">
                     <i class="fa fa-linkedin"></i>
                 </a>
                 <a
@@ -279,10 +336,6 @@ try {
                     Download CV
                 </a>
             </div>
-
-            <div class="btn-resume">
-                <a class="btn-resume" href="./admin/login.php">Login</a>
-            </div>
         </nav>
         <!-- End Nav Menu -->
     </header>
@@ -299,11 +352,11 @@ try {
             <img src="./assets/images/header-photo.jpg" alt="Profile photo of Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="index.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="GitHub profile">
+                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="GitHub profile" rel="noopener noreferrer">
                     <i class="fa fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
-                    aria-label="LinkedIn profile">
+                    aria-label="LinkedIn profile" rel="noopener noreferrer">
                     <i class="fa fa-linkedin"></i>
                 </a>
                 <a
@@ -369,10 +422,6 @@ try {
                     data-umami-event-location="mobile-nav">
                     Download CV
                 </a>
-            </div>
-
-            <div class="btn-resume">
-                <a class="btn-resume" href="./admin/login.php">Login</a>
             </div>
         </nav>
         <!-- Nav menu end -->

@@ -130,23 +130,38 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.">
+    <meta name="description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.">
 
     <meta
         name="keywords"
         content="Açelya Lejeune, designer UX/UI, développeuse front-end, design produit, React, TypeScript, Angular, PHP, MySQL, Python, Flask, applications IA, portfolio, Liège, Belgique, travail à distance">
 
-    <meta property="og:title" content="Açelya Lejeune - Designer UX/UI & Développeuse Front-End">
-    <meta
-        property="og:description"
-        content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end en Belgique, combinant design visuel, interfaces produit, React, TypeScript et projets d’applications IA.">
+    <!-- SEO & Social Preview -->
+    <meta name="author" content="Açelya Lejeune">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://www.acelyalejeune.com/fr.php">
+    <link rel="alternate" hreflang="en" href="https://www.acelyalejeune.com/">
+    <link rel="alternate" hreflang="fr" href="https://www.acelyalejeune.com/fr.php">
+    <link rel="alternate" hreflang="x-default" href="https://www.acelyalejeune.com/">
+    <meta property="og:title" content="Açelya Lejeune - Designer UX/UI &amp; Développeuse Front-End">
+    <meta property="og:description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.">
     <meta property="og:url" content="https://www.acelyalejeune.com/fr.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Portfolio Açelya Lejeune">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Aperçu du portfolio d’Açelya Lejeune avec positionnement UX/UI, front-end et applications IA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Açelya Lejeune - Designer UX/UI &amp; Développeuse Front-End">
+    <meta name="twitter:description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.">
+    <meta name="twitter:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
+    <meta name="twitter:image:alt" content="Aperçu du portfolio d’Açelya Lejeune avec positionnement UX/UI, front-end et applications IA">
 
-    <!-- AOS File -->
+
+<!-- AOS File -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <!-- Main Css file -->
@@ -161,10 +176,8 @@ try {
         rel="stylesheet">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.acelyalejeune.com/fr.php">
-
-    <!-- Title -->
-    <title>Açelya Lejeune - Designer UX/UI & Développeuse Front-End</title>
+<!-- Title -->
+    <title>Açelya Lejeune - Designer UX/UI &amp; Développeuse Front-End</title>
 
     <!-- Analytics -->
     <script
@@ -173,6 +186,50 @@ try {
         data-website-id="5bf62b4a-7132-4425-a099-12d42e69f1df"
         data-domains="www.acelyalejeune.com,acelyalejeune.com,flowdeck.acelyalejeune.com,quotes.acelyalejeune.com"
         data-tag="portfolio">
+    </script>
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "name": "Portfolio Açelya Lejeune",
+        "url": "https://www.acelyalejeune.com/fr.php",
+        "description": "Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.",
+        "inLanguage": "fr",
+        "mainEntity": {
+                "@type": "Person",
+                "name": "Açelya Lejeune",
+                "url": "https://www.acelyalejeune.com/",
+                "image": "https://www.acelyalejeune.com/assets/images/og-image.png",
+                "email": "mailto:contact@acelyalejeune.com",
+                "jobTitle": [
+                        "UX/UI Designer",
+                        "Frontend Developer",
+                        "AI Application Developer"
+                ],
+                "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Liège",
+                        "addressCountry": "BE"
+                },
+                "knowsAbout": [
+                        "UX/UI Design",
+                        "Product Design",
+                        "Frontend Development",
+                        "React",
+                        "TypeScript",
+                        "Angular",
+                        "PHP",
+                        "MySQL",
+                        "Python",
+                        "Flask",
+                        "AI Applications"
+                ],
+                "sameAs": [
+                        "https://www.linkedin.com/in/acelyalejeune",
+                        "https://github.com/LejeuneA"
+                ]
+        }
+}
     </script>
 </head>
 
@@ -209,11 +266,11 @@ try {
             <img src="./assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="Profil GitHub">
+                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="Profil GitHub" rel="noopener noreferrer">
                     <i class="fa fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
-                    aria-label="Profil LinkedIn">
+                    aria-label="Profil LinkedIn" rel="noopener noreferrer">
                     <i class="fa fa-linkedin"></i>
                 </a>
                 <a
@@ -280,10 +337,6 @@ try {
                     Télécharger le CV
                 </a>
             </div>
-
-            <div class="btn-resume">
-                <a class="btn-resume" href="./admin/login.php">Se connecter</a>
-            </div>
         </nav>
         <!-- End Nav Menu -->
     </header>
@@ -300,11 +353,11 @@ try {
             <img src="./assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="Profil GitHub">
+                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="Profil GitHub" rel="noopener noreferrer">
                     <i class="fa fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
-                    aria-label="Profil LinkedIn">
+                    aria-label="Profil LinkedIn" rel="noopener noreferrer">
                     <i class="fa fa-linkedin"></i>
                 </a>
                 <a
@@ -370,10 +423,6 @@ try {
                     data-umami-event-location="mobile-nav">
                     Télécharger le CV
                 </a>
-            </div>
-
-            <div class="btn-resume">
-                <a class="btn-resume" href="./admin/login.php">Se connecter</a>
             </div>
         </nav>
         <!-- Nav menu end -->
