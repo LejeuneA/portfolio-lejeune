@@ -100,11 +100,19 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
         name="description"
-        content="Portfolio d’Açelya Lejeune, UX/UI Designer et Frontend Developer en Belgique, spécialisée en React, TypeScript, PHP et applications d’IA.">
+        content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.">
 
     <meta
         name="keywords"
-        content="Açelya Lejeune, UX UI Designer, développeuse frontend, Product Designer, développeuse React, TypeScript, PHP, applications IA, portfolio UX UI, portfolio frontend, Liège, Belgique, travail à distance">
+        content="Açelya Lejeune, designer UX/UI, développeuse front-end, design produit, React, TypeScript, Angular, PHP, MySQL, Python, Flask, applications IA, portfolio, Liège, Belgique, travail à distance">
+
+    <meta property="og:title" content="Açelya Lejeune - Designer UX/UI & Développeuse Front-End">
+    <meta
+        property="og:description"
+        content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end en Belgique, combinant design visuel, interfaces produit, React, TypeScript et projets d’applications IA.">
+    <meta property="og:url" content="https://www.acelyalejeune.com/fr.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Portfolio Açelya Lejeune">
 
     <!-- AOS File -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -120,8 +128,11 @@ try {
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.acelyalejeune.com/fr.php">
+
     <!-- Title -->
-    <title>Acelya Lejeune - Designer UX/UI, Développeuse Front-End, Développeuse d’applications IA</title>
+    <title>Açelya Lejeune - Designer UX/UI & Développeuse Front-End</title>
 </head>
 
 <body>
