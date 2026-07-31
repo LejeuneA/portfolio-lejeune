@@ -10,6 +10,38 @@ $esc = function ($value, $fallback = '') {
     return htmlspecialchars((string)($value ?? $fallback), ENT_QUOTES, 'UTF-8');
 };
 
+$contactStatus = $_GET['contact'] ?? '';
+
+$contactToastMessages = [
+    'success' => [
+        'type' => 'success',
+        'title' => 'Message envoyé',
+        'message' => 'Merci de m’avoir contactée. Votre message a bien été envoyé.',
+    ],
+    'missing' => [
+        'type' => 'error',
+        'title' => 'Informations manquantes',
+        'message' => 'Veuillez compléter tous les champs avant d’envoyer votre message.',
+    ],
+    'invalid-email' => [
+        'type' => 'error',
+        'title' => 'Adresse e-mail invalide',
+        'message' => 'Veuillez saisir une adresse e-mail valide puis réessayer.',
+    ],
+    'too-long' => [
+        'type' => 'error',
+        'title' => 'Message trop long',
+        'message' => 'Un ou plusieurs champs sont trop longs. Veuillez raccourcir votre message puis réessayer.',
+    ],
+    'error' => [
+        'type' => 'error',
+        'title' => 'Message non envoyé',
+        'message' => 'Une erreur est survenue. Veuillez réessayer ou m’écrire directement à contact@acelyalejeune.com.',
+    ],
+];
+
+$contactToast = $contactToastMessages[$contactStatus] ?? null;
+
 $getPortfolioMetaFr = function ($item) {
     $source = strtolower(
         ($item['info_url_fr'] ?? '') . ' ' .
@@ -145,6 +177,29 @@ try {
 </head>
 
 <body>
+
+    <?php if ($contactToast) : ?>
+        <div
+            class="contact-toast contact-toast--<?= $esc($contactToast['type']); ?>"
+            role="status"
+            aria-live="polite"
+            data-contact-toast>
+            <div class="contact-toast__icon" aria-hidden="true">
+                <?= $contactToast['type'] === 'success' ? '✓' : '!'; ?>
+            </div>
+            <div class="contact-toast__content">
+                <p class="contact-toast__title"><?= $esc($contactToast['title']); ?></p>
+                <p><?= $esc($contactToast['message']); ?></p>
+            </div>
+            <button
+                class="contact-toast__close"
+                type="button"
+                aria-label="Close notification"
+                data-contact-toast-close>
+                &times;
+            </button>
+        </div>
+    <?php endif; ?>
     <!-----------------------------------------------------------------
                                Navigation
     ------------------------------------------------------------------>
@@ -154,7 +209,7 @@ try {
             <img src="./assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub">
+                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="Profil GitHub">
                     <i class="fa fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
@@ -216,10 +271,10 @@ try {
             <div class="btn-resume">
                 <a
                     class="btn-resume"
-                    href="./assets/resume/CV_LEJEUNE_FR.pdf"
+                    href="./assets/resume/Acelya_Lejeune_CV_FR_UXUI_Frontend.pdf"
                     download
                     data-umami-event="cv-download"
-                    data-umami-event-file="CV_LEJEUNE_FR.pdf"
+                    data-umami-event-file="Acelya_Lejeune_CV_FR_UXUI_Frontend.pdf"
                     data-umami-event-language="fr"
                     data-umami-event-location="main-nav">
                     Télécharger le CV
@@ -245,7 +300,7 @@ try {
             <img src="./assets/images/header-photo.jpg" alt="Photo de profil d’Açelya Lejeune" class="profile-img">
             <h1 class="text-light"><a href="./fr.php">Açelya Lejeune</a></h1>
             <div class="social-links">
-                <a href="https://github.com/lejeunea" class="github" target="_blank" aria-label="Profil GitHub">
+                <a href="https://github.com/LejeuneA" class="github" target="_blank" aria-label="Profil GitHub">
                     <i class="fa fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/acelyalejeune" class="linkedin" target="_blank"
@@ -307,10 +362,10 @@ try {
             <div class="btn-resume">
                 <a
                     class="btn-resume"
-                    href="./assets/resume/CV_LEJEUNE_FR.pdf"
+                    href="./assets/resume/Acelya_Lejeune_CV_FR_UXUI_Frontend.pdf"
                     download
                     data-umami-event="cv-download"
-                    data-umami-event-file="CV_LEJEUNE_FR.pdf"
+                    data-umami-event-file="Acelya_Lejeune_CV_FR_UXUI_Frontend.pdf"
                     data-umami-event-language="fr"
                     data-umami-event-location="mobile-nav">
                     Télécharger le CV
@@ -856,6 +911,41 @@ try {
 
     <script>
         AOS.init();
+
+
+        const contactToast = document.querySelector('[data-contact-toast]');
+
+        if (contactToast) {
+            const closeButton = contactToast.querySelector('[data-contact-toast-close]');
+
+            const closeContactToast = () => {
+                contactToast.classList.add('contact-toast--hide');
+
+                window.setTimeout(() => {
+                    contactToast.remove();
+                }, 250);
+            };
+
+            if (closeButton) {
+                closeButton.addEventListener('click', closeContactToast);
+            }
+
+            window.setTimeout(closeContactToast, 7000);
+
+            if (window.history && window.history.replaceState) {
+                const currentUrl = new URL(window.location.href);
+
+                if (currentUrl.searchParams.has('contact')) {
+                    currentUrl.searchParams.delete('contact');
+
+                    const cleanUrl = currentUrl.pathname
+                        + (currentUrl.search ? currentUrl.search : '')
+                        + currentUrl.hash;
+
+                    window.history.replaceState({}, document.title, cleanUrl);
+                }
+            }
+        }
     </script>
 
 </body>

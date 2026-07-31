@@ -10,6 +10,38 @@ $esc = function ($value, $fallback = '') {
     return htmlspecialchars((string)($value ?? $fallback), ENT_QUOTES, 'UTF-8');
 };
 
+$contactStatus = $_GET['contact'] ?? '';
+
+$contactToastMessages = [
+    'success' => [
+        'type' => 'success',
+        'title' => 'Message sent',
+        'message' => 'Thank you for contacting me. Your message has been sent successfully.',
+    ],
+    'missing' => [
+        'type' => 'error',
+        'title' => 'Missing information',
+        'message' => 'Please complete all fields before sending your message.',
+    ],
+    'invalid-email' => [
+        'type' => 'error',
+        'title' => 'Invalid email address',
+        'message' => 'Please enter a valid email address and try again.',
+    ],
+    'too-long' => [
+        'type' => 'error',
+        'title' => 'Message too long',
+        'message' => 'One or more fields are too long. Please shorten your message and try again.',
+    ],
+    'error' => [
+        'type' => 'error',
+        'title' => 'Message not sent',
+        'message' => 'Something went wrong. Please try again or email me directly at contact@acelyalejeune.com.',
+    ],
+];
+
+$contactToast = $contactToastMessages[$contactStatus] ?? null;
+
 $getPortfolioMeta = function ($item) {
     $source = strtolower(
         ($item['info_url'] ?? '') . ' ' .
@@ -144,6 +176,29 @@ try {
 </head>
 
 <body>
+
+    <?php if ($contactToast) : ?>
+        <div
+            class="contact-toast contact-toast--<?= $esc($contactToast['type']); ?>"
+            role="status"
+            aria-live="polite"
+            data-contact-toast>
+            <div class="contact-toast__icon" aria-hidden="true">
+                <?= $contactToast['type'] === 'success' ? '✓' : '!'; ?>
+            </div>
+            <div class="contact-toast__content">
+                <p class="contact-toast__title"><?= $esc($contactToast['title']); ?></p>
+                <p><?= $esc($contactToast['message']); ?></p>
+            </div>
+            <button
+                class="contact-toast__close"
+                type="button"
+                aria-label="Close notification"
+                data-contact-toast-close>
+                &times;
+            </button>
+        </div>
+    <?php endif; ?>
     <!-----------------------------------------------------------------
                                Navigation
     ------------------------------------------------------------------>
@@ -215,10 +270,10 @@ try {
             <div class="btn-resume">
                 <a
                     class="btn-resume"
-                    href="./assets/resume/CV_LEJEUNE_EN.pdf"
+                    href="./assets/resume/Acelya_Lejeune_CV_EN_UXUI_Frontend.pdf"
                     download
                     data-umami-event="cv-download"
-                    data-umami-event-file="CV_LEJEUNE_EN.pdf"
+                    data-umami-event-file="Acelya_Lejeune_CV_EN_UXUI_Frontend.pdf"
                     data-umami-event-language="en"
                     data-umami-event-location="main-nav">
                     Download CV
@@ -306,10 +361,10 @@ try {
             <div class="btn-resume">
                 <a
                     class="btn-resume"
-                    href="./assets/resume/CV_LEJEUNE_EN.pdf"
+                    href="./assets/resume/Acelya_Lejeune_CV_EN_UXUI_Frontend.pdf"
                     download
                     data-umami-event="cv-download"
-                    data-umami-event-file="CV_LEJEUNE_EN.pdf"
+                    data-umami-event-file="Acelya_Lejeune_CV_EN_UXUI_Frontend.pdf"
                     data-umami-event-language="en"
                     data-umami-event-location="mobile-nav">
                     Download CV
@@ -848,6 +903,41 @@ try {
 
     <script>
         AOS.init();
+
+
+        const contactToast = document.querySelector('[data-contact-toast]');
+
+        if (contactToast) {
+            const closeButton = contactToast.querySelector('[data-contact-toast-close]');
+
+            const closeContactToast = () => {
+                contactToast.classList.add('contact-toast--hide');
+
+                window.setTimeout(() => {
+                    contactToast.remove();
+                }, 250);
+            };
+
+            if (closeButton) {
+                closeButton.addEventListener('click', closeContactToast);
+            }
+
+            window.setTimeout(closeContactToast, 7000);
+
+            if (window.history && window.history.replaceState) {
+                const currentUrl = new URL(window.location.href);
+
+                if (currentUrl.searchParams.has('contact')) {
+                    currentUrl.searchParams.delete('contact');
+
+                    const cleanUrl = currentUrl.pathname
+                        + (currentUrl.search ? currentUrl.search : '')
+                        + currentUrl.hash;
+
+                    window.history.replaceState({}, document.title, cleanUrl);
+                }
+            }
+        }
     </script>
 
 </body>

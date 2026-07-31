@@ -170,3 +170,116 @@ select option {
   color: $primary-green;
   padding: 0.7em;
 }
+
+/* -----------------------------------------------------------------
+                        Contact toast notifications
+----------------------------------------------------------------- */
+.contact-toast {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 9999;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: start;
+  max-width: 28rem;
+  padding: 1rem 1.1rem;
+  color: $dark-green;
+  background-color: $surface;
+  border: 1px solid $border-soft;
+  border-left: 0.45rem solid $primary-green;
+  border-radius: 1rem;
+  box-shadow: $box-shadow-soft;
+  animation: contact-toast-enter 0.3s ease both;
+
+  &--success {
+    border-left-color: $primary-green;
+  }
+
+  &--error {
+    border-left-color: #b94a48;
+
+    .contact-toast__icon {
+      background-color: #b94a48;
+    }
+  }
+
+  &--hide {
+    animation: contact-toast-exit 0.25s ease both;
+  }
+
+  &__icon {
+    @include d-flex(flex, center, center, row, center);
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    color: $light-green;
+    background-color: $primary-green;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__content {
+    p {
+      margin: 0;
+      color: $dark-green;
+      line-height: 1.6;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.25rem !important;
+    font-weight: 700;
+  }
+
+  &__close {
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 0;
+    color: $dark-green;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    opacity: 0.75;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 768px) {
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    max-width: none;
+  }
+}
+
+@keyframes contact-toast-enter {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contact-toast-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
