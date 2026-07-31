@@ -65,6 +65,68 @@ if (
     exit;
 }
 
+$cleanHeaderValue = static function (string $value): string {
+    return trim((string) preg_replace('/[\r\n]+/', ' ', $value));
+};
+
+$sendContactNotification = static function (
+    string $firstName,
+    string $lastName,
+    string $email,
+    string $subject,
+    string $message,
+    string $redirectPage
+) use ($cleanHeaderValue): bool {
+    $recipient = 'contact@acelyalejeune.com';
+    $sender = 'contact@acelyalejeune.com';
+
+    $safeFirstName = $cleanHeaderValue($firstName);
+    $safeLastName = $cleanHeaderValue($lastName);
+    $safeEmail = $cleanHeaderValue($email);
+    $safeSubject = $cleanHeaderValue($subject);
+
+    $pageLanguage = $redirectPage === 'fr.php' ? 'French page' : 'English page';
+
+    $mailSubject = mb_encode_mimeheader(
+        'Portfolio contact: ' . $safeSubject,
+        'UTF-8'
+    );
+
+    $mailBody = implode("\n", [
+        'New message from the portfolio contact form',
+        '',
+        'Source: ' . $pageLanguage,
+        'First name: ' . $firstName,
+        'Last name: ' . $lastName,
+        'Email: ' . $email,
+        'Subject: ' . $subject,
+        '',
+        'Message:',
+        $message,
+        '',
+        'Reply directly to this visitor using: ' . $email,
+    ]);
+
+    $headers = [
+        'From: Acelya Lejeune Portfolio <' . $sender . '>',
+        'Reply-To: ' . $safeEmail,
+        'MIME-Version: 1.0',
+        'Content-Type: text/plain; charset=UTF-8',
+        'Content-Transfer-Encoding: 8bit',
+        'X-Mailer: PHP/' . phpversion(),
+    ];
+
+    $additionalParameters = '-f' . $sender;
+
+    return mail(
+        $recipient,
+        $mailSubject,
+        $mailBody,
+        implode("\r\n", $headers),
+        $additionalParameters
+    );
+};
+
 try {
     require_once __DIR__ . '/../conf/conf-db.php';
 
@@ -82,6 +144,19 @@ try {
         'subject' => $subject,
         'message' => $message,
     ]);
+
+    $mailSent = $sendContactNotification(
+        $firstName,
+        $lastName,
+        $email,
+        $subject,
+        $message,
+        $redirectPage,
+    );
+
+    if (!$mailSent) {
+        throw new RuntimeException('Contact notification email could not be sent.');
+    }
 
     header(
         'Location: ' . $redirectUrl . '?contact=success#contact',
