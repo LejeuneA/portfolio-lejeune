@@ -7,6 +7,8 @@ $redirectPage = $_POST['redirect'] ?? 'index.php';
 $allowedRedirects = [
     'index.php',
     'fr.php',
+    'freelance.html',
+    'freelance-fr.html',
 ];
 
 if (!in_array($redirectPage, $allowedRedirects, true)) {
@@ -77,7 +79,7 @@ $sendContactNotification = static function (
     string $message,
     string $redirectPage
 ) use ($cleanHeaderValue): bool {
-    $recipient = 'contact@acelyalejeune.com';
+    $recipient = 'acelyalejeune.contact@gmail.com';
     $sender = 'contact@acelyalejeune.com';
 
     $safeFirstName = $cleanHeaderValue($firstName);
@@ -85,7 +87,10 @@ $sendContactNotification = static function (
     $safeEmail = $cleanHeaderValue($email);
     $safeSubject = $cleanHeaderValue($subject);
 
-    $pageLanguage = $redirectPage === 'fr.php' ? 'French page' : 'English page';
+    $pageLanguage = match ($redirectPage) {
+        'fr.php', 'freelance-fr.html' => 'French page',
+        default => 'English page',
+    };
 
     $mailSubject = mb_encode_mimeheader(
         'Portfolio contact: ' . $safeSubject,
