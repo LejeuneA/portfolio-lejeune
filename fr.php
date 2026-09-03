@@ -161,7 +161,7 @@ try {
     <meta name="twitter:image:alt" content="Aperçu du portfolio d’Açelya Lejeune avec positionnement UX/UI, front-end et applications IA">
 
 
-<!-- AOS File -->
+    <!-- AOS File -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <!-- Main Css file -->
@@ -176,7 +176,7 @@ try {
         rel="stylesheet">
 
     <!-- Canonical -->
-<!-- Title -->
+    <!-- Title -->
     <title>Açelya Lejeune - Designer UX/UI &amp; Développeuse Front-End</title>
 
     <!-- Analytics -->
@@ -188,48 +188,48 @@ try {
         data-tag="portfolio">
     </script>
     <script type="application/ld+json">
-{
-        "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "name": "Portfolio Açelya Lejeune",
-        "url": "https://www.acelyalejeune.com/fr.php",
-        "description": "Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.",
-        "inLanguage": "fr",
-        "mainEntity": {
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "name": "Portfolio Açelya Lejeune",
+            "url": "https://www.acelyalejeune.com/fr.php",
+            "description": "Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.",
+            "inLanguage": "fr",
+            "mainEntity": {
                 "@type": "Person",
                 "name": "Açelya Lejeune",
                 "url": "https://www.acelyalejeune.com/",
                 "image": "https://www.acelyalejeune.com/assets/images/og-image.png",
                 "email": "mailto:contact@acelyalejeune.com",
                 "jobTitle": [
-                        "UX/UI Designer",
-                        "Frontend Developer",
-                        "AI Application Developer"
+                    "UX/UI Designer",
+                    "Frontend Developer",
+                    "AI Application Developer"
                 ],
                 "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Liège",
-                        "addressCountry": "BE"
+                    "@type": "PostalAddress",
+                    "addressLocality": "Liège",
+                    "addressCountry": "BE"
                 },
                 "knowsAbout": [
-                        "UX/UI Design",
-                        "Product Design",
-                        "Frontend Development",
-                        "React",
-                        "TypeScript",
-                        "Angular",
-                        "PHP",
-                        "MySQL",
-                        "Python",
-                        "Flask",
-                        "AI Applications"
+                    "UX/UI Design",
+                    "Product Design",
+                    "Frontend Development",
+                    "React",
+                    "TypeScript",
+                    "Angular",
+                    "PHP",
+                    "MySQL",
+                    "Python",
+                    "Flask",
+                    "AI Applications"
                 ],
                 "sameAs": [
-                        "https://www.linkedin.com/in/acelyalejeune",
-                        "https://github.com/LejeuneA"
+                    "https://www.linkedin.com/in/acelyalejeune",
+                    "https://github.com/LejeuneA"
                 ]
+            }
         }
-}
     </script>
 </head>
 
@@ -318,6 +318,12 @@ try {
                     </a>
                 </li>
                 <li>
+                    <a href="freelance-fr.html" class="nav-link scrollto">
+                        <i class="fas fa-handshake"></i>
+                        <span>Services design</span>
+                    </a>
+                </li>
+                <li>
                     <a href="fr.php#contact" class="nav-link scrollto">
                         <i class="fas fa-envelope"></i>
                         <span>Contact</span>
@@ -402,6 +408,12 @@ try {
                     <a href="fr.php#services" class="nav-link scrollto">
                         <i class="fas fa-tools"></i>
                         <span>Services</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="freelance-fr.html" class="nav-link scrollto">
+                        <i class="fas fa-handshake"></i>
+                        <span>Services design</span>
                     </a>
                 </li>
                 <li>
@@ -987,9 +999,9 @@ try {
                 if (currentUrl.searchParams.has('contact')) {
                     currentUrl.searchParams.delete('contact');
 
-                    const cleanUrl = currentUrl.pathname
-                        + (currentUrl.search ? currentUrl.search : '')
-                        + currentUrl.hash;
+                    const cleanUrl = currentUrl.pathname +
+                        (currentUrl.search ? currentUrl.search : '') +
+                        currentUrl.hash;
 
                     window.history.replaceState({}, document.title, cleanUrl);
                 }
