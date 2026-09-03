@@ -36,12 +36,10 @@ body.freelance-page {
             inset: 0;
             z-index: 1;
             display: block;
-            background: linear-gradient(
-                90deg,
-                rgba($background, 0.9) 0%,
-                rgba($background, 0.7) 58%,
-                rgba($background, 0.38) 100%
-            );
+            background: linear-gradient(90deg,
+                    rgba($background, 0.9) 0%,
+                    rgba($background, 0.7) 58%,
+                    rgba($background, 0.38) 100%);
         }
 
         .container {
@@ -168,7 +166,7 @@ body.freelance-page {
             background: $surface-soft;
         }
 
-        > .container {
+        >.container {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -438,6 +436,41 @@ body.freelance-page {
             font-weight: 800;
             line-height: 1.5;
         }
+
+        .freelance-work-card__code {
+            display: inline-flex;
+            align-items: center;
+            align-self: flex-start;
+            gap: 0.45em;
+            width: fit-content;
+            margin-top: 1.85em;
+            padding: 0.65em 0.9em;
+            border: 1px solid rgba($primary-green, 0.3);
+            border-radius: 0.75em;
+            background: rgba($primary-green, 0.08);
+            color: $primary-green;
+            font-size: 0.92em;
+            font-weight: 800;
+            line-height: 1.35;
+            text-decoration: none;
+            transition:
+                background-color 0.25s ease,
+                border-color 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+
+            &:hover {
+                border-color: rgba($primary-green, 0.55);
+                background: rgba($primary-green, 0.14);
+                color: $dark-green;
+                transform: translateY(-1px);
+            }
+
+            i {
+                font-size: 1em;
+                line-height: 1;
+            }
+        }
     }
 
     .freelance-tools-list {
@@ -521,6 +554,7 @@ body.freelance-page {
         }
 
         .freelance-grid--services {
+
             .freelance-card,
             .freelance-card:nth-last-child(2) {
                 grid-column: auto;
@@ -543,7 +577,7 @@ body.freelance-page {
         }
 
         .freelance-section {
-            > .container {
+            >.container {
                 padding: 3em 1.5em;
             }
 
