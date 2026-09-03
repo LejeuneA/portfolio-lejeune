@@ -313,13 +313,13 @@ try {
                 <li>
                     <a href="#services" class="nav-link scrollto">
                         <i class="fas fa-tools"></i>
-                        <span>Services</span>
+                        <span>Capabilities</span>
                     </a>
                 </li>
                 <li>
                     <a href="freelance.html" class="nav-link scrollto">
                         <i class="fas fa-handshake"></i>
-                        <span>Design Services</span>
+                        <span>UI &amp; Frontend Services</span>
                     </a>
                 </li>
                 <li>
@@ -406,13 +406,13 @@ try {
                 <li>
                     <a href="#services" class="nav-link scrollto">
                         <i class="fas fa-tools"></i>
-                        <span>Services</span>
+                        <span>Capabilities</span>
                     </a>
                 </li>
                 <li>
                     <a href="freelance.html" class="nav-link scrollto">
                         <i class="fas fa-handshake"></i>
-                        <span>Design Services</span>
+                        <span>UI &amp; Frontend Services</span>
                     </a>
                 </li>
                 <li>
@@ -831,14 +831,14 @@ try {
 
                 <div class="services-link-panel" data-aos="fade-up" data-aos-duration="1200">
                     <div class="services-link-panel__content">
-                        <h3>Design services for focused interface work</h3>
+                        <h3>UI &amp; frontend services for focused interface work</h3>
                         <p>
                             For small product screens, responsive UI improvements and Figma-to-code support,
                             I have a dedicated page with a clearer view of how I can help.
                         </p>
                     </div>
                     <a href="freelance.html" class="services-link-button">
-                        <span>Explore Design Services</span>
+                        <span>Explore UI &amp; Frontend Services</span>
                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>

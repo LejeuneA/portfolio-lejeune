@@ -314,13 +314,13 @@ try {
                 <li>
                     <a href="fr.php#services" class="nav-link scrollto">
                         <i class="fas fa-tools"></i>
-                        <span>Services</span>
+                        <span>Expertises</span>
                     </a>
                 </li>
                 <li>
                     <a href="freelance-fr.html" class="nav-link scrollto">
                         <i class="fas fa-handshake"></i>
-                        <span>Services design</span>
+                        <span>Services UI &amp; Front-end</span>
                     </a>
                 </li>
                 <li>
@@ -407,13 +407,13 @@ try {
                 <li>
                     <a href="fr.php#services" class="nav-link scrollto">
                         <i class="fas fa-tools"></i>
-                        <span>Services</span>
+                        <span>Expertises</span>
                     </a>
                 </li>
                 <li>
                     <a href="freelance-fr.html" class="nav-link scrollto">
                         <i class="fas fa-handshake"></i>
-                        <span>Services design</span>
+                        <span>Services UI &amp; Front-end</span>
                     </a>
                 </li>
                 <li>
@@ -838,14 +838,14 @@ try {
 
                 <div class="services-link-panel" data-aos="fade-up" data-aos-duration="1200">
                     <div class="services-link-panel__content">
-                        <h3>Services design pour des interfaces ciblées</h3>
+                        <h3>Services UI &amp; Front-end pour des interfaces ciblées</h3>
                         <p>
                             Pour de petits écrans produit, des améliorations UI responsives et du support Figma vers code,
                             une page dédiée présente plus clairement ma façon d’aider.
                         </p>
                     </div>
                     <a href="freelance-fr.html" class="services-link-button">
-                        <span>Découvrir les services design</span>
+                        <span>Découvrir les Services UI &amp; Front-end</span>
                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>

@@ -6,6 +6,7 @@
 --------------------------------------------------------------*/
 body.freelance-page {
     background: $body-background;
+    overflow-x: hidden;
 
     #main {
         background: $body-background;
@@ -228,6 +229,18 @@ body.freelance-page {
         margin-top: 2.3em;
     }
 
+    .freelance-grid--services {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+
+        .freelance-card {
+            grid-column: span 2;
+        }
+
+        .freelance-card:nth-last-child(2) {
+            grid-column: 2 / span 2;
+        }
+    }
+
     .freelance-card,
     .freelance-panel,
     .freelance-work-card {
@@ -447,6 +460,25 @@ body.freelance-page {
         }
     }
 
+    .freelance-tools-group {
+        margin-top: 1.35em;
+
+        h4 {
+            margin: 0;
+            color: $dark-green;
+            font-family: "Poppins", sans-serif;
+            font-size: 0.78em;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .freelance-tools-list {
+            margin-top: 0.7em;
+        }
+    }
+
     .freelance-cta {
         width: 100%;
         padding: 2.8em;
@@ -486,6 +518,13 @@ body.freelance-page {
 
         .freelance-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .freelance-grid--services {
+            .freelance-card,
+            .freelance-card:nth-last-child(2) {
+                grid-column: auto;
+            }
         }
     }
 
