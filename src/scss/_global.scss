@@ -53,7 +53,8 @@ a {
   transition: all 0.4s;
 
   &:hover {
-    @include hover("background-color", $dark-green, "color", $light-green);
+    background-color: $dark-green;
+    color: $light-green;
     transform: translateY(-2px);
   }
 

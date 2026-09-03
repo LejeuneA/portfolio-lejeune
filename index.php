@@ -828,6 +828,20 @@ try {
                     </div>
                 </div>
                 <!-- Services items end -->
+
+                <div class="services-link-panel" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="services-link-panel__content">
+                        <h3>Design services for focused interface work</h3>
+                        <p>
+                            For small product screens, responsive UI improvements and Figma-to-code support,
+                            I have a dedicated page with a clearer view of how I can help.
+                        </p>
+                    </div>
+                    <a href="freelance.html" class="services-link-button">
+                        <span>Explore Design Services</span>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
             <!-- Services content end -->
         </section>

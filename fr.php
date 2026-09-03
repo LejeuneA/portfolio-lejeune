@@ -835,6 +835,20 @@ try {
                     </div>
                 </div>
                 <!-- Services items end -->
+
+                <div class="services-link-panel" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="services-link-panel__content">
+                        <h3>Services design pour des interfaces ciblées</h3>
+                        <p>
+                            Pour de petits écrans produit, des améliorations UI responsives et du support Figma vers code,
+                            une page dédiée présente plus clairement ma façon d’aider.
+                        </p>
+                    </div>
+                    <a href="freelance-fr.html" class="services-link-button">
+                        <span>Découvrir les services design</span>
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
             <!-- Services content end -->
         </section>

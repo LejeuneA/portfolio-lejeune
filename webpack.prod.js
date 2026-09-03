@@ -4,6 +4,9 @@ const common = require('./webpack.common');
 
 module.exports = merge(common, {
     mode: 'production',
+    performance: {
+        maxAssetSize: 1600000,
+    },
     module: {
         rules: [
             {
