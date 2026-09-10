@@ -5,7 +5,7 @@ import '../scss/styles.scss';
 import 'aos/dist/aos.css';
 
 import Typed from 'typed.js';
-import Waypoint from 'waypoints/lib/noframework.waypoints';
+import 'waypoints/lib/noframework.waypoints';
 
 import { openNav, closeNav } from './nav.js';
 
@@ -188,8 +188,10 @@ document.querySelector(".closebtn").addEventListener("click", closeNav);
                     Skills animation
   ---------------------------------------------------------*/
   let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
+  const WaypointConstructor = window.Waypoint;
+
+  if (skilsContent && WaypointConstructor) {
+    new WaypointConstructor({
       element: skilsContent,
       offset: '80%',
       handler: function (direction) {
