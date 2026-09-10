@@ -647,15 +647,15 @@ try {
                     <h2>Portfolio</h2>
                     <p>
                         Ce portfolio présente une sélection de projets qui réunissent mon expérience en UX/UI, design visuel
-                        et développement front-end. Ces projets montrent comment je transforme des décisions de design en
-                        interfaces digitales responsives avec des technologies comme HTML5, CSS3, SCSS, JavaScript,
-                        TypeScript, Angular, React, PHP, MySQL, Python et Flask.
+                        et développement front-end. Il inclut des projets d’interface, des intégrations front-end et un aperçu
+                        de système de design Figma qui montre comment je structure des bases UI réutilisables avant
+                        l’implémentation.
                     </p>
                     <p>
                         Mon travail combine clarté visuelle, structure des interfaces, ergonomie, intégration front-end et
                         logique applicative concrète. Certains projets sont centrés sur le design d’interface et l’intégration
-                        responsive, tandis que d’autres incluent des interactions backend, des workflows CMS ou les premières
-                        bases de produits digitaux assistés par l’IA.
+                        responsive, tandis que d’autres incluent des interactions backend, des workflows CMS, une réflexion
+                        composants ou les premières bases de produits digitaux assistés par l’IA.
                     </p>
                 </div>
 
@@ -664,6 +664,36 @@ try {
                         <?= $esc($databaseError); ?>
                     </div>
                 <?php endif; ?>
+
+                <article class="portfolio-design-system" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="portfolio-design-system-copy">
+                        <span class="portfolio-feature-label">Système présenté</span>
+                        <h3>Système de design Figma</h3>
+                        <p>
+                            Un système de design structuré dans Figma pour poser des bases d’interface réutilisables,
+                            travailler les composants, garder une cohérence visuelle et préparer un handoff produit clair.
+                        </p>
+                        <div class="portfolio-design-system-actions">
+                            <a
+                                href="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40189&embed-host=share"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-umami-event="portfolio-figma-design-system-preview"
+                                data-umami-event-language="fr">
+                                <i class="fas fa-up-right-from-square"></i> Voir l’aperçu Figma
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-design-system-preview">
+                        <iframe
+                            src="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40189&embed-host=share"
+                            title="Aperçu du système de design Figma"
+                            loading="lazy"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </article>
 
                 <div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">
                     <?php foreach ($portfolioItems as $item) : ?>

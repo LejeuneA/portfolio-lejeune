@@ -641,14 +641,14 @@ try {
                     <h2>Portfolio</h2>
                     <p>
                         This portfolio presents selected projects that bring together my background in UX/UI, visual design
-                        and frontend development. The projects show how I translate design decisions into responsive digital
-                        interfaces using technologies such as HTML5, CSS3, SCSS, JavaScript, TypeScript, Angular, React,
-                        PHP, MySQL, Python and Flask.
+                        and frontend development. It includes interface projects, frontend builds and a Figma design system
+                        preview that shows how I structure reusable UI foundations before moving into implementation.
                     </p>
                     <p>
                         My work combines visual clarity, structured layouts, usability, frontend integration and practical
                         application logic. Some projects focus on interface design and responsive implementation, while others
-                        include backend interaction, CMS workflows or the foundations of AI-assisted digital products.
+                        include backend interaction, CMS workflows, component thinking or the foundations of AI-assisted
+                        digital products.
                     </p>
                 </div>
 
@@ -657,6 +657,36 @@ try {
                         <?= $esc($databaseError); ?>
                     </div>
                 <?php endif; ?>
+
+                <article class="portfolio-design-system" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="portfolio-design-system-copy">
+                        <span class="portfolio-feature-label">Featured design system</span>
+                        <h3>Figma Design System</h3>
+                        <p>
+                            A structured Figma design system for reusable interface foundations, component thinking,
+                            visual consistency and handoff-ready product design work.
+                        </p>
+                        <div class="portfolio-design-system-actions">
+                            <a
+                                href="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40189&embed-host=share"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-umami-event="portfolio-figma-design-system-preview"
+                                data-umami-event-language="en">
+                                <i class="fas fa-up-right-from-square"></i> View Figma preview
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-design-system-preview">
+                        <iframe
+                            src="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40189&embed-host=share"
+                            title="Figma Design System preview"
+                            loading="lazy"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </article>
 
                 <div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">
                     <?php foreach ($portfolioItems as $item) : ?>
