@@ -152,26 +152,117 @@
 
         .portfolio-design-system-preview {
             position: relative;
-            aspect-ratio: 16 / 9;
+            @include d-flex(flex, center, center, column, center);
+
             width: 100%;
             max-width: 100%;
             min-width: 0;
-            min-height: 24em;
+            min-height: 21em;
+            padding: 1.2em;
             overflow: hidden;
             background: $surface;
             border: 1px solid rgba($primary-green, 0.18);
             border-radius: 1em;
+        }
 
-            iframe {
-                display: block;
-                position: absolute;
-                inset: 0;
-                width: 100%;
-                height: 100%;
-                max-width: 100%;
-                min-width: 0;
-                min-height: 24em;
-                border: 0;
+        .portfolio-ui-system-visual {
+            display: grid;
+            grid-template-rows: auto 1fr auto auto;
+            gap: 1em;
+            width: 100%;
+            height: 100%;
+            min-height: 18.5em;
+            padding: 1.1em;
+            background:
+                linear-gradient(135deg, rgba($surface-soft, 0.82) 0%, rgba($surface, 0.96) 58%, rgba($primary-green, 0.08) 100%);
+            border: 1px solid rgba($primary-green, 0.16);
+            border-radius: 0.85em;
+        }
+
+        .portfolio-ui-system-visual-header,
+        .portfolio-ui-system-visual-grid,
+        .portfolio-ui-system-visual-stack,
+        .portfolio-ui-system-visual-components {
+            min-width: 0;
+        }
+
+        .portfolio-ui-system-visual-header {
+            display: flex;
+            gap: 0.45em;
+
+            span {
+                width: 0.65em;
+                height: 0.65em;
+                border-radius: 50%;
+                background: rgba($primary-green, 0.45);
+            }
+        }
+
+        .portfolio-ui-system-visual-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.8em;
+
+            span {
+                min-height: 4.2em;
+                background: rgba($surface, 0.9);
+                border: 1px solid rgba($primary-green, 0.14);
+                border-radius: 0.7em;
+                box-shadow: $box-shadow-soft;
+
+                &:nth-child(2) {
+                    background: rgba($background, 0.92);
+                }
+
+                &:nth-child(3) {
+                    background: rgba($primary-green, 0.16);
+                }
+
+                &:nth-child(4) {
+                    background:
+                        linear-gradient(90deg, rgba($primary-green, 0.22) 0 38%, rgba($surface, 0.92) 38% 100%);
+                }
+            }
+        }
+
+        .portfolio-ui-system-visual-stack {
+            display: grid;
+            gap: 0.55em;
+
+            span {
+                height: 0.7em;
+                border-radius: 999px;
+                background: rgba($primary-green, 0.18);
+
+                &:nth-child(1) {
+                    width: 76%;
+                    background: rgba($dark-green, 0.2);
+                }
+
+                &:nth-child(2) {
+                    width: 92%;
+                }
+
+                &:nth-child(3) {
+                    width: 58%;
+                }
+            }
+        }
+
+        .portfolio-ui-system-visual-components {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 1fr;
+            gap: 0.65em;
+
+            span {
+                min-height: 2.5em;
+                border-radius: 0.65em;
+                background: rgba($surface, 0.86);
+                border: 1px solid rgba($primary-green, 0.15);
+
+                &:nth-child(2) {
+                    background: rgba($primary-green, 0.18);
+                }
             }
         }
 
@@ -438,15 +529,31 @@
             }
 
             .portfolio-design-system-preview {
-                aspect-ratio: auto;
                 width: 100%;
                 min-height: 0;
-                height: clamp(13em, 62vw, 16em);
+                padding: 0.8em;
                 border-radius: 0.85em;
+            }
 
-                iframe {
-                    min-height: 0;
-                    height: 100%;
+            .portfolio-ui-system-visual {
+                min-height: 15.5em;
+                padding: 0.85em;
+                gap: 0.75em;
+            }
+
+            .portfolio-ui-system-visual-grid {
+                gap: 0.6em;
+
+                span {
+                    min-height: 3.2em;
+                }
+            }
+
+            .portfolio-ui-system-visual-components {
+                gap: 0.5em;
+
+                span {
+                    min-height: 2.1em;
                 }
             }
         }
@@ -460,10 +567,6 @@
 
             .portfolio-design-system-preview {
                 min-height: 22em;
-
-                iframe {
-                    min-height: 22em;
-                }
             }
 
             .portfolio-container {

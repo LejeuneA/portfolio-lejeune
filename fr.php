@@ -647,8 +647,8 @@ try {
                     <h2>Portfolio</h2>
                     <p>
                         Ce portfolio présente une sélection de projets qui réunissent mon expérience en UX/UI, design visuel
-                        et développement front-end. Il inclut des projets d’interface, des intégrations front-end et un aperçu
-                        de système de design Figma qui montre comment je structure des bases UI réutilisables avant
+                        et développement front-end. Il inclut des projets d’interface, des intégrations front-end et une
+                        étude de système UI qui montre comment je structure des bases d’interface réutilisables avant
                         l’implémentation.
                     </p>
                     <p>
@@ -664,36 +664,6 @@ try {
                         <?= $esc($databaseError); ?>
                     </div>
                 <?php endif; ?>
-
-                <article class="portfolio-design-system" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="portfolio-design-system-copy">
-                        <span class="portfolio-feature-label">Système présenté</span>
-                        <h3>Système de design Figma</h3>
-                        <p>
-                            Un système de design structuré dans Figma pour poser des bases d’interface réutilisables,
-                            travailler les composants, garder une cohérence visuelle et préparer un handoff produit clair.
-                        </p>
-                        <div class="portfolio-design-system-actions">
-                            <a
-                                href="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40189&embed-host=share"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                data-umami-event="portfolio-figma-design-system-preview"
-                                data-umami-event-language="fr">
-                                <i class="fas fa-up-right-from-square"></i> Voir l’aperçu Figma
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-design-system-preview">
-                        <iframe
-                            src="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40189&embed-host=share"
-                            title="Aperçu du système de design Figma"
-                            loading="lazy"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </article>
 
                 <div class="portfolio-container" data-aos="fade-up" data-aos-duration="1500">
                     <?php foreach ($portfolioItems as $item) : ?>
@@ -783,6 +753,53 @@ try {
                         </div>
                     <?php endforeach; ?>
                 </div>
+
+                <article class="portfolio-design-system" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="portfolio-design-system-copy">
+                        <span class="portfolio-feature-label">Bases d’interface</span>
+                        <h3>Bases de système UI</h3>
+                        <p>
+                            Une étude de système UI structurée dans Figma pour montrer des bases d’interface réutilisables,
+                            une réflexion composants, une cohérence visuelle et une documentation claire pour le handoff.
+                        </p>
+                        <div class="portfolio-design-system-actions">
+                            <a
+                                href="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40189&embed-host=share"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-umami-event="portfolio-ui-system-study-preview"
+                                data-umami-event-language="fr">
+                                <i class="fas fa-up-right-from-square"></i> Voir l’étude UI
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-design-system-preview" aria-hidden="true">
+                        <div class="portfolio-ui-system-visual">
+                            <div class="portfolio-ui-system-visual-header">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="portfolio-ui-system-visual-grid">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="portfolio-ui-system-visual-stack">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="portfolio-ui-system-visual-components">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
         <!-----------------------------------------------------------------
