@@ -233,10 +233,6 @@ body.freelance-page {
         .freelance-card {
             grid-column: span 2;
         }
-
-        .freelance-card:nth-last-child(2) {
-            grid-column: 2 / span 2;
-        }
     }
 
     .freelance-card,
@@ -473,6 +469,169 @@ body.freelance-page {
         }
     }
 
+    .freelance-system-study {
+        display: grid;
+        grid-template-columns: minmax(16em, 0.8fr) minmax(0, 1.2fr);
+        gap: 1.5em;
+        align-items: stretch;
+        width: 100%;
+        min-width: 0;
+        margin-top: 1.5em;
+        padding: 1.1em;
+        background: rgba($surface, 0.96);
+        border: 1px solid rgba($primary-green, 0.16);
+        border-radius: 1.25em;
+        box-shadow: $box-shadow-primary;
+    }
+
+    .freelance-system-study__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.95em;
+        min-width: 0;
+        padding: 1.4em;
+        background:
+            linear-gradient(135deg, rgba($surface-soft, 0.9) 0%, rgba($surface, 0.96) 72%);
+        border: 1px solid rgba($primary-green, 0.14);
+        border-radius: 1em;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            padding: 0.45em 0.9em;
+            border: 1px solid rgba($primary-green, 0.18);
+            border-radius: 999px;
+            background: rgba($primary-green, 0.12);
+            color: $dark-green;
+            font-size: 0.78em;
+            font-weight: 800;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            margin: 0;
+            color: $dark-green;
+            font-size: 1.45em;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+
+        p {
+            margin: 0;
+            color: $text-secondary;
+            font-weight: 500;
+            line-height: 1.75;
+        }
+    }
+
+    .freelance-system-study__visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+        min-height: 19em;
+        padding: 1.2em;
+        border: 1px solid rgba($primary-green, 0.18);
+        border-radius: 1em;
+        background: $surface;
+    }
+
+    .freelance-system-study__window {
+        display: grid;
+        grid-template-rows: auto 1fr auto auto;
+        gap: 1em;
+        width: 100%;
+        min-height: 16.5em;
+        padding: 1.1em;
+        border: 1px solid rgba($primary-green, 0.16);
+        border-radius: 0.85em;
+        background:
+            linear-gradient(135deg, rgba($surface-soft, 0.82) 0%, rgba($surface, 0.96) 58%, rgba($primary-green, 0.08) 100%);
+    }
+
+    .freelance-system-study__dots {
+        display: flex;
+        gap: 0.45em;
+
+        span {
+            width: 0.65em;
+            height: 0.65em;
+            border-radius: 50%;
+            background: rgba($primary-green, 0.45);
+        }
+    }
+
+    .freelance-system-study__tiles {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8em;
+
+        span {
+            min-height: 3.6em;
+            border: 1px solid rgba($primary-green, 0.14);
+            border-radius: 0.7em;
+            background: rgba($surface, 0.9);
+            box-shadow: $box-shadow-soft;
+
+            &:nth-child(2) {
+                background: rgba($background, 0.92);
+            }
+
+            &:nth-child(3) {
+                background: rgba($primary-green, 0.16);
+            }
+
+            &:nth-child(4) {
+                background:
+                    linear-gradient(90deg, rgba($primary-green, 0.22) 0 38%, rgba($surface, 0.92) 38% 100%);
+            }
+        }
+    }
+
+    .freelance-system-study__lines {
+        display: grid;
+        gap: 0.55em;
+
+        span {
+            height: 0.7em;
+            border-radius: 999px;
+            background: rgba($primary-green, 0.18);
+
+            &:nth-child(1) {
+                width: 76%;
+                background: rgba($dark-green, 0.2);
+            }
+
+            &:nth-child(2) {
+                width: 92%;
+            }
+
+            &:nth-child(3) {
+                width: 58%;
+            }
+        }
+    }
+
+    .freelance-system-study__controls {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr 1fr;
+        gap: 0.65em;
+
+        span {
+            min-height: 2.3em;
+            border: 1px solid rgba($primary-green, 0.15);
+            border-radius: 0.65em;
+            background: rgba($surface, 0.86);
+
+            &:nth-child(2) {
+                background: rgba($primary-green, 0.18);
+            }
+        }
+    }
+
     .freelance-tools-list {
         display: flex;
         flex-wrap: wrap;
@@ -555,8 +714,7 @@ body.freelance-page {
 
         .freelance-grid--services {
 
-            .freelance-card,
-            .freelance-card:nth-last-child(2) {
+            .freelance-card {
                 grid-column: auto;
             }
         }
@@ -596,14 +754,48 @@ body.freelance-page {
         .freelance-grid,
         #main .freelance-split,
         .freelance-split,
-        .freelance-work-grid {
+        .freelance-work-grid,
+        .freelance-system-study {
             grid-template-columns: 1fr;
         }
 
         .freelance-card,
         .freelance-panel,
-        .freelance-cta {
+        .freelance-cta,
+        .freelance-system-study__content {
             padding: 1.5em;
+        }
+
+        .freelance-system-study {
+            gap: 1em;
+            padding: 0.9em;
+        }
+
+        .freelance-system-study__visual {
+            min-height: 0;
+            padding: 0.8em;
+        }
+
+        .freelance-system-study__window {
+            min-height: 15.5em;
+            padding: 0.85em;
+            gap: 0.75em;
+        }
+
+        .freelance-system-study__tiles {
+            gap: 0.6em;
+
+            span {
+                min-height: 3.2em;
+            }
+        }
+
+        .freelance-system-study__controls {
+            gap: 0.5em;
+
+            span {
+                min-height: 2.1em;
+            }
         }
 
         .freelance-hero__actions,
