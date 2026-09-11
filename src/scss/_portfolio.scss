@@ -147,6 +147,26 @@
                     border-color: rgba($light-green, 0.3);
                     transform: translateY(-1px);
                 }
+
+                &.portfolio-design-system-action--secondary {
+                    color: $dark-green;
+                    background: rgba($surface, 0.82);
+                    border-color: rgba($primary-green, 0.24);
+
+                    i {
+                        color: $dark-green;
+                    }
+
+                    &:hover {
+                        color: $light-green;
+                        background: $dark-green;
+                        border-color: rgba($dark-green, 0.38);
+
+                        i {
+                            color: $light-green;
+                        }
+                    }
+                }
             }
         }
 

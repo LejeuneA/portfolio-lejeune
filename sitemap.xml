@@ -17,6 +17,14 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.acelyalejeune.com/public/ui-system-foundations.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.acelyalejeune.com/public/ui-system-foundations-fr.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.acelyalejeune.com/public/positive-quotes.html</loc>
         <priority>0.8</priority>
     </url>

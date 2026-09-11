@@ -771,6 +771,13 @@ try {
                                 data-umami-event-language="fr">
                                 <i class="fas fa-up-right-from-square"></i> Voir l’étude UI
                             </a>
+                            <a
+                                class="portfolio-design-system-action--secondary"
+                                href="./public/ui-system-foundations-fr.html"
+                                data-umami-event="portfolio-ui-system-study-more-info"
+                                data-umami-event-language="fr">
+                                <i class="fas fa-circle-info"></i> Plus d’informations
+                            </a>
                         </div>
                     </div>
 

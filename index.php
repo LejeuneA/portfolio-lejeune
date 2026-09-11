@@ -764,6 +764,13 @@ try {
                                 data-umami-event-language="en">
                                 <i class="fas fa-up-right-from-square"></i> View UI system study
                             </a>
+                            <a
+                                class="portfolio-design-system-action--secondary"
+                                href="./public/ui-system-foundations.html"
+                                data-umami-event="portfolio-ui-system-study-more-info"
+                                data-umami-event-language="en">
+                                <i class="fas fa-circle-info"></i> More information
+                            </a>
                         </div>
                     </div>
 
