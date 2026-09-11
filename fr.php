@@ -769,7 +769,7 @@ try {
                                 rel="noopener noreferrer"
                                 data-umami-event="portfolio-ui-system-study-preview"
                                 data-umami-event-language="fr">
-                                <i class="fas fa-up-right-from-square"></i> Voir l’étude UI
+                                <i class="fas fa-up-right-from-square"></i> Voir l’étude UI dans Figma
                             </a>
                             <a
                                 class="portfolio-design-system-action--secondary"
