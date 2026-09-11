@@ -764,19 +764,19 @@ try {
                         </p>
                         <div class="portfolio-design-system-actions">
                             <a
+                                class="portfolio-design-system-action--secondary"
+                                href="./public/ui-system-foundations-fr.html"
+                                data-umami-event="portfolio-ui-system-study-more-info"
+                                data-umami-event-language="fr">
+                                <i class="fas fa-circle-info"></i> Plus d’informations
+                            </a>
+                            <a
                                 href="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40189&embed-host=share"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 data-umami-event="portfolio-ui-system-study-preview"
                                 data-umami-event-language="fr">
                                 <i class="fas fa-up-right-from-square"></i> Voir l’étude UI dans Figma
-                            </a>
-                            <a
-                                class="portfolio-design-system-action--secondary"
-                                href="./public/ui-system-foundations-fr.html"
-                                data-umami-event="portfolio-ui-system-study-more-info"
-                                data-umami-event-language="fr">
-                                <i class="fas fa-circle-info"></i> Plus d’informations
                             </a>
                         </div>
                     </div>
