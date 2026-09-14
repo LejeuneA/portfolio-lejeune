@@ -764,7 +764,7 @@ try {
                                 <i class="fas fa-circle-info"></i> More information
                             </a>
                             <a
-                                href="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40189&embed-host=share"
+                                href="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40007&embed-host=share"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 data-umami-event="portfolio-ui-system-study-preview"
