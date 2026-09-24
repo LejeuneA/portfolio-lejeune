@@ -756,6 +756,15 @@ try {
                         </p>
                         <div class="portfolio-design-system-actions">
                             <a
+                                href="https://acelyalejeune.com/ui-system/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-umami-event="portfolio-ui-system-live-preview"
+                                data-umami-event-language="en"
+                                data-umami-event-location="featured-project">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Preview
+                            </a>
+                            <a
                                 class="portfolio-design-system-action--secondary"
                                 href="./public/ui-system-foundations.html"
                                 data-umami-event="portfolio-ui-system-study-more-info"
@@ -764,21 +773,12 @@ try {
                             </a>
                             <a
                                 class="portfolio-design-system-action--supporting"
-                                href="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40007&embed-host=share"
+                                href="https://www.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40007"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 data-umami-event="portfolio-ui-system-study-preview"
                                 data-umami-event-language="en">
                                 <i class="fab fa-figma"></i> View in Figma
-                            </a>
-                            <a
-                                href="https://acelyalejeune.com/ui-system/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                data-umami-event="portfolio-ui-system-live-preview"
-                                data-umami-event-language="en"
-                                data-umami-event-location="featured-project">
-                                <i class="fas fa-arrow-up-right-from-square"></i> Live Preview
                             </a>
                         </div>
                     </div>
