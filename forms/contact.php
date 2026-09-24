@@ -17,9 +17,34 @@ if (!in_array($redirectPage, $allowedRedirects, true)) {
 
 $redirectUrl = '../' . $redirectPage;
 
+$redirectAsSuccess = static function (string $redirectUrl): void {
+    header(
+        'Location: ' . $redirectUrl . '?contact=success#contact',
+        true,
+        303,
+    );
+    exit;
+};
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: ' . $redirectUrl . '#contact', true, 303);
     exit;
+}
+
+$websiteUrl = $_POST['website_url'] ?? '';
+
+if (!is_string($websiteUrl) || trim($websiteUrl) !== '') {
+    $redirectAsSuccess($redirectUrl);
+}
+
+$formStartedAt = $_POST['form_started_at'] ?? null;
+
+if (is_string($formStartedAt) && ctype_digit($formStartedAt)) {
+    $secondsToSubmit = time() - (int) $formStartedAt;
+
+    if ($secondsToSubmit >= 0 && $secondsToSubmit < 3) {
+        $redirectAsSuccess($redirectUrl);
+    }
 }
 
 $firstName = trim($_POST['firstName'] ?? '');
@@ -27,6 +52,15 @@ $lastName = trim($_POST['lastName'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $subject = trim($_POST['subject'] ?? '');
 $message = trim($_POST['message'] ?? '');
+
+$matchesKnownSpamPattern =
+    mb_stripos($subject, 'Email updates') !== false &&
+    mb_stripos($message, 'I would like more information') !== false &&
+    mb_stripos($message, 'Please contact me by email') !== false;
+
+if ($matchesKnownSpamPattern) {
+    $redirectAsSuccess($redirectUrl);
+}
 
 if (
     $firstName === '' ||

@@ -936,6 +936,20 @@ try {
                             type="hidden"
                             name="redirect"
                             value="fr.php">
+                        <input
+                            type="hidden"
+                            name="form_started_at"
+                            value="<?= time() ?>">
+
+                        <div style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
+                            <label for="website_url">URL du site web</label>
+                            <input
+                                type="text"
+                                id="website_url"
+                                name="website_url"
+                                tabindex="-1"
+                                autocomplete="off">
+                        </div>
 
                         <label for="firstName">Prénom</label>
                         <input
