@@ -606,7 +606,7 @@ body.freelance-page {
                 line-height: 1;
             }
 
-            &.freelance-system-study__link--figma {
+            &.freelance-system-study__link--primary {
                 border-color: rgba($light-green, 0.16);
                 background: $background;
                 color: $light-green;
@@ -619,6 +619,26 @@ body.freelance-page {
                     border-color: rgba($light-green, 0.32);
                     background: $dark-green;
                     color: $light-green;
+                }
+            }
+
+            &.freelance-system-study__link--figma {
+                border-color: rgba($primary-green, 0.18);
+                background: transparent;
+                color: $primary-green;
+
+                i {
+                    color: $primary-green;
+                }
+
+                &:hover {
+                    border-color: rgba($primary-green, 0.34);
+                    background: rgba($primary-green, 0.1);
+                    color: $dark-green;
+
+                    i {
+                        color: $dark-green;
+                    }
                 }
             }
         }

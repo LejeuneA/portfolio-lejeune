@@ -751,10 +751,19 @@ try {
                         <span class="portfolio-feature-label">Interface foundations</span>
                         <h3>UI System Foundations</h3>
                         <p>
-                            A structured UI system study created in Figma to demonstrate reusable interface foundations,
-                            component thinking, visual consistency and handoff-ready design documentation.
+                            An independent Figma-to-code UI system study translated into a responsive component library,
+                            demonstrating reusable foundations, visual consistency and developer-ready handoff thinking.
                         </p>
                         <div class="portfolio-design-system-actions">
+                            <a
+                                href="https://acelyalejeune.com/ui-system/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-umami-event="portfolio-ui-system-live-preview"
+                                data-umami-event-language="en"
+                                data-umami-event-location="featured-project">
+                                <i class="fas fa-arrow-up-right-from-square"></i> Live Preview
+                            </a>
                             <a
                                 class="portfolio-design-system-action--secondary"
                                 href="./public/ui-system-foundations.html"
@@ -763,12 +772,13 @@ try {
                                 <i class="fas fa-circle-info"></i> More information
                             </a>
                             <a
+                                class="portfolio-design-system-action--supporting"
                                 href="https://embed.figma.com/design/E4AoglpNYvP9wGa1Jksgg9/Design-System?node-id=2036-40007&embed-host=share"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 data-umami-event="portfolio-ui-system-study-preview"
                                 data-umami-event-language="en">
-                                <i class="fas fa-up-right-from-square"></i> View UI system study
+                                <i class="fab fa-figma"></i> View in Figma
                             </a>
                         </div>
                     </div>

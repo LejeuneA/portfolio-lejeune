@@ -167,6 +167,26 @@
                         }
                     }
                 }
+
+                &.portfolio-design-system-action--supporting {
+                    color: $primary-green;
+                    background: transparent;
+                    border-color: rgba($primary-green, 0.18);
+
+                    i {
+                        color: $primary-green;
+                    }
+
+                    &:hover {
+                        color: $dark-green;
+                        background: rgba($primary-green, 0.1);
+                        border-color: rgba($primary-green, 0.34);
+
+                        i {
+                            color: $dark-green;
+                        }
+                    }
+                }
             }
         }
 
