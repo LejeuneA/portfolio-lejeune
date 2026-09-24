@@ -152,12 +152,12 @@ try {
     <meta property="og:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Açelya Lejeune portfolio preview with UX/UI, frontend and AI application positioning">
+    <meta property="og:image:alt" content="Açelya Lejeune portfolio preview with UX/UI and frontend positioning">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Açelya Lejeune - UX/UI Designer &amp; Frontend Developer">
     <meta name="twitter:description" content="Portfolio of Açelya Lejeune, a UX/UI Designer &amp; Frontend Developer in Liège, Belgium, combining extensive visual design experience with responsive product interfaces, Figma, design systems and frontend development.">
     <meta name="twitter:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
-    <meta name="twitter:image:alt" content="Açelya Lejeune portfolio preview with UX/UI, frontend and AI application positioning">
+    <meta name="twitter:image:alt" content="Açelya Lejeune portfolio preview with UX/UI and frontend positioning">
 
 
     <!-- AOS File -->

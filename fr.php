@@ -153,12 +153,12 @@ try {
     <meta property="og:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Aperçu du portfolio d’Açelya Lejeune avec positionnement UX/UI, front-end et applications IA">
+    <meta property="og:image:alt" content="Aperçu du portfolio d’Açelya Lejeune avec positionnement UX/UI et front-end">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Açelya Lejeune - Designer UX/UI &amp; Développeuse Front-End">
     <meta name="twitter:description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, alliant une vaste expérience en design visuel à la création d’interfaces produit responsives, aux systèmes de design, à Figma et au développement front-end.">
     <meta name="twitter:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
-    <meta name="twitter:image:alt" content="Aperçu du portfolio d’Açelya Lejeune avec positionnement UX/UI, front-end et applications IA">
+    <meta name="twitter:image:alt" content="Aperçu du portfolio d’Açelya Lejeune avec positionnement UX/UI et front-end">
 
 
     <!-- AOS File -->
