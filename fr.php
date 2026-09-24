@@ -130,7 +130,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.">
+    <meta name="description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, alliant une vaste expérience en design visuel à la création d’interfaces produit responsives, aux systèmes de design, à Figma et au développement front-end.">
 
     <meta
         name="keywords"
@@ -144,7 +144,7 @@ try {
     <link rel="alternate" hreflang="fr" href="https://www.acelyalejeune.com/fr.php">
     <link rel="alternate" hreflang="x-default" href="https://www.acelyalejeune.com/">
     <meta property="og:title" content="Açelya Lejeune - Designer UX/UI &amp; Développeuse Front-End">
-    <meta property="og:description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.">
+    <meta property="og:description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, alliant une vaste expérience en design visuel à la création d’interfaces produit responsives, aux systèmes de design, à Figma et au développement front-end.">
     <meta property="og:url" content="https://www.acelyalejeune.com/fr.php">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Portfolio Açelya Lejeune">
@@ -156,7 +156,7 @@ try {
     <meta property="og:image:alt" content="Aperçu du portfolio d’Açelya Lejeune avec positionnement UX/UI, front-end et applications IA">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Açelya Lejeune - Designer UX/UI &amp; Développeuse Front-End">
-    <meta name="twitter:description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.">
+    <meta name="twitter:description" content="Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, alliant une vaste expérience en design visuel à la création d’interfaces produit responsives, aux systèmes de design, à Figma et au développement front-end.">
     <meta name="twitter:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
     <meta name="twitter:image:alt" content="Aperçu du portfolio d’Açelya Lejeune avec positionnement UX/UI, front-end et applications IA">
 
@@ -193,7 +193,7 @@ try {
             "@type": "ProfilePage",
             "name": "Portfolio Açelya Lejeune",
             "url": "https://www.acelyalejeune.com/fr.php",
-            "description": "Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, avec des projets en React, TypeScript, Angular, PHP, MySQL, Python, Flask et applications IA.",
+            "description": "Portfolio d’Açelya Lejeune, designer UX/UI et développeuse front-end à Liège, Belgique, alliant une vaste expérience en design visuel à la création d’interfaces produit responsives, aux systèmes de design, à Figma et au développement front-end.",
             "inLanguage": "fr",
             "mainEntity": {
                 "@type": "Person",
@@ -202,9 +202,8 @@ try {
                 "image": "https://www.acelyalejeune.com/assets/images/og-image.png",
                 "email": "mailto:contact@acelyalejeune.com",
                 "jobTitle": [
-                    "UX/UI Designer",
-                    "Frontend Developer",
-                    "AI Application Developer"
+                    "Designer UX/UI",
+                    "Développeuse Front-End"
                 ],
                 "address": {
                     "@type": "PostalAddress",
@@ -461,7 +460,7 @@ try {
             <h1>Açelya Lejeune</h1>
             <p>
                 <span class="typed"
-                    data-typed-items="Designer UX/UI, Développeuse Front-End, Développeuse d’applications IA"></span>
+                    data-typed-items="Designer UX/UI, Développeuse Front-End"></span>
             </p>
         </div>
     </section>

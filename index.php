@@ -129,7 +129,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Liège, Belgium, with projects in React, TypeScript, Angular, PHP, MySQL, Python, Flask and AI applications.">
+    <meta name="description" content="Portfolio of Açelya Lejeune, a UX/UI Designer &amp; Frontend Developer in Liège, Belgium, combining extensive visual design experience with responsive product interfaces, Figma, design systems and frontend development.">
 
     <meta
         name="keywords"
@@ -143,7 +143,7 @@ try {
     <link rel="alternate" hreflang="fr" href="https://www.acelyalejeune.com/fr.php">
     <link rel="alternate" hreflang="x-default" href="https://www.acelyalejeune.com/">
     <meta property="og:title" content="Açelya Lejeune - UX/UI Designer &amp; Frontend Developer">
-    <meta property="og:description" content="Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Liège, Belgium, with projects in React, TypeScript, Angular, PHP, MySQL, Python, Flask and AI applications.">
+    <meta property="og:description" content="Portfolio of Açelya Lejeune, a UX/UI Designer &amp; Frontend Developer in Liège, Belgium, combining extensive visual design experience with responsive product interfaces, Figma, design systems and frontend development.">
     <meta property="og:url" content="https://www.acelyalejeune.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Açelya Lejeune Portfolio">
@@ -155,7 +155,7 @@ try {
     <meta property="og:image:alt" content="Açelya Lejeune portfolio preview with UX/UI, frontend and AI application positioning">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Açelya Lejeune - UX/UI Designer &amp; Frontend Developer">
-    <meta name="twitter:description" content="Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Liège, Belgium, with projects in React, TypeScript, Angular, PHP, MySQL, Python, Flask and AI applications.">
+    <meta name="twitter:description" content="Portfolio of Açelya Lejeune, a UX/UI Designer &amp; Frontend Developer in Liège, Belgium, combining extensive visual design experience with responsive product interfaces, Figma, design systems and frontend development.">
     <meta name="twitter:image" content="https://www.acelyalejeune.com/assets/images/og-image.png">
     <meta name="twitter:image:alt" content="Açelya Lejeune portfolio preview with UX/UI, frontend and AI application positioning">
 
@@ -192,7 +192,7 @@ try {
             "@type": "ProfilePage",
             "name": "Açelya Lejeune Portfolio",
             "url": "https://www.acelyalejeune.com/",
-            "description": "Portfolio of Açelya Lejeune, a UX/UI Designer and Frontend Developer in Liège, Belgium, with projects in React, TypeScript, Angular, PHP, MySQL, Python, Flask and AI applications.",
+            "description": "Portfolio of Açelya Lejeune, a UX/UI Designer & Frontend Developer in Liège, Belgium, combining extensive visual design experience with responsive product interfaces, Figma, design systems and frontend development.",
             "inLanguage": "en",
             "mainEntity": {
                 "@type": "Person",
@@ -202,8 +202,7 @@ try {
                 "email": "mailto:contact@acelyalejeune.com",
                 "jobTitle": [
                     "UX/UI Designer",
-                    "Frontend Developer",
-                    "AI Application Developer"
+                    "Frontend Developer"
                 ],
                 "address": {
                     "@type": "PostalAddress",
@@ -460,7 +459,7 @@ try {
             <h1>Açelya Lejeune</h1>
             <p>
                 <span class="typed"
-                    data-typed-items="UX/UI Designer, Frontend Developer, AI Application Developer"></span>
+                    data-typed-items="UX/UI Designer, Frontend Developer"></span>
             </p>
         </div>
     </section>
